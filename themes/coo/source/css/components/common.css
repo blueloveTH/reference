@@ -9,3 +9,13 @@ a.underline {
 a.underline:hover {
     background-image: linear-gradient(transparent, transparent 4px, #1d1d1d 4px, #1D1D1DFF);
 }
+
+.unsupported{
+    opacity: 0.6 !important;
+    /* gray all the text */
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}

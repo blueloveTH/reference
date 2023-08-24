@@ -8,7 +8,7 @@ tags:
 categories:
     - Programming
 intro: |
-    The [Python](https://www.python.org/) cheat sheet is a one-page reference sheet for the Python 3 programming language.
+    One-page reference sheet for the Python 3 programming language.
 plugins:
     - copyCode
 ---
@@ -20,10 +20,9 @@ Getting Started
 
 
 ### Introduction
-- [Python](https://www.python.org/)  _(python.org)_
-- [Python Document](https://docs.python.org/3/index.html)  _(docs.python.org)_
-- [Learn X in Y minutes](https://learnxinyminutes.com/docs/python/) _(learnxinyminutes.com)_
-- [Regex in python](/regex#regex-in-python) _(cheatsheets.zip)_
+- Greyed out item means the feature is not supported in [pocketpy](https://github.com/blueloveTH/pocketpy) yet.
+- **(Partial)** means only part of the feature is supported in pocketpy.
+- Red card means there are core differences between cpython and pocketpy.
 
 
 
@@ -48,16 +47,16 @@ Python can't declare a variable without assignment.
 
 
 
-### Data Types {.row-span-2}
+### Data Types **(Partial)** {.row-span-2 .secondary}
 |                                    |          |
 |------------------------------------|----------|
 | `str`                              | Text     |
-| `int`, `float`, `complex`          | Numeric  |
+| `int`, `float`, `complex`{.unsupported}          | Numeric  |
 | `list`, `tuple`, `range`           | Sequence |
 | `dict`                             | Mapping  |
-| `set`, `frozenset`                 | Set      |
+| `set`, `frozenset`{.unsupported}                 | Set      |
 | `bool`                             | Boolean  |
-| `bytes`, `bytearray`, `memoryview` | Binary   |
+| `bytes`, `bytearray`{.unsupported}, `memoryview`{.unsupported} | Binary   |
 See: [Data Types](#python-data-types)
 
 
@@ -116,9 +115,10 @@ Hello from a function
 See: [Functions](#python-functions)
 
 
-### File Handling {.col-span-2}
+### File Handling **(Partial)** {.col-span-2 .secondary}
 ```python
-with open("myfile.txt", "r", encoding='utf8') as file:
+# `encoding` is not supported
+with open("myfile.txt", "r") as file:
     for line in file:
         print(line)
 ```
@@ -185,11 +185,11 @@ See: [Strings](#python-strings)
 
 
 
-### Numbers
+### Numbers **(Partial)** {.secondary}
 ```python
 x = 1    # int
 y = 2.8  # float
-z = 1j   # complex
+# (unsupport) z = 1j   # complex
 
 >>> print(type(x))
 <class 'int'>
@@ -242,12 +242,12 @@ Set of unique items/objects
 >>> a["one"]
 1
 >>> a.keys()
-dict_keys(['one', 'two', 'three'])
+('one', 'two', 'three')
 >>> a.values()
-dict_values([1, 2, 3])
+(1, 2, 3)
 >>> a.update({"four": 4})
 >>> a.keys()
-dict_keys(['one', 'two', 'three', 'four'])
+('one', 'two', 'three', 'four')
 >>> a['four']
 4
 ```
@@ -457,8 +457,8 @@ True
 ```
 
 
-### Formatting  {.col-span-2}
-```python
+### Formatting **(Partial)** {.col-span-2 .secondary}
+<!-- ```python
 name = "John"
 print("Hello, %s!" % name)
 ```
@@ -467,19 +467,19 @@ print("Hello, %s!" % name)
 name = "John"
 age = 23
 print("%s is %d years old." % (name, age))
-```
+``` -->
 
 #### format() Method
 ```python
-txt1 = "My name is {fname}, I'm {age}".format(fname="John", age=36)
+# (unsupport) txt1 = "My name is {fname}, I'm {age}".format(fname="John", age=36)
 txt2 = "My name is {0}, I'm {1}".format("John", 36)
 txt3 = "My name is {}, I'm {}".format("John", 36)
 ```
 
 ### Input
 ```python
->>> name = input("Enter your name: ")
-Enter your name: Tom
+>>> name = input()  # prompt not supported
+Tom
 >>> name
 'Tom'
 ```
@@ -531,7 +531,7 @@ it is available since Python 3.6, also see: [Formatted string literals](https://
 
 
 
-### f-Strings Fill Align
+### f-Strings Fill Align **(Partial)** {.secondary}
 ```python
 >>> f'{"text":10}'     # [width]
 'text      '
@@ -546,7 +546,7 @@ it is available since Python 3.6, also see: [Formatted string literals](https://
 ```
 
 
-### f-Strings Type
+### f-Strings Type {.unsupported}
 ```python
 >>> f'{10:b}'        # binary type
 '1010'
@@ -569,7 +569,7 @@ it is available since Python 3.6, also see: [Formatted string literals](https://
 ```
 
 
-### F-Strings Others
+### F-Strings Others {.unsupported}
 ```python
 >>> f'{-12345:0=10}'  # negative numbers
 '-000012345'
@@ -593,7 +593,7 @@ it is available since Python 3.6, also see: [Formatted string literals](https://
 ```
 
 
-### F-Strings Sign
+### F-Strings Sign {.unsupported}
 ```python
 >>> f'{12345:+}'      # [sign] (+/-)
 '+12345'
@@ -815,7 +815,7 @@ else:
     print("Value is True")
 ```
 
-### match case
+### match case {.unsupported}
 
 ```python
 x = 1
@@ -910,7 +910,7 @@ for i in range(4, 10, 2):
 
 
 
-### With zip()
+### With zip() **(Partial)** {.secondary}
 ```python
 words = ['Mon', 'Tue', 'Wed']
 nums = [1, 2, 3]
@@ -1451,7 +1451,7 @@ class Employee:
 ```
 
 
-### Self instance (3.11+)
+### Self instance (3.11+) {.unsupported}
 ```python
 from typing import Self
 
@@ -1465,7 +1465,7 @@ class Employee:
 ```
 
 
-### Type & Generic {.col-span-2}
+### Type & Generic {.col-span-2 .unsupported}
 ```python
 from typing import TypeVar, Type
 
@@ -1485,7 +1485,7 @@ result: int = converter(raw, mapper=int, default=0)
 ```
 
 
-### Function {.col-span-2}
+### Function {.col-span-2 .unsupported}
 ```python
 from typing import TypeVar, Callable, Any
 
@@ -1552,7 +1552,7 @@ def double_numbers(iterable):
 Generators help you make lazy code.
 
 
-### Generator to list
+### Generator to list {.unsupported}
 ```python
 values = (-x for x in [1,2,3,4,5])
 gen_to_list = list(values)
@@ -1562,8 +1562,17 @@ print(gen_to_list)
 ```
 
 
-### Handle exceptions {.col-span-3}
+### Handle exceptions **(Partial)** {.col-span-3 .secondary}
 ```python
+try:
+    # Use "raise" to raise an error
+    raise IndexError("This is an index error")
+except TypeError:
+    pass    # won't catch the IndexError
+except IndexError:
+    print("An index error occurred")
+```
+<!-- ```python
 try:
     # Use "raise" to raise an error
     raise IndexError("This is an index error")
@@ -1575,4 +1584,4 @@ else:                    # Optional clause to the try/except block. Must follow 
     print("All good!")   # Runs only if the code in try raises no exceptions
 finally:                 # Execute under all circumstances
     print("We can clean up resources here")
-```
+``` -->
