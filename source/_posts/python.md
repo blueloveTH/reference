@@ -1644,17 +1644,6 @@ except TypeError:
     pass    # won't catch the IndexError
 except IndexError:
     print("An index error occurred")
+# (unsupport) finally:
+#     print("This will always be called")
 ```
-<!-- ```python
-try:
-    # Use "raise" to raise an error
-    raise IndexError("This is an index error")
-except IndexError as e:
-    pass                 # Pass is just a no-op. Usually you would do recovery here.
-except (TypeError, NameError):
-    pass                 # Multiple exceptions can be handled together, if required.
-else:                    # Optional clause to the try/except block. Must follow all except blocks
-    print("All good!")   # Runs only if the code in try raises no exceptions
-finally:                 # Execute under all circumstances
-    print("We can clean up resources here")
-``` -->
