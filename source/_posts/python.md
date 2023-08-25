@@ -579,8 +579,9 @@ it is available since Python 3.6, also see: [Formatted string literals](https://
 '******test'
 >>> f'{"test":*<10}'   # fill right
 'test******'
->>> f'{"test":*^10}'   # fill center (not supported)
-'***test***'
+# fill center (not supported)
+>>> # f'{"test":*^10}'
+>>> 
 >>> f'{12345:0>10}'    # fill with numbers
 '0000012345'
 ```
@@ -840,7 +841,7 @@ Python Flow control
 ```python
 num = 5
 if num > 10:
-    print("num is totally bigger than 10.")
+    print("num is bigger than 10.")
 elif num < 10:
     print("num is smaller than 10.")
 else:
@@ -1392,7 +1393,7 @@ print(say("Python"))  # => Hi, Python
 ```
 
 
-### Built-in data type {.warning}
+### Built-in data type {.unsupported}
 ```python
 from typing import Dict, Tuple, List
 
@@ -1447,7 +1448,7 @@ print(say_hello(var))  # => Hello, Python
 ```
 
 
-### Union returned
+### Union returned {.unsupported}
 ```python
 from typing import Union
 
