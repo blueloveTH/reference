@@ -1310,7 +1310,7 @@ print(john)  # => John
 ```
 
 
-### User-defined exceptions
+### User-defined exceptions {.unsupported}
 ```python
 class CustomError(Exception):
     pass
