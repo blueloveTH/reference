@@ -26,7 +26,7 @@ index_recommends:
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
-  enable: true
+  enable: false
   title: Related
   params:
     maxCount: 4
@@ -36,7 +36,7 @@ related_posts:
     #isExcerpt: false
 
 top_posts:
-  enable: true
+  enable: false
   title: Top
   params:
     maxCount: 4
