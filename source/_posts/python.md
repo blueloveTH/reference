@@ -980,6 +980,7 @@ for i in range(4, 10, 2):
 ```python
 words = ['Mon', 'Tue', 'Wed']
 nums = [1, 2, 3]
+
 # Use zip to pack two iterables
 for w, n in zip(words, nums):
     print(f"{n}:{w}", end=", ")
