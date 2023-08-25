@@ -516,10 +516,10 @@ txt2 = "My name is {0}, I'm {1}".format("John", 36)
 txt3 = "My name is {}, I'm {}".format("John", 36)
 ```
 
-### Input {.warning}
+### Input
 ```python
->>> name = input()  # prompt not supported
-Tom
+>>> name = input("Enter your name: ")
+Enter your name: Tom
 >>> name
 'Tom'
 ```
