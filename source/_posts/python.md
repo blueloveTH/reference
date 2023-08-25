@@ -571,7 +571,7 @@ it is available since Python 3.6, also see: [Formatted string literals](https://
 
 
 
-### f-Strings Fill Align {.warning}
+### f-Strings Fill Align
 ```python
 >>> f'{"text":10}'     # [width]
 'text      '
@@ -579,9 +579,8 @@ it is available since Python 3.6, also see: [Formatted string literals](https://
 '******test'
 >>> f'{"test":*<10}'   # fill right
 'test******'
-# fill center (not supported)
->>> # f'{"test":*^10}'
->>> 
+>>> f'{"test":*^10}'   # fill center
+'***test***'
 >>> f'{12345:0>10}'    # fill with numbers
 '0000012345'
 ```
@@ -590,6 +589,7 @@ it is available since Python 3.6, also see: [Formatted string literals](https://
 a = 10
 assert f'{a:>10}' == '        10'
 assert f'{a:<10}' == '10        '
+assert f'{a:^10}' == '    10    '
 assert f'{a:<10.2f}' == '10.00     '
 assert f'{a:>10.2f}' == '     10.00'
 
