@@ -255,6 +255,18 @@ Similar to List but immutable
 ```python
 set1 = {"a", "b", "c"}   
 set2 = set(("a", "b", "c"))
+
+a == {1, 2, 3}
+
+assert a | {2, 3, 4} == {1, 2, 3, 4}
+assert a & {2, 3, 4} == {2, 3}
+assert a - {2, 3, 4} == {1}
+assert a ^ {2, 3, 4} == {1, 4}
+
+a.update({2, 3, 4})
+
+assert a == {1, 2, 3, 4}
+
 ```
 Set of unique items/objects
 
