@@ -139,7 +139,7 @@ result = 16 // 4 # => 4 (Integer Division)
 result = 25 % 2  # => 1
 result = 5 ** 3  # => 125
 ``` 
-`//` and `%` are not defined for float or negative numbers.
+`//` and `%` are not defined for float or negative numbers in pocketpy.
 
 ### Plus-Equals
 ```python
