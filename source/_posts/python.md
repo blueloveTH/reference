@@ -19,7 +19,7 @@ Getting Started
 ---------------
 
 
-### Item colors
+### Item Colors
 | color | cpython | pocketpy |
 |-------|---------|----------|
 | green | supported | supported |
@@ -575,9 +575,9 @@ it is available since Python 3.6, also see: [Formatted string literals](https://
 ```python
 >>> f'{"text":10}'     # [width]
 'text      '
->>> f'{"test":*>10}'   # fill left ('*' not supported)
+>>> f'{"test":*>10}'   # fill left
 '******test'
->>> f'{"test":*<10}'   # fill right ('*' not supported)
+>>> f'{"test":*<10}'   # fill right
 'test******'
 >>> f'{"test":*^10}'   # fill center (not supported)
 '***test***'
