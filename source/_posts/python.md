@@ -1047,6 +1047,16 @@ keyword_args(big="foot", loch="ness")
 
 Type of "kwargs" is dict.
 
+### Default arguments {.warning}
+```python
+def power(x, y=2):
+    return x ** y
+
+power(2)    # => 4
+power(2, 3) # => 8
+```
+
+Default arguments must be literal values, not variables or expressions.
 
 ### Returning multiple
 ```python
