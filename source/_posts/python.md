@@ -491,7 +491,7 @@ txt2 = "My name is {0}, I'm {1}".format("John", 36)
 txt3 = "My name is {}, I'm {}".format("John", 36)
 ```
 
-### Input
+### Input {.warning}
 ```python
 >>> name = input()  # prompt not supported
 Tom
@@ -550,11 +550,11 @@ it is available since Python 3.6, also see: [Formatted string literals](https://
 ```python
 >>> f'{"text":10}'     # [width]
 'text      '
->>> f'{"test":*>10}'   # fill left
+>>> f'{"test":*>10}'   # fill left ('*' not supported)
 '******test'
->>> f'{"test":*<10}'   # fill right
+>>> f'{"test":*<10}'   # fill right ('*' not supported)
 'test******'
->>> f'{"test":*^10}'   # fill center
+>>> f'{"test":*^10}'   # fill center (not supported)
 '***test***'
 >>> f'{12345:0>10}'    # fill with numbers
 '0000012345'
@@ -1245,7 +1245,7 @@ print(x.class_variable)
 
 
 
-### Super() Function {.row-span-2}
+### Super() Function {.row-span-2 .warning}
 
 ```python
 class ParentClass:
@@ -1256,7 +1256,7 @@ class ChildClass(ParentClass):
     def print_test(self):
         print("Child Method")
         # Calls the parent's print_test()
-        super().print_test() 
+        super(ChildClass, self).print_test() 
 ```          
 --- 
 
