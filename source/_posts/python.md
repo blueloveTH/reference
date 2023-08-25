@@ -120,7 +120,7 @@ See: [Functions](#python-functions)
 
 ### File Handling {.warning}
 ```python
-# `encoding` is not supported
+# `encoding` is always `utf-8` in pocketpy
 with open("myfile.txt", "r") as file:
     print(file.read())
 ```
@@ -1139,8 +1139,8 @@ Python File Handling
 ----------
 
 
-### Read file {.warning}
-#### Line by Line (not supported)
+### Read lines {.unsupported}
+#### Line by Line
 ```python {.unsupported}
 with open("myfile.txt") as file:
     for line in file:   # not iterable
@@ -1159,13 +1159,13 @@ for i, line in enumerate(file, start=1):
 #### Write a string
 ```python
 contents = {"aa": 12, "bb": 21}
-with open("myfile1.txt", "w+") as file:
+with open("myfile1.txt", "w") as file:
     file.write(str(contents))
 ```
 
 #### Read a string
 ```python
-with open('myfile1.txt', "r+") as file:
+with open('myfile1.txt', "r") as file:
     contents = file.read()
 print(contents)
 ```
