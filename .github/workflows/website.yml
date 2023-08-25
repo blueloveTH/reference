@@ -18,6 +18,7 @@ jobs:
       run: |
         npm install
         npm run build
+        echo 'reference.pocketpy.dev' > public/CNAME
     - uses: crazy-max/ghaction-github-pages@v3
       with:
         target_branch: gh-pages
