@@ -8,7 +8,7 @@ tags:
 categories:
     - Programming
 intro: |
-    One-page reference sheet for the Python 3 programming language.
+    One-page reference sheet for the differences between [cpython](https://www.python.org/) and [pocketpy](https://github.com/blueloveTH/pocketpy).
 plugins:
     - copyCode
 ---
@@ -19,11 +19,15 @@ Getting Started
 ---------------
 
 
-### Introduction
-- Greyed out item means the feature is not supported in [pocketpy](https://github.com/blueloveTH/pocketpy) yet.
-- **(Partial)** means only part of the feature is supported in pocketpy.
-- Red card means there are core differences between cpython and pocketpy.
-
+### Item colors
+| color | cpython | pocketpy |
+|-------|---------|----------|
+| green | supported | supported |
+| grey | supported | not supported |
+| yellow | supported | partially supported |
+| red | supported | different |
+| blue | not supported | supported |
+{.show-header .bold-first}
 
 
 ### Hello World
@@ -47,7 +51,7 @@ Python can't declare a variable without assignment.
 
 
 
-### Data Types **(Partial)** {.row-span-2 .secondary}
+### Data Types {.row-span-2 .warning}
 |                                    |          |
 |------------------------------------|----------|
 | `str`                              | Text     |
@@ -114,13 +118,11 @@ Hello from a function
 
 See: [Functions](#python-functions)
 
-
-### File Handling **(Partial)** {.col-span-2 .secondary}
+### File Handling {.warning}
 ```python
 # `encoding` is not supported
 with open("myfile.txt", "r") as file:
-    for line in file:
-        print(line)
+    print(file.read())
 ```
 
 See: [File Handling](#python-file-handling)
@@ -150,6 +152,19 @@ message = "Part 1."
 
 # => Part 1.Part 2.
 message += "Part 2."   
+```
+
+### ++/-- {.blue}
+```python
+a = 1
+++a
+assert a == 2
+
+def f(a):
+  --a
+  return a
+
+assert f(3) == 2
 ```
 
 ### f-Strings (Python 3.6+)
@@ -185,7 +200,7 @@ See: [Strings](#python-strings)
 
 
 
-### Numbers **(Partial)** {.secondary}
+### Numbers {.warning}
 ```python
 x = 1    # int
 y = 2.8  # float
@@ -457,17 +472,17 @@ True
 ```
 
 
-### Formatting **(Partial)** {.col-span-2 .secondary}
-<!-- ```python
+### Formatting {.col-span-2 .warning}
+
+#### % formatting is not supported
+```python {.unsupported}
 name = "John"
 print("Hello, %s!" % name)
-```
 
-```python
 name = "John"
 age = 23
 print("%s is %d years old." % (name, age))
-``` -->
+```
 
 #### format() Method
 ```python
@@ -531,7 +546,7 @@ it is available since Python 3.6, also see: [Formatted string literals](https://
 
 
 
-### f-Strings Fill Align **(Partial)** {.secondary}
+### f-Strings Fill Align {.warning}
 ```python
 >>> f'{"text":10}'     # [width]
 'text      '
@@ -543,6 +558,19 @@ it is available since Python 3.6, also see: [Formatted string literals](https://
 '***test***'
 >>> f'{12345:0>10}'    # fill with numbers
 '0000012345'
+```
+
+```python
+a = 10
+assert f'{a:>10}' == '        10'
+assert f'{a:<10}' == '10        '
+assert f'{a:<10.2f}' == '10.00     '
+assert f'{a:>10.2f}' == '     10.00'
+
+assert f'{a:010}' == '0000000010'
+assert f'{a:010d}' == '0000000010'
+assert f'{a:010f}' == '010.000000'
+assert f'{a:010.2f}' == '0000010.00'
 ```
 
 
@@ -828,6 +856,18 @@ match x:
     print("multiple")
 ```
 
+### goto/label {.blue}
+```python
+for i in range(10):
+  for j in range(10):
+    for k in range(10):
+      $goto exit
+
+$label exit
+```
+
+Change the control flow unconditionaly in pocketpy.
+
 
 
 
@@ -910,13 +950,13 @@ for i in range(4, 10, 2):
 
 
 
-### With zip() **(Partial)** {.secondary}
+### With zip() {.warning}
 ```python
 words = ['Mon', 'Tue', 'Wed']
 nums = [1, 2, 3]
 # Use zip to pack into a tuple list
 for w, n in zip(words, nums):
-    print('%d:%s, ' %(n, w))
+    print(f"{n}:{w}", end=", ")
 ```
 Prints: 1:Mon, 2:Tue, 3:Wed,
 
@@ -927,7 +967,7 @@ Prints: 1:Mon, 2:Tue, 3:Wed,
 nums = [60, 70, 30, 110, 90]
 for n in nums:
     if n > 100:
-        print("%d is bigger than 100" %n)
+        print(f"{n} is bigger than 100")
         break
 else:
     print("Not found!")
@@ -953,7 +993,7 @@ def hello_world():
 
 ```python
 def add(x, y):
-    print("x is %s, y is %s" %(x, y))
+    print(f"x is {x}, y is {y}")
     return x + y
 
 add(5, 6)    # => 11
@@ -1063,18 +1103,18 @@ Python File Handling
 ----------
 
 
-### Read file
-#### Line by line
-```python
+### Read file {.warning}
+#### Line by Line (not supported)
+```python {.unsupported}
 with open("myfile.txt") as file:
-    for line in file:
+    for line in file:   # not iterable
         print(line)
 ```
 #### With line number
 ```python
 file = open('myfile.txt', 'r')
 for i, line in enumerate(file, start=1):
-    print("Number %s: %s" % (i, line))
+    print(f"Number {i}: {line}")
 ```
 
 
@@ -1327,7 +1367,7 @@ print(say("Python"))  # => Hi, Python
 ```
 
 
-### Built-in date type
+### Built-in data type {.warning}
 ```python
 from typing import Dict, Tuple, List
 
@@ -1345,7 +1385,7 @@ codes: List[int] = (0, 1, -1, -2)
 ```
 
 
-### Built-in date type (3.10+)
+### Built-in data type (3.10+)
 ```python
 bill: dict[str, float] = {
     "apple": 3.14,
@@ -1544,25 +1584,32 @@ Miscellaneous
 
 ### Generators
 ```python
-def double_numbers(iterable):
-    for i in iterable:
-        yield i + i
+>>> def f(n):
+...    for i in range(n):
+...        yield i
+>>> list(f(5))
+[0, 1, 2, 3, 4]
+>>>
+>>> def g(n):
+...     yield from range(n)
+>>> list(g(4))
+[0, 1, 2, 3]
 ```
 
 Generators help you make lazy code.
 
 
-### Generator to list {.unsupported}
+### Generator expressions {.unsupported}
 ```python
 values = (-x for x in [1,2,3,4,5])
-gen_to_list = list(values)
 
-# => [-1, -2, -3, -4, -5]
-print(gen_to_list)
+sum(
+    x * x for x in range(10)
+)  # sum of squares
 ```
 
 
-### Handle exceptions **(Partial)** {.col-span-3 .secondary}
+### Handle exceptions {.col-span-3 .warning}
 ```python
 try:
     # Use "raise" to raise an error

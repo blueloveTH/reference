@@ -175,6 +175,18 @@ html.scrollbar {
     @apply bg-red-500;
 }
 
+.mdLayout .h3-wrap.red > h3 {
+    @apply bg-red-500;
+}
+
+.mdLayout .h3-wrap.warning > h3 {
+    @apply bg-yellow-500;
+}
+
+.mdLayout .h3-wrap.blue > h3 {
+    @apply bg-blue-500;
+}
+
 .mdLayout .h3-wrap > .section {
     @apply flex flex-col h-full w-full z-0;
 }
