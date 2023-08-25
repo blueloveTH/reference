@@ -483,14 +483,17 @@ True
 
 ```
 
-### Concatenates
+### Concatenates {.warning}
 ```python
 >>> s = 'spam'
 >>> t = 'egg'
 >>> s + t
 'spamegg'
->>> 'spam' 'egg'
-'spamegg'
+>>> 'spam' 'egg'  # not supported
+  File "<stdin>", line 1
+    'spam' 'egg'
+           ^
+SyntaxError: expected statement end
 ```
 
 
@@ -1271,20 +1274,20 @@ print(x.class_variable)
 
 ```python
 class ParentClass:
-    def print_test(self):
+    def test(self):
         print("Parent Method")
  
 class ChildClass(ParentClass):
-    def print_test(self):
+    def test(self):
         print("Child Method")
-        # Calls the parent's print_test()
-        super(ChildClass, self).print_test() 
+        # Calls the parent's test()
+        super(ChildClass, self).test() 
 ```          
 --- 
 
 ```python
 >>> child_instance = ChildClass()
->>> child_instance.print_test()
+>>> child_instance.test()
 Child Method
 Parent Method
 ```
