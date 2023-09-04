@@ -1551,13 +1551,13 @@ T = TypeVar("T")
 # "mapper" is a type, like int, str, MyClass and so on.
 # "default" is an instance of type T, such as 314, "string", MyClass() and so on.
 # returned is an instance of type T too.
-def converter(raw, mapper: Type[T], default: T) -> T:
+def converter(raw, mapper: Type[T] = None, default: T = None) -> T:
     try:
         return mapper(raw)
     except:
         return default
 
-raw: str = input("Enter an integer: ")
+raw: str = '4'
 result: int = converter(raw, mapper=int, default=0)
 ```
 
@@ -1568,7 +1568,7 @@ from typing import TypeVar, Callable, Any
 
 T = TypeVar("T")
 
-def converter(raw, mapper: Callable[[Any], T], default: T) -> T:
+def converter(raw, mapper: Callable[[Any], T] = None, default: T = None) -> T:
     try:
         return mapper(raw)
     except:
@@ -1589,8 +1589,8 @@ def converter(raw, mapper: Callable[[Any], T], default: T) -> T:
 def is_success(value) -> bool:
     return value in (0, "OK", True, "success")
 
-resp = dict(code=0, message="OK", data=[])
-successed: bool = converter(resp.message, mapper=is_success, default=False)
+resp = {'code': 0, 'message': 'OK', 'data': []}
+successed: bool = converter(resp['message'], mapper=is_success, default=False)
 ```
 
 
