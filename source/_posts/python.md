@@ -1404,7 +1404,7 @@ print(say("Python"))  # => Hi, Python
 ```
 
 
-### Built-in data type {.unsupported}
+### Built-in data type
 ```python
 from typing import Dict, Tuple, List
 
@@ -1459,7 +1459,7 @@ print(say_hello(var))  # => Hello, Python
 ```
 
 
-### Union returned {.unsupported}
+### Union returned
 ```python
 from typing import Union
 
@@ -1528,7 +1528,7 @@ class Employee:
 ```
 
 
-### Self instance (3.11+) {.unsupported}
+### Self instance (3.11+)
 ```python
 from typing import Self
 
@@ -1542,7 +1542,7 @@ class Employee:
 ```
 
 
-### Type & Generic {.col-span-2 .unsupported}
+### Type & Generic {.col-span-2}
 ```python
 from typing import TypeVar, Type
 
@@ -1562,7 +1562,7 @@ result: int = converter(raw, mapper=int, default=0)
 ```
 
 
-### Function {.col-span-2 .unsupported}
+### Function {.col-span-2}
 ```python
 from typing import TypeVar, Callable, Any
 
