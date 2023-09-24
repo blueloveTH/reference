@@ -887,9 +887,10 @@ match x:
 for i in range(10):
   for j in range(10):
     for k in range(10):
-      $goto exit
+      -> exit
 
-$label exit
+== exit ==
+print('exit')
 ```
 
 Change the control flow unconditionaly in pocketpy.
