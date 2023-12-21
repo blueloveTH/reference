@@ -138,7 +138,7 @@ result = 16 / 4  # => 4.0 (Float Division)
 result = 16 // 4 # => 4 (Integer Division)
 result = 25 % 2  # => 1
 result = 5 ** 3  # => 125
-``` 
+```
 `//` and `%` are not defined for float or negative numbers in pocketpy.
 
 ### Plus-Equals
@@ -1283,7 +1283,7 @@ print(x.class_variable)
 
 
 
-### Super() Function {.row-span-2 .warning}
+### Super() Function {.row-span-2}
 
 ```python
 class ParentClass:
@@ -1294,9 +1294,9 @@ class ChildClass(ParentClass):
     def test(self):
         print("Child Method")
         # Calls the parent's test()
-        super(ChildClass, self).test() 
-```          
---- 
+        super().test() 
+```
+---
 
 ```python
 >>> child_instance = ChildClass()
@@ -1654,7 +1654,7 @@ try:
     raise IndexError("This is an index error")
 except TypeError:
     pass    # won't catch the IndexError
-except IndexError:
+except IndexError as e:
     print("An index error occurred")
 # (unsupport) finally:
 #     print("This will always be called")
