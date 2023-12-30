@@ -55,13 +55,13 @@ Python can't declare a variable without assignment.
 |                                    |          |
 |------------------------------------|----------|
 | `str`                              | Text     |
-| `int`, `float`, `complex`{.unsupported}          | Numeric  |
+| `int`, `float`, `complex`          | Numeric  |
 | `list`, `tuple`, `range`           | Sequence |
 | `dict`                             | Mapping  |
 | `set`, `frozenset`{.unsupported}                 | Set      |
 | `bool`                             | Boolean  |
 | `bytes`, `bytearray`{.unsupported}, `memoryview`{.unsupported} | Binary   |
-See: [Data Types](#python-data-types)
+|See: [Data Types](#python-data-types)||
 
 
 ### Slicing String
@@ -204,7 +204,7 @@ See: [Strings](#python-strings)
 ```python
 x = 1    # int (limited precision)
 y = 2.8  # float
-# (unsupport) z = 1j   # complex
+z = 1j   # complex
 
 >>> print(type(x))
 <class 'int'>
