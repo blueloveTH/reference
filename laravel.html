@@ -1,0 +1,1582 @@
+<!DOCTYPE HTML><html class="scrollbar" translate="no"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta http-equiv="content-language" content="en-gb"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="app:pageurl" content="/"><title>Laravel Cheat Sheet & Quick Reference</title><meta name="keywords" content="reference,cheatsheet,code table,snippets,linux,web,framework,php"><meta name="description" content="Laravel is an expressive and progressive web application framework for PHP. This cheat sheet provides a refere"><meta property="og:url" content="https://cheatsheets.zip/laravel.html"><meta property="og:title" content="Laravel Cheat Sheet & Quick Reference"><meta property="og:site_name" content="CheatSheets.zip"><meta property="og:description" content="Laravel is an expressive and progressive web application framework for PHP. This cheat sheet provides a refere"><meta property="og:image" content="https://cheatsheets.zip/assets/image/preview.png?v=07i24"><meta property="og:image:width" content="2276"><meta property="og:image:height" content="1240"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Laravel Cheat Sheet & Quick Reference"><meta name="twitter:site" content="@CheatSheets.zip"><meta name="twitter:creator" content="@CheatSheets.zip"><meta name="twitter:description" content="Laravel is an expressive and progressive web application framework for PHP. This cheat sheet provides a refere"><meta name="twitter:image" content="https://cheatsheets.zip/assets/image/preview.png?v=iuem3"><link rel="icon" href="/images/favicon.png?v=1"><link rel="icon shortcut" type="image/png" href="/images/favicon.png?v=1"><link rel="canonical" href="https://cheatsheets.zip/laravel.html"><link rel="prefetch" href="https://cheatsheets.zip"><link rel="prerender" href="https://cheatsheets.zip"><link rel="alternate" href="/atom.xml" title="CheatSheets.zip" type="application/atom+xml"><link rel="stylesheet" href="/css/style.css?_v=1705688051674"><script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            let html = document.documentElement.classList;
+            html.toggle('dark')
+        }
+    </script></head><body class="bg-slate-100 dark:bg-slate-900"><header class=""><div class="max-container z-10" style="display:none"><div class="flex flex-row justify-between md:justify-start items-center py-3"><a href="/" class="flex font-medium items-center justify-center md:justify-start text-slate-800 dark:text-slate-300"><div class="hidden md:flex justify-center w-10 h-10 md:w-12 md:h-12 text-white p-2 bg-emerald-500 rounded-full mr-3 text-2xl"><div class="self-center"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M303.55291933 951.35043811c-1.84934059-3.43448917-12.68119097-22.19208477-24.04142536-41.74225521l-20.07855218-35.4016586 5.01963776-9.51089265c2.90610631-5.01963776 13.20957383-23.24885049 22.9846585-40.15710664l17.70082986-31.17459456h366.69778034l6.86897834-11.09604238c3.43448917-6.34059549 13.73795669-23.77723335 22.72046763-39.10033977 8.71831893-15.32310642 22.19208477-38.30776491 29.85363797-51.51733873 7.66155321-12.94538297 16.37987214-28.00429739 19.02178646-33.02393629 2.90610631-5.28382976 14.00214869-24.30561621 24.56980821-42.27063694 10.56765952-18.22921273 29.85363797-51.51733987 43.06321181-73.97361551 12.94538297-22.45627563 35.93004146-62.08499826 51.25314787-87.71157333 15.05891442-25.89076594 28.53268025-49.93219015 29.85363797-53.63087132 3.43448917-8.98251093 8.45412693-8.18993607 12.94538184 2.11353259 2.11353145 4.4912549 8.71831893 16.90825501 14.79472355 26.94753166 6.34059549 10.30346752 20.60693618 35.13746773 32.23136143 55.48021077s25.62657394 44.38416953 30.91040369 53.63087133l9.77508466 16.64406414-6.07640462 9.77508466c-3.43448917 5.28382976-7.13317035 11.62442525-8.71831893 14.00214869-2.90610631 4.7554469-13.73795669 23.77723335-24.83399908 43.3274038-3.96287203 7.39736121-13.47376583 23.77723335-21.13531904 36.45842432-7.39736121 12.94538297-13.47376583 24.04142535-13.47376583 24.56980821 0 .79257486-3.43448917 6.34059549-7.39736121 12.41699898-4.22706403 6.07640462-9.51089379 15.32310642-12.15280811 20.34274531-2.37772345 5.01963776-6.86897835 12.94538297-9.77508465 17.17244587-2.64191431 4.4912549-5.81221262 10.03927666-6.60478749 12.68119096-1.05676573 2.37772345-2.64191431 4.4912549-3.69868117 4.49125604s-2.64191431 2.11353145-3.43448918 4.75544576c-1.05676573 2.37772345-5.28382976 10.56765952-9.77508466 17.70082987-4.22706403 7.39736121-10.56765952 17.96502073-13.47376582 23.77723335-3.17029831 5.81221262-10.83185038 19.28597845-17.17244587 29.58944597-6.34059549 10.56765952-11.62442525 20.07855331-11.62442525 21.13531904 0 .79257486-1.58514859 3.69868117-3.69868117 5.81221263-2.11353145 2.37772345-8.71831893 13.73795669-14.79472355 25.36238307s-18.22921273 33.81651001-26.94753053 49.66799815l-16.11568128 28.26848939H307.25159936l-3.69868003-5.81221263z"></path><path d="M523.88861725 694.82050674c-31.70297856-20.60693618-68.95397774-44.11997753-70.01074347-44.11997753-.79257486 0-10.03927666-5.81221262-20.60693618-13.20957383-10.83185038-7.13317035-22.72046763-14.53053155-26.68333966-16.11568128-3.69868117-1.84934059-6.86897835-3.96287203-6.86897835-5.01963776 0-.79257486-4.7554469-4.22706403-10.56765952-7.66155321l-10.30346752-5.81221262-.79257486-98.27923172c-.52838286-54.15925419 0-99.33599744.79257486-100.3927643 1.05676573-1.32095773 27.74010539 12.94538297 59.44308395 31.96716942 31.96716942 18.75759559 69.21816861 40.42129749 82.95612529 48.61123356l25.09819108 14.26633956.264192 103.56306148c.264192 73.7094235-.52838286 103.56306147-2.64191545 103.56306261-1.58514859 0-10.56765952-5.01963776-20.07855217-11.36023438zm0-61.29242453c0-11.09604238-.79257486-12.15280811-11.09604239-18.2292116-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023325l60.23565881 34.60908486c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327574.264192 0 .52838286-5.28382976.528384-11.88861724zm0-42.27063695c0-11.09604238-.79257486-12.15280811-11.09604239-18.22921273-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023438l60.23565881 34.60908373c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327688.264192 0 .52838286-5.28382976.528384-11.88861725zm-1.84934059-54.42344619c-2.11353145-2.11353145-117.30101931-68.42559488-118.88616789-68.42559374-.52838286 0-.79257486 5.28382976-.79257487 11.62442525v11.36023324l60.23565881 34.60908487 59.97146681 34.60908488.79257373-10.83185152c.52838286-5.81221262 0-11.62442525-1.32095659-12.94538298z"></path><path d="M109.10798734 615.82725347c-3.69868117-7.39736121-10.56765952-20.34274418-15.58729841-28.26848938-7.92574407-13.47376583-49.66799929-84.80546589-61.2924234-105.41240206-7.13317035-12.15280811-6.34059549-15.85148928 6.34059548-37.77938205 24.56980821-42.00644608 41.21387122-70.27493433 45.96931812-78.99325326 7.13317035-12.41700011 49.66799929-86.12642361 81.37097671-141.34244466 14.53053155-24.56980821 40.68548835-70.27493433 58.12212622-101.18533803l32.23136143-56.27278563h229.05401685c159.30746539 0 230.37497458 1.05676573 232.75269689 2.90610631 1.84934059 1.58514859 10.56765952 15.58729728 19.55017045 31.17459456 8.71831893 15.58729728 18.75759559 33.02393515 22.45627563 38.83614777l6.34059548 10.83185152-8.9825098 14.26633955c-5.01963776 7.92574407-15.32310642 25.89076594-22.72046762 39.62872264s-13.73795669 25.62657394-14.2663407 25.89076594c-.264192.52838286-83.2203173.79257486-184.40565532.79257486l-183.6130816-.264192-9.5108938 14.53053155c-5.01963776 7.92574407-9.24670179 15.85148928-9.24670179 17.17244701 0 1.58514859-1.05676573 2.64191431-2.64191431 2.64191431-1.32095773 0-2.64191431 1.05676573-2.64191545 2.11353145 0 2.90610631-29.32525511 55.21601991-48.61123243 87.18319047-8.18993607 13.47376583-14.79472355 25.09819107-14.79472355 25.8907648 0 1.05676573-3.43448917 6.86897835-7.92574407 13.47376583-4.22706403 6.34059549-7.92574407 12.15280811-7.92574521 12.94538297 0 .52838286-2.90610631 5.54802062-6.07640349 11.09604238-3.43448917 5.28382976-9.24670179 15.05891442-12.94538296 21.6637019s-20.07855331 35.13746773-36.45842546 63.40595599-31.96716942 55.21601991-34.34489288 59.44308394c-2.64191431 4.4912549-8.18993607 14.26634069-12.94538182 21.92789276-4.4912549 7.66155321-8.18993607 14.53053155-8.18993608 15.32310642 0 2.37772345-19.28597845 30.11782883-20.87112704 30.11782884-.79257486 0-4.4912549-6.34059549-8.18993607-13.7379567z"></path><path d="M625.60233813 601.56091278c-15.85148928-10.56765952-31.17459456-21.13531904-33.81651-23.51304135-4.22706403-3.69868117-4.7554469-9.24670179-4.4912549-56.00859477.264192-39.89291463-.264192-52.3099136-3.17029832-54.95182905-1.84934059-1.84934059-21.13531904-13.73795669-43.0632118-26.4191488-21.6637019-12.68119097-41.74225408-25.09819107-44.11997753-27.21172252-4.22706403-3.43448917-4.7554469-9.51089379-4.75544689-50.72476502 0-25.62657394.52838286-47.29027584 1.58514858-48.08284956.79257486-.79257486 8.18993607 2.90610631 16.37987214 8.45412693s25.36238194 15.85148928 37.77938205 22.72046763c12.41700011 7.13317035 43.06321181 25.09819107 67.89721201 40.15710549l45.44093526 27.21172366-.52838286 103.29886948c-.52838286 66.31206229-1.84934059 103.56306147-3.43448918 103.82725347-1.32095773.264192-15.58729728-8.18993607-31.70297856-18.75759559z"></path></svg></div></div> <span class="domain text-slate-600 dark:text-slate-300 text-lg md:text-2xl">CheatSheets<span class="text-emerald-400">.zip</span></span></a><div class="md:ml-auto flex flex-wrap items-center text-base justify-center"> <button id="mysearch-trigger" type="button" class="fadeIn inline-flex h-8 items-center bg-slate-200 dark:bg-gray-900 md:dark:bg-transparent md:bg-transparent rounded-full px-2 md:px-3 lg:px-6 py-2 text-slate-700 md:hover:opacity-80"><div class="md:text-xl text-slate-700 dark:text-slate-300 md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div> <span class="hidden md:inline dark:text-slate-300">Search for cheatsheet</span> <span class="hidden md:inline dark:text-slate-300 md:ml-2 text-sm leading-5 py-0.5 px-1.5 border border-slate-400 rounded-md"><span class="font-sans">⌘</span> <span class="font-sans">K</span></span></button> <a href="https://github.com/Fechin/reference/blob/main/source/_posts/laravel.md" rel="external nofollow noreferrer" target="_blank"><img alt="GitHub Repo stars" style="height:26px;opacity:.8" src="https://img.shields.io/github/stars/Fechin/reference?style=social"></a> <a href="https://twitter.com/FechinLi" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"><div class="md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></div> <span class="hidden md:inline text-sm">Follow Me</span></button></a> <button id="darkMode" class="fadeIn inline-flex items-center justify-center flex-shrink-0 h-8 w-8 rounded-full text-gray-900 ml-1 lg:ml-4 dark:text-gray-300 bg-gray-200 dark:bg-gray-900"> <i class="icon-light text-gray-600 dark:text-gray-300 dark:hover:text-white"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M512 31.40266667c14.19946667 0 26.935296 8.14830933 31.93787733 20.447232l29.40381867 72.50466133c12.713984 31.30436267-4.456448 66.21320533-38.33856 77.96599467A70.34197333 70.34197333 0 0 1 512 206.16533333c-36.19771733 0-65.536-27.11005867-65.536-60.555264 0-7.25265067 1.41994667-14.46161067 4.17245867-21.25550933l29.425664-72.50466133C485.04285867 39.550976 497.75684267 31.40266667 512 31.40266667zm0 961.19466666c-14.221312 0-26.95714133-8.14830933-31.93787733-20.447232l-29.425664-72.50466133a56.492032 56.492032 0 0 1-4.17245867-21.25550933C446.464 844.96657067 475.80228267 817.83466667 512 817.83466667c7.86432 0 15.64125867 1.31072 23.003136 3.84477866 33.882112 11.75278933 51.052544 46.661632 38.33856 77.98784l-29.40381867 72.482816c-5.00258133 12.29892267-17.73841067 20.447232-31.93787733 20.447232zm480.59733333-480.59733333c0 14.19946667-8.14830933 26.935296-20.447232 31.93787733l-72.50466133 29.40381867c-31.30436267 12.713984-66.21320533-4.456448-77.96599467-38.33856A70.34197333 70.34197333 0 0 1 817.83466667 512c0-36.19771733 27.11005867-65.536 60.555264-65.536 7.25265067 0 14.46161067 1.41994667 21.25550933 4.17245867l72.50466133 29.425664c12.29892267 4.980736 20.447232 17.69472 20.447232 31.93787733zM31.40266667 512c0-14.221312 8.14830933-26.95714133 20.447232-31.93787733l72.50466133-29.425664c6.77205333-2.752512 13.98101333-4.17245867 21.25550933-4.17245867C179.03342933 446.464 206.16533333 475.80228267 206.16533333 512c0 7.86432-1.31072 15.64125867-3.84477866 23.003136-11.75278933 33.882112-46.661632 51.052544-77.98784 38.33856l-72.482816-29.40381867C39.550976 538.935296 31.40266667 526.19946667 31.40266667 512zM172.15214933 172.17399467c10.04885333-10.04885333 24.81629867-13.28196267 37.04968534-8.126464l72.06775466 30.45239466c31.1296 13.172736 43.66882133 49.98212267 28.00571734 82.24768a70.34197333 70.34197333 0 0 1-13.54410667 19.00544c-25.58088533 25.58088533-65.49230933 27.15374933-89.12896 3.49525334a56.492032 56.492032 0 0 1-12.10231467-17.97870934L164.04753067 209.22368c-5.177344-12.23338667-1.94423467-27.000832 8.10461866-37.04968533zm679.673856 679.673856c-10.04885333 10.04885333-24.81629867 13.28196267-37.04968533 8.10461866l-72.04590933-30.45239466a56.492032 56.492032 0 0 1-18.00055467-12.08046934c-23.63665067-23.658496-22.06378667-63.56992 3.51709867-89.15080533a70.34197333 70.34197333 0 0 1 19.00544-13.54410667c32.26555733-15.663104 69.074944-3.12388267 82.24768 28.00571734l30.45239466 72.06775466c5.15549867 12.23338667 1.92238933 26.97898667-8.126464 37.04968534zm0-679.69570134c10.04885333 10.04885333 13.28196267 24.81629867 8.126464 37.04968534l-30.45239466 72.06775466c-13.172736 31.1296-49.98212267 43.66882133-82.24768 28.00571734a70.34197333 70.34197333 0 0 1-19.00544-13.54410667c-25.58088533-25.58088533-27.15374933-65.49230933-3.49525334-89.12896 5.111808-5.15549867 11.206656-9.240576 17.97870934-12.10231467l72.04590933-30.45239466c12.23338667-5.177344 27.000832-1.94423467 37.04968533 8.10461866zM172.15214933 851.82600533c-10.04885333-10.04885333-13.28196267-24.81629867-8.10461866-37.04968533l30.45239466-72.04590933c2.83989333-6.77205333 6.946816-12.86690133 12.08046934-18.00055467 23.658496-23.63665067 63.56992-22.06378667 89.15080533 3.51709867 5.57056 5.57056 10.15808 12.01493333 13.54410667 19.00544 15.663104 32.26555733 3.12388267 69.074944-28.00571734 82.24768l-72.06775466 30.45239466c-12.23338667 5.15549867-26.97898667 1.92238933-37.04968534-8.126464zM512 752.29866667c-132.7104 0-240.29866667-107.58826667-240.29866667-240.29866667s107.58826667-240.29866667 240.29866667-240.29866667 240.29866667 107.58826667 240.29866667 240.29866667-107.58826667 240.29866667-240.29866667 240.29866667z"></path></svg></i></button> <a href="https://facebook.com/sharer/sharer.php?u=https://cheatsheets.zip/laravel.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4a66ad] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M594.74346667 51.53066667c-28.95893333 0-56.30826667 3.2192-88.48533334 16.0896-65.9616 27.34826667-98.13653333 88.48533333-98.13653333 186.6208v94.91946666h-91.70026667v157.66186667h91.70026667v455.28853333h186.6208v-455.28853333h127.09546667l17.696-157.66186667h-144.7936v-70.7872c0-22.52266667 1.60853333-38.61013333 8.04266666-46.65706666 8.04266667-14.47786667 24.13226667-20.91413333 49.872-20.91413334h85.26613334v-157.66186666h-143.184z"></path></svg></span> <span class="hidden">Facebook</span></button></a> <a href="https://twitter.com/intent/tweet/?text=Laravel%20is%20an%20expressive%20and%20progressive%20web%20application%20framework%20for%20PHP.%20This%20cheat%20sheet%20provides%20a%20refere&url=https://cheatsheets.zip/laravel.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></span> <span class="hidden">Twitter</span></button></a></div></div></div></header><div class="mx-auto flex flex-wrap md:py-5 flex-col md:flex-row items-center"><div class="flex flex-col w-full mx-auto text-center my-8"><div class="max-container w-full"><h1 class="text-5xl mb-4"> <span class="text-slate-700 dark:text-slate-300 font-light">Laravel</span> <span class="text-slate-400 dark:text-slate-500 font-extralight hidden md:inline">cheatsheet</span></h1><div class="lg:w-3/5 mx-auto intro leading-relaxed text-slate-600"><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://laravel.com/docs/8.x/">Laravel</a> is an expressive and progressive web application framework for PHP. This cheat sheet provides a reference for common commands and features for Laravel 8.</p></div></div></div><div id="mdLayout" class="mdLayout w-full max-container"> 
+        <div class="h2-wrap">
+<h2 id="getting-started"><a class="h-anchor" href="#getting-started">#</a>Getting Started</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap row-span-2">
+<h3 id="requirements"><a class="h-anchor" href="#requirements">#</a>Requirements</h3>
+<div class="section">
+<ul>
+<li>PHP version &gt;= 7.3</li>
+<li>BCMath PHP Extension</li>
+<li>Ctype PHP Extension</li>
+<li>Fileinfo PHP Extension</li>
+<li>JSON PHP Extension</li>
+<li>Mbstring PHP Extension</li>
+<li>OpenSSL PHP Extension</li>
+<li>PDO PHP Extension</li>
+<li>Tokenizer PHP Extension</li>
+<li>XML PHP Extension</li>
+</ul>
+<p>Ensure your web server directs all requests to your application's
+<code>public/index.php</code> file, See: <a href="#deployment">Deployment</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="windows"><a class="h-anchor" href="#windows">#</a>Windows</h3>
+<div class="section">
+<ul class="marker-timeline">
+<li>
+<h4 id="install-docker-desktop"><a class="h-anchor" href="#install-docker-desktop">#</a>Install <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.docker.com/products/docker-desktop">Docker Desktop</a></h4>
+</li>
+<li>
+<h4 id="install-enable-wsl2"><a class="h-anchor" href="#install-enable-wsl2">#</a>Install &amp; enable <a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.microsoft.com/en-us/windows/wsl/install">WSL2</a></h4>
+</li>
+<li>
+<h4 id="ensure-that-docker-desktop-is-configured-to-use-wsl2"><a class="h-anchor" href="#ensure-that-docker-desktop-is-configured-to-use-wsl2">#</a>Ensure that Docker Desktop is <a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.docker.com/desktop/windows/wsl/">configured to use WSL2</a></h4>
+</li>
+<li>
+<h4 id="in-wsl2-terminal"><a class="h-anchor" href="#in-wsl2-terminal">#</a>In WSL2 terminal:</h4>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">curl -s https://laravel.build/example-app | bash</span>
+<span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">cd</span> example-app</span>
+<span class="hljs-meta prompt_">$ </span><span class="language-bash">./vendor/bin/sail up</span>
+</code></pre>
+</li>
+</ul>
+<p>Access application via <code>http://localhost</code></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="mac"><a class="h-anchor" href="#mac">#</a>Mac</h3>
+<div class="section">
+<ul class="marker-timeline">
+<li>
+<h4 id="install-docker-desktop-2"><a class="h-anchor" href="#install-docker-desktop-2">#</a>Install <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.docker.com/products/docker-desktop">Docker Desktop</a></h4>
+</li>
+<li>
+<h4 id="in-terminal"><a class="h-anchor" href="#in-terminal">#</a>In terminal:</h4>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">curl -s https://laravel.build/example-app | bash</span>
+<span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">cd</span> example-app</span>
+<span class="hljs-meta prompt_">$ </span><span class="language-bash">./vendor/bin/sail up</span>
+</code></pre>
+</li>
+</ul>
+<p>Access application via <code>http://localhost</code></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="linux"><a class="h-anchor" href="#linux">#</a>Linux</h3>
+<div class="section">
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">curl -s https://laravel.build/example-app | bash</span>
+<span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">cd</span> example-app</span>
+<span class="hljs-meta prompt_">$ </span><span class="language-bash">./vendor/bin/sail up</span>
+</code></pre>
+<p>Installation via <a target="_blank" rel="noopener external nofollow noreferrer" href="https://getcomposer.org">Composer</a></p>
+<pre><code class="hljs language-bash">$ composer create-project laravel/laravel example-app
+$ <span class="hljs-built_in">cd</span> example-app
+$ php artisan serve
+</code></pre>
+<p>Access application via <code>http://localhost</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="configuration"><a class="h-anchor" href="#configuration">#</a>Configuration</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap cols-2">
+<h3 id="env"><a class="h-anchor" href="#env">#</a>.env</h3>
+<div class="section">
+<p>Retrieve values from <code>.env</code> file</p>
+<pre><code class="hljs language-php"><span class="hljs-title function_ invoke__">env</span>(<span class="hljs-string">&#x27;APP_DEBUG&#x27;</span>);
+
+<span class="hljs-comment">// with default value</span>
+<span class="hljs-title function_ invoke__">env</span>(<span class="hljs-string">&#x27;APP_DEBUG&#x27;</span>, <span class="hljs-literal">false</span>);
+</code></pre>
+<p>Determine current environment</p>
+<pre><code class="hljs language-php"><span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Support</span>\<span class="hljs-title">Facades</span>\<span class="hljs-title">App</span>;
+
+<span class="hljs-variable">$environment</span> = <span class="hljs-title class_">App</span>::<span class="hljs-title function_ invoke__">environment</span>();
+</code></pre>
+<p>Accessing configuration values using &quot;dot&quot; syntax</p>
+<pre><code class="hljs language-php"><span class="hljs-comment">// config/app.php --&gt; [&#x27;timezone&#x27; =&gt; &#x27;&#x27;]</span>
+<span class="hljs-variable">$value</span> = <span class="hljs-title function_ invoke__">config</span>(<span class="hljs-string">&#x27;app.timezone&#x27;</span>);
+
+<span class="hljs-comment">// Retrieve a default value if the configuration value does not exist...</span>
+<span class="hljs-variable">$value</span> = <span class="hljs-title function_ invoke__">config</span>(<span class="hljs-string">&#x27;app.timezone&#x27;</span>, <span class="hljs-string">&#x27;Asia/Seoul&#x27;</span>);
+</code></pre>
+<p>Set configuration values at runtime:</p>
+<pre><code class="hljs language-php"><span class="hljs-title function_ invoke__">config</span>([<span class="hljs-string">&#x27;app.timezone&#x27;</span> =&gt; <span class="hljs-string">&#x27;America/Chicago&#x27;</span>]);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="debug-mode"><a class="h-anchor" href="#debug-mode">#</a>Debug Mode</h3>
+<div class="section">
+<p>Turn on (local dev):</p>
+<pre><code class="hljs language-php"><span class="hljs-comment">// .env file</span>
+APP_ENV=local
+APP_DEBUG=<span class="hljs-literal">true</span>
+<span class="hljs-comment">// ...</span>
+</code></pre>
+<p>Turn off (production):</p>
+<pre><code class="hljs language-php"><span class="hljs-comment">// .env file</span>
+APP_ENV=production
+APP_DEBUG=<span class="hljs-literal">false</span>
+<span class="hljs-comment">// ...</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="maintenance-mode"><a class="h-anchor" href="#maintenance-mode">#</a>Maintenance Mode</h3>
+<div class="section">
+<p>Temporarily disable application (503 status code)</p>
+<pre><code class="hljs language-bash">php artisan down
+</code></pre>
+<h4 id="disable-maintenance-mode"><a class="h-anchor" href="#disable-maintenance-mode">#</a>Disable maintenance mode</h4>
+<pre><code class="hljs language-bash">php artisan up
+</code></pre>
+<h4 id="bypass-maintenance-mode"><a class="h-anchor" href="#bypass-maintenance-mode">#</a>Bypass Maintenance Mode</h4>
+<pre><code class="hljs language-bash">php artisan down --secret=<span class="hljs-string">&quot;1630542a-246b-4b66-afa1-dd72a4c43515&quot;</span>
+</code></pre>
+<p>Visit your application URL <code>https://example.com/1630542a-246b-4b66-afa1-dd72a4c43515</code> to set a cookie and bypass the maintenance screen</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="routing"><a class="h-anchor" href="#routing">#</a>Routing</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap row-span-2">
+<h3 id="router-http-methods"><a class="h-anchor" href="#router-http-methods">#</a>Router HTTP Methods</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-variable">$uri</span>, <span class="hljs-variable">$callback</span>);
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">post</span>(<span class="hljs-variable">$uri</span>, <span class="hljs-variable">$callback</span>);
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">put</span>(<span class="hljs-variable">$uri</span>, <span class="hljs-variable">$callback</span>);
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">patch</span>(<span class="hljs-variable">$uri</span>, <span class="hljs-variable">$callback</span>);
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">delete</span>(<span class="hljs-variable">$uri</span>, <span class="hljs-variable">$callback</span>);
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">options</span>(<span class="hljs-variable">$uri</span>, <span class="hljs-variable">$callback</span>);
+</code></pre>
+<p>Multiple HTTP methods</p>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-keyword">match</span>([<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;post&#x27;</span>], <span class="hljs-string">&#x27;/&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;
+    <span class="hljs-comment">//</span>
+&#125;);
+
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">any</span>(<span class="hljs-string">&#x27;/&#x27;</span>, function () &#123;
+    <span class="hljs-comment">//</span>
+&#125;);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="basic-definition"><a class="h-anchor" href="#basic-definition">#</a>Basic Definition</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Support</span>\<span class="hljs-title">Facades</span>\<span class="hljs-title">Route</span>;
+
+<span class="hljs-comment">// closure</span>
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/greeting&#x27;</span>, function () &#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Hello World&#x27;</span>;
+&#125;);
+
+<span class="hljs-comment">// controller action</span>
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(
+    <span class="hljs-string">&#x27;/user/profile&#x27;</span>,
+    [<span class="hljs-title class_">UserProfileController</span>::<span class="hljs-variable language_">class</span>, <span class="hljs-string">&#x27;show&#x27;</span>]
+);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="dependency-injection"><a class="h-anchor" href="#dependency-injection">#</a>Dependency Injection</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Request</span>;
+
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/users&#x27;</span>, function (Request <span class="hljs-variable">$request</span>) &#123;
+    <span class="hljs-comment">// ...</span>
+&#125;);
+</code></pre>
+<p>Type hint concrete dependencies for auto-injection</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="view-routes"><a class="h-anchor" href="#view-routes">#</a>View Routes</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-comment">// Argument 1: URI, Argument 2: view name</span>
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">view</span>(<span class="hljs-string">&#x27;/welcome&#x27;</span>, <span class="hljs-string">&#x27;welcome&#x27;</span>);
+
+<span class="hljs-comment">// with data</span>
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">view</span>(<span class="hljs-string">&#x27;/welcome&#x27;</span>, <span class="hljs-string">&#x27;welcome&#x27;</span>, [<span class="hljs-string">&#x27;name&#x27;</span> =&gt; <span class="hljs-string">&#x27;Taylor&#x27;</span>]);
+</code></pre>
+<p>Route only needs to return a view.</p>
+</div>
+</div>
+<div class="h3-wrap row-span-4">
+<h3 id="route-model-binding"><a class="h-anchor" href="#route-model-binding">#</a>Route Model Binding</h3>
+<div class="section">
+<h4 id="implicit-binding"><a class="h-anchor" href="#implicit-binding">#</a>Implicit binding</h4>
+<p>With closure</p>
+<pre><code class="hljs language-php"><span class="hljs-keyword">use</span> <span class="hljs-title">App</span>\<span class="hljs-title">Models</span>\<span class="hljs-title">User</span>;
+
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/users/&#123;user&#125;&#x27;</span>, function (User <span class="hljs-variable">$user</span>) &#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$user</span>-&gt;email;
+&#125;);
+
+<span class="hljs-comment">// /user/1 --&gt; User::where(&#x27;id&#x27;, &#x27;=&#x27;, 1);</span>
+</code></pre>
+<p>With controller action</p>
+<pre><code class="hljs language-php"><span class="hljs-keyword">use</span> <span class="hljs-title">App</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Controllers</span>\<span class="hljs-title">UserController</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">App</span>\<span class="hljs-title">Models</span>\<span class="hljs-title">User</span>;
+
+<span class="hljs-comment">// Route definition...</span>
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/users/&#123;user&#125;&#x27;</span>, [<span class="hljs-title class_">UserController</span>::<span class="hljs-variable language_">class</span>, <span class="hljs-string">&#x27;show&#x27;</span>]);
+
+<span class="hljs-comment">// Controller method definition...</span>
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">show</span>(<span class="hljs-params">User <span class="hljs-variable">$user</span></span>)
+</span>&#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_ invoke__">view</span>(<span class="hljs-string">&#x27;user.profile&#x27;</span>, [<span class="hljs-string">&#x27;user&#x27;</span> =&gt; <span class="hljs-variable">$user</span>]);
+&#125;
+</code></pre>
+<p>With custom resolution column</p>
+<pre><code class="hljs language-php"><span class="hljs-keyword">use</span> <span class="hljs-title">App</span>\<span class="hljs-title">Models</span>\<span class="hljs-title">Post</span>;
+
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/posts/&#123;post:slug&#125;&#x27;</span>, function (Post <span class="hljs-variable">$post</span>) &#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$post</span>;
+&#125;);
+
+<span class="hljs-comment">// /posts/my-post --&gt; Post::where(&#x27;slug&#x27;, &#x27;=&#x27;, &#x27;my-post&#x27;);</span>
+</code></pre>
+<p>Always use a different column to resolve</p>
+<pre><code class="hljs language-php"><span class="hljs-comment">// in App\Models\Post</span>
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getRouteKeyName</span>(<span class="hljs-params"></span>)
+</span>&#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;slug&#x27;</span>;
+&#125;
+</code></pre>
+<p>Multiple models - second is child of first</p>
+<pre><code class="hljs language-php"><span class="hljs-keyword">use</span> <span class="hljs-title">App</span>\<span class="hljs-title">Models</span>\<span class="hljs-title">Post</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">App</span>\<span class="hljs-title">Models</span>\<span class="hljs-title">User</span>;
+
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/users/&#123;user&#125;/posts/&#123;post:slug&#125;&#x27;</span>, function (User <span class="hljs-variable">$user</span>, Post <span class="hljs-variable">$post</span>) &#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$post</span>;
+&#125;);
+</code></pre>
+<p>Convenient way to automatically inject the model instances directly into your routes</p>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="route-parameters"><a class="h-anchor" href="#route-parameters">#</a>Route Parameters</h3>
+<div class="section">
+<p>Capture segments of the URI within your route</p>
+<h4 id="required-parameters"><a class="h-anchor" href="#required-parameters">#</a>Required parameters</h4>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/user/&#123;id&#125;&#x27;</span>, function (<span class="hljs-variable">$id</span>) &#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;User &#x27;</span>.<span class="hljs-variable">$id</span>;
+&#125;);
+</code></pre>
+<p>With dependency injection</p>
+<pre><code class="hljs language-php"><span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Request</span>;
+
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/user/&#123;id&#125;&#x27;</span>, function (Request <span class="hljs-variable">$request</span>, <span class="hljs-variable">$id</span>) &#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;User &#x27;</span>.<span class="hljs-variable">$id</span>;
+&#125;);
+</code></pre>
+<h4 id="optional-parameters"><a class="h-anchor" href="#optional-parameters">#</a>Optional Parameters</h4>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/user/&#123;name?&#125;&#x27;</span>, function (<span class="hljs-variable">$name</span> = <span class="hljs-literal">null</span>) &#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$name</span>;
+&#125;);
+
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/user/&#123;name?&#125;&#x27;</span>, function (<span class="hljs-variable">$name</span> = <span class="hljs-string">&#x27;John&#x27;</span>) &#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-variable">$name</span>;
+&#125;);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="redirect-routes"><a class="h-anchor" href="#redirect-routes">#</a>Redirect Routes</h3>
+<div class="section">
+<p>HTTP <code>302</code> status</p>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">redirect</span>(<span class="hljs-string">&#x27;/here&#x27;</span>, <span class="hljs-string">&#x27;/there&#x27;</span>);
+</code></pre>
+<p>Set the status code</p>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">redirect</span>(<span class="hljs-string">&#x27;/here&#x27;</span>, <span class="hljs-string">&#x27;/there&#x27;</span>, <span class="hljs-number">301</span>);
+</code></pre>
+<p>Permanent <code>301</code> redirect</p>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">permanentRedirect</span>(<span class="hljs-string">&#x27;/here&#x27;</span>, <span class="hljs-string">&#x27;/there&#x27;</span>);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap cols-2">
+<h3 id="regular-expression-constraints"><a class="h-anchor" href="#regular-expression-constraints">#</a>Regular Expression Constraints</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/user/&#123;name&#125;&#x27;</span>, function (<span class="hljs-variable">$name</span>) &#123;
+    <span class="hljs-comment">//</span>
+&#125;)-&gt;<span class="hljs-title function_ invoke__">where</span>(<span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;[A-Za-z]+&#x27;</span>);
+
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/user/&#123;id&#125;&#x27;</span>, function (<span class="hljs-variable">$id</span>) &#123;
+    <span class="hljs-comment">//</span>
+&#125;)-&gt;<span class="hljs-title function_ invoke__">where</span>(<span class="hljs-string">&#x27;id&#x27;</span>, <span class="hljs-string">&#x27;[0-9]+&#x27;</span>);
+
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/user/&#123;id&#125;/&#123;name&#125;&#x27;</span>, function (<span class="hljs-variable">$id</span>, <span class="hljs-variable">$name</span>) &#123;
+    <span class="hljs-comment">//</span>
+&#125;)-&gt;<span class="hljs-title function_ invoke__">where</span>([<span class="hljs-string">&#x27;id&#x27;</span> =&gt; <span class="hljs-string">&#x27;[0-9]+&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span> =&gt; <span class="hljs-string">&#x27;[a-z]+&#x27;</span>]);
+</code></pre>
+<p>See also: <a href="/regex">Regex Cheatsheet</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="named-routes"><a class="h-anchor" href="#named-routes">#</a>Named Routes</h3>
+<div class="section">
+<p>Route names should always be unique</p>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/user/profile&#x27;</span>, function () &#123;
+    <span class="hljs-comment">//</span>
+&#125;)-&gt;<span class="hljs-title function_ invoke__">name</span>(<span class="hljs-string">&#x27;profile&#x27;</span>);
+</code></pre>
+<p>See: <a href="#helpers-cols-3">Helpers</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="fallback-routes"><a class="h-anchor" href="#fallback-routes">#</a>Fallback Routes</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">fallback</span>(function () &#123;
+    <span class="hljs-comment">//</span>
+&#125;);
+</code></pre>
+<p>Executed when no other routes match</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="route-groups"><a class="h-anchor" href="#route-groups">#</a>Route Groups</h3>
+<div class="section">
+<h4 id="middleware"><a class="h-anchor" href="#middleware">#</a>Middleware</h4>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">middleware</span>([<span class="hljs-string">&#x27;first&#x27;</span>, <span class="hljs-string">&#x27;second&#x27;</span>])-&gt;<span class="hljs-title function_ invoke__">group</span>(function () &#123;
+    <span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/&#x27;</span>, function () &#123;
+        <span class="hljs-comment">// Uses first &amp; second middleware...</span>
+    &#125;);
+
+    <span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/user/profile&#x27;</span>, function () &#123;
+        <span class="hljs-comment">// Uses first &amp; second middleware...</span>
+    &#125;);
+&#125;);
+</code></pre>
+<h4 id="uri-prefixes"><a class="h-anchor" href="#uri-prefixes">#</a>URI Prefixes</h4>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">prefix</span>(<span class="hljs-string">&#x27;admin&#x27;</span>)-&gt;<span class="hljs-title function_ invoke__">group</span>(function () &#123;
+    <span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/users&#x27;</span>, function () &#123;
+        <span class="hljs-comment">// Matches The &quot;/admin/users&quot; URL</span>
+    &#125;);
+&#125;);
+</code></pre>
+<h4 id="name-prefix"><a class="h-anchor" href="#name-prefix">#</a>Name Prefix</h4>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">name</span>(<span class="hljs-string">&#x27;admin.&#x27;</span>)-&gt;<span class="hljs-title function_ invoke__">group</span>(function () &#123;
+    <span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/users&#x27;</span>, function () &#123;
+        <span class="hljs-comment">// Route assigned name &quot;admin.users&quot;...</span>
+    &#125;)-&gt;<span class="hljs-title function_ invoke__">name</span>(<span class="hljs-string">&#x27;users&#x27;</span>);
+&#125;);
+</code></pre>
+<p>Share attributes across routes</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="accessing-current-route"><a class="h-anchor" href="#accessing-current-route">#</a>Accessing current route</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Support</span>\<span class="hljs-title">Facades</span>\<span class="hljs-title">Route</span>;
+
+<span class="hljs-comment">// Illuminate\Routing\Route</span>
+<span class="hljs-variable">$route</span> = <span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">current</span>();
+
+<span class="hljs-comment">// string</span>
+<span class="hljs-variable">$name</span> = <span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">currentRouteName</span>();
+
+<span class="hljs-comment">// string</span>
+<span class="hljs-variable">$action</span> = <span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">currentRouteAction</span>();
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="helpers"><a class="h-anchor" href="#helpers">#</a>Helpers</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap row-span-2">
+<h3 id="routes"><a class="h-anchor" href="#routes">#</a>routes</h3>
+<div class="section">
+<h4 id="named-route"><a class="h-anchor" href="#named-route">#</a>Named route</h4>
+<pre><code class="hljs language-php"><span class="hljs-variable">$url</span> = <span class="hljs-title function_ invoke__">route</span>(<span class="hljs-string">&#x27;profile&#x27;</span>);
+</code></pre>
+<p>With parameters</p>
+<pre><code class="hljs language-php"><span class="hljs-comment">// Route::get(&#x27;/user/&#123;id&#125;/profile&#x27;, /*...*/ )-&gt;name(&#x27;profile);</span>
+
+<span class="hljs-variable">$url</span> = <span class="hljs-title function_ invoke__">route</span>(<span class="hljs-string">&#x27;profile&#x27;</span>, [<span class="hljs-string">&#x27;id&#x27;</span> =&gt; <span class="hljs-number">1</span>]);
+
+<span class="hljs-comment">// /user/1/profile/</span>
+</code></pre>
+<p>With query string</p>
+<pre><code class="hljs language-php"><span class="hljs-comment">// Route::get(&#x27;/user/&#123;id&#125;/profile&#x27;, /*...*/ )-&gt;name(&#x27;profile);</span>
+
+<span class="hljs-variable">$url</span> = <span class="hljs-title function_ invoke__">route</span>(<span class="hljs-string">&#x27;profile&#x27;</span>, [<span class="hljs-string">&#x27;id&#x27;</span> =&gt; <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;photos&#x27;</span>=&gt;<span class="hljs-string">&#x27;yes&#x27;</span>]);
+
+<span class="hljs-comment">// /user/1/profile?photos=yes</span>
+</code></pre>
+<h4 id="redirects"><a class="h-anchor" href="#redirects">#</a>Redirects</h4>
+<pre><code class="hljs language-php"><span class="hljs-comment">// Generating Redirects...</span>
+<span class="hljs-keyword">return</span> <span class="hljs-title function_ invoke__">redirect</span>()-&gt;<span class="hljs-title function_ invoke__">route</span>(<span class="hljs-string">&#x27;profile&#x27;</span>);
+</code></pre>
+<h4 id="eloquent-models"><a class="h-anchor" href="#eloquent-models">#</a>Eloquent Models</h4>
+<pre><code class="hljs language-php"><span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">route</span>(<span class="hljs-string">&#x27;post.show&#x27;</span>, [<span class="hljs-string">&#x27;post&#x27;</span> =&gt; <span class="hljs-variable">$post</span>]);
+</code></pre>
+<p>The route helper will automatically extract the model's route key.
+See <a href="#routing-cols-4">Routing</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="url-generation"><a class="h-anchor" href="#url-generation">#</a>URL Generation</h3>
+<div class="section">
+<p>Generate arbitrary URLs for your application that will
+automatically use the scheme (HTTP or HTTPS) and host
+from the current request</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$post</span> = <span class="hljs-title class_">App\Models\Post</span>::<span class="hljs-title function_ invoke__">find</span>(<span class="hljs-number">1</span>);
+
+<span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">url</span>(<span class="hljs-string">&quot;/posts/<span class="hljs-subst">&#123;$post-&gt;id&#125;</span>&quot;</span>);
+
+<span class="hljs-comment">// http://example.com/posts/1</span>
+</code></pre>
+<h4 id="current-url"><a class="h-anchor" href="#current-url">#</a>Current URL</h4>
+<pre><code class="hljs language-php"><span class="hljs-comment">// Get the current URL without the query string...</span>
+<span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">url</span>()-&gt;<span class="hljs-title function_ invoke__">current</span>();
+
+<span class="hljs-comment">// Get the current URL including the query string...</span>
+<span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">url</span>()-&gt;<span class="hljs-title function_ invoke__">full</span>();
+
+<span class="hljs-comment">// Get the full URL for the previous request...</span>
+<span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">url</span>()-&gt;<span class="hljs-title function_ invoke__">previous</span>();
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="named-route-url"><a class="h-anchor" href="#named-route-url">#</a>Named Route URL</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-variable">$url</span> = <span class="hljs-title function_ invoke__">route</span>(<span class="hljs-string">&#x27;profile&#x27;</span>);
+</code></pre>
+<p>See <a href="#named-route">Named Route</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="error-handling"><a class="h-anchor" href="#error-handling">#</a>Error Handling</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isValid</span>(<span class="hljs-params"><span class="hljs-variable">$value</span></span>)
+</span>&#123;
+    <span class="hljs-keyword">try</span> &#123;
+        <span class="hljs-comment">// Validate the value...</span>
+    &#125; <span class="hljs-keyword">catch</span> (<span class="hljs-built_in">Throwable</span> <span class="hljs-variable">$e</span>) &#123;
+        <span class="hljs-title function_ invoke__">report</span>(<span class="hljs-variable">$e</span>);
+
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    &#125;
+&#125;
+</code></pre>
+<p>Report an exception but continue handling the current request</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="http-exceptions"><a class="h-anchor" href="#http-exceptions">#</a>HTTP Exceptions</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-comment">// page not found</span>
+<span class="hljs-title function_ invoke__">abort</span>(<span class="hljs-number">404</span>);
+</code></pre>
+<p>Generate an HTTP exception response using status code</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="controllers"><a class="h-anchor" href="#controllers">#</a>Controllers</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="basic"><a class="h-anchor" href="#basic">#</a>Basic</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-keyword">namespace</span> <span class="hljs-title class_">App</span>\<span class="hljs-title class_">Http</span>\<span class="hljs-title class_">Controllers</span>;
+
+<span class="hljs-keyword">use</span> <span class="hljs-title">App</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Controllers</span>\<span class="hljs-title">Controller</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">App</span>\<span class="hljs-title">Models</span>\<span class="hljs-title">User</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserController</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Controller</span>
+</span>&#123;
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">show</span>(<span class="hljs-params"><span class="hljs-variable">$id</span></span>)
+    </span>&#123;
+        <span class="hljs-keyword">return</span> <span class="hljs-title function_ invoke__">view</span>(<span class="hljs-string">&#x27;user.profile&#x27;</span>, [
+            <span class="hljs-string">&#x27;user&#x27;</span> =&gt; <span class="hljs-title class_">User</span>::<span class="hljs-title function_ invoke__">findOrFail</span>(<span class="hljs-variable">$id</span>)
+        ]);
+    &#125;
+&#125;
+</code></pre>
+<p>Define a route for this controller method:</p>
+<pre><code class="hljs language-php"><span class="hljs-keyword">use</span> <span class="hljs-title">App</span>\<span class="hljs-title">Http</span>\<span class="hljs-title">Controllers</span>\<span class="hljs-title">UserController</span>;
+
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/user/&#123;id&#125;&#x27;</span>, [<span class="hljs-title class_">UserController</span>::<span class="hljs-variable language_">class</span>, <span class="hljs-string">&#x27;show&#x27;</span>]);
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="requests"><a class="h-anchor" href="#requests">#</a>Requests</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="csrf-protection"><a class="h-anchor" href="#csrf-protection">#</a>CSRF Protection</h3>
+<div class="section">
+<p>Laravel automatically generates a CSRF &quot;token&quot; for each active user session.<br>
+This token is used to verify that the authenticated user is the person actually making the requests.</p>
+<p>Get current session's token:</p>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/token&#x27;</span>, function (Request <span class="hljs-variable">$request</span>) &#123;
+    <span class="hljs-variable">$token</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">session</span>()-&gt;<span class="hljs-title function_ invoke__">token</span>();
+
+    <span class="hljs-variable">$token</span> = <span class="hljs-title function_ invoke__">csrf_token</span>();
+
+    <span class="hljs-comment">// ...</span>
+&#125;);
+</code></pre>
+<p><code>POST</code>, <code>PUT</code>, <code>PATCH</code>, or <code>DELETE</code> forms should include a hidden CSRF <code>_token</code> field
+in the form to validate the request.</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;POST&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/profile&quot;</span>&gt;</span>
+    @csrf
+
+    <span class="hljs-comment">&lt;!-- Equivalent to... --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;hidden&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;_token&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#123;&#123; csrf_token() &#125;&#125;&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<p>See <a href="#forms-cols-3">Forms</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="accessing-request"><a class="h-anchor" href="#accessing-request">#</a>Accessing Request</h3>
+<div class="section">
+<p>Get an instance of the current request by type-hinting the
+controller action or route closure</p>
+<pre><code class="hljs language-php"><span class="hljs-comment">// controller action</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserController</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Controller</span>
+</span>&#123;
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">store</span>(<span class="hljs-params">Request <span class="hljs-variable">$request</span></span>)
+    </span>&#123;
+        <span class="hljs-variable">$name</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">input</span>(<span class="hljs-string">&#x27;name&#x27;</span>);
+    &#125;
+&#125;
+
+<span class="hljs-comment">// closure</span>
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/&#x27;</span>, function (Request <span class="hljs-variable">$request</span>) &#123;
+    <span class="hljs-comment">//</span>
+&#125;);
+</code></pre>
+<p><a href="#routing">See Routing</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="path"><a class="h-anchor" href="#path">#</a>Path</h3>
+<div class="section">
+<p>The request's path information</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$uri</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">path</span>();
+
+<span class="hljs-comment">// https://example.com/foo/bar --&gt; foo/bar</span>
+</code></pre>
+<h4 id="match-path-to-pattern"><a class="h-anchor" href="#match-path-to-pattern">#</a>Match path to pattern</h4>
+<p>Verify that the incoming request path matches a given pattern</p>
+<pre><code class="hljs language-php"><span class="hljs-comment">// * is wildcard</span>
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">is</span>(<span class="hljs-string">&#x27;admin/*&#x27;</span>)) &#123;
+    <span class="hljs-comment">//</span>
+&#125;
+</code></pre>
+<p>Determine if the incoming request matches a named route</p>
+<pre><code class="hljs language-php"><span class="hljs-keyword">if</span> (<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">routeIs</span>(<span class="hljs-string">&#x27;admin.*&#x27;</span>)) &#123;
+    <span class="hljs-comment">//</span>
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="url"><a class="h-anchor" href="#url">#</a>URL</h3>
+<div class="section">
+<p>Full URL for the incoming request</p>
+<pre><code class="hljs language-php"><span class="hljs-comment">// URL without the query string</span>
+<span class="hljs-variable">$url</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">url</span>();
+
+<span class="hljs-comment">// URL including query string</span>
+<span class="hljs-variable">$urlWithQueryString</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">fullUrl</span>();
+
+<span class="hljs-comment">// append data to query string</span>
+<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">fullUrlWithQuery</span>([<span class="hljs-string">&#x27;type&#x27;</span> =&gt; <span class="hljs-string">&#x27;phone&#x27;</span>]);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="request-method"><a class="h-anchor" href="#request-method">#</a>Request Method</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-variable">$method</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">method</span>();
+
+<span class="hljs-comment">// verify that the HTTP verb matches a given string</span>
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">isMethod</span>(<span class="hljs-string">&#x27;post&#x27;</span>)) &#123;
+    <span class="hljs-comment">//</span>
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="client-ip"><a class="h-anchor" href="#client-ip">#</a>Client IP</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-variable">$ipAddress</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">ip</span>();
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="headers"><a class="h-anchor" href="#headers">#</a>Headers</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-variable">$value</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">header</span>(<span class="hljs-string">&#x27;X-Header-Name&#x27;</span>);
+
+<span class="hljs-variable">$value</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">header</span>(<span class="hljs-string">&#x27;X-Header-Name&#x27;</span>, <span class="hljs-string">&#x27;default value&#x27;</span>);
+
+<span class="hljs-comment">// determine if the request contains a given header</span>
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">hasHeader</span>(<span class="hljs-string">&#x27;X-Header-Name&#x27;</span>)) &#123;
+    <span class="hljs-comment">//</span>
+&#125;
+
+<span class="hljs-comment">// retrieve a bearer token from the Authorization header</span>
+<span class="hljs-variable">$token</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">bearerToken</span>();
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="content-type"><a class="h-anchor" href="#content-type">#</a>Content Type</h3>
+<div class="section">
+<p>Return an array containing all the content types accepted by the request</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$contentTypes</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">getAcceptableContentTypes</span>();
+</code></pre>
+<p>Boolean check for content types are accepted by the request</p>
+<pre><code class="hljs language-php"><span class="hljs-keyword">if</span> (<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">accepts</span>([<span class="hljs-string">&#x27;text/html&#x27;</span>, <span class="hljs-string">&#x27;application/json&#x27;</span>])) &#123;
+    <span class="hljs-comment">// ...</span>
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-4">
+<h3 id="input"><a class="h-anchor" href="#input">#</a>Input</h3>
+<div class="section">
+<p>Retrieve all the incoming request's input data as an array</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$input</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">all</span>();
+</code></pre>
+<p>Retrieve all the incoming request's input data as a collection</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$input</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">collect</span>();
+
+<span class="hljs-comment">// retrieve subset as collection</span>
+<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">collect</span>(<span class="hljs-string">&#x27;users&#x27;</span>)-&gt;<span class="hljs-title function_ invoke__">each</span>(function (<span class="hljs-variable">$user</span>) &#123;
+    <span class="hljs-comment">// ...</span>
+&#125;);
+</code></pre>
+<p>See <a href="#helpers-cols-3">Helpers</a></p>
+<p>Retrieve user input (also gets values from query string)</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$name</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">input</span>(<span class="hljs-string">&#x27;name&#x27;</span>);
+
+<span class="hljs-comment">// with default value if none present</span>
+<span class="hljs-variable">$name</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">input</span>(<span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;Sally&#x27;</span>);
+</code></pre>
+<p>Access array inputs</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$name</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">input</span>(<span class="hljs-string">&#x27;products.0.name&#x27;</span>);
+
+<span class="hljs-variable">$names</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">input</span>(<span class="hljs-string">&#x27;products.*.name&#x27;</span>);
+</code></pre>
+<p>Retrieve all the input values as an associative array:</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$input</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">input</span>();
+</code></pre>
+<p>Only retrieve values from the query string:</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$name</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">query</span>(<span class="hljs-string">&#x27;name&#x27;</span>);
+
+<span class="hljs-comment">// with default value</span>
+<span class="hljs-variable">$name</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">query</span>(<span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;Helen&#x27;</span>);
+</code></pre>
+<p>Retrieve all the query string values as an associative array:</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$query</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">query</span>();
+</code></pre>
+<h4 id="boolean-input-values"><a class="h-anchor" href="#boolean-input-values">#</a>Boolean Input Values</h4>
+<p>Helpful for checkbox inputs or other booleans.
+Return <code>true</code> for <code>1</code>, <code>&quot;1&quot;</code>, <code>true</code>, <code>&quot;true&quot;</code>, <code>&quot;on&quot;</code>, and <code>&quot;yes&quot;</code>.<br>
+All other values will return <code>false</code></p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$archived</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-keyword">boolean</span>(<span class="hljs-string">&#x27;archived&#x27;</span>);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="dynamic-properties"><a class="h-anchor" href="#dynamic-properties">#</a>Dynamic Properties</h3>
+<div class="section">
+<p>Access inputs via properties.<br>
+If not found as an input, the route parameters will be checked.</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$name</span> = <span class="hljs-variable">$request</span>-&gt;name;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="retrieve-partial-input"><a class="h-anchor" href="#retrieve-partial-input">#</a>Retrieve Partial Input</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-variable">$input</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">only</span>([<span class="hljs-string">&#x27;username&#x27;</span>, <span class="hljs-string">&#x27;password&#x27;</span>]);
+
+<span class="hljs-variable">$input</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">only</span>(<span class="hljs-string">&#x27;username&#x27;</span>, <span class="hljs-string">&#x27;password&#x27;</span>);
+
+<span class="hljs-variable">$input</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">except</span>([<span class="hljs-string">&#x27;credit_card&#x27;</span>]);
+
+<span class="hljs-variable">$input</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">except</span>(<span class="hljs-string">&#x27;credit_card&#x27;</span>);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="check-existence"><a class="h-anchor" href="#check-existence">#</a>Check Existence</h3>
+<div class="section">
+<p>Determine if value(s) present</p>
+<pre><code class="hljs language-php"><span class="hljs-keyword">if</span> (<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">has</span>(<span class="hljs-string">&#x27;name&#x27;</span>)) &#123;
+    <span class="hljs-comment">//</span>
+&#125;
+
+<span class="hljs-comment">// check if ALL values are present</span>
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">has</span>([<span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;email&#x27;</span>])) &#123;
+    <span class="hljs-comment">//</span>
+&#125;
+
+<span class="hljs-comment">// if any values are present</span>
+<span class="hljs-keyword">if</span> (<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">hasAny</span>([<span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;email&#x27;</span>])) &#123;
+    <span class="hljs-comment">//</span>
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="old-input"><a class="h-anchor" href="#old-input">#</a>Old Input</h3>
+<div class="section">
+<p>Retrieve input from the previous request</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$username</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">old</span>(<span class="hljs-string">&#x27;username&#x27;</span>);
+</code></pre>
+<p>Or use the <code>old()</code> helper</p>
+<pre><code class="hljs language-php">&lt;input type=<span class="hljs-string">&quot;text&quot;</span> name=<span class="hljs-string">&quot;username&quot;</span> value=<span class="hljs-string">&quot;&#123;&#123; old('username') &#125;&#125;&quot;</span>&gt;
+</code></pre>
+<p>See: <a href="#helpers-cols-3">Helpers</a><br>
+See: <a href="#forms-cols-3">Forms</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="uploaded-files"><a class="h-anchor" href="#uploaded-files">#</a>Uploaded Files</h3>
+<div class="section">
+<p>Retrieve uploaded file from request</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$file</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">file</span>(<span class="hljs-string">&#x27;photo&#x27;</span>);
+
+<span class="hljs-variable">$file</span> = <span class="hljs-variable">$request</span>-&gt;photo;
+</code></pre>
+<p>Get file path or extension</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$path</span> = <span class="hljs-variable">$request</span>-&gt;photo-&gt;<span class="hljs-title function_ invoke__">path</span>();
+
+<span class="hljs-variable">$extension</span> = <span class="hljs-variable">$request</span>-&gt;photo-&gt;<span class="hljs-title function_ invoke__">extension</span>();
+</code></pre>
+<p>Store uploaded file with a randomly generated filename</p>
+<pre><code class="hljs language-php"><span class="hljs-comment">// path where the file should be stored relative to</span>
+<span class="hljs-comment">// the filesystem&#x27;s configured root directory</span>
+<span class="hljs-variable">$path</span> = <span class="hljs-variable">$request</span>-&gt;photo-&gt;<span class="hljs-title function_ invoke__">store</span>(<span class="hljs-string">&#x27;images&#x27;</span>); 
+
+<span class="hljs-comment">// optional 2nd param to specify the filesystem disk</span>
+<span class="hljs-variable">$path</span> = <span class="hljs-variable">$request</span>-&gt;photo-&gt;<span class="hljs-title function_ invoke__">store</span>(<span class="hljs-string">&#x27;images&#x27;</span>, <span class="hljs-string">&#x27;s3&#x27;</span>);
+</code></pre>
+<p>Store uploaded file and specify the name</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$path</span> = <span class="hljs-variable">$request</span>-&gt;photo-&gt;<span class="hljs-title function_ invoke__">storeAs</span>(<span class="hljs-string">&#x27;images&#x27;</span>, <span class="hljs-string">&#x27;filename.jpg&#x27;</span>);
+
+<span class="hljs-variable">$path</span> = <span class="hljs-variable">$request</span>-&gt;photo-&gt;<span class="hljs-title function_ invoke__">storeAs</span>(<span class="hljs-string">&#x27;images&#x27;</span>, <span class="hljs-string">&#x27;filename.jpg&#x27;</span>, <span class="hljs-string">&#x27;s3&#x27;</span>);
+</code></pre>
+<p>See More: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://laravel.com/docs/8.x/filesystem">Laravel File Storage</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="views"><a class="h-anchor" href="#views">#</a>Views</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="intro"><a class="h-anchor" href="#intro">#</a>Intro</h3>
+<div class="section">
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://laravel.com/docs/8.x/views">Laravel Docs - Views</a></li>
+</ul>
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- View stored in resources/views/greeting.blade.php --&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, <span class="hljs-meta">&lt;?php echo $name; ?&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>Create a view by placing a file with the <code>.blade.php</code>
+extension in the <code>resources/views</code> directory.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="pass-data-to-views"><a class="h-anchor" href="#pass-data-to-views">#</a>Pass Data to Views</h3>
+<div class="section">
+<h4 id="as-an-array"><a class="h-anchor" href="#as-an-array">#</a>As an array</h4>
+<pre><code class="hljs language-php"><span class="hljs-keyword">return</span> <span class="hljs-title function_ invoke__">view</span>(<span class="hljs-string">&#x27;greetings&#x27;</span>, [<span class="hljs-string">&#x27;name&#x27;</span> =&gt; <span class="hljs-string">&#x27;Victoria&#x27;</span>]);
+</code></pre>
+<h4 id="using-with"><a class="h-anchor" href="#using-with">#</a>Using with()</h4>
+<pre><code class="hljs language-php"><span class="hljs-keyword">return</span> <span class="hljs-title function_ invoke__">view</span>(<span class="hljs-string">&#x27;greeting&#x27;</span>)
+            -&gt;<span class="hljs-title function_ invoke__">with</span>(<span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;Victoria&#x27;</span>)
+            -&gt;<span class="hljs-title function_ invoke__">with</span>(<span class="hljs-string">&#x27;occupation&#x27;</span>, <span class="hljs-string">&#x27;Astronaut&#x27;</span>);
+</code></pre>
+<p>Access each value using the data's keys</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, <span class="hljs-comment">&#123;&#123; $name &#125;&#125;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- Or --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, <span class="hljs-meta">&lt;?php echo $name; ?&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="view-helper"><a class="h-anchor" href="#view-helper">#</a>view helper</h3>
+<div class="section">
+<p>Return a view from a route with the <code>view()</code> helper</p>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/&#x27;</span>, function () &#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_ invoke__">view</span>(<span class="hljs-string">&#x27;greeting&#x27;</span>, [<span class="hljs-string">&#x27;name&#x27;</span> =&gt; <span class="hljs-string">&#x27;James&#x27;</span>]);
+&#125;);
+</code></pre>
+<p>See: <a href="#view-routes">View Routes</a>  and <a href="#helpers">Helpers</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="subdirectories"><a class="h-anchor" href="#subdirectories">#</a>Subdirectories</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-comment">// resources/views/admin.profile.blade.php</span>
+<span class="hljs-keyword">return</span> <span class="hljs-title function_ invoke__">view</span>(<span class="hljs-string">&#x27;admin.profile&#x27;</span>);
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="blade-templates"><a class="h-anchor" href="#blade-templates">#</a>Blade Templates</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="intro-2"><a class="h-anchor" href="#intro-2">#</a>Intro</h3>
+<div class="section">
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://laravel.com/docs/8.x/blade">Laravel Docs - Blade Templates</a></li>
+</ul>
+<p>Blade is the templating engine included in Laravel
+that also allows you to use plain PHP.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="views-2"><a class="h-anchor" href="#views-2">#</a>Views</h3>
+<div class="section">
+<p>Blade views are returned using the <code>view()</code> helper</p>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/&#x27;</span>, function () &#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_ invoke__">view</span>(<span class="hljs-string">&#x27;welcome&#x27;</span>, [<span class="hljs-string">&#x27;name&#x27;</span> =&gt; <span class="hljs-string">&#x27;Samantha&#x27;</span>]);
+&#125;);
+</code></pre>
+<p>See: <a href="#view-helper">Views</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="comments"><a class="h-anchor" href="#comments">#</a>Comments</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-comment">&#123;&#123;-- This comment will not be present in the rendered HTML --&#125;&#125;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-3">
+<h3 id="directives"><a class="h-anchor" href="#directives">#</a>Directives</h3>
+<div class="section">
+<h4 id="if-statements"><a class="h-anchor" href="#if-statements">#</a>if Statements</h4>
+<pre><code class="hljs language-php">@<span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">count</span>(<span class="hljs-variable">$records</span>) === <span class="hljs-number">1</span>)
+    I have one record!
+@<span class="hljs-keyword">elseif</span> (<span class="hljs-title function_ invoke__">count</span>(<span class="hljs-variable">$records</span>) &gt; <span class="hljs-number">1</span>)
+    I have multiple records!
+@<span class="hljs-keyword">else</span>
+    I don<span class="hljs-string">&#x27;t have any records!
+@endif
+</span></code></pre>
+<h4 id="isset-empty"><a class="h-anchor" href="#isset-empty">#</a>isset &amp; empty</h4>
+<pre><code class="hljs language-php">@<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$records</span>)
+    <span class="hljs-comment">// $records is defined and is not null...</span>
+@endisset
+
+@<span class="hljs-keyword">empty</span>(<span class="hljs-variable">$records</span>)
+    <span class="hljs-comment">// $records is &quot;empty&quot;...</span>
+@endempty
+</code></pre>
+<h4 id="authentication"><a class="h-anchor" href="#authentication">#</a>Authentication</h4>
+<pre><code class="hljs language-php">@auth
+    <span class="hljs-comment">// The user is authenticated...</span>
+@endauth
+
+@guest
+    <span class="hljs-comment">// The user is not authenticated...</span>
+@endguest
+</code></pre>
+<h4 id="loops"><a class="h-anchor" href="#loops">#</a>Loops</h4>
+<pre><code class="hljs language-html">@for ($i = 0; $i &lt; 10; $i++)
+    The current value is <span class="hljs-comment">&#123;&#123; $i &#125;&#125;</span>
+@endfor
+
+@foreach ($users as $user)
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is user <span class="hljs-comment">&#123;&#123; $user->id &#125;&#125;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+@endforeach
+
+@forelse ($users as $user)
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-comment">&#123;&#123; $user->name &#125;&#125;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+@empty
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>No users<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+@endforelse
+
+@while (true)
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I&#x27;m looping forever.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+@endwhile
+</code></pre>
+<p>Loop Iteration:</p>
+<pre><code class="hljs language-php">@<span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$users</span> <span class="hljs-keyword">as</span> <span class="hljs-variable">$user</span>)
+    @<span class="hljs-keyword">if</span> (<span class="hljs-variable">$loop</span>-&gt;first)
+        This is the first iteration.
+    @<span class="hljs-keyword">endif</span>
+
+    @<span class="hljs-keyword">if</span> (<span class="hljs-variable">$loop</span>-&gt;last)
+        This is the last iteration.
+    @<span class="hljs-keyword">endif</span>
+
+    &lt;p&gt;This is user &lt;!--swig￼<span class="hljs-number">7</span>--&gt;&lt;/p&gt;
+@<span class="hljs-keyword">endforeach</span>
+</code></pre>
+<p>See more: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://laravel.com/docs/8.x/blade#the-loop-variable">Laravel Loop Variable</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="displaying-data"><a class="h-anchor" href="#displaying-data">#</a>Displaying Data</h3>
+<div class="section">
+<p>Blade's echo statements <code>&#123;&#123; &#125;&#125;</code> are automatically sent through
+PHP's <code>htmlspecialchars</code> function to prevent XSS attacks.</p>
+<p>Display the contents of the name variable:</p>
+<pre><code class="hljs language-html">Hello, <span class="hljs-comment">&#123;&#123; $name &#125;&#125;</span>.
+</code></pre>
+<p>Display results of a PHP function:</p>
+<pre><code class="hljs language-html">The current UNIX timestamp is <span class="hljs-comment">&#123;&#123; time() &#125;&#125;</span>.
+</code></pre>
+<p>Display data without escaping with <code>htmlspecialchars</code></p>
+<pre><code class="hljs language-html">Hello, &#123;!! $name !!&#125;.
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="including-subviews"><a class="h-anchor" href="#including-subviews">#</a>Including Subviews</h3>
+<div class="section">
+<p>Include a Blade view from within another view.<br>
+All variables that are available to the parent view are also available to the included view</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- resources/views/shared/errors/blade.php --&gt;</span>
+    @include(&#x27;shared.errors&#x27;)
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- Form Contents --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="raw-php"><a class="h-anchor" href="#raw-php">#</a>Raw PHP</h3>
+<div class="section">
+<p>Execute a block of plain PHP</p>
+<pre><code class="hljs language-php">@php
+    <span class="hljs-variable">$counter</span> = <span class="hljs-number">1</span>;
+@endphp
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="stacks"><a class="h-anchor" href="#stacks">#</a>Stacks</h3>
+<div class="section">
+<p>Blade allows you to push to named stacks which can be rendered in another view or layout.<br>
+Useful for javascript libraries required by child views</p>
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- Add to the stack --&gt;</span>
+@push(&#x27;scripts&#x27;)
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/example.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+@endpush
+</code></pre>
+<p>Render the stack</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Head Contents --&gt;</span>
+
+    @stack(&#x27;scripts&#x27;)
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+</code></pre>
+<p>Prepend to the beginning of a stack</p>
+<pre><code class="hljs language-php">@<span class="hljs-title function_ invoke__">push</span>(<span class="hljs-string">&#x27;scripts&#x27;</span>)
+    This will be second...
+@endpush
+
+<span class="hljs-comment">// Later...</span>
+
+@<span class="hljs-title function_ invoke__">prepend</span>(<span class="hljs-string">&#x27;scripts&#x27;</span>)
+    This will be first...
+@endprepend
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="forms"><a class="h-anchor" href="#forms">#</a>Forms</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="intro-3"><a class="h-anchor" href="#intro-3">#</a>Intro</h3>
+<div class="section">
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://laravel.com/docs/8.x/blade#forms">Laravel Docs - Forms</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="csrf-field"><a class="h-anchor" href="#csrf-field">#</a>CSRF Field</h3>
+<div class="section">
+<p>Include a hidden CSRF token field to validate the request</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;POST&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/profile&quot;</span>&gt;</span>
+    @csrf
+    
+    ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<p>See: <a href="#csrf-protection">CSRF Protection</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="method-field"><a class="h-anchor" href="#method-field">#</a>Method Field</h3>
+<div class="section">
+<p>Since HTML forms can't make <code>PUT</code>, <code>PATCH</code>, or <code>DELETE</code> requests, you
+will need to add a hidden <code>_method</code> field to spoof these HTTP verbs:</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/post/my-post&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;POST&quot;</span>&gt;</span>
+    @method(&#x27;PUT&#x27;)
+
+    ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="validation-errors"><a class="h-anchor" href="#validation-errors">#</a>Validation Errors</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- /resources/views/post/create.blade.php --&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Post Title<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;title&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;@error(&#x27;title&#x27;) is-invalid @enderror&quot;</span>&gt;</span>
+
+@error(&#x27;title&#x27;)
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;alert alert-danger&quot;</span>&gt;</span><span class="hljs-comment">&#123;&#123; $message &#125;&#125;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+@enderror
+</code></pre>
+<p>See: <a href="#validation-cols-3">Validation</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="repopulating-forms"><a class="h-anchor" href="#repopulating-forms">#</a>Repopulating Forms</h3>
+<div class="section">
+<p>When redirecting due to a validation error, request input is flashed to the session.<br>
+Retrieve the input from the previous request with the <code>old</code> method</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$title</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">old</span>(<span class="hljs-string">&#x27;title&#x27;</span>);
+</code></pre>
+<p>Or the <code>old()</code> helper</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;title&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#123;&#123; old('title') &#125;&#125;&quot;</span>&gt;</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="validation"><a class="h-anchor" href="#validation">#</a>Validation</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="intro-4"><a class="h-anchor" href="#intro-4">#</a>Intro</h3>
+<div class="section">
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://laravel.com/docs/8.x/validation">Laravel Docs - Validation</a></li>
+</ul>
+<p>If validation fails, a redirect response to the previous URL will be generated.<br>
+If the incoming request is an XHR request, a JSON response with the
+validation error messages will be returned.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="logic"><a class="h-anchor" href="#logic">#</a>Logic</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-comment">// in routes/web.php</span>
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/post/create&#x27;</span>, [<span class="hljs-title class_">App\Http\Controllers\PostController</span>::<span class="hljs-variable language_">class</span>, <span class="hljs-string">&#x27;create&#x27;</span>]);
+<span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">post</span>(<span class="hljs-string">&#x27;/post&#x27;</span>, [<span class="hljs-title class_">App\Http\Controllers\PostController</span>::<span class="hljs-variable language_">class</span>, <span class="hljs-string">&#x27;store&#x27;</span>]);
+
+<span class="hljs-comment">// in app/Http/Controllers/PostController...</span>
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">store</span>(<span class="hljs-params">Request <span class="hljs-variable">$request</span></span>)
+</span>&#123;
+    <span class="hljs-variable">$validated</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">validate</span>([
+        // input name =&gt; validation rules
+        <span class="hljs-string">&#x27;title&#x27;</span> =&gt; <span class="hljs-string">&#x27;required|unique:posts|max:255&#x27;</span>,
+        <span class="hljs-string">&#x27;body&#x27;</span> =&gt; <span class="hljs-string">&#x27;required&#x27;</span>,
+    ]);
+
+    <span class="hljs-comment">// The blog post is valid...</span>
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-5">
+<h3 id="rules"><a class="h-anchor" href="#rules">#</a>Rules</h3>
+<div class="section">
+<p>Can also be passed as an array</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$validatedData</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">validate</span>([
+    <span class="hljs-string">&#x27;title&#x27;</span> =&gt; [<span class="hljs-string">&#x27;required&#x27;</span>, <span class="hljs-string">&#x27;unique:posts&#x27;</span>, <span class="hljs-string">&#x27;max:255&#x27;</span>],
+    <span class="hljs-string">&#x27;body&#x27;</span> =&gt; [<span class="hljs-string">&#x27;required&#x27;</span>],
+]);
+</code></pre>
+<h4 id="after-date"><a class="h-anchor" href="#after-date">#</a>after:date</h4>
+<p>Field must be a value after a given date.</p>
+<pre><code class="hljs language-php"><span class="hljs-string">&#x27;start_date&#x27;</span> =&gt; <span class="hljs-string">&#x27;required|date|after:tomorrow&#x27;</span>
+</code></pre>
+<p>Instead of a date string, you may specify another field to compare against the date</p>
+<pre><code class="hljs language-php"><span class="hljs-string">&#x27;finish_date&#x27;</span> =&gt; <span class="hljs-string">&#x27;required|date|after:start_date&#x27;</span>
+</code></pre>
+<p>See <a href="#beforedate">before:date</a></p>
+<h4 id="after-or-equal-date"><a class="h-anchor" href="#after-or-equal-date">#</a>after_or_equal:date</h4>
+<p>Field must be a value after or equal to the given date.<br>
+See <a href="#afterdate">after:date</a></p>
+<h4 id="before-date"><a class="h-anchor" href="#before-date">#</a>before:date</h4>
+<p>Field must be a value preceding the given date.<br>
+The name of another field may be supplied as the value of <code>date</code>.<br>
+See <a href="#afterdate">after:date</a></p>
+<h4 id="alpha-num"><a class="h-anchor" href="#alpha-num">#</a>alpha_num</h4>
+<p>Field must be entirely alpha-numeric characters</p>
+<h4 id="boolean"><a class="h-anchor" href="#boolean">#</a>boolean</h4>
+<p>Field must be able to be cast as a <code>boolean</code>.<br>
+Accepted input are <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>, <code>&quot;1&quot;</code>, and <code>&quot;0&quot;</code></p>
+<h4 id="confirmed"><a class="h-anchor" href="#confirmed">#</a>confirmed</h4>
+<p>Field must have a matching field of <code>&#123;field&#125;_confirmation</code>.<br>
+For example, if the field is password, a matching <code>password_confirmation</code> field must be present</p>
+<h4 id="current-password"><a class="h-anchor" href="#current-password">#</a>current_password</h4>
+<p>Field must match the authenticated user's password.</p>
+<h4 id="date"><a class="h-anchor" href="#date">#</a>date</h4>
+<p>Field must be a valid, non-relative date according to the <code>strtotime</code> PHP function.</p>
+<h4 id="email"><a class="h-anchor" href="#email">#</a>email</h4>
+<p>Field must be formatted as an email address.</p>
+<h4 id="file"><a class="h-anchor" href="#file">#</a>file</h4>
+<p>Field must be a successfully uploaded file.<br>
+See: <a href="#uploaded-files">Uploaded Files</a></p>
+<h4 id="max-value"><a class="h-anchor" href="#max-value">#</a>max:value</h4>
+<p>Field must be less than or equal to a maximum value.<br>
+Strings, numerics, arrays, and files are evaluated like the <a href="#sizevalue">size</a> rule.</p>
+<h4 id="min-value"><a class="h-anchor" href="#min-value">#</a>min:value</h4>
+<p>Field must have a minimum value.<br>
+Strings, numerics, arrays, and files are evaluated like the <a href="#sizevalue">size</a> rule.</p>
+<h4 id="mimetypes-text-plain"><a class="h-anchor" href="#mimetypes-text-plain">#</a>mimetypes:text/plain,...</h4>
+<p>File must match one of the given MIME types:</p>
+<pre><code class="hljs language-php"><span class="hljs-string">&#x27;video&#x27;</span> =&gt; <span class="hljs-string">&#x27;mimetypes:video/avi,video/mpeg,video/quicktime&#x27;</span>
+</code></pre>
+<p>File's contents will be read and the framework will attempt to guess the
+MIME type, regardless of the client's provided MIME type.</p>
+<h4 id="mimes-foo-bar"><a class="h-anchor" href="#mimes-foo-bar">#</a>mimes:foo,bar,...</h4>
+<p>Field must have a MIME type corresponding to one of the listed extensions.</p>
+<pre><code class="hljs language-php"><span class="hljs-string">&#x27;photo&#x27;</span> =&gt; <span class="hljs-string">&#x27;mimes:jpg,bmp,png&#x27;</span>
+</code></pre>
+<p>File's contents will be read and the framework will attempt to guess the
+MIME type, regardless of the client's provided MIME type.</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types">Full listing of MIME types &amp; extensions</a></p>
+<h4 id="nullable"><a class="h-anchor" href="#nullable">#</a>nullable</h4>
+<p>Field may be null.</p>
+<h4 id="numeric"><a class="h-anchor" href="#numeric">#</a>numeric</h4>
+<p>Field must be numeric.</p>
+<h4 id="password"><a class="h-anchor" href="#password">#</a>password</h4>
+<p>Field must match the authenticated user's password.</p>
+<h4 id="prohibited"><a class="h-anchor" href="#prohibited">#</a>prohibited</h4>
+<p>Field must be empty or not present.</p>
+<h4 id="prohibited-if-anotherfield-value"><a class="h-anchor" href="#prohibited-if-anotherfield-value">#</a>prohibited_if:anotherfield,value,...</h4>
+<p>Field must be empty or not present if the
+<em>anotherfield</em> field is equal to any value.</p>
+<h4 id="prohibited-unless-anotherfield-value"><a class="h-anchor" href="#prohibited-unless-anotherfield-value">#</a>prohibited_unless:anotherfield,value,...</h4>
+<p>Field must be empty or not present unless the
+<em>anotherfield</em> field is equal to any value.</p>
+<h4 id="required"><a class="h-anchor" href="#required">#</a>required</h4>
+<p>Field must be present in the input data and not empty.<br>
+A field is considered &quot;empty&quot; if one of the following conditions are true:</p>
+<ul>
+<li>The value is <code>null</code>.</li>
+<li>The value is an empty string.</li>
+<li>The value is an empty array or empty <code>Countable</code> object.</li>
+<li>The value is an uploaded file with no path.</li>
+</ul>
+<h4 id="required-with-foo-bar"><a class="h-anchor" href="#required-with-foo-bar">#</a>required_with:foo,bar,...</h4>
+<p>Field must be present and not empty, only if any of the other
+specified fields are present and not empty</p>
+<h4 id="size-value"><a class="h-anchor" href="#size-value">#</a>size:value</h4>
+<p>Field must have a size matching the given value.</p>
+<ul>
+<li>For strings: number of characters</li>
+<li>For numeric data: integer value (must also have the <code>numeric</code> or <code>integer</code> rule).</li>
+<li>For arrays: count of the array</li>
+<li>For files: file size in kilobytes</li>
+</ul>
+<pre><code class="hljs language-php"><span class="hljs-comment">// Validate that a string is exactly 12 characters long...</span>
+<span class="hljs-string">&#x27;title&#x27;</span> =&gt; <span class="hljs-string">&#x27;size:12&#x27;</span>;
+<span class="hljs-comment">// Validate that a provided integer equals 10...</span>
+<span class="hljs-string">&#x27;seats&#x27;</span> =&gt; <span class="hljs-string">&#x27;integer|size:10&#x27;</span>;
+<span class="hljs-comment">// Validate that an array has exactly 5 elements...</span>
+<span class="hljs-string">&#x27;tags&#x27;</span> =&gt; <span class="hljs-string">&#x27;array|size:5&#x27;</span>;
+<span class="hljs-comment">// Validate that an uploaded file is exactly 512 kilobytes...</span>
+<span class="hljs-string">&#x27;image&#x27;</span> =&gt; <span class="hljs-string">&#x27;file|size:512&#x27;</span>;
+</code></pre>
+<h4 id="unique-table-column"><a class="h-anchor" href="#unique-table-column">#</a>unique:table,column</h4>
+<p>Field must not exist within the given database table</p>
+<h4 id="url-2"><a class="h-anchor" href="#url-2">#</a>url</h4>
+<p>Field must be a valid URL</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://laravel.com/docs/8.x/validation#available-validation-rules">See all available rules</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="validate-passwords"><a class="h-anchor" href="#validate-passwords">#</a>Validate Passwords</h3>
+<div class="section">
+<p>Ensure passwords have an adequate level of complexity</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$validatedData</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">validate</span>([
+    <span class="hljs-string">&#x27;password&#x27;</span> =&gt; [<span class="hljs-string">&#x27;required&#x27;</span>, <span class="hljs-string">&#x27;confirmed&#x27;</span>, <span class="hljs-title class_">Password</span>::<span class="hljs-title function_ invoke__">min</span>(<span class="hljs-number">8</span>)],
+]);
+</code></pre>
+<p><code>Password</code> rule object allows you to easily customize the password complexity requirements</p>
+<pre><code class="hljs language-php"><span class="hljs-comment">// Require at least 8 characters...</span>
+<span class="hljs-title class_">Password</span>::<span class="hljs-title function_ invoke__">min</span>(<span class="hljs-number">8</span>)
+
+<span class="hljs-comment">// Require at least one letter...</span>
+<span class="hljs-title class_">Password</span>::<span class="hljs-title function_ invoke__">min</span>(<span class="hljs-number">8</span>)-&gt;<span class="hljs-title function_ invoke__">letters</span>()
+
+<span class="hljs-comment">// Require at least one uppercase and one lowercase letter...</span>
+<span class="hljs-title class_">Password</span>::<span class="hljs-title function_ invoke__">min</span>(<span class="hljs-number">8</span>)-&gt;<span class="hljs-title function_ invoke__">mixedCase</span>()
+
+<span class="hljs-comment">// Require at least one number...</span>
+<span class="hljs-title class_">Password</span>::<span class="hljs-title function_ invoke__">min</span>(<span class="hljs-number">8</span>)-&gt;<span class="hljs-title function_ invoke__">numbers</span>()
+
+<span class="hljs-comment">// Require at least one symbol...</span>
+<span class="hljs-title class_">Password</span>::<span class="hljs-title function_ invoke__">min</span>(<span class="hljs-number">8</span>)-&gt;<span class="hljs-title function_ invoke__">symbols</span>()
+</code></pre>
+<p>Ensure a password has not been compromised in a public password data breach leak</p>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Password</span>::<span class="hljs-title function_ invoke__">min</span>(<span class="hljs-number">8</span>)-&gt;<span class="hljs-title function_ invoke__">uncompromised</span>()
+</code></pre>
+<blockquote>
+<p><em>Uses the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://en.wikipedia.org/wiki/K-anonymity">k-Anonymity</a> model via the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://haveibeenpwned.com">haveibeenpwned.com</a> service without sacrificing the user's privacy or security</em></p>
+</blockquote>
+<p>Methods can be chained</p>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Password</span>::<span class="hljs-title function_ invoke__">min</span>(<span class="hljs-number">8</span>)
+    -&gt;<span class="hljs-title function_ invoke__">letters</span>()
+    -&gt;<span class="hljs-title function_ invoke__">mixedCase</span>()
+    -&gt;<span class="hljs-title function_ invoke__">numbers</span>()
+    -&gt;<span class="hljs-title function_ invoke__">symbols</span>()
+    -&gt;<span class="hljs-title function_ invoke__">uncompromised</span>()
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="display-validation-errors"><a class="h-anchor" href="#display-validation-errors">#</a>Display Validation Errors</h3>
+<div class="section">
+<pre><code class="hljs language-php">&lt;!-- /resources/views/post/create.blade.php --&gt;
+
+&lt;h1&gt;Create Post&lt;/h1&gt;
+
+@<span class="hljs-keyword">if</span> (<span class="hljs-variable">$errors</span>-&gt;<span class="hljs-title function_ invoke__">any</span>())
+    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>=&quot;<span class="hljs-title">alert</span> <span class="hljs-title">alert</span>-<span class="hljs-title">danger</span>&quot;&gt;
+        &lt;<span class="hljs-title">ul</span>&gt;
+            @<span class="hljs-title">foreach</span> ($<span class="hljs-title">errors</span>-&gt;<span class="hljs-title">all</span>() <span class="hljs-title">as</span> $<span class="hljs-title">error</span>)
+                &lt;<span class="hljs-title">li</span>&gt;&lt;!--<span class="hljs-title">swig</span>￼13--&gt;&lt;/<span class="hljs-title">li</span>&gt;
+            @<span class="hljs-title">endforeach</span>
+        &lt;/<span class="hljs-title">ul</span>&gt;
+    &lt;/<span class="hljs-title">div</span>&gt;
+@<span class="hljs-title">endif</span>
+
+&lt;!-- <span class="hljs-title">Create</span> <span class="hljs-title">Post</span> <span class="hljs-title">Form</span> --&gt;
+</span></code></pre>
+<p>See: <a href="#validation-errors">Validation Errors</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="optional-fields"><a class="h-anchor" href="#optional-fields">#</a>Optional Fields</h3>
+<div class="section">
+<p>You will often need to mark your &quot;optional&quot; request fields as <code>nullable</code>
+if you do not want the validator to consider <code>null</code> values as invalid</p>
+<pre><code class="hljs language-php"><span class="hljs-comment">// publish_at field may be either null or a valid date representation</span>
+<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">validate</span>([
+    <span class="hljs-string">&#x27;title&#x27;</span> =&gt; <span class="hljs-string">&#x27;required|unique:posts|max:255&#x27;</span>,
+    <span class="hljs-string">&#x27;body&#x27;</span> =&gt; <span class="hljs-string">&#x27;required&#x27;</span>,
+    <span class="hljs-string">&#x27;publish_at&#x27;</span> =&gt; <span class="hljs-string">&#x27;nullable|date&#x27;</span>,
+]);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="validated-input"><a class="h-anchor" href="#validated-input">#</a>Validated Input</h3>
+<div class="section">
+<p>Retrieve the request data that underwent validation</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$validated</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">validated</span>();
+</code></pre>
+<p>Or with <code>safe()</code>, which returns an instance of <code>Illuminate\Support\ValidatedInput</code></p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$validated</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">safe</span>()-&gt;<span class="hljs-title function_ invoke__">only</span>([<span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;email&#x27;</span>]);
+
+<span class="hljs-variable">$validated</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">safe</span>()-&gt;<span class="hljs-title function_ invoke__">except</span>([<span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;email&#x27;</span>]);
+
+<span class="hljs-variable">$validated</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">safe</span>()-&gt;<span class="hljs-title function_ invoke__">all</span>();
+</code></pre>
+<h4 id="iterate"><a class="h-anchor" href="#iterate">#</a>Iterate</h4>
+<pre><code class="hljs language-php"><span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">safe</span>() <span class="hljs-keyword">as</span> <span class="hljs-variable">$key</span> =&gt; <span class="hljs-variable">$value</span>) &#123;
+    <span class="hljs-comment">//</span>
+&#125;
+</code></pre>
+<h4 id="access-as-an-array"><a class="h-anchor" href="#access-as-an-array">#</a>Access as an array</h4>
+<pre><code class="hljs language-php"><span class="hljs-variable">$validated</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">safe</span>();
+
+<span class="hljs-variable">$email</span> = <span class="hljs-variable">$validated</span>[<span class="hljs-string">&#x27;email&#x27;</span>];
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="session"><a class="h-anchor" href="#session">#</a>Session</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="intro-5"><a class="h-anchor" href="#intro-5">#</a>Intro</h3>
+<div class="section">
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://laravel.com/docs/8.x/session">Laravel Docs - Session</a></li>
+</ul>
+<p>Laravel ships with a variety of session backends that are accessed through
+a unified API. Memcached, Redis, and database support is included.</p>
+<h4 id="configuration-2"><a class="h-anchor" href="#configuration-2">#</a>Configuration</h4>
+<p>Session configuration is in <code>config/session.php</code>.<br>
+By default, Laravel is configured to use the file session driver</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="check-isset-exists"><a class="h-anchor" href="#check-isset-exists">#</a>Check Isset / Exists</h3>
+<div class="section">
+<p>Returns <code>true</code> if the item is present and is not <code>null</code>:</p>
+<pre><code class="hljs language-php"><span class="hljs-keyword">if</span> (<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">session</span>()-&gt;<span class="hljs-title function_ invoke__">has</span>(<span class="hljs-string">&#x27;users&#x27;</span>)) &#123;
+    <span class="hljs-comment">//</span>
+&#125;
+</code></pre>
+<p>Returns <code>true</code> if present, even if it's <code>null</code>:</p>
+<pre><code class="hljs language-php"><span class="hljs-keyword">if</span> (<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">session</span>()-&gt;<span class="hljs-title function_ invoke__">exists</span>(<span class="hljs-string">&#x27;users&#x27;</span>)) &#123;
+    <span class="hljs-comment">//</span>
+&#125;
+</code></pre>
+<p>Returns <code>true</code> if the item is <code>null</code> or is not present:</p>
+<pre><code class="hljs language-php"><span class="hljs-keyword">if</span> (<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">session</span>()-&gt;<span class="hljs-title function_ invoke__">missing</span>(<span class="hljs-string">&#x27;users&#x27;</span>)) &#123;
+    <span class="hljs-comment">//</span>
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="retrieving-data"><a class="h-anchor" href="#retrieving-data">#</a>Retrieving Data</h3>
+<div class="section">
+<h4 id="via-request"><a class="h-anchor" href="#via-request">#</a>Via Request</h4>
+<pre><code class="hljs language-php"><span class="hljs-comment">// ...</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserController</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Controller</span>
+</span>&#123;
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">show</span>(<span class="hljs-params">Request <span class="hljs-variable">$request</span>, <span class="hljs-variable">$id</span></span>)
+    </span>&#123;
+        <span class="hljs-variable">$value</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">session</span>()-&gt;<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;key&#x27;</span>);
+
+        <span class="hljs-comment">//</span>
+    &#125;
+&#125;
+</code></pre>
+<p>Pass a default value as the second argument to use
+if the key does not exist</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$value</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">session</span>()-&gt;<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;key&#x27;</span>, <span class="hljs-string">&#x27;default&#x27;</span>);
+
+<span class="hljs-comment">// closure can be passed and executed as a default</span>
+<span class="hljs-variable">$value</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">session</span>()-&gt;<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;key&#x27;</span>, function () &#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;default&#x27;</span>;
+&#125;);
+</code></pre>
+<h4 id="via-session-helper"><a class="h-anchor" href="#via-session-helper">#</a>Via session helper</h4>
+<pre><code class="hljs language-php"><span class="hljs-title class_">Route</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;/home&#x27;</span>, function () &#123;
+    <span class="hljs-comment">// Retrieve a piece of data from the session...</span>
+    <span class="hljs-variable">$value</span> = <span class="hljs-title function_ invoke__">session</span>(<span class="hljs-string">&#x27;key&#x27;</span>);
+
+    <span class="hljs-comment">// Specifying a default value...</span>
+    <span class="hljs-variable">$value</span> = <span class="hljs-title function_ invoke__">session</span>(<span class="hljs-string">&#x27;key&#x27;</span>, <span class="hljs-string">&#x27;default&#x27;</span>);
+
+    <span class="hljs-comment">// Store a piece of data in the session...</span>
+    <span class="hljs-title function_ invoke__">session</span>([<span class="hljs-string">&#x27;key&#x27;</span> =&gt; <span class="hljs-string">&#x27;value&#x27;</span>]);
+&#125;);
+</code></pre>
+<p>See: <a href="">Session Helper</a></p>
+<h4 id="all-session-data"><a class="h-anchor" href="#all-session-data">#</a>All Session Data</h4>
+<pre><code class="hljs language-php"><span class="hljs-variable">$data</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">session</span>()-&gt;<span class="hljs-title function_ invoke__">all</span>();
+</code></pre>
+<h4 id="retrieve-and-delete"><a class="h-anchor" href="#retrieve-and-delete">#</a>Retrieve and Delete</h4>
+<p>Retrieve and delete an item from the session</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$value</span> = <span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">session</span>()-&gt;<span class="hljs-title function_ invoke__">pull</span>(<span class="hljs-string">&#x27;key&#x27;</span>, <span class="hljs-string">&#x27;default&#x27;</span>);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="store-data"><a class="h-anchor" href="#store-data">#</a>Store Data</h3>
+<div class="section">
+<p>Via a request instance</p>
+<pre><code class="hljs language-php"><span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">session</span>()-&gt;<span class="hljs-title function_ invoke__">put</span>(<span class="hljs-string">&#x27;key&#x27;</span>, <span class="hljs-string">&#x27;value&#x27;</span>);
+</code></pre>
+<p>Via the global &quot;session&quot; helper</p>
+<pre><code class="hljs language-php"><span class="hljs-title function_ invoke__">session</span>([<span class="hljs-string">&#x27;key&#x27;</span> =&gt; <span class="hljs-string">&#x27;value&#x27;</span>]);
+</code></pre>
+<p>Push a new value onto a session value that is an array</p>
+<pre><code class="hljs language-php"><span class="hljs-comment">// array of team names</span>
+<span class="hljs-variable">$request</span>-&gt;<span class="hljs-title function_ invoke__">session</span>()-&gt;<span class="hljs-title function_ invoke__">push</span>(<span class="hljs-string">&#x27;user.teams&#x27;</span>, <span class="hljs-string">&#x27;developers&#x27;</span>);
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="logging"><a class="h-anchor" href="#logging">#</a>Logging</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="configuration-3"><a class="h-anchor" href="#configuration-3">#</a>Configuration</h3>
+<div class="section">
+<p>Configuration options for logging behavior is in <code>config/logging.php</code>.<br>
+By default, Laravel will use the stack channel when logging messages, which aggregates multiple log channels into a single channel.</p>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="levels"><a class="h-anchor" href="#levels">#</a>Levels</h3>
+<div class="section">
+<p>All the log levels defined in the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://tools.ietf.org/html/rfc5424">RFC 5424 specification</a> are available:</p>
+<ul>
+<li>emergency</li>
+<li>alert</li>
+<li>critical</li>
+<li>error</li>
+<li>warning</li>
+<li>notice</li>
+<li>info</li>
+<li>debug</li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="log-facade"><a class="h-anchor" href="#log-facade">#</a>Log Facade</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Support</span>\<span class="hljs-title">Facades</span>\<span class="hljs-title">Log</span>;
+
+<span class="hljs-title class_">Log</span>::<span class="hljs-title function_ invoke__">emergency</span>(<span class="hljs-variable">$message</span>);
+<span class="hljs-title class_">Log</span>::<span class="hljs-title function_ invoke__">alert</span>(<span class="hljs-variable">$message</span>);
+<span class="hljs-title class_">Log</span>::<span class="hljs-title function_ invoke__">critical</span>(<span class="hljs-variable">$message</span>);
+<span class="hljs-title class_">Log</span>::<span class="hljs-title function_ invoke__">error</span>(<span class="hljs-variable">$message</span>);
+<span class="hljs-title class_">Log</span>::<span class="hljs-title function_ invoke__">warning</span>(<span class="hljs-variable">$message</span>);
+<span class="hljs-title class_">Log</span>::<span class="hljs-title function_ invoke__">notice</span>(<span class="hljs-variable">$message</span>);
+<span class="hljs-title class_">Log</span>::<span class="hljs-title function_ invoke__">info</span>(<span class="hljs-variable">$message</span>);
+<span class="hljs-title class_">Log</span>::<span class="hljs-title function_ invoke__">debug</span>(<span class="hljs-variable">$message</span>);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="contextual-info"><a class="h-anchor" href="#contextual-info">#</a>Contextual Info</h3>
+<div class="section">
+<pre><code class="hljs language-php"><span class="hljs-keyword">use</span> <span class="hljs-title">Illuminate</span>\<span class="hljs-title">Support</span>\<span class="hljs-title">Facades</span>\<span class="hljs-title">Log</span>;
+
+<span class="hljs-title class_">Log</span>::<span class="hljs-title function_ invoke__">info</span>(<span class="hljs-string">&#x27;User failed to login.&#x27;</span>, [<span class="hljs-string">&#x27;id&#x27;</span> =&gt; <span class="hljs-variable">$user</span>-&gt;id]);
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="deployment"><a class="h-anchor" href="#deployment">#</a>Deployment</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="intro-6"><a class="h-anchor" href="#intro-6">#</a>Intro</h3>
+<div class="section">
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://laravel.com/docs/8.x/deployment">Laravel Docs - Deployment</a></li>
+</ul>
+<p>Ensure your web server directs all requests to your application's <code>public/index.php</code> file</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="optimization"><a class="h-anchor" href="#optimization">#</a>Optimization</h3>
+<div class="section">
+<h4 id="composer-s-autoloader-map"><a class="h-anchor" href="#composer-s-autoloader-map">#</a>Composer's autoloader map</h4>
+<pre><code class="hljs language-bash">composer install --optimize-autoloader --no-dev
+</code></pre>
+<h4 id="configuration-loading"><a class="h-anchor" href="#configuration-loading">#</a>Configuration Loading</h4>
+<p>Be sure that you are only calling the <code>env</code> function from within your configuration files.<br>
+Once the configuration has been cached, the <code>.env</code> file will not be loaded and all calls
+to the <code>env</code> function for <code>.env</code> variables will return <code>null</code></p>
+<pre><code class="hljs language-bash">php artisan config:cache
+</code></pre>
+<h4 id="route-loading"><a class="h-anchor" href="#route-loading">#</a>Route Loading</h4>
+<pre><code class="hljs language-bash">php artisan route:cache
+</code></pre>
+<h4 id="view-loading"><a class="h-anchor" href="#view-loading">#</a>View Loading</h4>
+<pre><code class="hljs language-bash">php artisan view:cache
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="debug-mode-2"><a class="h-anchor" href="#debug-mode-2">#</a>Debug Mode</h3>
+<div class="section">
+<p>The debug option in your <code>config/app.php</code> determines how much information
+about an error is actually displayed to the user.<br>
+By default, this option is set to the value of the <code>APP_DEBUG</code> environment
+variable in your <code>.env</code> file.
+In your production environment, this value should always be <code>false</code>.<br>
+If the <code>APP_DEBUG</code> variable is set to <code>true</code> in production, you risk exposing sensitive configuration values to end users.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="also-see"><a class="h-anchor" href="#also-see">#</a>Also see</h2>
+<div class="h3-wrap-list">
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://laravel.com/docs/8.x">Laravel Docs</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://laracasts.com/">Laracasts</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://laravel.com/api/8.x/">Laravel API</a></li>
+</ul>
+</div>
+</div>
+
+        </div></div><div id="mysearch" class="z-50 fixed inset-0 flex justify-center bg-slate-600/80 dark:bg-slate-900/90 items-start text-sm z-50 overflow-hidden lg:pt-16 lg:pb-20 hidden"><div id="mysearch-box" class="lg:max-w-screen-lg w-full flex flex-col justify-between bg-white dark:bg-slate-700 shadow-3xl dark:shadow-3xl lg:rounded-lg lg:max-h-832 min-h-320 h-full"><div class="flex items-center h-16 flex-none border-b border-slate-200 dark:border-slate-700"><div class="w-full h-full"><form class="flex items-center w-full h-full outline-none rounded-tl-lg"><label for="mysearch-input" id="mysearch-label" class="h-full w-14 mt-1 ml-1 px-4 flex items-center justify-center transition-colors duration-200 ease-in-out text-emerald-200"><div class="text-2xl text-emerald-500"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div></label><div class="relative flex-1"> <input class="flex-1 font-light h-full bg-transparent focus:text-slate-900 text-slate-500 dark:text-slate-300 placeholder-slate-400 placeholder-opacity-80 shadow-none outline-none truncate text-lg sm:text-2xl caret-color-emerald-400 leading-normalized w-full appearance-none rounded-none transition-colors duration-200 ease-in-out" id="mysearch-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search for cheatsheet" maxlength="128" type="text" enterkeyhint="go"></div> <button id="mysearch-clear" type="reset" class="items-center justify-center h-full w-14 px-4 text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 opacity-75 fill-current cursor-pointer transition-fast-out flex"><i class="icon icon-close text-xs font-bold"></i></button></form></div><div class="w-px h-8 bg-slate-100 dark:bg-slate-400/20 flex-none"></div> <button class="cancel mr-1 px-4 h-full text-slate-500 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-300"> Cancel</button></div><div class="flex flex-grow overflow-hidden lg:rounded-br-lg"><div class="relative w-full flex-none overflow-y-auto lg:w-1/2"><ul id="mysearch-list"></ul></div><div class="preview-panel shadow-inner bg-slate-100 dark:bg-slate-800 lg:block w-1/2 flex-none overflow-y-auto"></div></div></div></div><footer class="text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-slate-800 md:mt-14"></footer><div id="carbon_container"></div></body><script src="/js/main.js?_v=1705688051674"></script><script>
+        // Get all pre > code elements
+        const codeBlocks = document.querySelectorAll('pre > code');
+        const initInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path> </svg>';
+        const successInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>';
+        codeBlocks.forEach(function (codeBlock) {
+            // Create a copy button element
+            const copyButton = document.createElement('button');
+            copyButton.className = 'bg-emerald-500 p-2 text-white fadeIn shadow-xl rounded flex items-center absolute top-2 right-2';
+            copyButton.innerHTML = initInnerHTML;
+            copyButton.style.opacity = "0";
+            const parent = codeBlock.parentNode;
+
+            parent.style = "position: relative;"
+            parent.insertBefore(copyButton, codeBlock);
+
+            // Add click event listener to copy button
+            copyButton.addEventListener('click', () => {
+                navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+                    copyButton.innerHTML = successInnerHTML;
+                    setTimeout(() => {
+                        copyButton.innerHTML = initInnerHTML;
+                    }, 1000);
+                });
+            });
+
+            parent.addEventListener('mouseenter', () => {
+                copyButton.style.opacity = "1";
+            });
+            parent.addEventListener('mouseleave', () => {
+                copyButton.style.opacity = "0";
+            });
+        });
+    </script></html>

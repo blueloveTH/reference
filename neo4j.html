@@ -1,0 +1,1494 @@
+<!DOCTYPE HTML><html class="scrollbar" translate="no"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta http-equiv="content-language" content="en-gb"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="app:pageurl" content="/"><title>Neo4j Cheat Sheet & Quick Reference</title><meta name="keywords" content="reference,cheatsheet,code table,snippets,linux,DB,GraphDB"><meta name="description" content="A Neo4j cheat sheet with getting started resources and information on how to query the database with Cypher. "><meta property="og:url" content="https://cheatsheets.zip/neo4j.html"><meta property="og:title" content="Neo4j Cheat Sheet & Quick Reference"><meta property="og:site_name" content="CheatSheets.zip"><meta property="og:description" content="A Neo4j cheat sheet with getting started resources and information on how to query the database with Cypher. "><meta property="og:image" content="https://cheatsheets.zip/assets/image/preview.png?v=sqmkm"><meta property="og:image:width" content="2276"><meta property="og:image:height" content="1240"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Neo4j Cheat Sheet & Quick Reference"><meta name="twitter:site" content="@CheatSheets.zip"><meta name="twitter:creator" content="@CheatSheets.zip"><meta name="twitter:description" content="A Neo4j cheat sheet with getting started resources and information on how to query the database with Cypher. "><meta name="twitter:image" content="https://cheatsheets.zip/assets/image/preview.png?v=y866u"><link rel="icon" href="/images/favicon.png?v=1"><link rel="icon shortcut" type="image/png" href="/images/favicon.png?v=1"><link rel="canonical" href="https://cheatsheets.zip/neo4j.html"><link rel="prefetch" href="https://cheatsheets.zip"><link rel="prerender" href="https://cheatsheets.zip"><link rel="alternate" href="/atom.xml" title="CheatSheets.zip" type="application/atom+xml"><link rel="stylesheet" href="/css/style.css?_v=1705688051674"><script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            let html = document.documentElement.classList;
+            html.toggle('dark')
+        }
+    </script></head><body class="bg-slate-100 dark:bg-slate-900"><header class=""><div class="max-container z-10" style="display:none"><div class="flex flex-row justify-between md:justify-start items-center py-3"><a href="/" class="flex font-medium items-center justify-center md:justify-start text-slate-800 dark:text-slate-300"><div class="hidden md:flex justify-center w-10 h-10 md:w-12 md:h-12 text-white p-2 bg-emerald-500 rounded-full mr-3 text-2xl"><div class="self-center"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M303.55291933 951.35043811c-1.84934059-3.43448917-12.68119097-22.19208477-24.04142536-41.74225521l-20.07855218-35.4016586 5.01963776-9.51089265c2.90610631-5.01963776 13.20957383-23.24885049 22.9846585-40.15710664l17.70082986-31.17459456h366.69778034l6.86897834-11.09604238c3.43448917-6.34059549 13.73795669-23.77723335 22.72046763-39.10033977 8.71831893-15.32310642 22.19208477-38.30776491 29.85363797-51.51733873 7.66155321-12.94538297 16.37987214-28.00429739 19.02178646-33.02393629 2.90610631-5.28382976 14.00214869-24.30561621 24.56980821-42.27063694 10.56765952-18.22921273 29.85363797-51.51733987 43.06321181-73.97361551 12.94538297-22.45627563 35.93004146-62.08499826 51.25314787-87.71157333 15.05891442-25.89076594 28.53268025-49.93219015 29.85363797-53.63087132 3.43448917-8.98251093 8.45412693-8.18993607 12.94538184 2.11353259 2.11353145 4.4912549 8.71831893 16.90825501 14.79472355 26.94753166 6.34059549 10.30346752 20.60693618 35.13746773 32.23136143 55.48021077s25.62657394 44.38416953 30.91040369 53.63087133l9.77508466 16.64406414-6.07640462 9.77508466c-3.43448917 5.28382976-7.13317035 11.62442525-8.71831893 14.00214869-2.90610631 4.7554469-13.73795669 23.77723335-24.83399908 43.3274038-3.96287203 7.39736121-13.47376583 23.77723335-21.13531904 36.45842432-7.39736121 12.94538297-13.47376583 24.04142535-13.47376583 24.56980821 0 .79257486-3.43448917 6.34059549-7.39736121 12.41699898-4.22706403 6.07640462-9.51089379 15.32310642-12.15280811 20.34274531-2.37772345 5.01963776-6.86897835 12.94538297-9.77508465 17.17244587-2.64191431 4.4912549-5.81221262 10.03927666-6.60478749 12.68119096-1.05676573 2.37772345-2.64191431 4.4912549-3.69868117 4.49125604s-2.64191431 2.11353145-3.43448918 4.75544576c-1.05676573 2.37772345-5.28382976 10.56765952-9.77508466 17.70082987-4.22706403 7.39736121-10.56765952 17.96502073-13.47376582 23.77723335-3.17029831 5.81221262-10.83185038 19.28597845-17.17244587 29.58944597-6.34059549 10.56765952-11.62442525 20.07855331-11.62442525 21.13531904 0 .79257486-1.58514859 3.69868117-3.69868117 5.81221263-2.11353145 2.37772345-8.71831893 13.73795669-14.79472355 25.36238307s-18.22921273 33.81651001-26.94753053 49.66799815l-16.11568128 28.26848939H307.25159936l-3.69868003-5.81221263z"></path><path d="M523.88861725 694.82050674c-31.70297856-20.60693618-68.95397774-44.11997753-70.01074347-44.11997753-.79257486 0-10.03927666-5.81221262-20.60693618-13.20957383-10.83185038-7.13317035-22.72046763-14.53053155-26.68333966-16.11568128-3.69868117-1.84934059-6.86897835-3.96287203-6.86897835-5.01963776 0-.79257486-4.7554469-4.22706403-10.56765952-7.66155321l-10.30346752-5.81221262-.79257486-98.27923172c-.52838286-54.15925419 0-99.33599744.79257486-100.3927643 1.05676573-1.32095773 27.74010539 12.94538297 59.44308395 31.96716942 31.96716942 18.75759559 69.21816861 40.42129749 82.95612529 48.61123356l25.09819108 14.26633956.264192 103.56306148c.264192 73.7094235-.52838286 103.56306147-2.64191545 103.56306261-1.58514859 0-10.56765952-5.01963776-20.07855217-11.36023438zm0-61.29242453c0-11.09604238-.79257486-12.15280811-11.09604239-18.2292116-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023325l60.23565881 34.60908486c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327574.264192 0 .52838286-5.28382976.528384-11.88861724zm0-42.27063695c0-11.09604238-.79257486-12.15280811-11.09604239-18.22921273-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023438l60.23565881 34.60908373c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327688.264192 0 .52838286-5.28382976.528384-11.88861725zm-1.84934059-54.42344619c-2.11353145-2.11353145-117.30101931-68.42559488-118.88616789-68.42559374-.52838286 0-.79257486 5.28382976-.79257487 11.62442525v11.36023324l60.23565881 34.60908487 59.97146681 34.60908488.79257373-10.83185152c.52838286-5.81221262 0-11.62442525-1.32095659-12.94538298z"></path><path d="M109.10798734 615.82725347c-3.69868117-7.39736121-10.56765952-20.34274418-15.58729841-28.26848938-7.92574407-13.47376583-49.66799929-84.80546589-61.2924234-105.41240206-7.13317035-12.15280811-6.34059549-15.85148928 6.34059548-37.77938205 24.56980821-42.00644608 41.21387122-70.27493433 45.96931812-78.99325326 7.13317035-12.41700011 49.66799929-86.12642361 81.37097671-141.34244466 14.53053155-24.56980821 40.68548835-70.27493433 58.12212622-101.18533803l32.23136143-56.27278563h229.05401685c159.30746539 0 230.37497458 1.05676573 232.75269689 2.90610631 1.84934059 1.58514859 10.56765952 15.58729728 19.55017045 31.17459456 8.71831893 15.58729728 18.75759559 33.02393515 22.45627563 38.83614777l6.34059548 10.83185152-8.9825098 14.26633955c-5.01963776 7.92574407-15.32310642 25.89076594-22.72046762 39.62872264s-13.73795669 25.62657394-14.2663407 25.89076594c-.264192.52838286-83.2203173.79257486-184.40565532.79257486l-183.6130816-.264192-9.5108938 14.53053155c-5.01963776 7.92574407-9.24670179 15.85148928-9.24670179 17.17244701 0 1.58514859-1.05676573 2.64191431-2.64191431 2.64191431-1.32095773 0-2.64191431 1.05676573-2.64191545 2.11353145 0 2.90610631-29.32525511 55.21601991-48.61123243 87.18319047-8.18993607 13.47376583-14.79472355 25.09819107-14.79472355 25.8907648 0 1.05676573-3.43448917 6.86897835-7.92574407 13.47376583-4.22706403 6.34059549-7.92574407 12.15280811-7.92574521 12.94538297 0 .52838286-2.90610631 5.54802062-6.07640349 11.09604238-3.43448917 5.28382976-9.24670179 15.05891442-12.94538296 21.6637019s-20.07855331 35.13746773-36.45842546 63.40595599-31.96716942 55.21601991-34.34489288 59.44308394c-2.64191431 4.4912549-8.18993607 14.26634069-12.94538182 21.92789276-4.4912549 7.66155321-8.18993607 14.53053155-8.18993608 15.32310642 0 2.37772345-19.28597845 30.11782883-20.87112704 30.11782884-.79257486 0-4.4912549-6.34059549-8.18993607-13.7379567z"></path><path d="M625.60233813 601.56091278c-15.85148928-10.56765952-31.17459456-21.13531904-33.81651-23.51304135-4.22706403-3.69868117-4.7554469-9.24670179-4.4912549-56.00859477.264192-39.89291463-.264192-52.3099136-3.17029832-54.95182905-1.84934059-1.84934059-21.13531904-13.73795669-43.0632118-26.4191488-21.6637019-12.68119097-41.74225408-25.09819107-44.11997753-27.21172252-4.22706403-3.43448917-4.7554469-9.51089379-4.75544689-50.72476502 0-25.62657394.52838286-47.29027584 1.58514858-48.08284956.79257486-.79257486 8.18993607 2.90610631 16.37987214 8.45412693s25.36238194 15.85148928 37.77938205 22.72046763c12.41700011 7.13317035 43.06321181 25.09819107 67.89721201 40.15710549l45.44093526 27.21172366-.52838286 103.29886948c-.52838286 66.31206229-1.84934059 103.56306147-3.43448918 103.82725347-1.32095773.264192-15.58729728-8.18993607-31.70297856-18.75759559z"></path></svg></div></div> <span class="domain text-slate-600 dark:text-slate-300 text-lg md:text-2xl">CheatSheets<span class="text-emerald-400">.zip</span></span></a><div class="md:ml-auto flex flex-wrap items-center text-base justify-center"> <button id="mysearch-trigger" type="button" class="fadeIn inline-flex h-8 items-center bg-slate-200 dark:bg-gray-900 md:dark:bg-transparent md:bg-transparent rounded-full px-2 md:px-3 lg:px-6 py-2 text-slate-700 md:hover:opacity-80"><div class="md:text-xl text-slate-700 dark:text-slate-300 md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div> <span class="hidden md:inline dark:text-slate-300">Search for cheatsheet</span> <span class="hidden md:inline dark:text-slate-300 md:ml-2 text-sm leading-5 py-0.5 px-1.5 border border-slate-400 rounded-md"><span class="font-sans">⌘</span> <span class="font-sans">K</span></span></button> <a href="https://github.com/Fechin/reference/blob/main/source/_posts/neo4j.md" rel="external nofollow noreferrer" target="_blank"><img alt="GitHub Repo stars" style="height:26px;opacity:.8" src="https://img.shields.io/github/stars/Fechin/reference?style=social"></a> <a href="https://twitter.com/FechinLi" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"><div class="md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></div> <span class="hidden md:inline text-sm">Follow Me</span></button></a> <button id="darkMode" class="fadeIn inline-flex items-center justify-center flex-shrink-0 h-8 w-8 rounded-full text-gray-900 ml-1 lg:ml-4 dark:text-gray-300 bg-gray-200 dark:bg-gray-900"> <i class="icon-light text-gray-600 dark:text-gray-300 dark:hover:text-white"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M512 31.40266667c14.19946667 0 26.935296 8.14830933 31.93787733 20.447232l29.40381867 72.50466133c12.713984 31.30436267-4.456448 66.21320533-38.33856 77.96599467A70.34197333 70.34197333 0 0 1 512 206.16533333c-36.19771733 0-65.536-27.11005867-65.536-60.555264 0-7.25265067 1.41994667-14.46161067 4.17245867-21.25550933l29.425664-72.50466133C485.04285867 39.550976 497.75684267 31.40266667 512 31.40266667zm0 961.19466666c-14.221312 0-26.95714133-8.14830933-31.93787733-20.447232l-29.425664-72.50466133a56.492032 56.492032 0 0 1-4.17245867-21.25550933C446.464 844.96657067 475.80228267 817.83466667 512 817.83466667c7.86432 0 15.64125867 1.31072 23.003136 3.84477866 33.882112 11.75278933 51.052544 46.661632 38.33856 77.98784l-29.40381867 72.482816c-5.00258133 12.29892267-17.73841067 20.447232-31.93787733 20.447232zm480.59733333-480.59733333c0 14.19946667-8.14830933 26.935296-20.447232 31.93787733l-72.50466133 29.40381867c-31.30436267 12.713984-66.21320533-4.456448-77.96599467-38.33856A70.34197333 70.34197333 0 0 1 817.83466667 512c0-36.19771733 27.11005867-65.536 60.555264-65.536 7.25265067 0 14.46161067 1.41994667 21.25550933 4.17245867l72.50466133 29.425664c12.29892267 4.980736 20.447232 17.69472 20.447232 31.93787733zM31.40266667 512c0-14.221312 8.14830933-26.95714133 20.447232-31.93787733l72.50466133-29.425664c6.77205333-2.752512 13.98101333-4.17245867 21.25550933-4.17245867C179.03342933 446.464 206.16533333 475.80228267 206.16533333 512c0 7.86432-1.31072 15.64125867-3.84477866 23.003136-11.75278933 33.882112-46.661632 51.052544-77.98784 38.33856l-72.482816-29.40381867C39.550976 538.935296 31.40266667 526.19946667 31.40266667 512zM172.15214933 172.17399467c10.04885333-10.04885333 24.81629867-13.28196267 37.04968534-8.126464l72.06775466 30.45239466c31.1296 13.172736 43.66882133 49.98212267 28.00571734 82.24768a70.34197333 70.34197333 0 0 1-13.54410667 19.00544c-25.58088533 25.58088533-65.49230933 27.15374933-89.12896 3.49525334a56.492032 56.492032 0 0 1-12.10231467-17.97870934L164.04753067 209.22368c-5.177344-12.23338667-1.94423467-27.000832 8.10461866-37.04968533zm679.673856 679.673856c-10.04885333 10.04885333-24.81629867 13.28196267-37.04968533 8.10461866l-72.04590933-30.45239466a56.492032 56.492032 0 0 1-18.00055467-12.08046934c-23.63665067-23.658496-22.06378667-63.56992 3.51709867-89.15080533a70.34197333 70.34197333 0 0 1 19.00544-13.54410667c32.26555733-15.663104 69.074944-3.12388267 82.24768 28.00571734l30.45239466 72.06775466c5.15549867 12.23338667 1.92238933 26.97898667-8.126464 37.04968534zm0-679.69570134c10.04885333 10.04885333 13.28196267 24.81629867 8.126464 37.04968534l-30.45239466 72.06775466c-13.172736 31.1296-49.98212267 43.66882133-82.24768 28.00571734a70.34197333 70.34197333 0 0 1-19.00544-13.54410667c-25.58088533-25.58088533-27.15374933-65.49230933-3.49525334-89.12896 5.111808-5.15549867 11.206656-9.240576 17.97870934-12.10231467l72.04590933-30.45239466c12.23338667-5.177344 27.000832-1.94423467 37.04968533 8.10461866zM172.15214933 851.82600533c-10.04885333-10.04885333-13.28196267-24.81629867-8.10461866-37.04968533l30.45239466-72.04590933c2.83989333-6.77205333 6.946816-12.86690133 12.08046934-18.00055467 23.658496-23.63665067 63.56992-22.06378667 89.15080533 3.51709867 5.57056 5.57056 10.15808 12.01493333 13.54410667 19.00544 15.663104 32.26555733 3.12388267 69.074944-28.00571734 82.24768l-72.06775466 30.45239466c-12.23338667 5.15549867-26.97898667 1.92238933-37.04968534-8.126464zM512 752.29866667c-132.7104 0-240.29866667-107.58826667-240.29866667-240.29866667s107.58826667-240.29866667 240.29866667-240.29866667 240.29866667 107.58826667 240.29866667 240.29866667-107.58826667 240.29866667-240.29866667 240.29866667z"></path></svg></i></button> <a href="https://facebook.com/sharer/sharer.php?u=https://cheatsheets.zip/neo4j.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4a66ad] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M594.74346667 51.53066667c-28.95893333 0-56.30826667 3.2192-88.48533334 16.0896-65.9616 27.34826667-98.13653333 88.48533333-98.13653333 186.6208v94.91946666h-91.70026667v157.66186667h91.70026667v455.28853333h186.6208v-455.28853333h127.09546667l17.696-157.66186667h-144.7936v-70.7872c0-22.52266667 1.60853333-38.61013333 8.04266666-46.65706666 8.04266667-14.47786667 24.13226667-20.91413333 49.872-20.91413334h85.26613334v-157.66186666h-143.184z"></path></svg></span> <span class="hidden">Facebook</span></button></a> <a href="https://twitter.com/intent/tweet/?text=A%20Neo4j%20cheat%20sheet%20with%20getting%20started%20resources%20and%20information%20on%20how%20to%20query%20the%20database%20with%20Cypher.%20&url=https://cheatsheets.zip/neo4j.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></span> <span class="hidden">Twitter</span></button></a></div></div></div></header><div class="mx-auto flex flex-wrap md:py-5 flex-col md:flex-row items-center"><div class="flex flex-col w-full mx-auto text-center my-8"><div class="max-container w-full"><h1 class="text-5xl mb-4"> <span class="text-slate-700 dark:text-slate-300 font-light">Neo4j</span> <span class="text-slate-400 dark:text-slate-500 font-extralight hidden md:inline">cheatsheet</span></h1><div class="lg:w-3/5 mx-auto intro leading-relaxed text-slate-600"><p>A Neo4j cheat sheet with getting started resources and information on how to query the database with Cypher.</p></div></div></div><div id="mdLayout" class="mdLayout w-full max-container"> 
+        <div class="h2-wrap cols-2">
+<h2 id="getting-started"><a class="h-anchor" href="#getting-started">#</a>Getting Started</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="getting-started-with-neo4j"><a class="h-anchor" href="#getting-started-with-neo4j">#</a>Getting Started with Neo4j</h3>
+<div class="section">
+<p>Neo4j is a Graph Database consisting of nodes connected together by relationships.  You might consider using a Graph database if you have a highly connected dataset or have queries with many joins.</p>
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://neo4j.com/download">Download Neo4j Desktop</a> <em>download Neo4j desktop or server editions</em></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://sandbox.neo4j.com">Neo4j Sandbox</a> <em>pick a data set - no installation required</em></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://neo4j.com/aura">Neo4j Aura</a> <em>free Neo4j instance in the cloud</em></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://neo4j.com/graphacademy">Neo4j GraphAcademy</a> <em>free, self-paced, hands-on online training</em></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://neo4j.com/graphgists">GraphGists</a> <em>use ase and industry specific example graphs</em></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="graph-database-concepts"><a class="h-anchor" href="#graph-database-concepts">#</a>Graph Database Concepts</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nodes</strong></td>
+<td>Nodes are commonly used to represent <em>entities</em> or <em>things</em> in your data.  For example, a <strong>Person</strong> or <strong>Movie</strong></td>
+</tr>
+<tr>
+<td><strong>Relationships</strong></td>
+<td>Relationships are used to connect two nodes together and organise the data into structure.  For example, a Person <strong>acted in</strong> a movie.  A relationship has a <em>type</em> and <em>direction</em>, although the direction can be ignored at query time.</td>
+</tr>
+<tr>
+<td><strong>Labels</strong></td>
+<td>Labels are used to group nodes into categories.  For example, a person may have <code>Person</code> and <code>Actor</code> labels.</td>
+</tr>
+<tr>
+<td><strong>Relationship Type</strong></td>
+<td>Each relationship has a type.  Relationships allow you to explore smaller sections of a graph.</td>
+</tr>
+<tr>
+<td><strong>Properties</strong></td>
+<td>Both nodes and relationships can have properties set against them.  Properties are <a target="_blank" rel="noopener external nofollow noreferrer" href="https://neo4j.com/docs/cypher-manual/4.3/syntax/values/#cypher-values">name-value pairs</a>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="neo4j-syntax"><a class="h-anchor" href="#neo4j-syntax">#</a>Neo4j Syntax</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="read-query-structure"><a class="h-anchor" href="#read-query-structure">#</a>Read query structure</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-meta">[</span>USE<span class="hljs-meta">]</span>
+<span class="hljs-meta">[</span><span class="hljs-keyword">MATCH</span> <span class="hljs-keyword">WHERE</span><span class="hljs-meta">]</span>
+<span class="hljs-meta">[</span>OPTIONAL <span class="hljs-keyword">MATCH</span> <span class="hljs-keyword">WHERE</span><span class="hljs-meta">]</span>
+<span class="hljs-meta">[</span><span class="hljs-keyword">WITH</span> <span class="hljs-meta">[</span><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span><span class="hljs-meta">]</span> <span class="hljs-meta">[</span><span class="hljs-keyword">SKIP</span><span class="hljs-meta">]</span> <span class="hljs-meta">[</span>LIMIT<span class="hljs-meta">]</span>]
+RETURN <span class="hljs-meta">[</span><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span><span class="hljs-meta">]</span> <span class="hljs-meta">[</span><span class="hljs-keyword">SKIP</span><span class="hljs-meta">]</span> <span class="hljs-meta">[</span>LIMIT<span class="hljs-meta">]</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="write-only-query-structure"><a class="h-anchor" href="#write-only-query-structure">#</a>Write-only query structure</h3>
+<div class="section">
+<pre><code class="hljs">[USE]
+(<span class="hljs-keyword">CREATE</span> | <span class="hljs-keyword">MERGE</span>)*
+[<span class="hljs-keyword">SET</span>|<span class="hljs-keyword">DELETE</span>|REMOVE|FOREACH]*
+[<span class="hljs-keyword">RETURN</span> [<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span>] [SKIP] [<span class="hljs-keyword">LIMIT</span>]]
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="read-write-query-structure"><a class="h-anchor" href="#read-write-query-structure">#</a>Read-write query structure</h3>
+<div class="section">
+<pre><code class="hljs">[USE]
+[<span class="hljs-keyword">MATCH</span> <span class="hljs-keyword">WHERE</span>]
+[OPTIONAL <span class="hljs-keyword">MATCH</span> <span class="hljs-keyword">WHERE</span>]
+[<span class="hljs-keyword">WITH</span> [<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span>] [<span class="hljs-keyword">SKIP</span>] [LIMIT]]
+(<span class="hljs-keyword">CREATE</span> <span class="hljs-operator">|</span> <span class="hljs-keyword">MERGE</span>)<span class="hljs-operator">*</span>
+[<span class="hljs-keyword">SET</span><span class="hljs-operator">|</span><span class="hljs-keyword">DELETE</span><span class="hljs-operator">|</span>REMOVE<span class="hljs-operator">|</span>FOREACH]<span class="hljs-operator">*</span>
+[<span class="hljs-keyword">RETURN</span> [<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span>] [<span class="hljs-keyword">SKIP</span>] [LIMIT]]
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="neo4j-reading-data"><a class="h-anchor" href="#neo4j-reading-data">#</a>Neo4j Reading Data</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="match"><a class="h-anchor" href="#match">#</a>MATCH</h3>
+<div class="section">
+<pre><code class="hljs">MATCH (<span class="hljs-function"><span class="hljs-title">n</span>:Person)-[:KNOWS]-&gt;</span>(m:Person)
+WHERE n.<span class="hljs-keyword">name</span> = <span class="hljs-string">&#x27;Alice&#x27;</span>
+</code></pre>
+<p>Node patterns can contain labels and properties.</p>
+<pre><code class="hljs">MATCH <span class="hljs-function"><span class="hljs-params">(n)</span>--&gt;</span>(m)
+</code></pre>
+<p>Any pattern can be used in MATCH.</p>
+<pre><code class="hljs">MATCH <span class="hljs-function"><span class="hljs-params">(n &#123;name: <span class="hljs-string">&#x27;Alice&#x27;</span>&#125;)</span>--&gt;</span>(m)
+</code></pre>
+<p>Patterns with node properties.</p>
+<pre><code class="hljs">MATCH <span class="hljs-function"><span class="hljs-title">p</span> = <span class="hljs-params">(n)</span>--&gt;</span>(m)
+</code></pre>
+<p>Assign a path to p.</p>
+<pre><code class="hljs">OPTIONAL MATCH (n)-<span class="hljs-selector-attr">[r]</span>-&gt;(m)
+</code></pre>
+<p>Optional pattern: nulls will be used for missing parts.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="where"><a class="h-anchor" href="#where">#</a>WHERE</h3>
+<div class="section">
+<pre><code class="hljs">WHERE n.<span class="hljs-keyword">property</span> &lt;&gt; <span class="hljs-built_in">$value</span>
+</code></pre>
+<p>Use a predicate to filter. Note that WHERE is always part of a MATCH, OPTIONAL MATCH or WITH clause. Putting it after a different clause in a query will alter what it does.</p>
+<pre><code class="hljs"><span class="hljs-keyword">WHERE</span> EXISTS &#123;
+  <span class="hljs-keyword">MATCH</span> (n)--&gt;(m) <span class="hljs-keyword">WHERE</span> n.age = m.age
+&#125;
+</code></pre>
+<p>Use an existential subquery to filter.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="return"><a class="h-anchor" href="#return">#</a>RETURN</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">RETURN</span> *
+</code></pre>
+<p>Return the value of all variables.</p>
+<pre><code class="hljs"><span class="hljs-keyword">RETURN</span> n <span class="hljs-keyword">AS</span> columnName
+</code></pre>
+<p>Use alias for result column name.</p>
+<pre><code class="hljs"><span class="hljs-keyword">RETURN</span> <span class="hljs-built_in">DISTINCT</span> n
+</code></pre>
+<p>Return unique rows.</p>
+<pre><code class="hljs"><span class="hljs-keyword">ORDER</span> <span class="hljs-title">BY</span> n.property
+</code></pre>
+<p>Sort the result.</p>
+<pre><code class="hljs"><span class="hljs-keyword">ORDER</span> <span class="hljs-title">BY</span> n.property DESC
+</code></pre>
+<p>Sort the result in descending order.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SKIP </span>$skipNumber
+</code></pre>
+<p>Skip a number of results.</p>
+<pre><code class="hljs">LIMIT <span class="hljs-symbol">$limit</span><span class="hljs-built_in">Number</span>
+</code></pre>
+<p>Limit the number of results.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SKIP </span>$skipNumber LIMIT $limitNumber
+</code></pre>
+<p>Skip results at the top and limit the number of results.</p>
+<pre><code class="hljs"><span class="hljs-keyword">RETURN</span> <span class="hljs-built_in">count</span>(*)
+</code></pre>
+<p>The number of matching rows. See Aggregating functions for more.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="with"><a class="h-anchor" href="#with">#</a>WITH</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">MATCH</span> (<span class="hljs-keyword">user</span>)<span class="hljs-operator">-</span>[:FRIEND]<span class="hljs-operator">-</span>(friend)
+<span class="hljs-keyword">WHERE</span> user.name <span class="hljs-operator">=</span> $name
+<span class="hljs-keyword">WITH</span> <span class="hljs-keyword">user</span>, <span class="hljs-built_in">count</span>(friend) <span class="hljs-keyword">AS</span> friends
+<span class="hljs-keyword">WHERE</span> friends <span class="hljs-operator">&gt;</span> <span class="hljs-number">10</span>
+<span class="hljs-keyword">RETURN</span> <span class="hljs-keyword">user</span>
+</code></pre>
+<p>The WITH syntax is similar to RETURN. It separates query parts explicitly, allowing you to declare which variables to carry over to the next part.</p>
+<pre><code class="hljs">MATCH (<span class="hljs-keyword">user</span>)-[:FRIEND]-(friend)
+<span class="hljs-keyword">WITH</span> <span class="hljs-keyword">user</span>, count(friend) <span class="hljs-keyword">AS</span> friends
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> friends <span class="hljs-keyword">DESC</span>
+  SKIP <span class="hljs-number">1</span>
+  <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">3</span>
+<span class="hljs-keyword">RETURN</span> <span class="hljs-keyword">user</span>
+</code></pre>
+<p>ORDER BY, SKIP, and LIMIT can also be used with WITH.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="union"><a class="h-anchor" href="#union">#</a>UNION</h3>
+<div class="section">
+<pre><code class="hljs">MATCH (<span class="hljs-selector-tag">a</span>)-<span class="hljs-selector-attr">[:KNOWS]</span>-&gt;(<span class="hljs-selector-tag">b</span>)
+RETURN <span class="hljs-selector-tag">b</span><span class="hljs-selector-class">.name</span>
+UNION
+MATCH (<span class="hljs-selector-tag">a</span>)-<span class="hljs-selector-attr">[:LOVES]</span>-&gt;(<span class="hljs-selector-tag">b</span>)
+RETURN <span class="hljs-selector-tag">b</span><span class="hljs-selector-class">.name</span>
+</code></pre>
+<p>Returns the distinct union of all query results. Result column types and names have to match.</p>
+<pre><code class="hljs">MATCH (<span class="hljs-selector-tag">a</span>)-<span class="hljs-selector-attr">[:KNOWS]</span>-&gt;(<span class="hljs-selector-tag">b</span>)
+RETURN <span class="hljs-selector-tag">b</span><span class="hljs-selector-class">.name</span>
+UNION <span class="hljs-attribute">ALL</span>
+MATCH (<span class="hljs-selector-tag">a</span>)-<span class="hljs-selector-attr">[:LOVES]</span>-&gt;(<span class="hljs-selector-tag">b</span>)
+RETURN <span class="hljs-selector-tag">b</span><span class="hljs-selector-class">.name</span>
+</code></pre>
+<p>Returns the union of all query results, including duplicated rows.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="neo4j-writing-data"><a class="h-anchor" href="#neo4j-writing-data">#</a>Neo4j Writing Data</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="create"><a class="h-anchor" href="#create">#</a>CREATE</h3>
+<div class="section">
+<pre><code class="hljs">CREATE (<span class="hljs-built_in">n</span> &#123;<span class="hljs-built_in">na</span><span class="hljs-symbol">me:</span> $<span class="hljs-built_in">value</span>&#125;)
+</code></pre>
+<p>Create a node with the given properties.</p>
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> (n $<span class="hljs-keyword">map</span>)
+</code></pre>
+<p>Create a node with the given properties.</p>
+<pre><code class="hljs">UNWIND <span class="hljs-built_in">$listOfMaps</span> <span class="hljs-keyword">AS</span> properties
+CREATE (n) <span class="hljs-keyword">SET</span> n = properties
+</code></pre>
+<p>Create nodes with the given properties.</p>
+<pre><code class="hljs">CREATE (n)-<span class="hljs-selector-attr">[r:KNOWS]</span>-&gt;(m)
+</code></pre>
+<p>Create a relationship with the given type and direction; bind a variable to it.</p>
+<pre><code class="hljs">CREATE (n)-<span class="hljs-selector-attr">[:LOVES &#123;since: $value&#125;]</span>-&gt;(m)
+</code></pre>
+<p>Create a relationship with the given type, direction, and properties.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="set"><a class="h-anchor" href="#set">#</a>SET</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-built_in">SET</span> n.property1 = <span class="hljs-variable">$value1</span>,
+    n.property2 = <span class="hljs-variable">$value2</span>
+</code></pre>
+<p>Update or create a property.</p>
+<pre><code class="hljs"><span class="hljs-built_in">SET</span> n = <span class="hljs-variable">$map</span>
+</code></pre>
+<p>Set all properties. This will remove any existing properties.</p>
+<pre><code class="hljs"><span class="hljs-built_in">SET</span> n += <span class="hljs-variable">$map</span>
+</code></pre>
+<p>Add and update properties, while keeping existing ones.</p>
+<pre><code class="hljs"><span class="hljs-built_in">SET</span> n:Person
+</code></pre>
+<p>Adds a label Person to a node.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="merge"><a class="h-anchor" href="#merge">#</a>MERGE</h3>
+<div class="section">
+<pre><code class="hljs">MERGE (n:Person &#123;name: <span class="hljs-variable">$value</span>&#125;)
+  ON CREATE SET n<span class="hljs-selector-class">.created</span> = <span class="hljs-built_in">timestamp</span>()
+  ON MATCH SET
+    n<span class="hljs-selector-class">.counter</span> = <span class="hljs-built_in">coalesce</span>(n<span class="hljs-selector-class">.counter</span>, <span class="hljs-number">0</span>) + <span class="hljs-number">1</span>,
+    n<span class="hljs-selector-class">.accessTime</span> = <span class="hljs-built_in">timestamp</span>()
+</code></pre>
+<p>Match a pattern or create it if it does not exist. Use ON CREATE and ON MATCH for conditional updates.</p>
+<pre><code class="hljs">MATCH (<span class="hljs-selector-tag">a</span>:Person &#123;name: $value1&#125;),
+      (<span class="hljs-selector-tag">b</span>:Person &#123;name: $value2&#125;)
+MERGE (<span class="hljs-selector-tag">a</span>)-<span class="hljs-selector-attr">[r:LOVES]</span>-&gt;(<span class="hljs-selector-tag">b</span>)
+</code></pre>
+<p>MERGE finds or creates a relationship between the nodes.</p>
+<pre><code class="hljs">MATCH (<span class="hljs-selector-tag">a</span>:Person &#123;name: $value1&#125;)
+MERGE
+  (<span class="hljs-selector-tag">a</span>)-<span class="hljs-selector-attr">[r:KNOWS]</span>-&gt;(<span class="hljs-selector-tag">b</span>:Person &#123;name: $value3&#125;)
+</code></pre>
+<p>MERGE finds or creates paths attached to the node.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="delete"><a class="h-anchor" href="#delete">#</a>DELETE</h3>
+<div class="section">
+<pre><code class="hljs">DELETE <span class="hljs-built_in">n</span>, r
+</code></pre>
+<p>Delete a node and a relationship.</p>
+<pre><code class="hljs"><span class="hljs-attribute">DETACH DELETE n</span>
+</code></pre>
+<p>Delete a node and all relationships connected to it.</p>
+<pre><code class="hljs"><span class="hljs-built_in">MATCH</span> (<span class="hljs-built_in">n</span>)
+DETACH DELETE <span class="hljs-built_in">n</span>
+</code></pre>
+<p>Delete all nodes and relationships from the database.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="remove"><a class="h-anchor" href="#remove">#</a>REMOVE</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-comment">REMOVE n:Person</span>
+</code></pre>
+<p>Remove a label from n.</p>
+<pre><code class="hljs"><span class="hljs-comment">REMOVE n.property</span>
+</code></pre>
+<p>Remove a property.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="foreach"><a class="h-anchor" href="#foreach">#</a>FOREACH</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">FOREACH</span> (r <span class="hljs-keyword">IN</span> relationships(<span class="hljs-type">path</span>) |
+  <span class="hljs-keyword">SET</span> r.marked = <span class="hljs-keyword">true</span>)
+</code></pre>
+<p>Execute a mutating operation for each relationship in a path.</p>
+<pre><code class="hljs">FOREACH (<span class="hljs-name">value</span> IN coll |
+ CREATE (<span class="hljs-symbol">:Person</span> &#123;name: value&#125;))
+</code></pre>
+<p>Execute a mutating operation for each element in a list.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="call-subquery"><a class="h-anchor" href="#call-subquery">#</a>CALL subquery</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-selector-tag">CALL</span> &#123;
+  <span class="hljs-selector-tag">MATCH</span> (<span class="hljs-attribute">p</span>:Person)<span class="hljs-selector-tag">-</span><span class="hljs-selector-attr">[:FRIEND_OF]</span><span class="hljs-selector-tag">-</span>&gt;(<span class="hljs-attribute">other</span>:Person) <span class="hljs-selector-tag">RETURN</span> <span class="hljs-selector-tag">p</span>, <span class="hljs-selector-tag">other</span>
+  <span class="hljs-selector-tag">UNION</span>
+  <span class="hljs-selector-tag">MATCH</span> (<span class="hljs-attribute">p</span>:Child)<span class="hljs-selector-tag">-</span><span class="hljs-selector-attr">[:CHILD_OF]</span><span class="hljs-selector-tag">-</span>&gt;(<span class="hljs-attribute">other</span>:Parent) <span class="hljs-selector-tag">RETURN</span> <span class="hljs-selector-tag">p</span>, <span class="hljs-selector-tag">other</span>
+&#125;
+</code></pre>
+<p>This calls a subquery with two union parts. The result of the subquery can afterwards be post-processed.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="call-procedure"><a class="h-anchor" href="#call-procedure">#</a>CALL procedure</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">CALL</span> db.labels() YIELD <span class="hljs-built_in">label</span>
+</code></pre>
+<p>This shows a standalone call to the built-in procedure db.labels to list all labels used in the database. Note that required procedure arguments are given explicitly in brackets after the procedure name.</p>
+<pre><code class="hljs"><span class="hljs-built_in">CALL</span> db.labels() <span class="hljs-built_in">YIELD</span> *
+</code></pre>
+<p>Standalone calls may use YIELD * to return all columns.</p>
+<pre><code class="hljs">CALL java<span class="hljs-selector-class">.stored</span><span class="hljs-selector-class">.procedureWithArgs</span>
+</code></pre>
+<p>Standalone calls may omit YIELD and also provide arguments implicitly via statement parameters, e.g. a standalone call requiring one argument input may be run by passing the parameter map {input: 'foo'}.</p>
+<pre><code class="hljs">CALL <span class="hljs-keyword">db</span>.labels() YIELD <span class="hljs-keyword">label</span>
+<span class="hljs-keyword">RETURN</span> <span class="hljs-keyword">count</span>(<span class="hljs-keyword">label</span>) <span class="hljs-keyword">AS</span> <span class="hljs-keyword">count</span>
+</code></pre>
+<p>Calls the built-in procedure db.labels inside a larger query to count all labels used in the database. Calls inside a larger query always requires passing arguments and naming results explicitly with YIELD.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="import"><a class="h-anchor" href="#import">#</a>Import</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">LOAD</span> CSV <span class="hljs-keyword">FROM</span>
+<span class="hljs-string">&#x27;https://neo4j.com/docs/cypher-refcard/4.3/csv/artists.csv&#x27;</span> <span class="hljs-keyword">AS</span> <span class="hljs-type">line</span>
+<span class="hljs-keyword">CREATE</span> (:Artist &#123;<span class="hljs-type">name</span>: <span class="hljs-type">line</span>[<span class="hljs-number">1</span>], year: toInteger(<span class="hljs-type">line</span>[<span class="hljs-number">2</span>])&#125;)
+</code></pre>
+<p>Load data from a CSV file and create nodes.</p>
+<pre><code class="hljs"><span class="hljs-keyword">LOAD</span> CSV <span class="hljs-keyword">WITH</span> HEADERS <span class="hljs-keyword">FROM</span>
+<span class="hljs-string">&#x27;https://neo4j.com/docs/cypher-refcard/4.3/csv/artists-with-headers.csv&#x27;</span> <span class="hljs-keyword">AS</span> <span class="hljs-type">line</span>
+<span class="hljs-keyword">CREATE</span> (:Artist &#123;<span class="hljs-type">name</span>: <span class="hljs-type">line</span>.Name, year: toInteger(<span class="hljs-type">line</span>.Year)&#125;)
+</code></pre>
+<p>Load CSV data which has headers.</p>
+<pre><code class="hljs"><span class="hljs-keyword">USING</span> PERIODIC <span class="hljs-keyword">COMMIT</span> <span class="hljs-number">500</span>
+<span class="hljs-keyword">LOAD</span> CSV <span class="hljs-keyword">WITH</span> HEADERS <span class="hljs-keyword">FROM</span>
+<span class="hljs-string">&#x27;https://neo4j.com/docs/cypher-refcard/4.3/csv/artists-with-headers.csv&#x27;</span> <span class="hljs-keyword">AS</span> <span class="hljs-type">line</span>
+<span class="hljs-keyword">CREATE</span> (:Artist &#123;<span class="hljs-type">name</span>: <span class="hljs-type">line</span>.Name, year: toInteger(<span class="hljs-type">line</span>.Year)&#125;)
+</code></pre>
+<p>Commit the current transaction after every 500 rows when importing large amounts of data.</p>
+<pre><code class="hljs"><span class="hljs-keyword">LOAD</span> CSV <span class="hljs-keyword">FROM</span>
+<span class="hljs-string">&#x27;https://neo4j.com/docs/cypher-refcard/4.3/csv/artists-fieldterminator.csv&#x27;</span>
+<span class="hljs-keyword">AS</span> <span class="hljs-type">line</span> FIELDTERMINATOR <span class="hljs-string">&#x27;;&#x27;</span>
+<span class="hljs-keyword">CREATE</span> (:Artist &#123;<span class="hljs-type">name</span>: <span class="hljs-type">line</span>[<span class="hljs-number">1</span>], year: toInteger(<span class="hljs-type">line</span>[<span class="hljs-number">2</span>])&#125;)
+</code></pre>
+<p>Use a different field terminator, not the default which is a comma (with no whitespace around it).</p>
+<pre><code class="hljs"><span class="hljs-keyword">LOAD</span> CSV <span class="hljs-keyword">FROM</span>
+<span class="hljs-string">&#x27;https://neo4j.com/docs/cypher-refcard/4.3/csv/artists.csv&#x27;</span> <span class="hljs-keyword">AS</span> <span class="hljs-type">line</span>
+<span class="hljs-keyword">RETURN</span> <span class="hljs-keyword">DISTINCT</span> file()
+</code></pre>
+<p>Returns the absolute path of the file that LOAD CSV is processing, returns null if called outside of LOAD CSV context.</p>
+<pre><code class="hljs"><span class="hljs-keyword">LOAD</span> CSV <span class="hljs-keyword">FROM</span>
+<span class="hljs-string">&#x27;https://neo4j.com/docs/cypher-refcard/4.3/csv/artists.csv&#x27;</span> <span class="hljs-keyword">AS</span> <span class="hljs-type">line</span>
+<span class="hljs-keyword">RETURN</span> linenumber()
+</code></pre>
+<p>Returns the line number that LOAD CSV is currently processing, returns null if called outside of LOAD CSV context.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="operators"><a class="h-anchor" href="#operators">#</a>Operators</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>General</strong></td>
+<td>DISTINCT, ., []</td>
+</tr>
+<tr>
+<td><strong>Mathematical</strong></td>
+<td>+, -, *, /, %, ^</td>
+</tr>
+<tr>
+<td><strong>Comparison</strong></td>
+<td>=, &lt;&gt;, &lt;, &gt;, &lt;=, &gt;=, IS NULL, IS NOT NULL</td>
+</tr>
+<tr>
+<td><strong>Boolean</strong></td>
+<td>AND, OR, XOR, NOT</td>
+</tr>
+<tr>
+<td><strong>String</strong></td>
+<td>+</td>
+</tr>
+<tr>
+<td><strong>List</strong></td>
+<td>+, IN, [x], [x .. y]</td>
+</tr>
+<tr>
+<td><strong>Regular Expression</strong></td>
+<td>=~</td>
+</tr>
+<tr>
+<td><strong>String matching</strong></td>
+<td>STARTS WITH, ENDS WITH, CONTAINS</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="null"><a class="h-anchor" href="#null">#</a>null</h3>
+<div class="section">
+<ul>
+<li>
+<p><code>null</code> is used to represent missing/undefined values.</p>
+</li>
+<li>
+<p><code>null</code> is not equal to <code>null</code>. Not knowing two values does not imply that they are the same value. So the expression <code>null = null</code> yields <code>null</code> and not <code>true</code>. To check if an expression is <code>null</code>, use <code>IS NULL</code>.</p>
+</li>
+<li>
+<p>Arithmetic expressions, comparisons and function calls (except <code>coalesce</code>) will return <code>null</code> if any argument is <code>null</code>.</p>
+</li>
+<li>
+<p>An attempt to access a missing element in a list or a property that doesn’t exist yields <code>null</code>.</p>
+</li>
+<li>
+<p>In <code>OPTIONAL MATCH</code> clauses, <code>nulls</code> will be used for missing parts of the pattern.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="patterns"><a class="h-anchor" href="#patterns">#</a>Patterns</h3>
+<div class="section">
+<pre><code class="hljs">(<span class="hljs-name">n</span><span class="hljs-symbol">:Person</span>)
+</code></pre>
+<p>Node with Person label.</p>
+<pre><code class="hljs">(<span class="hljs-name">n</span><span class="hljs-symbol">:Person</span><span class="hljs-symbol">:Swedish</span>)
+</code></pre>
+<p>Node with both Person and Swedish labels.</p>
+<pre><code class="hljs">(n:Person &#123;name: $value&#125;)
+</code></pre>
+<p>Node with the declared properties.</p>
+<pre><code class="hljs">()-<span class="hljs-selector-attr">[r &#123;name: $value&#125;]</span><span class="hljs-built_in">-</span>()
+</code></pre>
+<p>Matches relationships with the declared properties.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-params">(n)</span>--&gt;</span>(m)
+</code></pre>
+<p>Relationship from n to m.</p>
+<pre><code class="hljs">(n)<span class="hljs-built_in">--</span>(m)
+</code></pre>
+<p>Relationship in any direction between n and m.</p>
+<pre><code class="hljs">(<span class="hljs-name">n</span><span class="hljs-symbol">:Person</span>)--&gt;(<span class="hljs-name">m</span>)
+</code></pre>
+<p>Node n labeled Person with relationship to m.</p>
+<pre><code class="hljs">(m)&lt;-<span class="hljs-selector-attr">[:KNOWS]</span><span class="hljs-built_in">-</span>(n)
+</code></pre>
+<p>Relationship of type KNOWS from n to m.</p>
+<pre><code class="hljs">(n)-[<span class="hljs-symbol">:KNOWS|</span><span class="hljs-symbol">:LOVES</span>]-&gt;(m)
+</code></pre>
+<p>Relationship of type KNOWS or of type LOVES from n to m.</p>
+<pre><code class="hljs">(n)-<span class="hljs-selector-attr">[r]</span>-&gt;(m)
+</code></pre>
+<p>Bind the relationship to variable r.</p>
+<pre><code class="hljs">(n)-<span class="hljs-selector-attr">[*1..5]</span>-&gt;(m)
+</code></pre>
+<p>Variable length path of between 1 and 5 relationships from n to m.</p>
+<pre><code class="hljs">(n)-<span class="hljs-selector-attr">[*]</span>-&gt;(m)
+</code></pre>
+<p>Variable length path of any number of relationships from n to m. (See Performance section.)</p>
+<pre><code class="hljs">(n)-<span class="hljs-selector-attr">[:KNOWS]</span>-&gt;(m &#123;property: $value&#125;)
+</code></pre>
+<p>A relationship of type KNOWS from a node n to a node m with the declared property.</p>
+<pre><code class="hljs"><span class="hljs-built_in">shortestPath</span>((n1:Person)-<span class="hljs-selector-attr">[*..6]</span><span class="hljs-built_in">-</span>(n2:Person))
+</code></pre>
+<p>Find a single shortest path.</p>
+<pre><code class="hljs"><span class="hljs-built_in">allShortestPaths</span>((n1:Person)-<span class="hljs-selector-attr">[*..6]</span>-&gt;(n2:Person))
+</code></pre>
+<p>Find all shortest paths.</p>
+<pre><code class="hljs">size<span class="hljs-function"><span class="hljs-params">((n)--&gt;()--&gt;())</span>
+</span></code></pre>
+<p>Count the paths matching the pattern.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="use"><a class="h-anchor" href="#use">#</a>USE</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">USE</span> myDatabase
+</code></pre>
+<p>Select myDatabase to execute query, or query part, against.</p>
+<pre><code class="hljs">USE neo4j
+MATCH (<span class="hljs-function"><span class="hljs-title">n</span>:Person)-[:KNOWS]-&gt;</span>(m:Person)
+WHERE n.<span class="hljs-keyword">name</span> = <span class="hljs-string">&#x27;Alice&#x27;</span>
+</code></pre>
+<p>MATCH query executed against neo4j database.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="show-functions-and-procedures"><a class="h-anchor" href="#show-functions-and-procedures">#</a>SHOW FUNCTIONS and PROCEDURES</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">FUNCTIONS</span>
+</code></pre>
+<p>Listing all available functions.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">PROCEDURES</span> EXECUTABLE YIELD <span class="hljs-type">name</span>
+</code></pre>
+<p>List all procedures that can be executed by the current user and return only the name of the procedures.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="labels"><a class="h-anchor" href="#labels">#</a>Labels</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-title function_ invoke__">CREATE</span> (<span class="hljs-attr">n</span>:Person &#123;<span class="hljs-attr">name</span>: <span class="hljs-variable">$value</span>&#125;)
+</code></pre>
+<p>Create a node with label and property.</p>
+<pre><code class="hljs"><span class="hljs-title function_ invoke__">MERGE</span> (<span class="hljs-attr">n</span>:Person &#123;<span class="hljs-attr">name</span>: <span class="hljs-variable">$value</span>&#125;)
+</code></pre>
+<p>Matches or creates unique node(s) with the label and property.</p>
+<pre><code class="hljs"><span class="hljs-variable constant_">SET</span> <span class="hljs-symbol">n:</span><span class="hljs-title class_">Spouse</span><span class="hljs-symbol">:Parent</span><span class="hljs-symbol">:Employee</span>
+</code></pre>
+<p>Add label(s) to a node.</p>
+<pre><code class="hljs">MATCH (<span class="hljs-name">n</span><span class="hljs-symbol">:Person</span>)
+</code></pre>
+<p>Matches nodes labeled Person.</p>
+<pre><code class="hljs"><span class="hljs-keyword">MATCH</span> (n:Person)
+<span class="hljs-keyword">WHERE</span> n.name = $value
+</code></pre>
+<p>Matches nodes labeled Person with the given name.</p>
+<pre><code class="hljs">WHERE (<span class="hljs-name">n</span><span class="hljs-symbol">:Person</span>)
+</code></pre>
+<p>Checks the existence of the label on the node.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">labels</span><span class="hljs-params">(n)</span></span>
+</code></pre>
+<p>Labels of the node.</p>
+<pre><code class="hljs"><span class="hljs-comment">REMOVE n:Person</span>
+</code></pre>
+<p>Remove the label from the node.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="lists"><a class="h-anchor" href="#lists">#</a>Lists</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-selector-attr">[<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-string">&#x27;c&#x27;</span>]</span> AS list
+</code></pre>
+<p>Literal lists are declared in square brackets.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">size</span><span class="hljs-params">(<span class="hljs-variable">$list</span>)</span></span> AS len, <span class="hljs-variable">$list</span><span class="hljs-selector-attr">[0]</span> AS value
+</code></pre>
+<p>Lists can be passed in as parameters.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">range</span><span class="hljs-params">(<span class="hljs-variable">$firstNum</span>, <span class="hljs-variable">$lastNum</span>, <span class="hljs-variable">$step</span>)</span></span> AS list
+</code></pre>
+<p>range() creates a list of numbers (step is optional), other functions returning lists are: labels(), nodes(), relationships().</p>
+<pre><code class="hljs">MATCH <span class="hljs-selector-tag">p</span> = (a)-<span class="hljs-selector-attr">[:KNOWS*]</span>-&gt;()
+RETURN <span class="hljs-built_in">relationships</span>(p) AS r
+</code></pre>
+<p>The list of relationships comprising a variable length path can be returned using named paths and relationships().</p>
+<pre><code class="hljs"><span class="hljs-keyword">RETURN</span> matchedNode.list[<span class="hljs-number">0</span>] <span class="hljs-keyword">AS</span> value,
+       size(matchedNode.list) <span class="hljs-keyword">AS</span> len
+</code></pre>
+<p>Properties can be lists of strings, numbers or booleans.</p>
+<pre><code class="hljs">list[<span class="hljs-built_in">$idx</span>] <span class="hljs-keyword">AS</span> value,
+list[<span class="hljs-built_in">$startIdx</span>..<span class="hljs-built_in">$endIdx</span>] <span class="hljs-keyword">AS</span> slice
+</code></pre>
+<p>List elements can be accessed with idx subscripts in square brackets. Invalid indexes return null. Slices can be retrieved with intervals from start_idx to end_idx, each of which can be omitted or negative. Out of range elements are ignored.</p>
+<pre><code class="hljs">UNWIND <span class="hljs-variable">$names</span> AS<span class="hljs-built_in"> name</span>
+MATCH (n <span class="hljs-built_in">&#123;name</span>:<span class="hljs-built_in"> name</span>&#125;)
+RETURN<span class="hljs-built_in"> avg</span>(n.age)
+</code></pre>
+<p>With UNWIND, any list can be transformed back into individual rows. The example matches all names from a list of names.</p>
+<pre><code class="hljs"><span class="hljs-keyword">MATCH</span> (a)
+<span class="hljs-keyword">RETURN</span> <span class="hljs-meta">[</span>(a)--&gt;(b) <span class="hljs-keyword">WHERE</span> b.name = <span class="hljs-string">&#x27;Bob&#x27;</span> | b.age<span class="hljs-meta">]</span>
+</code></pre>
+<p>Pattern comprehensions may be used to do a custom projection from a match directly into a list.</p>
+<pre><code class="hljs">MATCH (person)
+<span class="hljs-keyword">RETURN</span> person &#123; .<span class="hljs-keyword">name</span>, .age&#125;
+</code></pre>
+<p>Map projections may be easily constructed from nodes, relationships and other map values.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="maps"><a class="h-anchor" href="#maps">#</a>Maps</h3>
+<div class="section">
+<pre><code class="hljs">&#123;<span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;Alice&#x27;</span>, <span class="hljs-attr">age:</span> <span class="hljs-number">38</span>,
+ <span class="hljs-attr">address:</span> &#123;<span class="hljs-attr">city:</span> <span class="hljs-string">&#x27;London&#x27;</span>, <span class="hljs-attr">residential:</span> <span class="hljs-literal">true</span>&#125;&#125;
+</code></pre>
+<p>Literal maps are declared in curly braces much like property maps. Lists are supported.</p>
+<pre><code class="hljs"><span class="hljs-keyword">WITH</span> &#123;person: &#123;<span class="hljs-type">name</span>: <span class="hljs-string">&#x27;Anne&#x27;</span>, age: <span class="hljs-number">25</span>&#125;&#125; <span class="hljs-keyword">AS</span> p
+<span class="hljs-keyword">RETURN</span> p.person.name
+</code></pre>
+<p>Access the property of a nested map.</p>
+<pre><code class="hljs"><span class="hljs-keyword">MERGE</span> (p:Person &#123;name: $<span class="hljs-keyword">map</span>.name&#125;)
+  <span class="hljs-keyword">ON</span> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">SET</span> p = $<span class="hljs-keyword">map</span>
+</code></pre>
+<p>Maps can be passed in as parameters and used either as a map or by accessing keys.</p>
+<pre><code class="hljs"><span class="hljs-keyword">MATCH</span> (matchedNode:Person)
+<span class="hljs-keyword">RETURN</span> matchedNode
+</code></pre>
+<p>Nodes and relationships are returned as maps of their data.</p>
+<pre><code class="hljs">map<span class="hljs-selector-class">.name</span>, map<span class="hljs-selector-class">.age</span>, map<span class="hljs-selector-class">.children</span><span class="hljs-selector-attr">[0]</span>
+</code></pre>
+<p>Map entries can be accessed by their keys. Invalid keys result in an error.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="predicates"><a class="h-anchor" href="#predicates">#</a>Predicates</h3>
+<div class="section">
+<pre><code class="hljs">n.<span class="hljs-keyword">property</span> &lt;&gt; <span class="hljs-built_in">$value</span>
+</code></pre>
+<p>Use comparison operators.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">toString</span><span class="hljs-params">(n.property)</span></span> = <span class="hljs-variable">$value</span>
+</code></pre>
+<p>Use functions.</p>
+<pre><code class="hljs">n.number &gt;<span class="hljs-operator">=</span> <span class="hljs-number">1</span> AND n.number &lt;<span class="hljs-operator">=</span> <span class="hljs-number">10</span>
+</code></pre>
+<p>Use boolean operators to combine predicates.</p>
+<pre><code class="hljs"><span class="hljs-symbol">1 </span>&lt;= n.number &lt;= <span class="hljs-number">10</span>
+</code></pre>
+<p>Use chained operators to combine predicates.</p>
+<pre><code class="hljs"><span class="hljs-symbol">n:</span>Person
+</code></pre>
+<p>Check for node labels.</p>
+<pre><code class="hljs"><span class="hljs-keyword">variable</span> <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>
+</code></pre>
+<p>Check if something is not null, e.g. that a property exists.</p>
+<pre><code class="hljs">n.<span class="hljs-keyword">property</span> <span class="hljs-keyword">IS</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">OR</span> n.<span class="hljs-keyword">property</span> = $value
+</code></pre>
+<p>Either the property does not exist or the predicate is true.</p>
+<pre><code class="hljs"><span class="hljs-attr">n.property</span> = <span class="hljs-variable">$value</span>
+</code></pre>
+<p>Non-existing property returns null, which is not equal to anything.</p>
+<pre><code class="hljs">n<span class="hljs-selector-attr">[<span class="hljs-string">&quot;property&quot;</span>]</span> = <span class="hljs-variable">$value</span>
+</code></pre>
+<p>Properties may also be accessed using a dynamically computed property name.</p>
+<pre><code class="hljs">n.<span class="hljs-keyword">property</span> STARTS <span class="hljs-keyword">WITH</span> <span class="hljs-string">&#x27;Tim&#x27;</span> <span class="hljs-keyword">OR</span>
+n.<span class="hljs-keyword">property</span> ENDS <span class="hljs-keyword">WITH</span> <span class="hljs-string">&#x27;n&#x27;</span> <span class="hljs-keyword">OR</span>
+n.<span class="hljs-keyword">property</span> CONTAINS <span class="hljs-string">&#x27;goodie&#x27;</span>
+</code></pre>
+<p>String matching.</p>
+<pre><code class="hljs"><span class="hljs-attr">n.property</span> =~ <span class="hljs-string">&#x27;Tim.*&#x27;</span>
+</code></pre>
+<p>String regular expression matching.</p>
+<pre><code class="hljs">(n)-<span class="hljs-selector-attr">[:KNOWS]</span>-&gt;(m)
+</code></pre>
+<p>Ensure the pattern has at least one match.</p>
+<pre><code class="hljs">NOT (n)-<span class="hljs-selector-attr">[:KNOWS]</span>-&gt;(m)
+</code></pre>
+<p>Exclude matches to (n)-[:KNOWS]-&gt;(m) from the result.</p>
+<pre><code class="hljs">n.<span class="hljs-keyword">property</span> IN [<span class="hljs-built_in">$value</span>1, <span class="hljs-built_in">$value</span>2]
+</code></pre>
+<p>Check if an element exists in a list.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="list-predicates"><a class="h-anchor" href="#list-predicates">#</a>List predicates</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">all</span>(x <span class="hljs-keyword">IN</span> coll <span class="hljs-keyword">WHERE</span> x.property <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>)
+</code></pre>
+<p>Returns true if the predicate is true for all elements in the list.</p>
+<pre><code class="hljs"><span class="hljs-keyword">any</span>(x <span class="hljs-keyword">IN</span> coll <span class="hljs-keyword">WHERE</span> x.property <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>)
+</code></pre>
+<p>Returns true if the predicate is true for at least one element in the list.</p>
+<pre><code class="hljs"><span class="hljs-keyword">none</span>(x <span class="hljs-keyword">IN</span> coll <span class="hljs-keyword">WHERE</span> x.property <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>)
+</code></pre>
+<p>Returns true if the predicate is false for all elements in the list.</p>
+<pre><code class="hljs"><span class="hljs-type">single</span>(x <span class="hljs-keyword">IN</span> coll <span class="hljs-keyword">WHERE</span> x.<span class="hljs-keyword">property</span> <span class="hljs-built_in">IS</span> <span class="hljs-built_in">NOT</span> NULL)
+</code></pre>
+<p>Returns true if the predicate is true for exactly one element in the list.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="case"><a class="h-anchor" href="#case">#</a>CASE</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">CASE</span> n.eyes
+ <span class="hljs-keyword">WHEN</span> <span class="hljs-symbol">&#x27;blue</span>&#x27; <span class="hljs-keyword">THEN</span> <span class="hljs-number">1</span>
+ <span class="hljs-keyword">WHEN</span> <span class="hljs-symbol">&#x27;brown</span>&#x27; <span class="hljs-keyword">THEN</span> <span class="hljs-number">2</span>
+ <span class="hljs-keyword">ELSE</span> <span class="hljs-number">3</span>
+<span class="hljs-keyword">END</span>
+</code></pre>
+<p>Return THEN value from the matching WHEN value. The ELSE value is optional, and substituted for null if missing.</p>
+<pre><code class="hljs"><span class="hljs-keyword">CASE</span>
+ <span class="hljs-keyword">WHEN</span> n.eyes = <span class="hljs-symbol">&#x27;blue</span>&#x27; <span class="hljs-keyword">THEN</span> <span class="hljs-number">1</span>
+ <span class="hljs-keyword">WHEN</span> n.age &lt; <span class="hljs-number">40</span> <span class="hljs-keyword">THEN</span> <span class="hljs-number">2</span>
+ <span class="hljs-keyword">ELSE</span> <span class="hljs-number">3</span>
+<span class="hljs-keyword">END</span>
+</code></pre>
+<p>Return THEN value from the first WHEN predicate evaluating to true. Predicates are evaluated in order.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="list-expressions"><a class="h-anchor" href="#list-expressions">#</a>List expressions</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">size</span><span class="hljs-params">(<span class="hljs-variable">$list</span>)</span></span>
+</code></pre>
+<p>Number of elements in the list.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">reverse</span><span class="hljs-params">(<span class="hljs-variable">$list</span>)</span></span>
+</code></pre>
+<p>Reverse the order of the elements in the list.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">head</span><span class="hljs-params">(<span class="hljs-variable">$list</span>)</span></span>, <span class="hljs-built_in">last</span>(<span class="hljs-variable">$list</span>), <span class="hljs-built_in">tail</span>(<span class="hljs-variable">$list</span>)
+</code></pre>
+<p>head() returns the first, last() the last element of the list. tail() returns all but the first element. All return null for an empty list.</p>
+<pre><code class="hljs">[<span class="hljs-keyword">x</span> IN list | <span class="hljs-keyword">x</span>.prop]
+</code></pre>
+<p>A list of the value of the expression for each element in the original list.</p>
+<pre><code class="hljs"><span class="hljs-meta">[</span>x <span class="hljs-keyword">IN</span> <span class="hljs-built_in">list</span> <span class="hljs-keyword">WHERE</span> x.prop &lt;&gt; $value<span class="hljs-meta">]</span>
+</code></pre>
+<p>A filtered list of the elements where the predicate is true.</p>
+<pre><code class="hljs">[<span class="hljs-keyword">x</span> IN list WHERE <span class="hljs-keyword">x</span>.prop &lt;&gt; $value | <span class="hljs-keyword">x</span>.prop]
+</code></pre>
+<p>A list comprehension that filters a list and extracts the value of the expression for each element in that list.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">reduce</span><span class="hljs-params">(s = <span class="hljs-string">&quot;&quot;</span>, x IN list | s + x.prop)</span></span>
+</code></pre>
+<p>Evaluate expression for each element in the list, accumulate the results.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="functions"><a class="h-anchor" href="#functions">#</a>Functions</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">coalesce</span><span class="hljs-params">(n.property, <span class="hljs-variable">$defaultValue</span>)</span></span>
+</code></pre>
+<p>The first non-null expression.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">timestamp</span><span class="hljs-params">()</span></span>
+</code></pre>
+<p>Milliseconds since midnight, January 1, 1970 UTC.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">id</span><span class="hljs-params">(nodeOrRelationship)</span></span>
+</code></pre>
+<p>The internal id of the relationship or node.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">toInteger</span><span class="hljs-params">(<span class="hljs-variable">$expr</span>)</span></span>
+</code></pre>
+<p>Converts the given input into an integer if possible; otherwise it returns null.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">toFloat</span><span class="hljs-params">(<span class="hljs-variable">$expr</span>)</span></span>
+</code></pre>
+<p>Converts the given input into a floating point number if possible; otherwise it returns null.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">toBoolean</span><span class="hljs-params">(<span class="hljs-variable">$expr</span>)</span></span>
+</code></pre>
+<p>Converts the given input into a boolean if possible; otherwise it returns null.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">keys</span><span class="hljs-params">(<span class="hljs-variable">$expr</span>)</span></span>
+</code></pre>
+<p>Returns a list of string representations for the property names of a node, relationship, or map.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">properties</span><span class="hljs-params">(<span class="hljs-variable">$expr</span>)</span></span>
+</code></pre>
+<p>Returns a map containing all the properties of a node or relationship.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="path-functions"><a class="h-anchor" href="#path-functions">#</a>Path functions</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title"><span class="hljs-built_in">length</span></span>(<span class="hljs-variable">path</span>)</span>
+</code></pre>
+<p>The number of relationships in the path.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">nodes</span><span class="hljs-params">(path)</span></span>
+</code></pre>
+<p>The nodes in the path as a list.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">relationships</span><span class="hljs-params">(path)</span></span>
+</code></pre>
+<p>The relationships in the path as a list.</p>
+<pre><code class="hljs">[<span class="hljs-keyword">x</span> IN nodes(path) | <span class="hljs-keyword">x</span>.prop]
+</code></pre>
+<p>Extract properties from the nodes in a path.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="spatial-functions"><a class="h-anchor" href="#spatial-functions">#</a>Spatial functions</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">point</span><span class="hljs-params">(&#123;x: <span class="hljs-variable">$x</span>, y: <span class="hljs-variable">$y</span>&#125;)</span></span>
+</code></pre>
+<p>Returns a point in a 2D cartesian coordinate system.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">point</span><span class="hljs-params">(&#123;latitude: <span class="hljs-variable">$y</span>, longitude: <span class="hljs-variable">$x</span>&#125;)</span></span>
+</code></pre>
+<p>Returns a point in a 2D geographic coordinate system, with coordinates specified in decimal degrees.</p>
+<pre><code class="hljs"><span class="hljs-title function_ invoke__">point</span>(&#123;<span class="hljs-attr">x</span>: <span class="hljs-variable">$x</span>, <span class="hljs-attr">y</span>: <span class="hljs-variable">$y</span>, <span class="hljs-attr">z</span>: <span class="hljs-variable">$z</span>&#125;)
+</code></pre>
+<p>Returns a point in a 3D cartesian coordinate system.</p>
+<pre><code class="hljs"><span class="hljs-title function_ invoke__">point</span>(&#123;<span class="hljs-attr">latitude</span>: <span class="hljs-variable">$y</span>, <span class="hljs-attr">longitude</span>: <span class="hljs-variable">$x</span>, <span class="hljs-attr">height</span>: <span class="hljs-variable">$z</span>&#125;)
+</code></pre>
+<p>Returns a point in a 3D geographic coordinate system, with latitude and longitude in decimal degrees, and height in meters.</p>
+<pre><code class="hljs"><span class="hljs-title function_ invoke__">distance</span>(<span class="hljs-title function_ invoke__">point</span>(&#123;<span class="hljs-attr">x</span>: <span class="hljs-variable">$x1</span>, <span class="hljs-attr">y</span>: <span class="hljs-variable">$y1</span>&#125;), <span class="hljs-title function_ invoke__">point</span>(&#123;<span class="hljs-attr">x</span>: <span class="hljs-variable">$x2</span>, <span class="hljs-attr">y</span>: <span class="hljs-variable">$y2</span>&#125;))
+</code></pre>
+<p>Returns a floating point number representing the linear distance between two points. The returned units will be the same as those of the point coordinates, and it will work for both 2D and 3D cartesian points.</p>
+<pre><code class="hljs"><span class="hljs-title function_ invoke__">distance</span>(<span class="hljs-title function_ invoke__">point</span>(&#123;<span class="hljs-attr">latitude</span>: <span class="hljs-variable">$y1</span>, <span class="hljs-attr">longitude</span>: <span class="hljs-variable">$x1</span>&#125;), <span class="hljs-title function_ invoke__">point</span>(&#123;<span class="hljs-attr">latitude</span>: <span class="hljs-variable">$y2</span>, <span class="hljs-attr">longitude</span>: <span class="hljs-variable">$x2</span>&#125;))
+</code></pre>
+<p>Returns the geodesic distance between two points in meters. It can be used for 3D geographic points as well.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="neo4j-functions"><a class="h-anchor" href="#neo4j-functions">#</a>Neo4j Functions</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="temporal-functions"><a class="h-anchor" href="#temporal-functions">#</a>Temporal functions</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">date</span><span class="hljs-params">(<span class="hljs-string">&quot;2018-04-05&quot;</span>)</span></span>
+</code></pre>
+<p>Returns a date parsed from a string.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">localtime</span><span class="hljs-params">(<span class="hljs-string">&quot;12:45:30.25&quot;</span>)</span></span>
+</code></pre>
+<p>Returns a time with no time zone.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title"><span class="hljs-built_in">time</span></span>(<span class="hljs-string">&quot;12:45:30.25+01:00&quot;</span>)</span>
+</code></pre>
+<p>Returns a time in a specified time zone.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">localdatetime</span><span class="hljs-params">(<span class="hljs-string">&quot;2018-04-05T12:34:00&quot;</span>)</span></span>
+</code></pre>
+<p>Returns a datetime with no time zone.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">datetime</span><span class="hljs-params">(<span class="hljs-string">&quot;2018-04-05T12:34:00[Europe/Berlin]&quot;</span>)</span></span>
+</code></pre>
+<p>Returns a datetime in the specified time zone.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">datetime</span><span class="hljs-params">(&#123;epochMillis: <span class="hljs-number">3360000</span>&#125;)</span></span>
+</code></pre>
+<p>Transforms 3360000 as a UNIX Epoch time into a normal datetime.</p>
+<pre><code class="hljs"><span class="hljs-built_in">date</span>(&#123;<span class="hljs-built_in">year</span>: $<span class="hljs-built_in">year</span>, <span class="hljs-built_in">month</span>: $<span class="hljs-built_in">month</span>, <span class="hljs-built_in">day</span>: $<span class="hljs-built_in">day</span>&#125;)
+</code></pre>
+<p>All of the temporal functions can also be called with a map of named components. This example returns a date from year, month and day components. Each function supports a different set of possible components.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">datetime</span><span class="hljs-params">(&#123;date: <span class="hljs-variable">$date</span>, time: <span class="hljs-variable">$time</span>&#125;)</span></span>
+</code></pre>
+<p>Temporal types can be created by combining other types. This example creates a datetime from a date and a time.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">date</span><span class="hljs-params">(&#123;date: <span class="hljs-variable">$datetime</span>, day: <span class="hljs-number">5</span>&#125;)</span></span>
+</code></pre>
+<p>Temporal types can be created by selecting from more complex types, as well as overriding individual components. This example creates a date by selecting from a datetime, as well as overriding the day component.</p>
+<pre><code class="hljs">WITH <span class="hljs-built_in">date</span>(<span class="hljs-string">&quot;2018-04-05&quot;</span>) AS d
+<span class="hljs-keyword">RETURN</span> d.<span class="hljs-built_in">year</span>, d.<span class="hljs-built_in">month</span>, d.<span class="hljs-built_in">day</span>, d.<span class="hljs-built_in">week</span>, d.dayOfWeek
+</code></pre>
+<p>Accessors allow extracting components of temporal types.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="duration-functions"><a class="h-anchor" href="#duration-functions">#</a>Duration functions</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">duration</span><span class="hljs-params">(<span class="hljs-string">&quot;P1Y2M10DT12H45M30.25S&quot;</span>)</span></span>
+</code></pre>
+<p>Returns a duration of 1 year, 2 months, 10 days, 12 hours, 45 minutes and 30.25 seconds.</p>
+<pre><code class="hljs"><span class="hljs-built_in">duration</span>.between($date1,$date2)
+</code></pre>
+<p>Returns a duration between two temporal instances.</p>
+<pre><code class="hljs">WITH <span class="hljs-built_in">duration</span>(<span class="hljs-string">&quot;P1Y2M10DT12H45M&quot;</span>) AS d
+RETURN d<span class="hljs-selector-class">.years</span>, d<span class="hljs-selector-class">.months</span>, d<span class="hljs-selector-class">.days</span>, d<span class="hljs-selector-class">.hours</span>, d<span class="hljs-selector-class">.minutes</span>
+</code></pre>
+<p>Returns 1 year, 14 months, 10 days, 12 hours and 765 minutes.</p>
+<pre><code class="hljs">WITH <span class="hljs-built_in">duration</span>(<span class="hljs-string">&quot;P1Y2M10DT12H45M&quot;</span>) AS d
+RETURN d<span class="hljs-selector-class">.years</span>, d<span class="hljs-selector-class">.monthsOfYear</span>, d<span class="hljs-selector-class">.days</span>, d<span class="hljs-selector-class">.hours</span>, d<span class="hljs-selector-class">.minutesOfHour</span>
+</code></pre>
+<p>Returns 1 year, 2 months, 10 days, 12 hours and 45 minutes.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">date</span><span class="hljs-params">(<span class="hljs-string">&quot;2015-01-01&quot;</span>)</span></span> + <span class="hljs-built_in">duration</span>(<span class="hljs-string">&quot;P1Y1M1D&quot;</span>)
+</code></pre>
+<p>Returns a date of 2016-02-02. It is also possible to subtract durations from temporal instances.</p>
+<pre><code class="hljs"><span class="hljs-attribute">duration</span>(<span class="hljs-string">&quot;PT30S&quot;</span>) * <span class="hljs-number">10</span>
+</code></pre>
+<p>Returns a duration of 5 minutes. It is also possible to divide a duration by a number.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="mathematical-functions"><a class="h-anchor" href="#mathematical-functions">#</a>Mathematical functions</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">abs</span><span class="hljs-params">(<span class="hljs-variable">$expr</span>)</span></span>
+</code></pre>
+<p>The absolute value.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">rand</span><span class="hljs-params">()</span></span>
+</code></pre>
+<p>Returns a random number in the range from 0 (inclusive) to 1 (exclusive), [0,1). Returns a new value for each call. Also useful for selecting a subset or random ordering.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">round</span><span class="hljs-params">(<span class="hljs-variable">$expr</span>)</span></span>
+</code></pre>
+<p>Round to the nearest integer; ceil() and floor() find the next integer up or down.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">sqrt</span><span class="hljs-params">(<span class="hljs-variable">$expr</span>)</span></span>
+</code></pre>
+<p>The square root.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">sign</span><span class="hljs-params">(<span class="hljs-variable">$expr</span>)</span></span>
+</code></pre>
+<p>0 if zero, -1 if negative, 1 if positive.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">sin</span><span class="hljs-params">(<span class="hljs-variable">$expr</span>)</span></span>
+</code></pre>
+<p>Trigonometric functions also include cos(), tan(), cot(), asin(), acos(), atan(), atan2(), and haversin(). All arguments for the trigonometric functions should be in radians, if not otherwise specified.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">degrees</span><span class="hljs-params">(<span class="hljs-variable">$expr</span>)</span></span>, <span class="hljs-built_in">radians</span>(<span class="hljs-variable">$expr</span>), <span class="hljs-built_in">pi</span>()
+</code></pre>
+<p>Converts radians into degrees; use radians() for the reverse, and pi() for π.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">log10</span><span class="hljs-params">(<span class="hljs-variable">$expr</span>)</span></span>, <span class="hljs-built_in">log</span>(<span class="hljs-variable">$expr</span>), <span class="hljs-built_in">exp</span>(<span class="hljs-variable">$expr</span>), <span class="hljs-built_in">e</span>()
+</code></pre>
+<p>Logarithm base 10, natural logarithm, e to the power of the parameter, and the value of e.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="string-functions"><a class="h-anchor" href="#string-functions">#</a>String functions</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">toString</span><span class="hljs-params">(<span class="hljs-variable">$expression</span>)</span></span>
+</code></pre>
+<p>String representation of the expression.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">replace</span><span class="hljs-params">(<span class="hljs-variable">$original</span>, <span class="hljs-variable">$search</span>, <span class="hljs-variable">$replacement</span>)</span></span>
+</code></pre>
+<p>Replace all occurrences of search with replacement. All arguments must be expressions.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">substring</span><span class="hljs-params">(<span class="hljs-variable">$original</span>, <span class="hljs-variable">$begin</span>, <span class="hljs-variable">$subLength</span>)</span></span>
+</code></pre>
+<p>Get part of a string. The subLength argument is optional.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-variable">$original</span>, <span class="hljs-variable">$subLength</span>)</span></span>,
+  <span class="hljs-attribute">right</span>(<span class="hljs-variable">$original</span>, <span class="hljs-variable">$subLength</span>)
+</code></pre>
+<p>The first part of a string. The last part of the string.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">trim</span><span class="hljs-params">(<span class="hljs-variable">$original</span>)</span></span>, <span class="hljs-built_in">lTrim</span>(<span class="hljs-variable">$original</span>),
+  <span class="hljs-built_in">rTrim</span>(<span class="hljs-variable">$original</span>)
+</code></pre>
+<p>Trim all whitespace, or on the left or right side.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">toUpper</span><span class="hljs-params">(<span class="hljs-variable">$original</span>)</span></span>, <span class="hljs-built_in">toLower</span>(<span class="hljs-variable">$original</span>)
+</code></pre>
+<p>UPPERCASE and lowercase.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">split</span><span class="hljs-params">(<span class="hljs-variable">$original</span>, <span class="hljs-variable">$delimiter</span>)</span></span>
+</code></pre>
+<p>Split a string into a list of strings.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">reverse</span><span class="hljs-params">(<span class="hljs-variable">$original</span>)</span></span>
+</code></pre>
+<p>Reverse a string.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">size</span><span class="hljs-params">(<span class="hljs-variable">$string</span>)</span></span>
+</code></pre>
+<p>Calculate the number of characters in the string.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="relationship-functions"><a class="h-anchor" href="#relationship-functions">#</a>Relationship functions</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">type</span>(a_relationship)
+</code></pre>
+<p>String representation of the relationship type.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">startNode</span><span class="hljs-params">(a_relationship)</span></span>
+</code></pre>
+<p>Start node of the relationship.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">endNode</span><span class="hljs-params">(a_relationship)</span></span>
+</code></pre>
+<p>End node of the relationship.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">id</span><span class="hljs-params">(a_relationship)</span></span>
+</code></pre>
+<p>The internal id of the relationship.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="aggregating-functions"><a class="h-anchor" href="#aggregating-functions">#</a>Aggregating functions</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">count</span><span class="hljs-params">(*)</span></span>
+</code></pre>
+<p>The number of matching rows.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">count</span><span class="hljs-params">(variable)</span></span>
+</code></pre>
+<p>The number of non-null values.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">count</span><span class="hljs-params">(DISTINCT variable)</span></span>
+</code></pre>
+<p>All aggregating functions also take the DISTINCT operator, which removes duplicates from the values.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">collect</span><span class="hljs-params">(n.property)</span></span>
+</code></pre>
+<p>List from the values, ignores null.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">sum</span><span class="hljs-params">(n.property)</span></span>
+</code></pre>
+<p>Sum numerical values. Similar functions are avg(), min(), max().</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">percentileDisc</span><span class="hljs-params">(n.property, <span class="hljs-variable">$percentile</span>)</span></span>
+</code></pre>
+<p>Discrete percentile. Continuous percentile is percentileCont(). The percentile argument is from 0.0 to 1.0.</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">stDev</span><span class="hljs-params">(n.property)</span></span>
+</code></pre>
+<p>Standard deviation for a sample of a population. For an entire population use stDevP().</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="neo4j-schema-operations"><a class="h-anchor" href="#neo4j-schema-operations">#</a>Neo4j Schema Operations</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="index"><a class="h-anchor" href="#index">#</a>INDEX</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">INDEX</span> <span class="hljs-keyword">FOR</span> (p:Person) <span class="hljs-keyword">ON</span> (p.name)
+</code></pre>
+<p>Create an index on nodes with label Person and property name.</p>
+<pre><code class="hljs">CREATE INDEX index_name FOR ()-<span class="hljs-selector-attr">[k:KNOWS]</span><span class="hljs-built_in">-</span>() ON (k.since)
+</code></pre>
+<p>Create an index on relationships with type KNOWS and property since with the name index_name.</p>
+<pre><code class="hljs">CREATE INDEX FOR (<span class="hljs-selector-tag">p</span>:Person) ON (<span class="hljs-selector-tag">p</span>.surname)
+OPTIONS &#123;indexProvider: <span class="hljs-string">&#x27;native-btree-1.0&#x27;</span>, indexConfig: &#123;`spatial<span class="hljs-selector-class">.cartesian</span>.min`: <span class="hljs-selector-attr">[-100.0, -100.0]</span>, `spatial<span class="hljs-selector-class">.cartesian</span>.max`: <span class="hljs-selector-attr">[100.0, 100.0]</span>&#125;&#125;
+</code></pre>
+<p>Create an index on nodes with label Person and property surname with the index provider native-btree-1.0 and given spatial.cartesian settings. The other index settings will have their default values.</p>
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">INDEX</span> <span class="hljs-keyword">FOR</span> (p:Person) <span class="hljs-keyword">ON</span> (p.name, p.age)
+</code></pre>
+<p>Create a composite index on nodes with label Person and the properties name and age, throws an error if the index already exist.</p>
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">INDEX</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> <span class="hljs-keyword">FOR</span> (p:Person) <span class="hljs-keyword">ON</span> (p.name, p.age)
+</code></pre>
+<p>Create a composite index on nodes with label Person and the properties name and age if it does not already exist, does nothing if it did exist.</p>
+<pre><code class="hljs">CREATE <span class="hljs-built_in">LOOKUP</span> <span class="hljs-built_in">INDEX</span> lookup_index_name FOR (<span class="hljs-built_in">n</span>) ON EACH labels(<span class="hljs-built_in">n</span>)
+</code></pre>
+<p>Create a token lookup index with the name lookup_index_name on nodes with any label .</p>
+<pre><code class="hljs">CREATE LOOKUP INDEX FOR ()-<span class="hljs-selector-attr">[r]</span><span class="hljs-built_in">-</span>() ON EACH <span class="hljs-built_in">type</span>(r)
+</code></pre>
+<p>Create a token lookup index on relationships with any relationship type.</p>
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> FULLTEXT <span class="hljs-keyword">INDEX</span> node_fulltext_index_name <span class="hljs-keyword">FOR</span> (n:Friend) <span class="hljs-keyword">ON</span> <span class="hljs-keyword">EACH</span> [n.name]
+<span class="hljs-keyword">OPTIONS</span> &#123;indexConfig: &#123;`fulltext.analyzer`: <span class="hljs-string">&#x27;swedish&#x27;</span>&#125;&#125;
+</code></pre>
+<p>Create a fulltext index on nodes with the name node_fulltext_index_name and analyzer swedish. Fulltext indexes on nodes can only be used by from the procedure db.index.fulltext.queryNodes. The other index settings will have their default values.</p>
+<pre><code class="hljs">CREATE FULLTEXT INDEX rel_fulltext_index_name FOR ()-<span class="hljs-selector-attr">[r:HAS_PET|BROUGHT_PET]</span><span class="hljs-built_in">-</span>() ON EACH <span class="hljs-selector-attr">[r.since, r.price]</span>
+</code></pre>
+<p>Create a fulltext index on relationships with the name rel_fulltext_index_name. Fulltext indexes on relationships can only be used by from the procedure db.index.fulltext.queryRelationships.</p>
+<pre><code class="hljs"><span class="hljs-attribute">SHOW INDEXES</span>
+</code></pre>
+<p>List all indexes.</p>
+<pre><code class="hljs"><span class="hljs-keyword">MATCH</span> (n:Person) <span class="hljs-keyword">WHERE</span> n.name = $value
+</code></pre>
+<p>An index can be automatically used for the equality comparison. Note that for example toLower(n.name) = $value will not use an index.</p>
+<pre><code class="hljs"><span class="hljs-keyword">MATCH</span> (n:Person)
+<span class="hljs-keyword">WHERE</span> n.name <span class="hljs-keyword">IN</span> <span class="hljs-meta">[</span>$value<span class="hljs-meta">]</span>
+</code></pre>
+<p>An index can automatically be used for the IN list checks.</p>
+<pre><code class="hljs"><span class="hljs-keyword">MATCH</span> (n:Person)
+<span class="hljs-keyword">WHERE</span> n.name = $value <span class="hljs-literal">and</span> n.age = $value2
+</code></pre>
+<p>A composite index can be automatically used for equality comparison of both properties. Note that there needs to be predicates on all properties of the composite index for it to be used.</p>
+<pre><code class="hljs">MATCH (n:Person)
+USING <span class="hljs-built_in">INDEX</span> n:Person(<span class="hljs-keyword">name</span>)
+<span class="hljs-keyword">WHERE</span> n.<span class="hljs-keyword">name</span> = $<span class="hljs-keyword">value</span>
+</code></pre>
+<p>Index usage can be enforced when Cypher uses a suboptimal index, or more than one index should be used.</p>
+<pre><code class="hljs"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">INDEX</span> index_name
+</code></pre>
+<p>Drop the index named index_name, throws an error if the index does not exist.</p>
+<pre><code class="hljs"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">INDEX</span> index_name <span class="hljs-keyword">IF</span> <span class="hljs-keyword">EXISTS</span>
+</code></pre>
+<p>Drop the index named index_name if it exists, does nothing if it does not exist.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="constraint"><a class="h-anchor" href="#constraint">#</a>CONSTRAINT</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">CONSTRAINT</span> <span class="hljs-keyword">ON</span> (p:Person)
+       <span class="hljs-keyword">ASSERT</span> p.name <span class="hljs-keyword">IS</span> <span class="hljs-keyword">UNIQUE</span>
+</code></pre>
+<p>Create a unique property constraint on the label Person and property name. If any other node with that label is updated or created with a name that already exists, the write operation will fail. This constraint will create an accompanying index.</p>
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">CONSTRAINT</span> uniqueness <span class="hljs-keyword">ON</span> (p:Person)
+       <span class="hljs-keyword">ASSERT</span> p.age <span class="hljs-keyword">IS</span> <span class="hljs-keyword">UNIQUE</span>
+</code></pre>
+<p>Create a unique property constraint on the label Person and property age with the name uniqueness. If any other node with that label is updated or created with a age that already exists, the write operation will fail. This constraint will create an accompanying index.</p>
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">CONSTRAINT</span> <span class="hljs-keyword">ON</span> (p:Person)
+       <span class="hljs-keyword">ASSERT</span> p.surname <span class="hljs-keyword">IS</span> <span class="hljs-keyword">UNIQUE</span>
+       <span class="hljs-keyword">OPTIONS</span> &#123;indexProvider: <span class="hljs-string">&#x27;native-btree-1.0&#x27;</span>&#125;
+</code></pre>
+<p>Create a unique property constraint on the label Person and property surname with the index provider native-btree-1.0 for the accompanying index.</p>
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">CONSTRAINT</span> <span class="hljs-keyword">ON</span> (p:Person)
+       <span class="hljs-keyword">ASSERT</span> p.name <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>
+</code></pre>
+<p>(★) Create a node property existence constraint on the label Person and property name, throws an error if the constraint already exists. If a node with that label is created without a name, or if the name property is removed from an existing node with the Person label, the write operation will fail.</p>
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">CONSTRAINT</span> node_exists <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> <span class="hljs-keyword">ON</span> (p:Person)
+       <span class="hljs-keyword">ASSERT</span> p.name <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>
+</code></pre>
+<p>(★) If a node property existence constraint on the label Person and property name or any constraint with the name node_exists already exist then nothing happens. If no such constraint exists, then it will be created.</p>
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">CONSTRAINT</span> <span class="hljs-keyword">ON</span> ()-[l:LIKED]-()
+       <span class="hljs-keyword">ASSERT</span> l.<span class="hljs-keyword">when</span> <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>
+</code></pre>
+<p>(★) Create a relationship property existence constraint on the type LIKED and property when. If a relationship with that type is created without a when, or if the when property is removed from an existing relationship with the LIKED type, the write operation will fail.</p>
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">CONSTRAINT</span> relationship_exists <span class="hljs-keyword">ON</span> ()-[l:LIKED]-()
+       <span class="hljs-keyword">ASSERT</span> l.since <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>
+</code></pre>
+<p>(★) Create a relationship property existence constraint on the type LIKED and property since with the name relationship_exists. If a relationship with that type is created without a since, or if the since property is removed from an existing relationship with the LIKED type, the write operation will fail.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> <span class="hljs-built_in">UNIQUE</span> CONSTRAINTS YIELD *
+</code></pre>
+<p>List all unique constraints.</p>
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">CONSTRAINT</span> <span class="hljs-keyword">ON</span> (p:Person)
+      <span class="hljs-keyword">ASSERT</span> (p.firstname, p.surname) <span class="hljs-keyword">IS</span> NODE KEY
+</code></pre>
+<p>(★) Create a node key constraint on the label Person and properties firstname and surname. If a node with that label is created without both firstname and surname or if the combination of the two is not unique, or if the firstname and/or surname labels on an existing node with the Person label is modified to violate these constraints, the write operation will fail.</p>
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">CONSTRAINT</span> node_key <span class="hljs-keyword">ON</span> (p:Person)
+      <span class="hljs-keyword">ASSERT</span> (p.name, p.surname) <span class="hljs-keyword">IS</span> NODE KEY
+</code></pre>
+<p>(★) Create a node key constraint on the label Person and properties name and surname with the name node_key. If a node with that label is created without both name and surname or if the combination of the two is not unique, or if the name and/or surname labels on an existing node with the Person label is modified to violate these constraints, the write operation will fail.</p>
+<pre><code class="hljs">CREATE CONSTRAINT node_key_with_config ON (<span class="hljs-selector-tag">p</span>:Person)
+      ASSERT (<span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.name</span>, <span class="hljs-selector-tag">p</span>.age) IS NODE KEY
+      OPTIONS &#123;indexConfig: &#123;`spatial<span class="hljs-selector-class">.wgs-84</span>.min`: <span class="hljs-selector-attr">[-100.0, -100.0]</span>, `spatial<span class="hljs-selector-class">.wgs-84</span>.max`: <span class="hljs-selector-attr">[100.0, 100.0]</span>&#125;&#125;
+</code></pre>
+<p>(★) Create a node key constraint on the label Person and properties name and age with the name node_key_with_config and given spatial.wgs-84 settings for the accompanying index. The other index settings will have their default values.</p>
+<pre><code class="hljs"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">CONSTRAINT</span> uniqueness
+</code></pre>
+<p>Drop the constraint with the name uniqueness, throws an error if the constraint does not exist.</p>
+<pre><code class="hljs"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">CONSTRAINT</span> uniqueness IF <span class="hljs-keyword">EXISTS</span>
+</code></pre>
+<p>Drop the constraint with the name uniqueness if it exists, does nothing if it does not exist.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="performance"><a class="h-anchor" href="#performance">#</a>Performance</h3>
+<div class="section">
+<ul>
+<li>Use parameters instead of literals when possible. This allows Cypher to re-use your queries instead of having to parse and build new execution plans.</li>
+<li>Always set an upper limit for your variable length patterns. It’s possible to have a query go wild and touch all nodes in a graph by mistake.</li>
+<li>Return only the data you need. Avoid returning whole nodes and relationships — instead, pick the data you need and return only that.</li>
+<li>Use <code>PROFILE</code> / <code>EXPLAIN</code> to analyze the performance of your queries. See <a target="_blank" rel="noopener external nofollow noreferrer" href="https://neo4j.com/docs/cypher-manual/4.3/query-tuning">Query Tuning</a> for more information on these and other topics, such as planner hints.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="neo4j-multidatabase"><a class="h-anchor" href="#neo4j-multidatabase">#</a>Neo4j Multidatabase</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="database-management"><a class="h-anchor" href="#database-management">#</a>Database management</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">OR</span> <span class="hljs-built_in">REPLACE</span> <span class="hljs-keyword">DATABASE</span> myDatabase
+</code></pre>
+<p>(★) Create a database named myDatabase. If a database with that name exists, then the existing database is deleted and a new one created.</p>
+<pre><code class="hljs"><span class="hljs-literal">STOP</span> DATABASE myDatabase
+</code></pre>
+<p>(★) Stop the database myDatabase.</p>
+<pre><code class="hljs"><span class="hljs-keyword">START</span> <span class="hljs-keyword">DATABASE</span> myDatabase
+</code></pre>
+<p>(★) Start the database myDatabase.</p>
+<pre><code class="hljs"><span class="hljs-attribute">SHOW DATABASES</span>
+</code></pre>
+<p>List all databases in the system and information about them.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> DATABASES
+YIELD <span class="hljs-type">name</span>, currentStatus
+<span class="hljs-keyword">WHERE</span> <span class="hljs-type">name</span> CONTAINS <span class="hljs-string">&#x27;my&#x27;</span> <span class="hljs-keyword">AND</span> currentStatus = <span class="hljs-string">&#x27;online&#x27;</span>
+</code></pre>
+<p>List information about databases, filtered by name and online status and further refined by conditions on these.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">DATABASE</span> myDatabase
+</code></pre>
+<p>List information about the database myDatabase.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">DATABASE</span>
+</code></pre>
+<p>List information about the default database.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> HOME <span class="hljs-keyword">DATABASE</span>
+</code></pre>
+<p>List information about the current users home database.</p>
+<pre><code class="hljs"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">DATABASE</span> myDatabase <span class="hljs-keyword">IF</span> <span class="hljs-keyword">EXISTS</span>
+</code></pre>
+<p>(★) Delete the database myDatabase, if it exists.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="neo4j-security"><a class="h-anchor" href="#neo4j-security">#</a>Neo4j Security</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="user-management"><a class="h-anchor" href="#user-management">#</a>User management</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">USER</span> alice <span class="hljs-keyword">SET</span> <span class="hljs-keyword">PASSWORD</span> $<span class="hljs-keyword">password</span>
+</code></pre>
+<p>Create a new user and a password. This password must be changed on the first login.</p>
+<pre><code class="hljs">ALTER<span class="hljs-built_in"> USER </span>alice <span class="hljs-built_in">SET</span> PASSWORD <span class="hljs-variable">$password</span> CHANGE <span class="hljs-keyword">NOT</span> REQUIRED
+</code></pre>
+<p>Set a new password for a user. This user will not be required to change this password on the next login.</p>
+<pre><code class="hljs"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> alice <span class="hljs-keyword">IF</span> <span class="hljs-keyword">EXISTS</span> <span class="hljs-keyword">SET</span> <span class="hljs-keyword">PASSWORD</span> CHANGE REQUIRED
+</code></pre>
+<p>If the specified user exists, force this user to change their password on the next login.</p>
+<pre><code class="hljs">ALTER <span class="hljs-keyword">USER</span> <span class="hljs-title">alice</span> SET STATUS SUSPENDED
+</code></pre>
+<p>(★) Change the user status to suspended. Use SET STATUS ACTIVE to reactivate the user.</p>
+<pre><code class="hljs"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> alice <span class="hljs-keyword">SET</span> HOME <span class="hljs-keyword">DATABASE</span> otherDb
+</code></pre>
+<p>(★) Change the home database of user to otherDb. Use REMOVE HOME DATABASE to unset the home database for the user and fallback to the default database.</p>
+<pre><code class="hljs">ALTER CURRENT<span class="hljs-built_in"> USER </span><span class="hljs-built_in">SET</span> PASSWORD <span class="hljs-keyword">FROM</span> <span class="hljs-variable">$old</span> <span class="hljs-keyword">TO</span> <span class="hljs-variable">$new</span>
+</code></pre>
+<p>Change the password of the logged-in user. The user will not be required to change this password on the next login.</p>
+<pre><code class="hljs"><span class="hljs-literal">SHOW</span> <span class="hljs-literal">CURRENT</span> <span class="hljs-literal">USER</span>
+</code></pre>
+<p>List the currently logged-in user, their status, roles and whether they need to change their password.
+(★) Status and roles are Enterprise Edition only.</p>
+<pre><code class="hljs"><span class="hljs-attribute">SHOW USERS</span>
+</code></pre>
+<p>List all users in the system, their status, roles and if they need to change their password.
+(★) Status and roles are Enterprise Edition only.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> USERS
+YIELD <span class="hljs-keyword">user</span>, suspended
+<span class="hljs-keyword">WHERE</span> suspended <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>
+</code></pre>
+<p>List users in the system, filtered by their name and status and further refined by whether they are suspended.
+(★) Status is Enterprise Edition only.</p>
+<pre><code class="hljs">RENAME <span class="hljs-keyword">USER</span> <span class="hljs-title">alice</span> TO alice_delete
+</code></pre>
+<p>Rename the user alice to alice_delete.</p>
+<pre><code class="hljs">DROP <span class="hljs-keyword">USER</span> <span class="hljs-title">alice_delete</span>
+</code></pre>
+<p>Delete the user.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="★-role-management"><a class="h-anchor" href="#★-role-management">#</a>(★) Role management</h3>
+<div class="section">
+<pre><code class="hljs">CREATE <span class="hljs-keyword">ROLE</span> <span class="hljs-title">my_role</span>
+</code></pre>
+<p>Create a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">ROLE</span> my_second_role <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> <span class="hljs-keyword">AS</span> <span class="hljs-keyword">COPY</span> <span class="hljs-keyword">OF</span> my_role
+</code></pre>
+<p>Create a role named my_second_role, unless it already exists, as a copy of the existing my_role.</p>
+<pre><code class="hljs">RENAME <span class="hljs-keyword">ROLE</span> <span class="hljs-title">my_second_role</span> TO my_other_role
+</code></pre>
+<p>Rename a role named my_second_role to my_other_role.</p>
+<pre><code class="hljs">GRANT <span class="hljs-keyword">ROLE</span> <span class="hljs-title">my_role</span>, my_other_role TO alice
+</code></pre>
+<p>Assign roles to a user.</p>
+<pre><code class="hljs">REVOKE <span class="hljs-keyword">ROLE</span> <span class="hljs-title">my_other_role</span> FROM alice
+</code></pre>
+<p>Remove a specified role from a user.</p>
+<pre><code class="hljs"><span class="hljs-attribute">SHOW ROLES</span>
+</code></pre>
+<p>List all roles in the system.</p>
+<pre><code class="hljs">SHOW ROLES
+YIELD <span class="hljs-keyword">role</span>
+<span class="hljs-title">WHERE</span> <span class="hljs-keyword">role</span> <span class="hljs-title">CONTAINS</span> &#x27;my&#x27;
+</code></pre>
+<p>List roles, filtered by the name of the role and further refined by whether the name contains 'my'.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> POPULATED ROLES <span class="hljs-keyword">WITH</span> USERS
+</code></pre>
+<p>List all roles that are assigned to at least one user in the system, and the users assigned to those roles.</p>
+<pre><code class="hljs">DROP <span class="hljs-keyword">ROLE</span> <span class="hljs-title">my_role</span>
+</code></pre>
+<p>Delete a role.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="★-graph-read-privileges"><a class="h-anchor" href="#★-graph-read-privileges">#</a>(★) Graph read privileges</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> TRAVERSE <span class="hljs-keyword">ON</span> GRAPH * NODES * <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant traverse privilege on all nodes and all graphs to a role.</p>
+<pre><code class="hljs">DENY <span class="hljs-keyword">READ</span> &#123;<span class="hljs-keyword">prop</span>&#125; <span class="hljs-keyword">ON</span> <span class="hljs-keyword">GRAPH</span> foo RELATIONSHIP <span class="hljs-keyword">Type</span> TO my_role
+</code></pre>
+<p>Deny read privilege on a specified property, on all relationships with a specified type in a specified graph, to a role.</p>
+<pre><code class="hljs">GRANT MATCH <span class="hljs-comment">&#123;*&#125;</span> <span class="hljs-keyword">ON</span> HOME GRAPH ELEMENTS <span class="hljs-keyword">Label</span> <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant read privilege on all properties and traverse privilege in the home graph, to a role. Here, both privileges apply to all nodes and relationships with a specified label/type in the graph.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="★-graph-write-privileges"><a class="h-anchor" href="#★-graph-write-privileges">#</a>(★) Graph write privileges</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">ON</span> GRAPH * NODES Label <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant create privilege on all nodes with a specified label in all graphs to a role.</p>
+<pre><code class="hljs">DENY <span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">ON</span> GRAPH neo4j <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Deny delete privilege on all nodes and relationships in a specified graph to a role.</p>
+<pre><code class="hljs">REVOKE <span class="hljs-keyword">SET</span> <span class="hljs-keyword">LABEL</span> <span class="hljs-keyword">Label</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">GRAPH</span> * FROM my_role
+</code></pre>
+<p>Revoke set label privilege for the specified label on all graphs to a role.</p>
+<pre><code class="hljs">GRANT REMOVE <span class="hljs-keyword">LABEL</span> * <span class="hljs-keyword">ON</span> GRAPH foo <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant remove label privilege for all labels on a specified graph to a role.</p>
+<pre><code class="hljs">DENY <span class="hljs-keyword">SET</span> <span class="hljs-keyword">PROPERTY</span> <span class="hljs-comment">&#123;prop&#125;</span> <span class="hljs-keyword">ON</span> GRAPH foo RELATIONSHIPS <span class="hljs-keyword">Type</span> <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Deny set property privilege on a specified property, on all relationships with a specified type in a specified graph, to a role.</p>
+<pre><code class="hljs">GRANT <span class="hljs-keyword">MERGE</span> &#123;*&#125; <span class="hljs-keyword">ON</span> <span class="hljs-keyword">GRAPH</span> * NODES <span class="hljs-keyword">Label</span> TO my_role
+</code></pre>
+<p>Grant merge privilege on all properties, on all nodes with a specified label in all graphs, to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">REVOKE</span> <span class="hljs-keyword">WRITE</span> <span class="hljs-keyword">ON</span> GRAPH * <span class="hljs-keyword">FROM</span> my_role
+</code></pre>
+<p>Revoke write privilege on all graphs from a role.</p>
+<pre><code class="hljs">DENY <span class="hljs-keyword">ALL</span> GRAPH <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">ON</span> GRAPH foo <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Deny all graph privileges privilege on a specified graph to a role.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="★-show-privileges"><a class="h-anchor" href="#★-show-privileges">#</a>(★) SHOW PRIVILEGES</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">AS</span> COMMANDS
+</code></pre>
+<p>List all privileges in the system as Cypher commands.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">PRIVILEGES</span>
+</code></pre>
+<p>List all privileges in the system, and the roles that they are assigned to.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">PRIVILEGES</span>
+YIELD <span class="hljs-keyword">role</span>, action, <span class="hljs-keyword">access</span>
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">role</span> = <span class="hljs-string">&#x27;my_role&#x27;</span>
+</code></pre>
+<p>List information about privileges, filtered by role, action and access and further refined by the name of the role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">ROLE</span> my_role <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">AS</span> COMMANDS
+</code></pre>
+<p>List all privileges assigned to a role as Cypher commands.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">ROLE</span> my_role, my_second_role <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">AS</span> COMMANDS
+</code></pre>
+<p>List all privileges assigned to each of the multiple roles as Cypher commands.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">USER</span> alice <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">AS</span> COMMANDS
+</code></pre>
+<p>List all privileges of a user, and the role that they are assigned to as Cypher commands.</p>
+<pre><code class="hljs"><span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">USER</span> <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">AS</span> COMMANDS
+</code></pre>
+<p>List all privileges of the currently logged in user, and the role that they are assigned to as Cypher commands.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="★-database-privileges"><a class="h-anchor" href="#★-database-privileges">#</a>(★) Database privileges</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ACCESS</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> * <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant privilege to access and run queries against all databases to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">START</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> * <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant privilege to start all databases to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> STOP <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> * <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant privilege to stop all databases to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">INDEX</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> foo <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant privilege to create indexes on a specified database to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">INDEX</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> foo <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant privilege to drop indexes on a specified database to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">INDEX</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> * <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant privilege to show indexes on all databases to a role.</p>
+<pre><code class="hljs">DENY <span class="hljs-keyword">INDEX</span> MANAGEMENT <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> bar <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Deny privilege to create and drop indexes on a specified database to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">CONSTRAINT</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> * <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant privilege to create constraints on all databases to a role.</p>
+<pre><code class="hljs">DENY <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">CONSTRAINT</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> * <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Deny privilege to drop constraints on all databases to a role.</p>
+<pre><code class="hljs">DENY <span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">CONSTRAINT</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> foo <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Deny privilege to show constraints on a specified database to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">REVOKE</span> <span class="hljs-keyword">CONSTRAINT</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> * <span class="hljs-keyword">FROM</span> my_role
+</code></pre>
+<p>Revoke granted and denied privileges to create and drop constraints on all databases from a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">CREATE</span> <span class="hljs-built_in">NEW</span> LABELS <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> * <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant privilege to create new labels on all databases to a role.</p>
+<pre><code class="hljs">DENY <span class="hljs-keyword">CREATE</span> <span class="hljs-built_in">NEW</span> <span class="hljs-keyword">TYPES</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> foo <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Deny privilege to create new relationship types on a specified database to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">REVOKE</span> <span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">CREATE</span> <span class="hljs-built_in">NEW</span> PROPERTY NAMES <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> bar <span class="hljs-keyword">FROM</span> my_role
+</code></pre>
+<p>Revoke the grant privilege to create new property names on a specified database from a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-type">NAME</span> MANAGEMENT <span class="hljs-keyword">ON</span> HOME <span class="hljs-keyword">DATABASE</span> <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant privilege to create labels, relationship types, and property names on the home database to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DATABASE</span> baz <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant privilege to access, create and drop indexes and constraints, create new labels, types and property names on a specified database to a role.</p>
+<pre><code class="hljs">GRANT SHOW TRANSACTION (*) <span class="hljs-keyword">ON</span> DATABASE foo <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant privilege to list transactions and queries from all users on a specified database to a role.</p>
+<pre><code class="hljs">DENY TERMINATE <span class="hljs-keyword">TRANSACTION</span> (user1, user2) <span class="hljs-keyword">ON</span> DATABASES * <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Deny privilege to kill transactions and queries from user1 and user2 on all databases to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">REVOKE</span> <span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">TRANSACTION</span> MANAGEMENT <span class="hljs-keyword">ON</span> HOME <span class="hljs-keyword">DATABASE</span> <span class="hljs-keyword">FROM</span> my_role
+</code></pre>
+<p>Revoke the granted privilege to list and kill transactions and queries from all users on the home database from a role.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="★-role-management-privileges"><a class="h-anchor" href="#★-role-management-privileges">#</a>(★) Role management privileges</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">ROLE</span> <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant the privilege to create roles to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">RENAME</span> <span class="hljs-keyword">ROLE</span> <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant the privilege to rename roles to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">ROLE</span> <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant the privilege to delete roles to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">DENY</span> ASSIGN <span class="hljs-keyword">ROLE</span> <span class="hljs-title">ON</span> DBMS TO my_role
+</code></pre>
+<p>Deny the privilege to assign roles to users to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">DENY</span> REMOVE <span class="hljs-keyword">ROLE</span> <span class="hljs-title">ON</span> DBMS TO my_role
+</code></pre>
+<p>Deny the privilege to remove roles from users to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">REVOKE</span> DENY <span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">ROLE</span> <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">FROM</span> my_role
+</code></pre>
+<p>Revoke the denied privilege to show roles from a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ROLE</span> MANAGEMENT <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant all privileges to manage roles to a role.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="★-user-management-privileges"><a class="h-anchor" href="#★-user-management-privileges">#</a>(★) User management privileges</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">USER</span> <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant the privilege to create users to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">RENAME</span> <span class="hljs-keyword">USER</span> <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant the privilege to rename users to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">DENY</span> ALTER <span class="hljs-keyword">USER</span> <span class="hljs-title">ON</span> DBMS TO my_role
+</code></pre>
+<p>Deny the privilege to alter users to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">REVOKE</span> <span class="hljs-keyword">SET</span> PASSWORDS <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">FROM</span> my_role
+</code></pre>
+<p>Revoke the granted and denied privileges to alter users' passwords from a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">REVOKE</span> <span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">SET</span> <span class="hljs-keyword">USER</span> STATUS <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">FROM</span> my_role
+</code></pre>
+<p>Revoke the granted privilege to alter the account status of users from a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">SET</span> <span class="hljs-keyword">USER</span> HOME <span class="hljs-keyword">DATABASE</span> <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant the privilege alter the home database of users to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">USER</span> <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant the privilege to delete users to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">REVOKE</span> DENY <span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">USER</span> <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">FROM</span> my_role
+</code></pre>
+<p>Revoke the denied privilege to show users from a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">USER</span> MANAGEMENT <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant all privileges to manage users to a role.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="★-database-management-privileges"><a class="h-anchor" href="#★-database-management-privileges">#</a>(★) Database management privileges</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">DATABASE</span> <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant the privilege to create databases to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">REVOKE</span> DENY <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">DATABASE</span> <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">FROM</span> my_role
+</code></pre>
+<p>Revoke the denied privilege to delete databases from a role.</p>
+<pre><code class="hljs">DENY <span class="hljs-keyword">DATABASE</span> MANAGEMENT <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Deny all privileges to manage database to a role.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="★-privilege-management-privileges"><a class="h-anchor" href="#★-privilege-management-privileges">#</a>(★) Privilege management privileges</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">SHOW</span> PRIVILEGE <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant the privilege to show privileges to a role.</p>
+<pre><code class="hljs"><span class="hljs-attribute">DENY</span> ASSIGN PRIVILEGE <span class="hljs-literal">ON</span> DBMS TO my_role
+</code></pre>
+<p>Deny the privilege to assign privileges to roles to a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">REVOKE</span> <span class="hljs-keyword">GRANT</span> REMOVE PRIVILEGE <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">FROM</span> my_role
+</code></pre>
+<p>Revoke the granted privilege to remove privileges from roles from a role.</p>
+<pre><code class="hljs"><span class="hljs-keyword">REVOKE</span> PRIVILEGE MANAGEMENT <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">FROM</span> my_role
+</code></pre>
+<p>Revoke all granted and denied privileges for manage privileges from a role.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="★-dbms-privileges"><a class="h-anchor" href="#★-dbms-privileges">#</a>(★) DBMS privileges</h3>
+<div class="section">
+<pre><code class="hljs"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">ON</span> DBMS <span class="hljs-keyword">TO</span> my_role
+</code></pre>
+<p>Grant privilege to perform all role management, user management, database management and privilege management to a role.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="★-note"><a class="h-anchor" href="#★-note">#</a>★ Note</h2>
+<div class="h3-wrap-list">
+<p>(★) Functionality available in Neo4j Enterprise Edition.</p>
+</div>
+</div>
+
+        </div></div><div id="mysearch" class="z-50 fixed inset-0 flex justify-center bg-slate-600/80 dark:bg-slate-900/90 items-start text-sm z-50 overflow-hidden lg:pt-16 lg:pb-20 hidden"><div id="mysearch-box" class="lg:max-w-screen-lg w-full flex flex-col justify-between bg-white dark:bg-slate-700 shadow-3xl dark:shadow-3xl lg:rounded-lg lg:max-h-832 min-h-320 h-full"><div class="flex items-center h-16 flex-none border-b border-slate-200 dark:border-slate-700"><div class="w-full h-full"><form class="flex items-center w-full h-full outline-none rounded-tl-lg"><label for="mysearch-input" id="mysearch-label" class="h-full w-14 mt-1 ml-1 px-4 flex items-center justify-center transition-colors duration-200 ease-in-out text-emerald-200"><div class="text-2xl text-emerald-500"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div></label><div class="relative flex-1"> <input class="flex-1 font-light h-full bg-transparent focus:text-slate-900 text-slate-500 dark:text-slate-300 placeholder-slate-400 placeholder-opacity-80 shadow-none outline-none truncate text-lg sm:text-2xl caret-color-emerald-400 leading-normalized w-full appearance-none rounded-none transition-colors duration-200 ease-in-out" id="mysearch-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search for cheatsheet" maxlength="128" type="text" enterkeyhint="go"></div> <button id="mysearch-clear" type="reset" class="items-center justify-center h-full w-14 px-4 text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 opacity-75 fill-current cursor-pointer transition-fast-out flex"><i class="icon icon-close text-xs font-bold"></i></button></form></div><div class="w-px h-8 bg-slate-100 dark:bg-slate-400/20 flex-none"></div> <button class="cancel mr-1 px-4 h-full text-slate-500 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-300"> Cancel</button></div><div class="flex flex-grow overflow-hidden lg:rounded-br-lg"><div class="relative w-full flex-none overflow-y-auto lg:w-1/2"><ul id="mysearch-list"></ul></div><div class="preview-panel shadow-inner bg-slate-100 dark:bg-slate-800 lg:block w-1/2 flex-none overflow-y-auto"></div></div></div></div><footer class="text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-slate-800 md:mt-14"></footer><div id="carbon_container"></div></body><script src="/js/main.js?_v=1705688051674"></script><script>
+        // Get all pre > code elements
+        const codeBlocks = document.querySelectorAll('pre > code');
+        const initInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path> </svg>';
+        const successInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>';
+        codeBlocks.forEach(function (codeBlock) {
+            // Create a copy button element
+            const copyButton = document.createElement('button');
+            copyButton.className = 'bg-emerald-500 p-2 text-white fadeIn shadow-xl rounded flex items-center absolute top-2 right-2';
+            copyButton.innerHTML = initInnerHTML;
+            copyButton.style.opacity = "0";
+            const parent = codeBlock.parentNode;
+
+            parent.style = "position: relative;"
+            parent.insertBefore(copyButton, codeBlock);
+
+            // Add click event listener to copy button
+            copyButton.addEventListener('click', () => {
+                navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+                    copyButton.innerHTML = successInnerHTML;
+                    setTimeout(() => {
+                        copyButton.innerHTML = initInnerHTML;
+                    }, 1000);
+                });
+            });
+
+            parent.addEventListener('mouseenter', () => {
+                copyButton.style.opacity = "1";
+            });
+            parent.addEventListener('mouseleave', () => {
+                copyButton.style.opacity = "0";
+            });
+        });
+    </script></html>

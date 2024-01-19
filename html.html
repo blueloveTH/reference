@@ -1,0 +1,1350 @@
+<!DOCTYPE HTML><html class="scrollbar" translate="no"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta http-equiv="content-language" content="en-gb"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="app:pageurl" content="/"><title>HTML Cheat Sheet & Quick Reference</title><meta name="keywords" content="reference,cheatsheet,code table,snippets,linux,web"><meta name="description" content="This HTML quick reference cheat sheet lists the common HTML and HTML5 tags in readable layout. "><meta property="og:url" content="https://cheatsheets.zip/html.html"><meta property="og:title" content="HTML Cheat Sheet & Quick Reference"><meta property="og:site_name" content="CheatSheets.zip"><meta property="og:description" content="This HTML quick reference cheat sheet lists the common HTML and HTML5 tags in readable layout. "><meta property="og:image" content="https://cheatsheets.zip/assets/image/preview.png?v=1wjea"><meta property="og:image:width" content="2276"><meta property="og:image:height" content="1240"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="HTML Cheat Sheet & Quick Reference"><meta name="twitter:site" content="@CheatSheets.zip"><meta name="twitter:creator" content="@CheatSheets.zip"><meta name="twitter:description" content="This HTML quick reference cheat sheet lists the common HTML and HTML5 tags in readable layout. "><meta name="twitter:image" content="https://cheatsheets.zip/assets/image/preview.png?v=0gdbn"><link rel="icon" href="/images/favicon.png?v=1"><link rel="icon shortcut" type="image/png" href="/images/favicon.png?v=1"><link rel="canonical" href="https://cheatsheets.zip/html.html"><link rel="prefetch" href="https://cheatsheets.zip"><link rel="prerender" href="https://cheatsheets.zip"><link rel="alternate" href="/atom.xml" title="CheatSheets.zip" type="application/atom+xml"><link rel="stylesheet" href="/css/style.css?_v=1705688051674"><script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            let html = document.documentElement.classList;
+            html.toggle('dark')
+        }
+    </script></head><body class="bg-slate-100 dark:bg-slate-900"><header class=""><div class="max-container z-10" style="display:none"><div class="flex flex-row justify-between md:justify-start items-center py-3"><a href="/" class="flex font-medium items-center justify-center md:justify-start text-slate-800 dark:text-slate-300"><div class="hidden md:flex justify-center w-10 h-10 md:w-12 md:h-12 text-white p-2 bg-emerald-500 rounded-full mr-3 text-2xl"><div class="self-center"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M303.55291933 951.35043811c-1.84934059-3.43448917-12.68119097-22.19208477-24.04142536-41.74225521l-20.07855218-35.4016586 5.01963776-9.51089265c2.90610631-5.01963776 13.20957383-23.24885049 22.9846585-40.15710664l17.70082986-31.17459456h366.69778034l6.86897834-11.09604238c3.43448917-6.34059549 13.73795669-23.77723335 22.72046763-39.10033977 8.71831893-15.32310642 22.19208477-38.30776491 29.85363797-51.51733873 7.66155321-12.94538297 16.37987214-28.00429739 19.02178646-33.02393629 2.90610631-5.28382976 14.00214869-24.30561621 24.56980821-42.27063694 10.56765952-18.22921273 29.85363797-51.51733987 43.06321181-73.97361551 12.94538297-22.45627563 35.93004146-62.08499826 51.25314787-87.71157333 15.05891442-25.89076594 28.53268025-49.93219015 29.85363797-53.63087132 3.43448917-8.98251093 8.45412693-8.18993607 12.94538184 2.11353259 2.11353145 4.4912549 8.71831893 16.90825501 14.79472355 26.94753166 6.34059549 10.30346752 20.60693618 35.13746773 32.23136143 55.48021077s25.62657394 44.38416953 30.91040369 53.63087133l9.77508466 16.64406414-6.07640462 9.77508466c-3.43448917 5.28382976-7.13317035 11.62442525-8.71831893 14.00214869-2.90610631 4.7554469-13.73795669 23.77723335-24.83399908 43.3274038-3.96287203 7.39736121-13.47376583 23.77723335-21.13531904 36.45842432-7.39736121 12.94538297-13.47376583 24.04142535-13.47376583 24.56980821 0 .79257486-3.43448917 6.34059549-7.39736121 12.41699898-4.22706403 6.07640462-9.51089379 15.32310642-12.15280811 20.34274531-2.37772345 5.01963776-6.86897835 12.94538297-9.77508465 17.17244587-2.64191431 4.4912549-5.81221262 10.03927666-6.60478749 12.68119096-1.05676573 2.37772345-2.64191431 4.4912549-3.69868117 4.49125604s-2.64191431 2.11353145-3.43448918 4.75544576c-1.05676573 2.37772345-5.28382976 10.56765952-9.77508466 17.70082987-4.22706403 7.39736121-10.56765952 17.96502073-13.47376582 23.77723335-3.17029831 5.81221262-10.83185038 19.28597845-17.17244587 29.58944597-6.34059549 10.56765952-11.62442525 20.07855331-11.62442525 21.13531904 0 .79257486-1.58514859 3.69868117-3.69868117 5.81221263-2.11353145 2.37772345-8.71831893 13.73795669-14.79472355 25.36238307s-18.22921273 33.81651001-26.94753053 49.66799815l-16.11568128 28.26848939H307.25159936l-3.69868003-5.81221263z"></path><path d="M523.88861725 694.82050674c-31.70297856-20.60693618-68.95397774-44.11997753-70.01074347-44.11997753-.79257486 0-10.03927666-5.81221262-20.60693618-13.20957383-10.83185038-7.13317035-22.72046763-14.53053155-26.68333966-16.11568128-3.69868117-1.84934059-6.86897835-3.96287203-6.86897835-5.01963776 0-.79257486-4.7554469-4.22706403-10.56765952-7.66155321l-10.30346752-5.81221262-.79257486-98.27923172c-.52838286-54.15925419 0-99.33599744.79257486-100.3927643 1.05676573-1.32095773 27.74010539 12.94538297 59.44308395 31.96716942 31.96716942 18.75759559 69.21816861 40.42129749 82.95612529 48.61123356l25.09819108 14.26633956.264192 103.56306148c.264192 73.7094235-.52838286 103.56306147-2.64191545 103.56306261-1.58514859 0-10.56765952-5.01963776-20.07855217-11.36023438zm0-61.29242453c0-11.09604238-.79257486-12.15280811-11.09604239-18.2292116-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023325l60.23565881 34.60908486c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327574.264192 0 .52838286-5.28382976.528384-11.88861724zm0-42.27063695c0-11.09604238-.79257486-12.15280811-11.09604239-18.22921273-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023438l60.23565881 34.60908373c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327688.264192 0 .52838286-5.28382976.528384-11.88861725zm-1.84934059-54.42344619c-2.11353145-2.11353145-117.30101931-68.42559488-118.88616789-68.42559374-.52838286 0-.79257486 5.28382976-.79257487 11.62442525v11.36023324l60.23565881 34.60908487 59.97146681 34.60908488.79257373-10.83185152c.52838286-5.81221262 0-11.62442525-1.32095659-12.94538298z"></path><path d="M109.10798734 615.82725347c-3.69868117-7.39736121-10.56765952-20.34274418-15.58729841-28.26848938-7.92574407-13.47376583-49.66799929-84.80546589-61.2924234-105.41240206-7.13317035-12.15280811-6.34059549-15.85148928 6.34059548-37.77938205 24.56980821-42.00644608 41.21387122-70.27493433 45.96931812-78.99325326 7.13317035-12.41700011 49.66799929-86.12642361 81.37097671-141.34244466 14.53053155-24.56980821 40.68548835-70.27493433 58.12212622-101.18533803l32.23136143-56.27278563h229.05401685c159.30746539 0 230.37497458 1.05676573 232.75269689 2.90610631 1.84934059 1.58514859 10.56765952 15.58729728 19.55017045 31.17459456 8.71831893 15.58729728 18.75759559 33.02393515 22.45627563 38.83614777l6.34059548 10.83185152-8.9825098 14.26633955c-5.01963776 7.92574407-15.32310642 25.89076594-22.72046762 39.62872264s-13.73795669 25.62657394-14.2663407 25.89076594c-.264192.52838286-83.2203173.79257486-184.40565532.79257486l-183.6130816-.264192-9.5108938 14.53053155c-5.01963776 7.92574407-9.24670179 15.85148928-9.24670179 17.17244701 0 1.58514859-1.05676573 2.64191431-2.64191431 2.64191431-1.32095773 0-2.64191431 1.05676573-2.64191545 2.11353145 0 2.90610631-29.32525511 55.21601991-48.61123243 87.18319047-8.18993607 13.47376583-14.79472355 25.09819107-14.79472355 25.8907648 0 1.05676573-3.43448917 6.86897835-7.92574407 13.47376583-4.22706403 6.34059549-7.92574407 12.15280811-7.92574521 12.94538297 0 .52838286-2.90610631 5.54802062-6.07640349 11.09604238-3.43448917 5.28382976-9.24670179 15.05891442-12.94538296 21.6637019s-20.07855331 35.13746773-36.45842546 63.40595599-31.96716942 55.21601991-34.34489288 59.44308394c-2.64191431 4.4912549-8.18993607 14.26634069-12.94538182 21.92789276-4.4912549 7.66155321-8.18993607 14.53053155-8.18993608 15.32310642 0 2.37772345-19.28597845 30.11782883-20.87112704 30.11782884-.79257486 0-4.4912549-6.34059549-8.18993607-13.7379567z"></path><path d="M625.60233813 601.56091278c-15.85148928-10.56765952-31.17459456-21.13531904-33.81651-23.51304135-4.22706403-3.69868117-4.7554469-9.24670179-4.4912549-56.00859477.264192-39.89291463-.264192-52.3099136-3.17029832-54.95182905-1.84934059-1.84934059-21.13531904-13.73795669-43.0632118-26.4191488-21.6637019-12.68119097-41.74225408-25.09819107-44.11997753-27.21172252-4.22706403-3.43448917-4.7554469-9.51089379-4.75544689-50.72476502 0-25.62657394.52838286-47.29027584 1.58514858-48.08284956.79257486-.79257486 8.18993607 2.90610631 16.37987214 8.45412693s25.36238194 15.85148928 37.77938205 22.72046763c12.41700011 7.13317035 43.06321181 25.09819107 67.89721201 40.15710549l45.44093526 27.21172366-.52838286 103.29886948c-.52838286 66.31206229-1.84934059 103.56306147-3.43448918 103.82725347-1.32095773.264192-15.58729728-8.18993607-31.70297856-18.75759559z"></path></svg></div></div> <span class="domain text-slate-600 dark:text-slate-300 text-lg md:text-2xl">CheatSheets<span class="text-emerald-400">.zip</span></span></a><div class="md:ml-auto flex flex-wrap items-center text-base justify-center"> <button id="mysearch-trigger" type="button" class="fadeIn inline-flex h-8 items-center bg-slate-200 dark:bg-gray-900 md:dark:bg-transparent md:bg-transparent rounded-full px-2 md:px-3 lg:px-6 py-2 text-slate-700 md:hover:opacity-80"><div class="md:text-xl text-slate-700 dark:text-slate-300 md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div> <span class="hidden md:inline dark:text-slate-300">Search for cheatsheet</span> <span class="hidden md:inline dark:text-slate-300 md:ml-2 text-sm leading-5 py-0.5 px-1.5 border border-slate-400 rounded-md"><span class="font-sans">⌘</span> <span class="font-sans">K</span></span></button> <a href="https://github.com/Fechin/reference/blob/main/source/_posts/html.md" rel="external nofollow noreferrer" target="_blank"><img alt="GitHub Repo stars" style="height:26px;opacity:.8" src="https://img.shields.io/github/stars/Fechin/reference?style=social"></a> <a href="https://twitter.com/FechinLi" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"><div class="md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></div> <span class="hidden md:inline text-sm">Follow Me</span></button></a> <button id="darkMode" class="fadeIn inline-flex items-center justify-center flex-shrink-0 h-8 w-8 rounded-full text-gray-900 ml-1 lg:ml-4 dark:text-gray-300 bg-gray-200 dark:bg-gray-900"> <i class="icon-light text-gray-600 dark:text-gray-300 dark:hover:text-white"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M512 31.40266667c14.19946667 0 26.935296 8.14830933 31.93787733 20.447232l29.40381867 72.50466133c12.713984 31.30436267-4.456448 66.21320533-38.33856 77.96599467A70.34197333 70.34197333 0 0 1 512 206.16533333c-36.19771733 0-65.536-27.11005867-65.536-60.555264 0-7.25265067 1.41994667-14.46161067 4.17245867-21.25550933l29.425664-72.50466133C485.04285867 39.550976 497.75684267 31.40266667 512 31.40266667zm0 961.19466666c-14.221312 0-26.95714133-8.14830933-31.93787733-20.447232l-29.425664-72.50466133a56.492032 56.492032 0 0 1-4.17245867-21.25550933C446.464 844.96657067 475.80228267 817.83466667 512 817.83466667c7.86432 0 15.64125867 1.31072 23.003136 3.84477866 33.882112 11.75278933 51.052544 46.661632 38.33856 77.98784l-29.40381867 72.482816c-5.00258133 12.29892267-17.73841067 20.447232-31.93787733 20.447232zm480.59733333-480.59733333c0 14.19946667-8.14830933 26.935296-20.447232 31.93787733l-72.50466133 29.40381867c-31.30436267 12.713984-66.21320533-4.456448-77.96599467-38.33856A70.34197333 70.34197333 0 0 1 817.83466667 512c0-36.19771733 27.11005867-65.536 60.555264-65.536 7.25265067 0 14.46161067 1.41994667 21.25550933 4.17245867l72.50466133 29.425664c12.29892267 4.980736 20.447232 17.69472 20.447232 31.93787733zM31.40266667 512c0-14.221312 8.14830933-26.95714133 20.447232-31.93787733l72.50466133-29.425664c6.77205333-2.752512 13.98101333-4.17245867 21.25550933-4.17245867C179.03342933 446.464 206.16533333 475.80228267 206.16533333 512c0 7.86432-1.31072 15.64125867-3.84477866 23.003136-11.75278933 33.882112-46.661632 51.052544-77.98784 38.33856l-72.482816-29.40381867C39.550976 538.935296 31.40266667 526.19946667 31.40266667 512zM172.15214933 172.17399467c10.04885333-10.04885333 24.81629867-13.28196267 37.04968534-8.126464l72.06775466 30.45239466c31.1296 13.172736 43.66882133 49.98212267 28.00571734 82.24768a70.34197333 70.34197333 0 0 1-13.54410667 19.00544c-25.58088533 25.58088533-65.49230933 27.15374933-89.12896 3.49525334a56.492032 56.492032 0 0 1-12.10231467-17.97870934L164.04753067 209.22368c-5.177344-12.23338667-1.94423467-27.000832 8.10461866-37.04968533zm679.673856 679.673856c-10.04885333 10.04885333-24.81629867 13.28196267-37.04968533 8.10461866l-72.04590933-30.45239466a56.492032 56.492032 0 0 1-18.00055467-12.08046934c-23.63665067-23.658496-22.06378667-63.56992 3.51709867-89.15080533a70.34197333 70.34197333 0 0 1 19.00544-13.54410667c32.26555733-15.663104 69.074944-3.12388267 82.24768 28.00571734l30.45239466 72.06775466c5.15549867 12.23338667 1.92238933 26.97898667-8.126464 37.04968534zm0-679.69570134c10.04885333 10.04885333 13.28196267 24.81629867 8.126464 37.04968534l-30.45239466 72.06775466c-13.172736 31.1296-49.98212267 43.66882133-82.24768 28.00571734a70.34197333 70.34197333 0 0 1-19.00544-13.54410667c-25.58088533-25.58088533-27.15374933-65.49230933-3.49525334-89.12896 5.111808-5.15549867 11.206656-9.240576 17.97870934-12.10231467l72.04590933-30.45239466c12.23338667-5.177344 27.000832-1.94423467 37.04968533 8.10461866zM172.15214933 851.82600533c-10.04885333-10.04885333-13.28196267-24.81629867-8.10461866-37.04968533l30.45239466-72.04590933c2.83989333-6.77205333 6.946816-12.86690133 12.08046934-18.00055467 23.658496-23.63665067 63.56992-22.06378667 89.15080533 3.51709867 5.57056 5.57056 10.15808 12.01493333 13.54410667 19.00544 15.663104 32.26555733 3.12388267 69.074944-28.00571734 82.24768l-72.06775466 30.45239466c-12.23338667 5.15549867-26.97898667 1.92238933-37.04968534-8.126464zM512 752.29866667c-132.7104 0-240.29866667-107.58826667-240.29866667-240.29866667s107.58826667-240.29866667 240.29866667-240.29866667 240.29866667 107.58826667 240.29866667 240.29866667-107.58826667 240.29866667-240.29866667 240.29866667z"></path></svg></i></button> <a href="https://facebook.com/sharer/sharer.php?u=https://cheatsheets.zip/html.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4a66ad] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M594.74346667 51.53066667c-28.95893333 0-56.30826667 3.2192-88.48533334 16.0896-65.9616 27.34826667-98.13653333 88.48533333-98.13653333 186.6208v94.91946666h-91.70026667v157.66186667h91.70026667v455.28853333h186.6208v-455.28853333h127.09546667l17.696-157.66186667h-144.7936v-70.7872c0-22.52266667 1.60853333-38.61013333 8.04266666-46.65706666 8.04266667-14.47786667 24.13226667-20.91413333 49.872-20.91413334h85.26613334v-157.66186666h-143.184z"></path></svg></span> <span class="hidden">Facebook</span></button></a> <a href="https://twitter.com/intent/tweet/?text=This%20HTML%20quick%20reference%20cheat%20sheet%20lists%20the%20common%20HTML%20and%20HTML5%20tags%20in%20readable%20layout.%20&url=https://cheatsheets.zip/html.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></span> <span class="hidden">Twitter</span></button></a></div></div></div></header><div class="mx-auto flex flex-wrap md:py-5 flex-col md:flex-row items-center"><div class="flex flex-col w-full mx-auto text-center my-8"><div class="max-container w-full"><h1 class="text-5xl mb-4"> <span class="text-slate-700 dark:text-slate-300 font-light">HTML</span> <span class="text-slate-400 dark:text-slate-500 font-extralight hidden md:inline">cheatsheet</span></h1><div class="lg:w-3/5 mx-auto intro leading-relaxed text-slate-600"><p>This HTML quick reference cheat sheet lists the common HTML and HTML5 tags in readable layout.</p></div></div></div><div id="mdLayout" class="mdLayout w-full max-container"> 
+        <div class="h2-wrap">
+<h2 id="getting-started"><a class="h-anchor" href="#getting-started">#</a>Getting Started</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap col-span-2 row-span-2">
+<h3 id="hello-html"><a class="h-anchor" href="#hello-html">#</a>hello.html</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=edge&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>HTML5 Boilerplate<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello world, hello CheatSheets.zip!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>Or try it out in the <a target="_blank" rel="noopener external nofollow noreferrer" href="https://jsfiddle.net/Fechin/1e4wz20b/">jsfiddle</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="comment"><a class="h-anchor" href="#comment">#</a>Comment</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- this is a comment --&gt;</span>
+
+<span class="hljs-comment">&lt;!--
+    Or you can comment out a
+    large number of lines.
+--&gt;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="paragraph"><a class="h-anchor" href="#paragraph">#</a>Paragraph</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I&#x27;m from CheatSheets.zip<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Share quick reference cheat sheet.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>See: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">The Paragraph element</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="html-link"><a class="h-anchor" href="#html-link">#</a>HTML link</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://cheatsheets.zip&quot;</span>&gt;</span>CheatSheets<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;mailto:jack@abc.com&quot;</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;tel:+12345678&quot;</span>&gt;</span>Call<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;sms:+12345678&amp;body=ha%20ha&quot;</span>&gt;</span>Msg<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<hr>
+<table class="left-text">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><code>href</code></td>
+<td>The URL that the hyperlink points to</td>
+</tr>
+<tr>
+<td></td>
+<td><code>rel</code></td>
+<td>Relationship of the linked URL</td>
+</tr>
+<tr>
+<td></td>
+<td><code>target</code></td>
+<td>Link target location: <br><code>_self</code>, <code>_blank</code>, <code>_top</code>, <code>_parent</code></td>
+</tr>
+</tbody>
+</table>
+<p>See: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes">The &lt;a&gt; Attributes</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="image-tag"><a class="h-anchor" href="#image-tag">#</a>Image Tag</h3>
+<div class="section">
+<pre><code class="hljs wrap language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">loading</span>=<span class="hljs-string">&quot;lazy&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://xxx.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Describe image here&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;400&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;400&quot;</span>&gt;</span>
+</code></pre>
+<hr>
+<table class="left-text">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><code>src</code></td>
+<td>Required, Image location <em>(URL | Path)</em></td>
+</tr>
+<tr>
+<td></td>
+<td><code>alt</code></td>
+<td>Describe of the image</td>
+</tr>
+<tr>
+<td></td>
+<td><code>width</code></td>
+<td>Width of the image</td>
+</tr>
+<tr>
+<td></td>
+<td><code>height</code></td>
+<td>Height of the image</td>
+</tr>
+<tr>
+<td></td>
+<td><code>loading</code></td>
+<td>How the browser should load</td>
+</tr>
+</tbody>
+</table>
+<p>See: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">The Image Embed element</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="text-formatting-tags"><a class="h-anchor" href="#text-formatting-tags">#</a>Text Formatting Tags</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Bold Text<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>This text is important<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>Italic Text<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>This text is emphasized<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">u</span>&gt;</span>Underline Text<span class="hljs-tag">&lt;/<span class="hljs-name">u</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span>Pre-formatted Text<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>Source code<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">del</span>&gt;</span>Deleted text<span class="hljs-tag">&lt;/<span class="hljs-name">del</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mark</span>&gt;</span>Highlighted text (HTML5)<span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ins</span>&gt;</span>Inserted text<span class="hljs-tag">&lt;/<span class="hljs-name">ins</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">sup</span>&gt;</span>Makes text superscripted<span class="hljs-tag">&lt;/<span class="hljs-name">sup</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">sub</span>&gt;</span>Makes text subscripted<span class="hljs-tag">&lt;/<span class="hljs-name">sub</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>Makes text smaller<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span>Ctrl<span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span>&gt;</span>Text Block Quote<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="headings"><a class="h-anchor" href="#headings">#</a>Headings</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span> This is Heading 1 <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span> This is Heading 2 <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span> This is Heading 3 <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span> This is Heading 4 <span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span> This is Heading 5 <span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span> This is Heading 6 <span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+</code></pre>
+<p>You should only have one h1 on your page</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="section-divisions"><a class="h-anchor" href="#section-divisions">#</a>Section Divisions</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;div&gt;&lt;/div&gt;</code></td>
+<td>Division or Section of Page Content</td>
+</tr>
+<tr>
+<td><code>&lt;span&gt;&lt;/span&gt;</code></td>
+<td>Section of text within other content</td>
+</tr>
+<tr>
+<td><code>&lt;p&gt;&lt;/p&gt;</code></td>
+<td>Paragraph of Text</td>
+</tr>
+<tr>
+<td><code>&lt;br&gt;</code></td>
+<td>Line Break</td>
+</tr>
+<tr>
+<td><code>&lt;hr&gt;</code></td>
+<td>Basic Horizontal Line</td>
+</tr>
+</tbody>
+</table>
+<p>These are the tags used to divide your page up into sections</p>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="inline-frame"><a class="h-anchor" href="#inline-frame">#</a>Inline Frame</h3>
+<div class="section">
+<pre><code class="hljs wrap language-html"><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;New York&quot;</span>
+    <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;342&quot;</span>
+    <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;306&quot;</span>
+    <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;gmap_canvas&quot;</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed&quot;</span>
+    <span class="hljs-attr">scrolling</span>=<span class="hljs-string">&quot;no&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+</code></pre>
+<h4 id="↓-preview"><a class="h-anchor" href="#↓-preview">#</a>↓ Preview</h4>
+<iframe title="New York" width="342" height="306" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" scrolling="no">
+</iframe>
+<p>See: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">The Inline Frame element</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="javascript-in-html"><a class="h-anchor" href="#javascript-in-html">#</a>JavaScript in HTML</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript">
+    <span class="hljs-keyword">let</span> text = <span class="hljs-string">&quot;Hello CheatSheets.zip&quot;</span>;
+    <span class="hljs-title function_">alert</span>(text);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h4 id="external-javascript"><a class="h-anchor" href="#external-javascript">#</a>External JavaScript</h4>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    ...
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;app.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="css-in-html"><a class="h-anchor" href="#css-in-html">#</a>CSS in HTML</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span>&gt;</span><span class="language-css">
+    <span class="hljs-selector-tag">h1</span> &#123;
+        <span class="hljs-attribute">color</span>: purple;
+    &#125;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<h4 id="external-stylesheet"><a class="h-anchor" href="#external-stylesheet">#</a>External stylesheet</h4>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+...
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;style.css&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="html5-tags"><a class="h-anchor" href="#html5-tags">#</a>HTML5 Tags</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="document"><a class="h-anchor" href="#document">#</a>Document</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>CheatSheets.zip<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>©2023 CheatSheets.zip<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="header-navigation"><a class="h-anchor" href="#header-navigation">#</a>Header Navigation</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Edit Page<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Twitter<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Facebook<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-4">
+<h3 id="html5-tags-2"><a class="h-anchor" href="#html5-tags-2">#</a>HTML5 Tags</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article">article</a></td>
+<td>Content that’s independent</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">aside</a></td>
+<td>Secondary content</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">audio</a></td>
+<td>Embeds a sound, or an audio stream</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi">bdi</a></td>
+<td>The Bidirectional Isolate element</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">canvas</a></td>
+<td>Draw graphics via JavaScript</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data">data</a></td>
+<td>Machine readable content</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</a></td>
+<td>A set of pre-defined options</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">details</a></td>
+<td>Additional information</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">dialog</a></td>
+<td>A dialog box or sub-window</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">embed</a></td>
+<td>Embeds external application</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption">figcaption</a></td>
+<td>A caption or legend for a figure</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure">figure</a></td>
+<td>A figure illustrated</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">footer</a></td>
+<td>Footer or least important</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">header</a></td>
+<td>Masthead or important information</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">main</a></td>
+<td>The main content of the document</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark">mark</a></td>
+<td>Text highlighted</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter">meter</a></td>
+<td>A scalar value within a known range</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav">nav</a></td>
+<td>A section of navigation links</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">output</a></td>
+<td>The result of a calculation</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">picture</a></td>
+<td>A container for multiple image sources</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress">progress</a></td>
+<td>The completion progress of a task</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rp">rp</a></td>
+<td>Provides fall-back parenthesis</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rt">rt</a></td>
+<td>Defines the pronunciation of character</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby">ruby</a></td>
+<td>Represents a ruby annotation</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">section</a></td>
+<td>A group in a series of related content</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source">source</a></td>
+<td>Resources for the media elements</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary">summary</a></td>
+<td>A summary for the &lt;details&gt; element</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template">template</a></td>
+<td>Defines the fragments of HTML</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time">time</a></td>
+<td>A time or date</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">track</a></td>
+<td>Text tracks for the media elements</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">video</a></td>
+<td>Embeds video</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr">wbr</a></td>
+<td>A line break opportunity</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="html5-video"><a class="h-anchor" href="#html5-video">#</a>HTML5 Video</h3>
+<div class="section">
+<pre><code class="hljs wrap language-html"><span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">controls</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;100%&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;video/mp4&quot;</span>&gt;</span>
+    Sorry, your browser doesn&#x27;t support embedded videos.
+<span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+</code></pre>
+<h4 id="↓-preview-2"><a class="h-anchor" href="#↓-preview-2">#</a>↓ Preview</h4>
+<video controls="" width="100%">
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+    Sorry, your browser doesn't support embedded videos.
+</video>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="html5-audio"><a class="h-anchor" href="#html5-audio">#</a>HTML5 Audio</h3>
+<div class="section">
+<pre><code class="hljs wrap language-html"><span class="hljs-tag">&lt;<span class="hljs-name">audio</span> <span class="hljs-attr">controls</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3&quot;</span>&gt;</span>
+    Your browser does not support the audio element.
+<span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span>
+</code></pre>
+<h4 id="↓-preview-3"><a class="h-anchor" href="#↓-preview-3">#</a>↓ Preview</h4>
+<p><audio controls class="w-full" src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3">
+Your browser does not support the audio element.
+</audio></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="html5-ruby"><a class="h-anchor" href="#html5-ruby">#</a>HTML5 Ruby</h3>
+<div class="section">
+<pre><code class="hljs wrap language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ruby</span>&gt;</span>
+  汉 <span class="hljs-tag">&lt;<span class="hljs-name">rp</span>&gt;</span>(<span class="hljs-tag">&lt;/<span class="hljs-name">rp</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">rt</span>&gt;</span>hàn<span class="hljs-tag">&lt;/<span class="hljs-name">rt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">rp</span>&gt;</span>)<span class="hljs-tag">&lt;/<span class="hljs-name">rp</span>&gt;</span>
+  字 <span class="hljs-tag">&lt;<span class="hljs-name">rp</span>&gt;</span>(<span class="hljs-tag">&lt;/<span class="hljs-name">rp</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">rt</span>&gt;</span>zì<span class="hljs-tag">&lt;/<span class="hljs-name">rt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">rp</span>&gt;</span>)<span class="hljs-tag">&lt;/<span class="hljs-name">rp</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ruby</span>&gt;</span>
+</code></pre>
+<h4 id="↓-preview-4"><a class="h-anchor" href="#↓-preview-4">#</a>↓ Preview</h4>
+<ruby class="mt-4 text-center text-5xl">
+  汉 <rp>(</rp><rt>hàn</rt><rp>)</rp>
+  字 <rp>(</rp><rt>zì</rt><rp>)</rp>
+</ruby>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="html5-kdi"><a class="h-anchor" href="#html5-kdi">#</a>HTML5 kdi</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>User <span class="hljs-tag">&lt;<span class="hljs-name">bdi</span>&gt;</span>hrefs<span class="hljs-tag">&lt;/<span class="hljs-name">bdi</span>&gt;</span>: 60 points<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>User <span class="hljs-tag">&lt;<span class="hljs-name">bdi</span>&gt;</span>jdoe<span class="hljs-tag">&lt;/<span class="hljs-name">bdi</span>&gt;</span>: 80 points<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>User <span class="hljs-tag">&lt;<span class="hljs-name">bdi</span>&gt;</span>إيان<span class="hljs-tag">&lt;/<span class="hljs-name">bdi</span>&gt;</span>: 90 points<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<h4 id="↓-preview-5"><a class="h-anchor" href="#↓-preview-5">#</a>↓ Preview</h4>
+<ul>
+ <li>User <bdi>hrefs</bdi>: 60 points</li>
+ <li>User <bdi>jdoe</bdi>: 80 points</li>
+ <li>User <bdi>إيان</bdi>: 90 points</li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="html5-progress"><a class="h-anchor" href="#html5-progress">#</a>HTML5 progress</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">progress</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;50&quot;</span> <span class="hljs-attr">max</span>=<span class="hljs-string">&quot;100&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">progress</span>&gt;</span>
+</code></pre>
+<p><progress value="50" max="100" class="w-full"></progress></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="html5-mark"><a class="h-anchor" href="#html5-mark">#</a>HTML5 mark</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I Love <span class="hljs-tag">&lt;<span class="hljs-name">mark</span>&gt;</span>CheatSheets.zip<span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>I Love <mark>CheatSheets.zip</mark></p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="html-tables"><a class="h-anchor" href="#html-tables">#</a>HTML Tables</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap row-span-2">
+<h3 id="table-example"><a class="h-anchor" href="#table-example">#</a>Table Example</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>name<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>age<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Roberta<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>39<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Oliver<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>25<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="html-table-tags"><a class="h-anchor" href="#html-table-tags">#</a>HTML Table Tags</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">&lt;table&gt;</a></td>
+<td>Defines a table</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th">&lt;th&gt;</a></td>
+<td>Defines a header cell in a table</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr">&lt;tr&gt;</a></td>
+<td>Defines a row in a table</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td">&lt;td&gt;</a></td>
+<td>Defines a cell in a table</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption">&lt;caption&gt;</a></td>
+<td>Defines a table caption</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></td>
+<td>Defines a group of columns</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col">&lt;col&gt;</a></td>
+<td>Defines a column within a table</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead">&lt;thead&gt;</a></td>
+<td>Groups the header content</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody">&lt;tbody&gt;</a></td>
+<td>Groups the body content</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot">&lt;tfoot&gt;</a></td>
+<td>Groups the footer content</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="td-attributes"><a class="h-anchor" href="#td-attributes">#</a>&lt;td&gt; Attributes</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>colspan</code></td>
+<td>Number of columns a cell should span</td>
+</tr>
+<tr>
+<td><code>headers</code></td>
+<td>One or more header cells a cell is related to</td>
+</tr>
+<tr>
+<td><code>rowspan</code></td>
+<td>Number of rows a cell should span</td>
+</tr>
+</tbody>
+</table>
+<p>See: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attributes">td#Attributes</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="th-attributes"><a class="h-anchor" href="#th-attributes">#</a>&lt;th&gt; Attributes</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>colspan</code></td>
+<td>Number of columns a cell should span</td>
+</tr>
+<tr>
+<td><code>headers</code></td>
+<td>One or more header cells a cell is related to</td>
+</tr>
+<tr>
+<td><code>rowspan</code></td>
+<td>Number of rows a cell should span</td>
+</tr>
+<tr>
+<td><code>abbr</code></td>
+<td>Description of the cell's content</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-scope">scope</a></td>
+<td>The header element relates to</td>
+</tr>
+</tbody>
+</table>
+<p>See: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attributes">th#Attributes</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="html-lists"><a class="h-anchor" href="#html-lists">#</a>HTML Lists</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="unordered-list"><a class="h-anchor" href="#unordered-list">#</a>Unordered list</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>I&#x27;m an item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>I&#x27;m another item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>I&#x27;m another item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<p>See: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul">The Unordered List element</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="ordered-list"><a class="h-anchor" href="#ordered-list">#</a>Ordered list</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>I&#x27;m the first item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>I&#x27;m the second item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>I&#x27;m the third item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+</code></pre>
+<p>See: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol">The Ordered List element</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="definition-list"><a class="h-anchor" href="#definition-list">#</a>Definition list</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>A Term<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>Definition of a term<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Another Term<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>Definition of another term<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+</code></pre>
+<p>See: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl">The Description List element</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="html-forms"><a class="h-anchor" href="#html-forms">#</a>HTML Forms</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap row-span-2">
+<h3 id="form-tags"><a class="h-anchor" href="#form-tags">#</a>Form tags</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;POST&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;api/login&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;mail&quot;</span>&gt;</span>Email: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;mail&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;mail&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;pw&quot;</span>&gt;</span>Password: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;pw&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;pw&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Login&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;ck&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;ck&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;ck&quot;</span>&gt;</span>Remember me<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<h4 id="↓-preview-6"><a class="h-anchor" href="#↓-preview-6">#</a>↓ Preview</h4>
+<form method="POST" action="api/login" style="padding:20px">
+    <label for="email">Email: </label> 
+    <input type="email" id="email" name="email" class="border border-slate-400 mt-2">
+    <br>
+    <label for="pwd">Password: </label> 
+    <input type="password" id="pwd" name="pwd" class="border border-slate-400 mt-2">
+    <br>
+    <input type="submit" value="Login" class="mt-2">
+    <br>
+    <input type="checkbox" id="ck" name="ck" class="mt-2">
+    <label for="ck">Remember me</label> 
+</form>
+<p>The HTML <code>&lt;form&gt;</code> element is used to collect and send information to an external source.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="form-attribute"><a class="h-anchor" href="#form-attribute">#</a>Form Attribute</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>Name of form for scripting</td>
+</tr>
+<tr>
+<td><code>action</code></td>
+<td>URL of form script</td>
+</tr>
+<tr>
+<td><code>method</code></td>
+<td>HTTP method, <code>POST</code> / <code>GET</code> <em>(default)</em></td>
+</tr>
+<tr>
+<td><code>enctype</code></td>
+<td>Media type, See <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype">enctype</a></td>
+</tr>
+<tr>
+<td><code>onsubmit</code></td>
+<td>Runs when the form was submit</td>
+</tr>
+<tr>
+<td><code>onreset</code></td>
+<td>Runs when the form was reset</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="label-tags"><a class="h-anchor" href="#label-tags">#</a>Label tags</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- Nested label --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Click me 
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;user&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;name&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+</code></pre>
+<hr>
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- &#x27;for&#x27; attribute --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;user&quot;</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;user&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;name&quot;</span>/&gt;</span>
+</code></pre>
+<p><code>for</code> in a label references an input's <code>id</code> attribute</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="input-tags"><a class="h-anchor" href="#input-tags">#</a>Input tags</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;Name&quot;</span>&gt;</span>Name:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;Name&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+</code></pre>
+<h4 id="↓-preview-7"><a class="h-anchor" href="#↓-preview-7">#</a>↓ Preview</h4>
+<form style="padding:20px">
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" class="border border-slate-400">
+</form>
+<p>See: <a href="/html#html-input-tags">HTML input Tags</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="textarea-tags"><a class="h-anchor" href="#textarea-tags">#</a>Textarea tags</h3>
+<div class="section">
+<pre><code class="hljs wrap language-html"><span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">&quot;2&quot;</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">&quot;30&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;address&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;address&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+</code></pre>
+<h4 id="↓-preview-8"><a class="h-anchor" href="#↓-preview-8">#</a>↓ Preview</h4>
+<form style="padding:20px">
+    <textarea rows="2" cols="30" name="address" id="address" class="border border-slate-400" style="width:100%"></textarea>
+</form>
+<p>Textarea is a multiple-line text input control</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="radio-buttons"><a class="h-anchor" href="#radio-buttons">#</a>Radio Buttons</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;gender&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;m&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;m&quot;</span>&gt;</span>Male<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;gender&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;f&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;f&quot;</span>&gt;</span>Female<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+</code></pre>
+<h4 id="↓-preview-9"><a class="h-anchor" href="#↓-preview-9">#</a>↓ Preview</h4>
+<form style="padding:20px">
+    <input type="radio" name="gender" id="m">
+    <label for="m">Male</label>
+    <input type="radio" name="gender" id="f">
+    <label for="f">Female</label>
+</form>
+<p>Radio buttons are used to let the user select exactly one</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="checkboxes"><a class="h-anchor" href="#checkboxes">#</a>Checkboxes</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;s&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;soc&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;soc&quot;</span>&gt;</span>Soccer<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;s&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;bas&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;bas&quot;</span>&gt;</span>Baseball<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+</code></pre>
+<h4 id="↓-preview-10"><a class="h-anchor" href="#↓-preview-10">#</a>↓ Preview</h4>
+<form style="padding:20px">
+    <input type="checkbox" name="sports" id="soccer">
+    <label for="soccer">Soccer</label>
+    <input type="checkbox" name="sports" id="baseball">
+    <label for="baseball">Baseball</label>
+</form>
+<p>Checkboxes allows the user to select one or more</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="select-tags"><a class="h-anchor" href="#select-tags">#</a>Select tags</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;city&quot;</span>&gt;</span>City:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;city&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;city&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>Sydney<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;2&quot;</span>&gt;</span>Melbourne<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;3&quot;</span>&gt;</span>Cromwell<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+<h4 id="↓-preview-11"><a class="h-anchor" href="#↓-preview-11">#</a>↓ Preview</h4>
+<form style="padding:20px">
+    <label for="city">City:</label>
+    <select name="city" id="city" class="border border-slate-400">
+        <option value="1">Sydney</option>
+        <option value="2">Melbourne</option>
+        <option value="3">Cromwell</option>
+    </select>
+</form>
+<p>A select box is a dropdown list of options</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="fieldset-tags"><a class="h-anchor" href="#fieldset-tags">#</a>Fieldset tags</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Your favorite monster<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;kra&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;m&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;kraken&quot;</span>&gt;</span>Kraken<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;sas&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;m&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;sas&quot;</span>&gt;</span>Sasquatch<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+</code></pre>
+<h4 id="↓-preview-12"><a class="h-anchor" href="#↓-preview-12">#</a>↓ Preview</h4>
+<form style="padding:20px">
+    <fieldset class="border border-slate-400" style="padding:20px">
+        <legend>Your favorite monster</legend>
+        <input type="radio" id="kra" name="monster">
+        <label for="kra">Kraken</label><br>
+        <input type="radio" id="sas" name="monster">
+        <label for="sas">Sasquatch</label>
+    </fieldset>
+</form>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="datalist-tags-html5"><a class="h-anchor" href="#datalist-tags-html5">#</a>Datalist tags(HTML5)</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;b&quot;</span>&gt;</span>Choose a browser: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">list</span>=<span class="hljs-string">&quot;list&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;b&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;browser&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">datalist</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Chrome&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Firefox&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Internet Explorer&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Opera&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Safari&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Microsoft Edge&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">datalist</span>&gt;</span>
+</code></pre>
+<h4 id="↓-preview-13"><a class="h-anchor" href="#↓-preview-13">#</a>↓ Preview</h4>
+<form style="padding:20px">
+    <label for="myBrowser">Choose a browser:</label>
+    <input list="browsers" id="myBrowser" name="myBrowser" class="border border-slate-400">
+    <datalist id="browsers">
+      <option value="Chrome">
+      </option><option value="Firefox">
+      </option><option value="Internet Explorer">
+      </option><option value="Opera">
+      </option><option value="Safari">
+      </option><option value="Microsoft Edge">
+    </option></datalist>
+</form>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="submit-and-reset-buttons"><a class="h-anchor" href="#submit-and-reset-buttons">#</a>Submit and Reset Buttons</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;register.php&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;foo&quot;</span>&gt;</span>Name:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;foo&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Submit&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;reset&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Reset&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<h4 id="↓-preview-14"><a class="h-anchor" href="#↓-preview-14">#</a>↓ Preview</h4>
+<form action="register.php" method="post" style="padding:20px">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" class="border border-slate-400">
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+<p><code>Submit</code> the data to server; <code>Reset</code> to default values</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap cols-2">
+<h2 id="html-input-tags"><a class="h-anchor" href="#html-input-tags">#</a>HTML input Tags</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap row-span-2">
+<h3 id="input-attributes"><a class="h-anchor" href="#input-attributes">#</a>Input Attributes</h3>
+<div class="section">
+<p>The input tag is an empty element, identifying the particular type of field information to obtain from a user.</p>
+<pre><code class="hljs wrap language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;?&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;?&quot;</span> <span class="hljs-attr">minlength</span>=<span class="hljs-string">&quot;6&quot;</span>	 <span class="hljs-attr">required</span> /&gt;</span>
+</code></pre>
+<hr>
+<table class="left-text">
+<thead>
+<tr>
+<th>-</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><code>type=&quot;…&quot;</code></td>
+<td>The type of data that is being input</td>
+</tr>
+<tr>
+<td></td>
+<td><code>value=&quot;…&quot;</code></td>
+<td>Default value</td>
+</tr>
+<tr>
+<td></td>
+<td><code>name=&quot;…&quot;</code></td>
+<td>Used to describe this data in the HTTP request</td>
+</tr>
+<tr>
+<td></td>
+<td><code>id=&quot;…&quot;</code></td>
+<td>Unique identifier that other HTML elements</td>
+</tr>
+<tr>
+<td></td>
+<td><code>readonly</code></td>
+<td>Stops the user from modifying</td>
+</tr>
+<tr>
+<td></td>
+<td><code>disabled</code></td>
+<td>Stops any interaction</td>
+</tr>
+<tr>
+<td></td>
+<td><code>checked</code></td>
+<td>The radio or checkbox select or not</td>
+</tr>
+<tr>
+<td></td>
+<td><code>required</code></td>
+<td>Being compulsory, See <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/required#example">required</a></td>
+</tr>
+<tr>
+<td></td>
+<td><code>placeholder=&quot;…&quot;</code></td>
+<td>Adds a temporary, See <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder#examples">::placeholder</a></td>
+</tr>
+<tr>
+<td></td>
+<td><code>autocomplete=&quot;off&quot;</code></td>
+<td>Disable auto completion</td>
+</tr>
+<tr>
+<td></td>
+<td><code>autocapitalize=&quot;none&quot;</code></td>
+<td>Disable auto capitalization</td>
+</tr>
+<tr>
+<td></td>
+<td><code>inputmode=&quot;…&quot;</code></td>
+<td>Display a specific keyboard, See <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode">inputmode</a></td>
+</tr>
+<tr>
+<td></td>
+<td><code>list=&quot;…&quot;</code></td>
+<td>The id of an associated <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">datalist</a></td>
+</tr>
+<tr>
+<td></td>
+<td><code>maxlength=&quot;…&quot;</code></td>
+<td>Maximum number of characters</td>
+</tr>
+<tr>
+<td></td>
+<td><code>minlength=&quot;…&quot;</code></td>
+<td>Minimum number of characters</td>
+</tr>
+<tr>
+<td></td>
+<td><code>min=&quot;…&quot;</code></td>
+<td>Minimum numerical value on range &amp; number</td>
+</tr>
+<tr>
+<td></td>
+<td><code>max=&quot;…&quot;</code></td>
+<td>Maximum numerical value on range &amp; number</td>
+</tr>
+<tr>
+<td></td>
+<td><code>step=&quot;…&quot;</code></td>
+<td>How the number will increment in range &amp; number</td>
+</tr>
+<tr>
+<td></td>
+<td><code>pattern=&quot;…&quot;</code></td>
+<td>Specifies a <a href="/regex">Regular expression</a>, See <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></td>
+</tr>
+<tr>
+<td></td>
+<td><code>autofocus</code></td>
+<td>Be focused</td>
+</tr>
+<tr>
+<td></td>
+<td><code>spellcheck</code></td>
+<td>Perform spell checking</td>
+</tr>
+<tr>
+<td></td>
+<td><code>multiple</code></td>
+<td>Whether to allow <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/multiple">multiple</a> values</td>
+</tr>
+<tr>
+<td></td>
+<td><code>accept=&quot;&quot;</code></td>
+<td>Expected file type in <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file">file</a> upload controls</td>
+</tr>
+</tbody>
+</table>
+<p>Also see: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes">Attributes for the &lt;input&gt; element</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="input-types"><a class="h-anchor" href="#input-types">#</a>Input types</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type=&quot;checkbox&quot;</code></td>
+<td><input type="checkbox" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;radio&quot;</code></td>
+<td><input type="radio" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;file&quot;</code></td>
+<td><input type="file" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;hidden&quot;</code></td>
+<td><input type="hidden" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;text&quot;</code></td>
+<td><input type="text" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;password&quot;</code></td>
+<td><input type="password" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;image&quot;</code></td>
+<td><input type="image" src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" width="70"></td>
+</tr>
+<tr>
+<td><code>type=&quot;reset&quot;</code></td>
+<td><input type="reset" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;button&quot;</code></td>
+<td><input type="button" class="border border-slate-400">Button</td>
+</tr>
+<tr>
+<td><code>type=&quot;submit&quot;</code></td>
+<td><input type="submit" class="border border-slate-400"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="new-input-types-in-html5"><a class="h-anchor" href="#new-input-types-in-html5">#</a>New Input Types in HTML5</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type=&quot;color&quot;</code></td>
+<td><input type="color" value="#0FB881" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;date&quot;</code></td>
+<td><input type="date" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;time&quot;</code></td>
+<td><input type="time" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;month&quot;</code></td>
+<td><input type="month" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;datetime-local&quot;</code></td>
+<td><input type="datetime-local" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;week&quot;</code></td>
+<td><input type="week" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;email&quot;</code></td>
+<td><input type="email" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;tel&quot;</code></td>
+<td><input type="tel" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;url&quot;</code></td>
+<td><input type="url" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;number&quot;</code></td>
+<td><input type="number" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;search&quot;</code></td>
+<td><input type="search" class="border border-slate-400"></td>
+</tr>
+<tr>
+<td><code>type=&quot;range&quot;</code></td>
+<td><input type="range" class="border border-slate-400"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="input-css-selectors"><a class="h-anchor" href="#input-css-selectors">#</a>Input CSS selectors</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input:focus</code></td>
+<td>When its keyboard focused</td>
+</tr>
+</tbody>
+</table>
+<p>See: <a href="/css#input-pseudo-classes">Input pseudo classes</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap cols-2">
+<h2 id="html-meta-tags"><a class="h-anchor" href="#html-meta-tags">#</a>HTML meta Tags</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap row-span-3">
+<h3 id="meta-tags"><a class="h-anchor" href="#meta-tags">#</a>Meta tags</h3>
+<div class="section">
+<p>The meta tag describes meta data within an HTML document. It explains additional material about the HTML.</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span>
+</code></pre>
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- title --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>···<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:title&quot;</span>  <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;···&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;twitter:title&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;···&quot;</span>&gt;</span>
+</code></pre>
+<hr>
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- url --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;canonical&quot;</span>       <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://···&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:url&quot;</span>  <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;https://···&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;twitter:url&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;https://···&quot;</span>&gt;</span>
+</code></pre>
+<hr>
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- description --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;description&quot;</span>         <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;···&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:description&quot;</span>  <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;···&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;twitter:description&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;···&quot;</span>&gt;</span>
+</code></pre>
+<hr>
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- image --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:image&quot;</span>  <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;https://···&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;twitter:image&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;https://···&quot;</span>&gt;</span>
+</code></pre>
+<hr>
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- ua --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=edge,chrome=1&quot;</span>&gt;</span>
+</code></pre>
+<hr>
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- viewport --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=1024&quot;</span>&gt;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="open-graph"><a class="h-anchor" href="#open-graph">#</a>Open Graph</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:type&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;website&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:locale&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;en_CA&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:title&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;HTML cheatsheet&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:url&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;https://cheatsheets.zip/html&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:image&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;https://xxx.com/image.jpg&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:site_name&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;Name of your website&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;og:description&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;Description of this page&quot;</span>&gt;</span>
+</code></pre>
+<p>Used by Facebook, Instagram, Pinterest, LinkedIn, etc.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="twitter-cards"><a class="h-anchor" href="#twitter-cards">#</a>Twitter Cards</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;twitter:card&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;summary&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;twitter:site&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;@FechinLi&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;twitter:title&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;HTML cheatsheet&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;twitter:url&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;https://cheatsheets.zip/html&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;twitter:description&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;Description of this page&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;twitter:image&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;https://xxx.com/image.jpg&quot;</span>&gt;</span>
+</code></pre>
+<p>See: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary">Twitter Card Documentation</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="geotagging"><a class="h-anchor" href="#geotagging">#</a>Geotagging</h3>
+<div class="section">
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;ICBM&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;45.416667,-75.7&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;geo.position&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;45.416667;-75.7&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;geo.region&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;ca-on&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;geo.placename&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;Ottawa&quot;</span>&gt;</span>
+</code></pre>
+<p>See: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://en.wikipedia.org/wiki/Geotagging#HTML_pages">Geotagging</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="also-see"><a class="h-anchor" href="#also-see">#</a>Also see</h2>
+<div class="h3-wrap-list">
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.w3.org/TR/REC-html40/cover.html#minitoc">HTML 4.01 Specification</a> <em>(w3.org)</em></li>
+</ul>
+</div>
+</div>
+
+        </div></div><div id="mysearch" class="z-50 fixed inset-0 flex justify-center bg-slate-600/80 dark:bg-slate-900/90 items-start text-sm z-50 overflow-hidden lg:pt-16 lg:pb-20 hidden"><div id="mysearch-box" class="lg:max-w-screen-lg w-full flex flex-col justify-between bg-white dark:bg-slate-700 shadow-3xl dark:shadow-3xl lg:rounded-lg lg:max-h-832 min-h-320 h-full"><div class="flex items-center h-16 flex-none border-b border-slate-200 dark:border-slate-700"><div class="w-full h-full"><form class="flex items-center w-full h-full outline-none rounded-tl-lg"><label for="mysearch-input" id="mysearch-label" class="h-full w-14 mt-1 ml-1 px-4 flex items-center justify-center transition-colors duration-200 ease-in-out text-emerald-200"><div class="text-2xl text-emerald-500"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div></label><div class="relative flex-1"> <input class="flex-1 font-light h-full bg-transparent focus:text-slate-900 text-slate-500 dark:text-slate-300 placeholder-slate-400 placeholder-opacity-80 shadow-none outline-none truncate text-lg sm:text-2xl caret-color-emerald-400 leading-normalized w-full appearance-none rounded-none transition-colors duration-200 ease-in-out" id="mysearch-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search for cheatsheet" maxlength="128" type="text" enterkeyhint="go"></div> <button id="mysearch-clear" type="reset" class="items-center justify-center h-full w-14 px-4 text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 opacity-75 fill-current cursor-pointer transition-fast-out flex"><i class="icon icon-close text-xs font-bold"></i></button></form></div><div class="w-px h-8 bg-slate-100 dark:bg-slate-400/20 flex-none"></div> <button class="cancel mr-1 px-4 h-full text-slate-500 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-300"> Cancel</button></div><div class="flex flex-grow overflow-hidden lg:rounded-br-lg"><div class="relative w-full flex-none overflow-y-auto lg:w-1/2"><ul id="mysearch-list"></ul></div><div class="preview-panel shadow-inner bg-slate-100 dark:bg-slate-800 lg:block w-1/2 flex-none overflow-y-auto"></div></div></div></div><footer class="text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-slate-800 md:mt-14"></footer><div id="carbon_container"></div></body><script src="/js/main.js?_v=1705688051674"></script><script>
+        // Get all pre > code elements
+        const codeBlocks = document.querySelectorAll('pre > code');
+        const initInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path> </svg>';
+        const successInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>';
+        codeBlocks.forEach(function (codeBlock) {
+            // Create a copy button element
+            const copyButton = document.createElement('button');
+            copyButton.className = 'bg-emerald-500 p-2 text-white fadeIn shadow-xl rounded flex items-center absolute top-2 right-2';
+            copyButton.innerHTML = initInnerHTML;
+            copyButton.style.opacity = "0";
+            const parent = codeBlock.parentNode;
+
+            parent.style = "position: relative;"
+            parent.insertBefore(copyButton, codeBlock);
+
+            // Add click event listener to copy button
+            copyButton.addEventListener('click', () => {
+                navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+                    copyButton.innerHTML = successInnerHTML;
+                    setTimeout(() => {
+                        copyButton.innerHTML = initInnerHTML;
+                    }, 1000);
+                });
+            });
+
+            parent.addEventListener('mouseenter', () => {
+                copyButton.style.opacity = "1";
+            });
+            parent.addEventListener('mouseleave', () => {
+                copyButton.style.opacity = "0";
+            });
+        });
+    </script></html>

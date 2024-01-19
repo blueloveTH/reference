@@ -1,0 +1,1775 @@
+<!DOCTYPE HTML><html class="scrollbar" translate="no"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta http-equiv="content-language" content="en-gb"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="app:pageurl" content="/"><title>JavaScript Cheat Sheet & Quick Reference</title><meta name="keywords" content="reference,cheatsheet,code table,snippets,linux,web,js"><meta name="description" content="A JavaScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick refe"><meta property="og:url" content="https://cheatsheets.zip/javascript.html"><meta property="og:title" content="JavaScript Cheat Sheet & Quick Reference"><meta property="og:site_name" content="CheatSheets.zip"><meta property="og:description" content="A JavaScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick refe"><meta property="og:image" content="https://cheatsheets.zip/assets/image/preview.png?v=w34cch"><meta property="og:image:width" content="2276"><meta property="og:image:height" content="1240"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="JavaScript Cheat Sheet & Quick Reference"><meta name="twitter:site" content="@CheatSheets.zip"><meta name="twitter:creator" content="@CheatSheets.zip"><meta name="twitter:description" content="A JavaScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick refe"><meta name="twitter:image" content="https://cheatsheets.zip/assets/image/preview.png?v=1q4kwf"><link rel="icon" href="/images/favicon.png?v=1"><link rel="icon shortcut" type="image/png" href="/images/favicon.png?v=1"><link rel="canonical" href="https://cheatsheets.zip/javascript.html"><link rel="prefetch" href="https://cheatsheets.zip"><link rel="prerender" href="https://cheatsheets.zip"><link rel="alternate" href="/atom.xml" title="CheatSheets.zip" type="application/atom+xml"><link rel="stylesheet" href="/css/style.css?_v=1705688051674"><script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            let html = document.documentElement.classList;
+            html.toggle('dark')
+        }
+    </script></head><body class="bg-slate-100 dark:bg-slate-900"><header class=""><div class="max-container z-10" style="display:none"><div class="flex flex-row justify-between md:justify-start items-center py-3"><a href="/" class="flex font-medium items-center justify-center md:justify-start text-slate-800 dark:text-slate-300"><div class="hidden md:flex justify-center w-10 h-10 md:w-12 md:h-12 text-white p-2 bg-emerald-500 rounded-full mr-3 text-2xl"><div class="self-center"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M303.55291933 951.35043811c-1.84934059-3.43448917-12.68119097-22.19208477-24.04142536-41.74225521l-20.07855218-35.4016586 5.01963776-9.51089265c2.90610631-5.01963776 13.20957383-23.24885049 22.9846585-40.15710664l17.70082986-31.17459456h366.69778034l6.86897834-11.09604238c3.43448917-6.34059549 13.73795669-23.77723335 22.72046763-39.10033977 8.71831893-15.32310642 22.19208477-38.30776491 29.85363797-51.51733873 7.66155321-12.94538297 16.37987214-28.00429739 19.02178646-33.02393629 2.90610631-5.28382976 14.00214869-24.30561621 24.56980821-42.27063694 10.56765952-18.22921273 29.85363797-51.51733987 43.06321181-73.97361551 12.94538297-22.45627563 35.93004146-62.08499826 51.25314787-87.71157333 15.05891442-25.89076594 28.53268025-49.93219015 29.85363797-53.63087132 3.43448917-8.98251093 8.45412693-8.18993607 12.94538184 2.11353259 2.11353145 4.4912549 8.71831893 16.90825501 14.79472355 26.94753166 6.34059549 10.30346752 20.60693618 35.13746773 32.23136143 55.48021077s25.62657394 44.38416953 30.91040369 53.63087133l9.77508466 16.64406414-6.07640462 9.77508466c-3.43448917 5.28382976-7.13317035 11.62442525-8.71831893 14.00214869-2.90610631 4.7554469-13.73795669 23.77723335-24.83399908 43.3274038-3.96287203 7.39736121-13.47376583 23.77723335-21.13531904 36.45842432-7.39736121 12.94538297-13.47376583 24.04142535-13.47376583 24.56980821 0 .79257486-3.43448917 6.34059549-7.39736121 12.41699898-4.22706403 6.07640462-9.51089379 15.32310642-12.15280811 20.34274531-2.37772345 5.01963776-6.86897835 12.94538297-9.77508465 17.17244587-2.64191431 4.4912549-5.81221262 10.03927666-6.60478749 12.68119096-1.05676573 2.37772345-2.64191431 4.4912549-3.69868117 4.49125604s-2.64191431 2.11353145-3.43448918 4.75544576c-1.05676573 2.37772345-5.28382976 10.56765952-9.77508466 17.70082987-4.22706403 7.39736121-10.56765952 17.96502073-13.47376582 23.77723335-3.17029831 5.81221262-10.83185038 19.28597845-17.17244587 29.58944597-6.34059549 10.56765952-11.62442525 20.07855331-11.62442525 21.13531904 0 .79257486-1.58514859 3.69868117-3.69868117 5.81221263-2.11353145 2.37772345-8.71831893 13.73795669-14.79472355 25.36238307s-18.22921273 33.81651001-26.94753053 49.66799815l-16.11568128 28.26848939H307.25159936l-3.69868003-5.81221263z"></path><path d="M523.88861725 694.82050674c-31.70297856-20.60693618-68.95397774-44.11997753-70.01074347-44.11997753-.79257486 0-10.03927666-5.81221262-20.60693618-13.20957383-10.83185038-7.13317035-22.72046763-14.53053155-26.68333966-16.11568128-3.69868117-1.84934059-6.86897835-3.96287203-6.86897835-5.01963776 0-.79257486-4.7554469-4.22706403-10.56765952-7.66155321l-10.30346752-5.81221262-.79257486-98.27923172c-.52838286-54.15925419 0-99.33599744.79257486-100.3927643 1.05676573-1.32095773 27.74010539 12.94538297 59.44308395 31.96716942 31.96716942 18.75759559 69.21816861 40.42129749 82.95612529 48.61123356l25.09819108 14.26633956.264192 103.56306148c.264192 73.7094235-.52838286 103.56306147-2.64191545 103.56306261-1.58514859 0-10.56765952-5.01963776-20.07855217-11.36023438zm0-61.29242453c0-11.09604238-.79257486-12.15280811-11.09604239-18.2292116-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023325l60.23565881 34.60908486c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327574.264192 0 .52838286-5.28382976.528384-11.88861724zm0-42.27063695c0-11.09604238-.79257486-12.15280811-11.09604239-18.22921273-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023438l60.23565881 34.60908373c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327688.264192 0 .52838286-5.28382976.528384-11.88861725zm-1.84934059-54.42344619c-2.11353145-2.11353145-117.30101931-68.42559488-118.88616789-68.42559374-.52838286 0-.79257486 5.28382976-.79257487 11.62442525v11.36023324l60.23565881 34.60908487 59.97146681 34.60908488.79257373-10.83185152c.52838286-5.81221262 0-11.62442525-1.32095659-12.94538298z"></path><path d="M109.10798734 615.82725347c-3.69868117-7.39736121-10.56765952-20.34274418-15.58729841-28.26848938-7.92574407-13.47376583-49.66799929-84.80546589-61.2924234-105.41240206-7.13317035-12.15280811-6.34059549-15.85148928 6.34059548-37.77938205 24.56980821-42.00644608 41.21387122-70.27493433 45.96931812-78.99325326 7.13317035-12.41700011 49.66799929-86.12642361 81.37097671-141.34244466 14.53053155-24.56980821 40.68548835-70.27493433 58.12212622-101.18533803l32.23136143-56.27278563h229.05401685c159.30746539 0 230.37497458 1.05676573 232.75269689 2.90610631 1.84934059 1.58514859 10.56765952 15.58729728 19.55017045 31.17459456 8.71831893 15.58729728 18.75759559 33.02393515 22.45627563 38.83614777l6.34059548 10.83185152-8.9825098 14.26633955c-5.01963776 7.92574407-15.32310642 25.89076594-22.72046762 39.62872264s-13.73795669 25.62657394-14.2663407 25.89076594c-.264192.52838286-83.2203173.79257486-184.40565532.79257486l-183.6130816-.264192-9.5108938 14.53053155c-5.01963776 7.92574407-9.24670179 15.85148928-9.24670179 17.17244701 0 1.58514859-1.05676573 2.64191431-2.64191431 2.64191431-1.32095773 0-2.64191431 1.05676573-2.64191545 2.11353145 0 2.90610631-29.32525511 55.21601991-48.61123243 87.18319047-8.18993607 13.47376583-14.79472355 25.09819107-14.79472355 25.8907648 0 1.05676573-3.43448917 6.86897835-7.92574407 13.47376583-4.22706403 6.34059549-7.92574407 12.15280811-7.92574521 12.94538297 0 .52838286-2.90610631 5.54802062-6.07640349 11.09604238-3.43448917 5.28382976-9.24670179 15.05891442-12.94538296 21.6637019s-20.07855331 35.13746773-36.45842546 63.40595599-31.96716942 55.21601991-34.34489288 59.44308394c-2.64191431 4.4912549-8.18993607 14.26634069-12.94538182 21.92789276-4.4912549 7.66155321-8.18993607 14.53053155-8.18993608 15.32310642 0 2.37772345-19.28597845 30.11782883-20.87112704 30.11782884-.79257486 0-4.4912549-6.34059549-8.18993607-13.7379567z"></path><path d="M625.60233813 601.56091278c-15.85148928-10.56765952-31.17459456-21.13531904-33.81651-23.51304135-4.22706403-3.69868117-4.7554469-9.24670179-4.4912549-56.00859477.264192-39.89291463-.264192-52.3099136-3.17029832-54.95182905-1.84934059-1.84934059-21.13531904-13.73795669-43.0632118-26.4191488-21.6637019-12.68119097-41.74225408-25.09819107-44.11997753-27.21172252-4.22706403-3.43448917-4.7554469-9.51089379-4.75544689-50.72476502 0-25.62657394.52838286-47.29027584 1.58514858-48.08284956.79257486-.79257486 8.18993607 2.90610631 16.37987214 8.45412693s25.36238194 15.85148928 37.77938205 22.72046763c12.41700011 7.13317035 43.06321181 25.09819107 67.89721201 40.15710549l45.44093526 27.21172366-.52838286 103.29886948c-.52838286 66.31206229-1.84934059 103.56306147-3.43448918 103.82725347-1.32095773.264192-15.58729728-8.18993607-31.70297856-18.75759559z"></path></svg></div></div> <span class="domain text-slate-600 dark:text-slate-300 text-lg md:text-2xl">CheatSheets<span class="text-emerald-400">.zip</span></span></a><div class="md:ml-auto flex flex-wrap items-center text-base justify-center"> <button id="mysearch-trigger" type="button" class="fadeIn inline-flex h-8 items-center bg-slate-200 dark:bg-gray-900 md:dark:bg-transparent md:bg-transparent rounded-full px-2 md:px-3 lg:px-6 py-2 text-slate-700 md:hover:opacity-80"><div class="md:text-xl text-slate-700 dark:text-slate-300 md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div> <span class="hidden md:inline dark:text-slate-300">Search for cheatsheet</span> <span class="hidden md:inline dark:text-slate-300 md:ml-2 text-sm leading-5 py-0.5 px-1.5 border border-slate-400 rounded-md"><span class="font-sans">⌘</span> <span class="font-sans">K</span></span></button> <a href="https://github.com/Fechin/reference/blob/main/source/_posts/javascript.md" rel="external nofollow noreferrer" target="_blank"><img alt="GitHub Repo stars" style="height:26px;opacity:.8" src="https://img.shields.io/github/stars/Fechin/reference?style=social"></a> <a href="https://twitter.com/FechinLi" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"><div class="md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></div> <span class="hidden md:inline text-sm">Follow Me</span></button></a> <button id="darkMode" class="fadeIn inline-flex items-center justify-center flex-shrink-0 h-8 w-8 rounded-full text-gray-900 ml-1 lg:ml-4 dark:text-gray-300 bg-gray-200 dark:bg-gray-900"> <i class="icon-light text-gray-600 dark:text-gray-300 dark:hover:text-white"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M512 31.40266667c14.19946667 0 26.935296 8.14830933 31.93787733 20.447232l29.40381867 72.50466133c12.713984 31.30436267-4.456448 66.21320533-38.33856 77.96599467A70.34197333 70.34197333 0 0 1 512 206.16533333c-36.19771733 0-65.536-27.11005867-65.536-60.555264 0-7.25265067 1.41994667-14.46161067 4.17245867-21.25550933l29.425664-72.50466133C485.04285867 39.550976 497.75684267 31.40266667 512 31.40266667zm0 961.19466666c-14.221312 0-26.95714133-8.14830933-31.93787733-20.447232l-29.425664-72.50466133a56.492032 56.492032 0 0 1-4.17245867-21.25550933C446.464 844.96657067 475.80228267 817.83466667 512 817.83466667c7.86432 0 15.64125867 1.31072 23.003136 3.84477866 33.882112 11.75278933 51.052544 46.661632 38.33856 77.98784l-29.40381867 72.482816c-5.00258133 12.29892267-17.73841067 20.447232-31.93787733 20.447232zm480.59733333-480.59733333c0 14.19946667-8.14830933 26.935296-20.447232 31.93787733l-72.50466133 29.40381867c-31.30436267 12.713984-66.21320533-4.456448-77.96599467-38.33856A70.34197333 70.34197333 0 0 1 817.83466667 512c0-36.19771733 27.11005867-65.536 60.555264-65.536 7.25265067 0 14.46161067 1.41994667 21.25550933 4.17245867l72.50466133 29.425664c12.29892267 4.980736 20.447232 17.69472 20.447232 31.93787733zM31.40266667 512c0-14.221312 8.14830933-26.95714133 20.447232-31.93787733l72.50466133-29.425664c6.77205333-2.752512 13.98101333-4.17245867 21.25550933-4.17245867C179.03342933 446.464 206.16533333 475.80228267 206.16533333 512c0 7.86432-1.31072 15.64125867-3.84477866 23.003136-11.75278933 33.882112-46.661632 51.052544-77.98784 38.33856l-72.482816-29.40381867C39.550976 538.935296 31.40266667 526.19946667 31.40266667 512zM172.15214933 172.17399467c10.04885333-10.04885333 24.81629867-13.28196267 37.04968534-8.126464l72.06775466 30.45239466c31.1296 13.172736 43.66882133 49.98212267 28.00571734 82.24768a70.34197333 70.34197333 0 0 1-13.54410667 19.00544c-25.58088533 25.58088533-65.49230933 27.15374933-89.12896 3.49525334a56.492032 56.492032 0 0 1-12.10231467-17.97870934L164.04753067 209.22368c-5.177344-12.23338667-1.94423467-27.000832 8.10461866-37.04968533zm679.673856 679.673856c-10.04885333 10.04885333-24.81629867 13.28196267-37.04968533 8.10461866l-72.04590933-30.45239466a56.492032 56.492032 0 0 1-18.00055467-12.08046934c-23.63665067-23.658496-22.06378667-63.56992 3.51709867-89.15080533a70.34197333 70.34197333 0 0 1 19.00544-13.54410667c32.26555733-15.663104 69.074944-3.12388267 82.24768 28.00571734l30.45239466 72.06775466c5.15549867 12.23338667 1.92238933 26.97898667-8.126464 37.04968534zm0-679.69570134c10.04885333 10.04885333 13.28196267 24.81629867 8.126464 37.04968534l-30.45239466 72.06775466c-13.172736 31.1296-49.98212267 43.66882133-82.24768 28.00571734a70.34197333 70.34197333 0 0 1-19.00544-13.54410667c-25.58088533-25.58088533-27.15374933-65.49230933-3.49525334-89.12896 5.111808-5.15549867 11.206656-9.240576 17.97870934-12.10231467l72.04590933-30.45239466c12.23338667-5.177344 27.000832-1.94423467 37.04968533 8.10461866zM172.15214933 851.82600533c-10.04885333-10.04885333-13.28196267-24.81629867-8.10461866-37.04968533l30.45239466-72.04590933c2.83989333-6.77205333 6.946816-12.86690133 12.08046934-18.00055467 23.658496-23.63665067 63.56992-22.06378667 89.15080533 3.51709867 5.57056 5.57056 10.15808 12.01493333 13.54410667 19.00544 15.663104 32.26555733 3.12388267 69.074944-28.00571734 82.24768l-72.06775466 30.45239466c-12.23338667 5.15549867-26.97898667 1.92238933-37.04968534-8.126464zM512 752.29866667c-132.7104 0-240.29866667-107.58826667-240.29866667-240.29866667s107.58826667-240.29866667 240.29866667-240.29866667 240.29866667 107.58826667 240.29866667 240.29866667-107.58826667 240.29866667-240.29866667 240.29866667z"></path></svg></i></button> <a href="https://facebook.com/sharer/sharer.php?u=https://cheatsheets.zip/javascript.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4a66ad] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M594.74346667 51.53066667c-28.95893333 0-56.30826667 3.2192-88.48533334 16.0896-65.9616 27.34826667-98.13653333 88.48533333-98.13653333 186.6208v94.91946666h-91.70026667v157.66186667h91.70026667v455.28853333h186.6208v-455.28853333h127.09546667l17.696-157.66186667h-144.7936v-70.7872c0-22.52266667 1.60853333-38.61013333 8.04266666-46.65706666 8.04266667-14.47786667 24.13226667-20.91413333 49.872-20.91413334h85.26613334v-157.66186666h-143.184z"></path></svg></span> <span class="hidden">Facebook</span></button></a> <a href="https://twitter.com/intent/tweet/?text=A%20JavaScript%20cheat%20sheet%20with%20the%20most%20important%20concepts,%20functions,%20methods,%20and%20more.%20A%20complete%20quick%20refe&url=https://cheatsheets.zip/javascript.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></span> <span class="hidden">Twitter</span></button></a></div></div></div></header><div class="mx-auto flex flex-wrap md:py-5 flex-col md:flex-row items-center"><div class="flex flex-col w-full mx-auto text-center my-8"><div class="max-container w-full"><h1 class="text-5xl mb-4"> <span class="text-slate-700 dark:text-slate-300 font-light">JavaScript</span> <span class="text-slate-400 dark:text-slate-500 font-extralight hidden md:inline">cheatsheet</span></h1><div class="lg:w-3/5 mx-auto intro leading-relaxed text-slate-600"><p>A JavaScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.</p></div></div></div><div id="mdLayout" class="mdLayout w-full max-container"> 
+        <div class="h2-wrap">
+<h2 id="getting-started"><a class="h-anchor" href="#getting-started">#</a>Getting Started</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="introduction"><a class="h-anchor" href="#introduction">#</a>Introduction</h3>
+<div class="section">
+<p>JavaScript is a lightweight, interpreted programming language.</p>
+<ul>
+<li><a href="/json">JSON cheatsheet</a> <em>(cheatsheets.zip)</em></li>
+<li><a href="/regex#regex-in-javascript">Regex in JavaScript</a> <em>(cheatsheets.zip)</em></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="console"><a class="h-anchor" href="#console">#</a>Console</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// =&gt; Hello world!</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Hello world!&#x27;</span>);
+
+<span class="hljs-comment">// =&gt; Hello CheatSheets.zip</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">warn</span>(<span class="hljs-string">&#x27;hello %s&#x27;</span>, <span class="hljs-string">&#x27;CheatSheets.zip&#x27;</span>);
+
+<span class="hljs-comment">// Prints error message to stderr</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">&#x27;Oops!&#x27;</span>));
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="numbers"><a class="h-anchor" href="#numbers">#</a>Numbers</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> amount = <span class="hljs-number">6</span>;
+<span class="hljs-keyword">let</span> price = <span class="hljs-number">4.99</span>;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="variables"><a class="h-anchor" href="#variables">#</a>Variables</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> x = <span class="hljs-literal">null</span>;
+<span class="hljs-keyword">let</span> name = <span class="hljs-string">&quot;Tammy&quot;</span>;
+<span class="hljs-keyword">const</span> found = <span class="hljs-literal">false</span>;
+
+<span class="hljs-comment">// =&gt; Tammy, false, null</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(name, found, x);
+
+<span class="hljs-keyword">var</span> a;
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a); <span class="hljs-comment">// =&gt; undefined</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="strings"><a class="h-anchor" href="#strings">#</a>Strings</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> single = <span class="hljs-string">&#x27;Wheres my bandit hat?&#x27;</span>;
+<span class="hljs-keyword">let</span> double = <span class="hljs-string">&quot;Wheres my bandit hat?&quot;</span>;
+
+<span class="hljs-comment">// =&gt; 21</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(single.<span class="hljs-property">length</span>);
+
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="arithmetic-operators"><a class="h-anchor" href="#arithmetic-operators">#</a>Arithmetic Operators</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-number">5</span> + <span class="hljs-number">5</span> = <span class="hljs-number">10</span>     <span class="hljs-comment">// Addition</span>
+<span class="hljs-number">10</span> - <span class="hljs-number">5</span> = <span class="hljs-number">5</span>     <span class="hljs-comment">// Subtraction</span>
+<span class="hljs-number">5</span> * <span class="hljs-number">10</span> = <span class="hljs-number">50</span>    <span class="hljs-comment">// Multiplication</span>
+<span class="hljs-number">10</span> / <span class="hljs-number">5</span> = <span class="hljs-number">2</span>     <span class="hljs-comment">// Division</span>
+<span class="hljs-number">10</span> % <span class="hljs-number">5</span> = <span class="hljs-number">0</span>     <span class="hljs-comment">// Modulo</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="comments"><a class="h-anchor" href="#comments">#</a>Comments</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// This line will denote a comment</span>
+
+<span class="hljs-comment">/*  
+The below configuration must be 
+changed before deployment. 
+*/</span>
+
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="assignment-operators"><a class="h-anchor" href="#assignment-operators">#</a>Assignment Operators</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> number = <span class="hljs-number">100</span>;
+
+<span class="hljs-comment">// Both statements will add 10</span>
+number = number + <span class="hljs-number">10</span>;
+number += <span class="hljs-number">10</span>;
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(number); 
+<span class="hljs-comment">// =&gt; 120</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="string-interpolation"><a class="h-anchor" href="#string-interpolation">#</a>String Interpolation</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> age = <span class="hljs-number">7</span>;
+
+<span class="hljs-comment">// String concatenation</span>
+<span class="hljs-string">&#x27;Tommy is &#x27;</span> + age + <span class="hljs-string">&#x27; years old.&#x27;</span>;
+
+<span class="hljs-comment">// String interpolation</span>
+<span class="hljs-string">`Tommy is <span class="hljs-subst">$&#123;age&#125;</span> years old.`</span>;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="let-keyword"><a class="h-anchor" href="#let-keyword">#</a>let Keyword</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> count; 
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(count); <span class="hljs-comment">// =&gt; undefined</span>
+count = <span class="hljs-number">10</span>;
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(count); <span class="hljs-comment">// =&gt; 10</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="const-keyword"><a class="h-anchor" href="#const-keyword">#</a>const Keyword</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> numberOfColumns = <span class="hljs-number">4</span>;
+
+<span class="hljs-comment">// TypeError: Assignment to constant...</span>
+numberOfColumns = <span class="hljs-number">8</span>;
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="javascript-conditionals"><a class="h-anchor" href="#javascript-conditionals">#</a>JavaScript Conditionals</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="if-statement"><a class="h-anchor" href="#if-statement">#</a>if Statement</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> isMailSent = <span class="hljs-literal">true</span>;
+
+<span class="hljs-keyword">if</span> (isMailSent) &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Mail sent to recipient&#x27;</span>);
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="ternary-operator"><a class="h-anchor" href="#ternary-operator">#</a>Ternary Operator</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> x=<span class="hljs-number">1</span>;
+
+<span class="hljs-comment">// =&gt; true</span>
+result = (x == <span class="hljs-number">1</span>) ? <span class="hljs-literal">true</span> : <span class="hljs-literal">false</span>;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="operators"><a class="h-anchor" href="#operators">#</a>Operators</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-literal">true</span> || <span class="hljs-literal">false</span>;       <span class="hljs-comment">// true</span>
+<span class="hljs-number">10</span> &gt; <span class="hljs-number">5</span> || <span class="hljs-number">10</span> &gt; <span class="hljs-number">20</span>;   <span class="hljs-comment">// true</span>
+<span class="hljs-literal">false</span> || <span class="hljs-literal">false</span>;      <span class="hljs-comment">// false</span>
+<span class="hljs-number">10</span> &gt; <span class="hljs-number">100</span> || <span class="hljs-number">10</span> &gt; <span class="hljs-number">20</span>; <span class="hljs-comment">// false</span>
+</code></pre>
+<h4 id="logical-operator"><a class="h-anchor" href="#logical-operator">#</a>Logical Operator &amp;&amp;</h4>
+<pre><code class="hljs language-javascript"><span class="hljs-literal">true</span> &amp;&amp; <span class="hljs-literal">true</span>;        <span class="hljs-comment">// true</span>
+<span class="hljs-number">1</span> &gt; <span class="hljs-number">2</span> &amp;&amp; <span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span>;      <span class="hljs-comment">// false</span>
+<span class="hljs-literal">true</span> &amp;&amp; <span class="hljs-literal">false</span>;       <span class="hljs-comment">// false</span>
+<span class="hljs-number">4</span> === <span class="hljs-number">4</span> &amp;&amp; <span class="hljs-number">3</span> &gt; <span class="hljs-number">1</span>;    <span class="hljs-comment">// true</span>
+</code></pre>
+<h4 id="comparison-operators"><a class="h-anchor" href="#comparison-operators">#</a>Comparison Operators</h4>
+<pre><code class="hljs language-javascript"><span class="hljs-number">1</span> &gt; <span class="hljs-number">3</span>                <span class="hljs-comment">// false</span>
+<span class="hljs-number">3</span> &gt; <span class="hljs-number">1</span>                <span class="hljs-comment">// true</span>
+<span class="hljs-number">250</span> &gt;= <span class="hljs-number">250</span>           <span class="hljs-comment">// true</span>
+<span class="hljs-number">1</span> === <span class="hljs-number">1</span>              <span class="hljs-comment">// true</span>
+<span class="hljs-number">1</span> === <span class="hljs-number">2</span>              <span class="hljs-comment">// false</span>
+<span class="hljs-number">1</span> === <span class="hljs-string">&#x27;1&#x27;</span>            <span class="hljs-comment">// false</span>
+</code></pre>
+<h4 id="logical-operator-2"><a class="h-anchor" href="#logical-operator-2">#</a>Logical Operator !</h4>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> lateToWork = <span class="hljs-literal">true</span>;
+<span class="hljs-keyword">let</span> oppositeValue = !lateToWork;
+
+<span class="hljs-comment">// =&gt; false</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(oppositeValue); 
+</code></pre>
+<h4 id="nullish-coalescing-operator"><a class="h-anchor" href="#nullish-coalescing-operator">#</a>Nullish coalescing operator ??</h4>
+<pre><code class="hljs language-javascript"><span class="hljs-literal">null</span> ?? <span class="hljs-string">&#x27;I win&#x27;</span>;           <span class="hljs-comment">//  &#x27;I win&#x27;</span>
+<span class="hljs-literal">undefined</span> ?? <span class="hljs-string">&#x27;Me too&#x27;</span>;     <span class="hljs-comment">//  &#x27;Me too&#x27;</span>
+
+<span class="hljs-literal">false</span> ?? <span class="hljs-string">&#x27;I lose&#x27;</span>          <span class="hljs-comment">//  false</span>
+<span class="hljs-number">0</span> ?? <span class="hljs-string">&#x27;I lose again&#x27;</span>        <span class="hljs-comment">//  0</span>
+<span class="hljs-string">&#x27;&#x27;</span> ?? <span class="hljs-string">&#x27;Damn it&#x27;</span>            <span class="hljs-comment">//  &#x27;&#x27;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="else-if"><a class="h-anchor" href="#else-if">#</a>else if</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> size = <span class="hljs-number">10</span>;
+
+<span class="hljs-keyword">if</span> (size &gt; <span class="hljs-number">100</span>) &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Big&#x27;</span>);
+&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (size &gt; <span class="hljs-number">20</span>) &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Medium&#x27;</span>);
+&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (size &gt; <span class="hljs-number">4</span>) &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Small&#x27;</span>);
+&#125; <span class="hljs-keyword">else</span> &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Tiny&#x27;</span>);
+&#125;
+<span class="hljs-comment">// Print: Small</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="switch-statement"><a class="h-anchor" href="#switch-statement">#</a>switch Statement</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> food = <span class="hljs-string">&#x27;salad&#x27;</span>;
+
+<span class="hljs-keyword">switch</span> (food) &#123;
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;oyster&#x27;</span>:
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;The taste of the sea&#x27;</span>);
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;pizza&#x27;</span>:
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;A delicious pie&#x27;</span>);
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-attr">default</span>:
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Enjoy your meal&#x27;</span>);
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="vs"><a class="h-anchor" href="#vs">#</a>== vs ===</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-number">0</span> == <span class="hljs-literal">false</span>   <span class="hljs-comment">// true</span>
+<span class="hljs-number">0</span> === <span class="hljs-literal">false</span>  <span class="hljs-comment">// false, different type</span>
+<span class="hljs-number">1</span> == <span class="hljs-string">&quot;1&quot;</span>     <span class="hljs-comment">// true,  automatic type conversion </span>
+<span class="hljs-number">1</span> === <span class="hljs-string">&quot;1&quot;</span>    <span class="hljs-comment">// false, different type</span>
+<span class="hljs-literal">null</span> == <span class="hljs-literal">undefined</span>  <span class="hljs-comment">// true</span>
+<span class="hljs-literal">null</span> === <span class="hljs-literal">undefined</span> <span class="hljs-comment">// false</span>
+<span class="hljs-string">&#x27;0&#x27;</span> == <span class="hljs-literal">false</span>       <span class="hljs-comment">// true</span>
+<span class="hljs-string">&#x27;0&#x27;</span> === <span class="hljs-literal">false</span>      <span class="hljs-comment">// false</span>
+</code></pre>
+<p>The <code>==</code> just check the value, <code>===</code> check both the value and the type.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="javascript-functions"><a class="h-anchor" href="#javascript-functions">#</a>JavaScript Functions</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="functions"><a class="h-anchor" href="#functions">#</a>Functions</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// Defining the function:</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">sum</span>(<span class="hljs-params">num1, num2</span>) &#123;
+  <span class="hljs-keyword">return</span> num1 + num2;
+&#125;
+
+<span class="hljs-comment">// Calling the function:</span>
+<span class="hljs-title function_">sum</span>(<span class="hljs-number">3</span>, <span class="hljs-number">6</span>); <span class="hljs-comment">// 9</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="anonymous-functions"><a class="h-anchor" href="#anonymous-functions">#</a>Anonymous Functions</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// Named function</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">rocketToMars</span>(<span class="hljs-params"></span>) &#123;
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;BOOM!&#x27;</span>;
+&#125;
+
+<span class="hljs-comment">// Anonymous function</span>
+<span class="hljs-keyword">const</span> rocketToMars = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;BOOM!&#x27;</span>;
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="arrow-functions-es6"><a class="h-anchor" href="#arrow-functions-es6">#</a>Arrow Functions (ES6)</h3>
+<div class="section">
+<h4 id="with-two-arguments"><a class="h-anchor" href="#with-two-arguments">#</a>With two arguments</h4>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">sum</span> = (<span class="hljs-params">param1, param2</span>) =&gt; &#123; 
+  <span class="hljs-keyword">return</span> param1 + param2; 
+&#125;; 
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">sum</span>(<span class="hljs-number">2</span>,<span class="hljs-number">5</span>)); <span class="hljs-comment">// =&gt; 7 </span>
+</code></pre>
+<h4 id="with-no-arguments"><a class="h-anchor" href="#with-no-arguments">#</a>With no arguments</h4>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">printHello</span> = (<span class="hljs-params"></span>) =&gt; &#123; 
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;hello&#x27;</span>); 
+&#125;; 
+<span class="hljs-title function_">printHello</span>(); <span class="hljs-comment">// =&gt; hello</span>
+</code></pre>
+<h4 id="with-a-single-argument"><a class="h-anchor" href="#with-a-single-argument">#</a>With a single argument</h4>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">checkWeight</span> = weight =&gt; &#123; 
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Weight : <span class="hljs-subst">$&#123;weight&#125;</span>`</span>); 
+&#125;; 
+<span class="hljs-title function_">checkWeight</span>(<span class="hljs-number">25</span>); <span class="hljs-comment">// =&gt; Weight : 25 </span>
+</code></pre>
+<h4 id="concise-arrow-functions"><a class="h-anchor" href="#concise-arrow-functions">#</a>Concise arrow functions</h4>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">multiply</span> = (<span class="hljs-params">a, b</span>) =&gt; a * b; 
+<span class="hljs-comment">// =&gt; 60 </span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">multiply</span>(<span class="hljs-number">2</span>, <span class="hljs-number">30</span>)); 
+</code></pre>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow function</a> available starting ES2015</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="return-keyword"><a class="h-anchor" href="#return-keyword">#</a>return Keyword</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// With return</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">sum</span>(<span class="hljs-params">num1, num2</span>) &#123;
+  <span class="hljs-keyword">return</span> num1 + num2;
+&#125;
+
+<span class="hljs-comment">// The function doesn&#x27;t output the sum</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">sum</span>(<span class="hljs-params">num1, num2</span>) &#123;
+  num1 + num2;
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="calling-functions"><a class="h-anchor" href="#calling-functions">#</a>Calling Functions</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// Defining the function</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">sum</span>(<span class="hljs-params">num1, num2</span>) &#123;
+  <span class="hljs-keyword">return</span> num1 + num2;
+&#125;
+
+<span class="hljs-comment">// Calling the function</span>
+<span class="hljs-title function_">sum</span>(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">// 6</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="function-expressions"><a class="h-anchor" href="#function-expressions">#</a>Function Expressions</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> dog = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;
+  <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Woof!&#x27;</span>;
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="function-parameters"><a class="h-anchor" href="#function-parameters">#</a>Function Parameters</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// The parameter is name</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">sayHello</span>(<span class="hljs-params">name</span>) &#123;
+  <span class="hljs-keyword">return</span> <span class="hljs-string">`Hello, <span class="hljs-subst">$&#123;name&#125;</span>!`</span>;
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="function-declaration"><a class="h-anchor" href="#function-declaration">#</a>Function Declaration</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">num1, num2</span>) &#123;
+  <span class="hljs-keyword">return</span> num1 + num2;
+&#125;
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="javascript-scope"><a class="h-anchor" href="#javascript-scope">#</a>JavaScript Scope</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="scope"><a class="h-anchor" href="#scope">#</a>Scope</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">myFunction</span>(<span class="hljs-params"></span>) &#123;
+  
+  <span class="hljs-keyword">var</span> pizzaName = <span class="hljs-string">&quot;Margarita&quot;</span>;
+  <span class="hljs-comment">// Code here can use pizzaName</span>
+  
+&#125;
+
+<span class="hljs-comment">// Code here can&#x27;t use pizzaName</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="block-scoped-variables"><a class="h-anchor" href="#block-scoped-variables">#</a>Block Scoped Variables</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> isLoggedIn = <span class="hljs-literal">true</span>;
+
+<span class="hljs-keyword">if</span> (isLoggedIn == <span class="hljs-literal">true</span>) &#123;
+  <span class="hljs-keyword">const</span> statusMessage = <span class="hljs-string">&#x27;Logged in.&#x27;</span>;
+&#125;
+
+<span class="hljs-comment">// Uncaught ReferenceError...</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(statusMessage);
+
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="global-variables"><a class="h-anchor" href="#global-variables">#</a>Global Variables</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// Variable declared globally</span>
+<span class="hljs-keyword">const</span> color = <span class="hljs-string">&#x27;blue&#x27;</span>;
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">printColor</span>(<span class="hljs-params"></span>) &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(color);
+&#125;
+
+<span class="hljs-title function_">printColor</span>(); <span class="hljs-comment">// =&gt; blue</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="let-vs-var"><a class="h-anchor" href="#let-vs-var">#</a>let vs var</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) &#123;
+  <span class="hljs-comment">// This is the Max Scope for &#x27;let&#x27;</span>
+  <span class="hljs-comment">// i accessible ✔️</span>
+&#125;
+<span class="hljs-comment">// i not accessible ❌</span>
+
+</code></pre>
+<hr>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) &#123;
+  <span class="hljs-comment">// i accessible ✔️</span>
+&#125;
+<span class="hljs-comment">// i accessible ✔️</span>
+</code></pre>
+<p><code>var</code> is scoped to the nearest function block, and <code>let</code> is scoped to the nearest enclosing block.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="loops-with-closures"><a class="h-anchor" href="#loops-with-closures">#</a>Loops with closures</h3>
+<div class="section">
+<pre><code class="hljs wrap language-javascript"><span class="hljs-comment">// Prints 3 thrice, not what we meant.</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) &#123;
+  <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function"><span class="hljs-params">_</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(i), <span class="hljs-number">10</span>);
+&#125;
+</code></pre>
+<hr>
+<pre><code class="hljs wrap language-javascript"><span class="hljs-comment">// Prints 0, 1 and 2, as expected.</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">3</span>; j++) &#123; 
+  <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function"><span class="hljs-params">_</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(j), <span class="hljs-number">10</span>);
+&#125;
+</code></pre>
+<p>The variable has its own copy using <code>let</code>, and the variable has shared copy using <code>var</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="javascript-arrays"><a class="h-anchor" href="#javascript-arrays">#</a>JavaScript Arrays</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="arrays"><a class="h-anchor" href="#arrays">#</a>Arrays</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> fruits = [<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>];
+
+<span class="hljs-comment">// Different data types</span>
+<span class="hljs-keyword">const</span> data = [<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;chicken&#x27;</span>, <span class="hljs-literal">false</span>];
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="property-length"><a class="h-anchor" href="#property-length">#</a>Property .length</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+
+numbers.<span class="hljs-property">length</span> <span class="hljs-comment">// 4</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="index"><a class="h-anchor" href="#index">#</a>Index</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// Accessing an array element</span>
+<span class="hljs-keyword">const</span> myArray = [<span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">300</span>];
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(myArray[<span class="hljs-number">0</span>]); <span class="hljs-comment">// 100</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(myArray[<span class="hljs-number">1</span>]); <span class="hljs-comment">// 200</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="mutable-chart"><a class="h-anchor" href="#mutable-chart">#</a>Mutable chart</h3>
+<div class="section">
+<table class="show-header">
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:center">add</th>
+<th style="text-align:center">remove</th>
+<th style="text-align:center">start</th>
+<th style="text-align:center">end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>push</code></td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✔</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>pop</code></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✔</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>unshift</code></td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>shift</code></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="method-push"><a class="h-anchor" href="#method-push">#</a>Method .push()</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// Adding a single element:</span>
+<span class="hljs-keyword">const</span> cart = [<span class="hljs-string">&#x27;apple&#x27;</span>, <span class="hljs-string">&#x27;orange&#x27;</span>];
+cart.<span class="hljs-title function_">push</span>(<span class="hljs-string">&#x27;pear&#x27;</span>); 
+
+<span class="hljs-comment">// Adding multiple elements:</span>
+<span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>];
+numbers.<span class="hljs-title function_">push</span>(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>);
+</code></pre>
+<p>Add items to the end and returns the new array length.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="method-pop"><a class="h-anchor" href="#method-pop">#</a>Method .pop()</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> fruits = [<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>];
+
+<span class="hljs-keyword">const</span> fruit = fruits.<span class="hljs-title function_">pop</span>(); <span class="hljs-comment">// &#x27;banana&#x27;</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(fruits); <span class="hljs-comment">// [&quot;apple&quot;, &quot;orange&quot;]</span>
+</code></pre>
+<p>Remove an item from the end and returns the removed item.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="method-shift"><a class="h-anchor" href="#method-shift">#</a>Method .shift()</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> cats = [<span class="hljs-string">&#x27;Bob&#x27;</span>, <span class="hljs-string">&#x27;Willy&#x27;</span>, <span class="hljs-string">&#x27;Mini&#x27;</span>];
+
+cats.<span class="hljs-title function_">shift</span>(); <span class="hljs-comment">// [&#x27;Willy&#x27;, &#x27;Mini&#x27;]</span>
+</code></pre>
+<p>Remove an item from the beginning and returns the removed item.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="method-unshift"><a class="h-anchor" href="#method-unshift">#</a>Method .unshift()</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> cats = [<span class="hljs-string">&#x27;Bob&#x27;</span>];
+
+<span class="hljs-comment">// =&gt; [&#x27;Willy&#x27;, &#x27;Bob&#x27;]</span>
+cats.<span class="hljs-title function_">unshift</span>(<span class="hljs-string">&#x27;Willy&#x27;</span>);
+
+<span class="hljs-comment">// =&gt; [&#x27;Puff&#x27;, &#x27;George&#x27;, &#x27;Willy&#x27;, &#x27;Bob&#x27;]</span>
+cats.<span class="hljs-title function_">unshift</span>(<span class="hljs-string">&#x27;Puff&#x27;</span>, <span class="hljs-string">&#x27;George&#x27;</span>);
+</code></pre>
+<p>Add items to the beginning and returns the new array length.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="method-concat"><a class="h-anchor" href="#method-concat">#</a>Method .concat()</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]
+<span class="hljs-keyword">const</span> newFirstNumber = <span class="hljs-number">4</span>
+    
+<span class="hljs-comment">// =&gt; [ 4, 3, 2, 1 ]</span>
+[newFirstNumber].<span class="hljs-title function_">concat</span>(numbers)
+    
+<span class="hljs-comment">// =&gt; [ 3, 2, 1, 4 ]</span>
+numbers.<span class="hljs-title function_">concat</span>(newFirstNumber)
+</code></pre>
+<p>if you want to avoid mutating your original array, you can use concat.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="javascipt-set"><a class="h-anchor" href="#javascipt-set">#</a>JavaScipt Set</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="create-set"><a class="h-anchor" href="#create-set">#</a>Create Set</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// Empty Set Object</span>
+<span class="hljs-keyword">const</span> emptySet = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>()
+
+<span class="hljs-comment">// Set Object with values</span>
+<span class="hljs-keyword">const</span> setObj = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>([<span class="hljs-number">1</span>, <span class="hljs-literal">true</span>, <span class="hljs-string">&quot;hi&quot;</span>])
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="add"><a class="h-anchor" href="#add">#</a>Add</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> emptySet = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>()
+
+<span class="hljs-comment">// add values</span>
+emptySet.<span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;a&#x27;</span>)   <span class="hljs-comment">// &#x27;a&#x27;</span>
+emptySet.<span class="hljs-title function_">add</span>(<span class="hljs-number">1</span>)     <span class="hljs-comment">// &#x27;a&#x27;, 1</span>
+emptySet.<span class="hljs-title function_">add</span>(<span class="hljs-literal">true</span>)  <span class="hljs-comment">// &#x27;a&#x27;, 1, true</span>
+emptySet.<span class="hljs-title function_">add</span>(<span class="hljs-string">&#x27;a&#x27;</span>)   <span class="hljs-comment">// &#x27;a&#x27;, 1, true</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="delete"><a class="h-anchor" href="#delete">#</a>Delete</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> emptySet = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>([<span class="hljs-number">1</span>, <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;a&#x27;</span>])
+
+<span class="hljs-comment">// delete values</span>
+emptySet.<span class="hljs-title function_">delete</span>(<span class="hljs-string">&#x27;a&#x27;</span>)    <span class="hljs-comment">// 1, true</span>
+emptySet.<span class="hljs-title function_">delete</span>(<span class="hljs-literal">true</span>)   <span class="hljs-comment">// 1</span>
+emptySet.<span class="hljs-title function_">delete</span>(<span class="hljs-number">1</span>)      <span class="hljs-comment">//</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="has"><a class="h-anchor" href="#has">#</a>Has</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> setObj = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>([<span class="hljs-number">1</span>, <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;a&#x27;</span>])
+
+<span class="hljs-comment">// returns true or false</span>
+setObj.<span class="hljs-title function_">has</span>(<span class="hljs-string">&#x27;a&#x27;</span>)     <span class="hljs-comment">// true</span>
+setObj.<span class="hljs-title function_">has</span>(<span class="hljs-number">1</span>)       <span class="hljs-comment">// true</span>
+setObj.<span class="hljs-title function_">has</span>(<span class="hljs-literal">false</span>)   <span class="hljs-comment">// false</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="clear"><a class="h-anchor" href="#clear">#</a>Clear</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> setObj = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>([<span class="hljs-number">1</span>, <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;a&#x27;</span>])
+
+<span class="hljs-comment">// clears the set</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(setObj)   <span class="hljs-comment">// 1, true, &#x27;a&#x27;</span>
+setObj.<span class="hljs-title function_">clear</span>()        <span class="hljs-comment">//</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="size"><a class="h-anchor" href="#size">#</a>Size</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> setObj = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>([<span class="hljs-number">1</span>, <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;a&#x27;</span>])
+
+consoloe.<span class="hljs-title function_">log</span>(setObj.<span class="hljs-property">size</span>)   <span class="hljs-comment">// 3</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="foreach"><a class="h-anchor" href="#foreach">#</a>ForEach</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> setObj = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Set</span>([<span class="hljs-number">1</span>, <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;a&#x27;</span>])
+
+setObj.<span class="hljs-title function_">forEach</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>)&#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(value)
+&#125;)
+
+<span class="hljs-comment">// 1</span>
+<span class="hljs-comment">// true</span>
+<span class="hljs-comment">// &#x27;a&#x27;</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="javascript-loops"><a class="h-anchor" href="#javascript-loops">#</a>JavaScript Loops</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="while-loop"><a class="h-anchor" href="#while-loop">#</a>While Loop</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">while</span> (condition) &#123;
+  <span class="hljs-comment">// code block to be executed</span>
+&#125;
+
+<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">while</span> (i &lt; <span class="hljs-number">5</span>) &#123;        
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(i);
+  i++;
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="reverse-loop"><a class="h-anchor" href="#reverse-loop">#</a>Reverse Loop</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> fruits = [<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>];
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = fruits.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`<span class="hljs-subst">$&#123;i&#125;</span>. <span class="hljs-subst">$&#123;fruits[i]&#125;</span>`</span>);
+&#125;
+
+<span class="hljs-comment">// =&gt; 2. banana</span>
+<span class="hljs-comment">// =&gt; 1. orange</span>
+<span class="hljs-comment">// =&gt; 0. apple</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="do…while-statement"><a class="h-anchor" href="#do…while-statement">#</a>Do…While Statement</h3>
+<div class="section">
+<pre><code class="hljs language-javascript">x = <span class="hljs-number">0</span>
+i = <span class="hljs-number">0</span>
+
+<span class="hljs-keyword">do</span> &#123;
+  x = x + i;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(x)
+  i++;
+&#125; <span class="hljs-keyword">while</span> (i &lt; <span class="hljs-number">5</span>);
+<span class="hljs-comment">// =&gt; 0 1 3 6 10</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="for-loop"><a class="h-anchor" href="#for-loop">#</a>For Loop</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i += <span class="hljs-number">1</span>) &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(i);
+&#125;;
+
+<span class="hljs-comment">// =&gt; 0, 1, 2, 3</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="looping-through-arrays"><a class="h-anchor" href="#looping-through-arrays">#</a>Looping Through Arrays</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; array.<span class="hljs-property">length</span>; i++)&#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(array[i]);
+&#125;
+
+<span class="hljs-comment">// =&gt; Every item in the array</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="break"><a class="h-anchor" href="#break">#</a>Break</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">99</span>; i += <span class="hljs-number">1</span>) &#123;
+  <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">5</span>) &#123;
+     <span class="hljs-keyword">break</span>;
+  &#125;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(i)
+&#125;
+<span class="hljs-comment">// =&gt; 0 1 2 3 4 5</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="continue"><a class="h-anchor" href="#continue">#</a>Continue</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) &#123;
+  <span class="hljs-keyword">if</span> (i === <span class="hljs-number">3</span>) &#123; <span class="hljs-keyword">continue</span>; &#125;
+  text += <span class="hljs-string">&quot;The number is &quot;</span> + i + <span class="hljs-string">&quot;&lt;br&gt;&quot;</span>;
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="nested"><a class="h-anchor" href="#nested">#</a>Nested</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">2</span>; i += <span class="hljs-number">1</span>) &#123;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">3</span>; j += <span class="hljs-number">1</span>) &#123;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`<span class="hljs-subst">$&#123;i&#125;</span>-<span class="hljs-subst">$&#123;j&#125;</span>`</span>);
+  &#125;
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="for-in-loop"><a class="h-anchor" href="#for-in-loop">#</a>for...in loop</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> fruits = [<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>];
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> index <span class="hljs-keyword">in</span> fruits) &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(index);
+&#125;
+<span class="hljs-comment">// =&gt; 0</span>
+<span class="hljs-comment">// =&gt; 1</span>
+<span class="hljs-comment">// =&gt; 2</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="for-of-loop"><a class="h-anchor" href="#for-of-loop">#</a>for...of loop</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> fruits = [<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>];
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> fruit <span class="hljs-keyword">of</span> fruits) &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(fruit);
+&#125;
+<span class="hljs-comment">// =&gt; apple</span>
+<span class="hljs-comment">// =&gt; orange</span>
+<span class="hljs-comment">// =&gt; banana</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap cols-2">
+<h2 id="javascript-iterators"><a class="h-anchor" href="#javascript-iterators">#</a>JavaScript Iterators</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="functions-assigned-to-variables"><a class="h-anchor" href="#functions-assigned-to-variables">#</a>Functions Assigned to Variables</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> <span class="hljs-title function_">plusFive</span> = (<span class="hljs-params">number</span>) =&gt; &#123;
+  <span class="hljs-keyword">return</span> number + <span class="hljs-number">5</span>;  
+&#125;;
+<span class="hljs-comment">// f is assigned the value of plusFive</span>
+<span class="hljs-keyword">let</span> f = plusFive;
+
+<span class="hljs-title function_">plusFive</span>(<span class="hljs-number">3</span>); <span class="hljs-comment">// 8</span>
+<span class="hljs-comment">// Since f has a function value, it can be invoked. </span>
+<span class="hljs-title function_">f</span>(<span class="hljs-number">9</span>); <span class="hljs-comment">// 14</span>
+
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="callback-functions"><a class="h-anchor" href="#callback-functions">#</a>Callback Functions</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">isEven</span> = (<span class="hljs-params">n</span>) =&gt; &#123;
+  <span class="hljs-keyword">return</span> n % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>;
+&#125;
+
+<span class="hljs-keyword">let</span> <span class="hljs-title function_">printMsg</span> = (<span class="hljs-params">evenFunc, num</span>) =&gt; &#123;
+  <span class="hljs-keyword">const</span> isNumEven = <span class="hljs-title function_">evenFunc</span>(num);
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`<span class="hljs-subst">$&#123;num&#125;</span> is an even number: <span class="hljs-subst">$&#123;isNumEven&#125;</span>.`</span>)
+&#125;
+
+<span class="hljs-comment">// Pass in isEven as the callback function</span>
+<span class="hljs-title function_">printMsg</span>(isEven, <span class="hljs-number">4</span>); 
+<span class="hljs-comment">// =&gt; The number 4 is an even number: True.</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="array-method-reduce"><a class="h-anchor" href="#array-method-reduce">#</a>Array Method .reduce()</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+
+<span class="hljs-keyword">const</span> sum = numbers.<span class="hljs-title function_">reduce</span>(<span class="hljs-function">(<span class="hljs-params">accumulator, curVal</span>) =&gt;</span> &#123;  
+  <span class="hljs-keyword">return</span> accumulator + curVal;
+&#125;);
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(sum); <span class="hljs-comment">// 10</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="array-method-map"><a class="h-anchor" href="#array-method-map">#</a>Array Method .map()</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> members = [<span class="hljs-string">&quot;Taylor&quot;</span>, <span class="hljs-string">&quot;Donald&quot;</span>, <span class="hljs-string">&quot;Don&quot;</span>, <span class="hljs-string">&quot;Natasha&quot;</span>, <span class="hljs-string">&quot;Bobby&quot;</span>];
+
+<span class="hljs-keyword">const</span> announcements = members.<span class="hljs-title function_">map</span>(<span class="hljs-function">(<span class="hljs-params">member</span>) =&gt;</span> &#123;
+  <span class="hljs-keyword">return</span> member + <span class="hljs-string">&quot; joined the contest.&quot;</span>;
+&#125;);
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(announcements);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="array-method-foreach"><a class="h-anchor" href="#array-method-foreach">#</a>Array Method .forEach()</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">28</span>, <span class="hljs-number">77</span>, <span class="hljs-number">45</span>, <span class="hljs-number">99</span>, <span class="hljs-number">27</span>];
+
+numbers.<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">number</span> =&gt;</span> &#123;  
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(number);
+&#125;); 
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="array-method-filter"><a class="h-anchor" href="#array-method-filter">#</a>Array Method .filter()</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> randomNumbers = [<span class="hljs-number">4</span>, <span class="hljs-number">11</span>, <span class="hljs-number">42</span>, <span class="hljs-number">14</span>, <span class="hljs-number">39</span>];
+<span class="hljs-keyword">const</span> filteredArray = randomNumbers.<span class="hljs-title function_">filter</span>(<span class="hljs-function"><span class="hljs-params">n</span> =&gt;</span> &#123;  
+  <span class="hljs-keyword">return</span> n &gt; <span class="hljs-number">5</span>;
+&#125;);
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap cols-2">
+<h2 id="javascript-objects"><a class="h-anchor" href="#javascript-objects">#</a>JavaScript Objects</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="accessing-properties"><a class="h-anchor" href="#accessing-properties">#</a>Accessing Properties</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> apple = &#123; 
+  <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;Green&#x27;</span>,
+  <span class="hljs-attr">price</span>: &#123; <span class="hljs-attr">bulk</span>: <span class="hljs-string">&#x27;$3/kg&#x27;</span>, <span class="hljs-attr">smallQty</span>: <span class="hljs-string">&#x27;$4/kg&#x27;</span> &#125;
+&#125;;
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(apple.<span class="hljs-property">color</span>); <span class="hljs-comment">// =&gt; Green</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(apple.<span class="hljs-property">price</span>.<span class="hljs-property">bulk</span>); <span class="hljs-comment">// =&gt; $3/kg</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="naming-properties"><a class="h-anchor" href="#naming-properties">#</a>Naming Properties</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// Example of invalid key names</span>
+<span class="hljs-keyword">const</span> trainSchedule = &#123;
+  <span class="hljs-comment">// Invalid because of the space between words.</span>
+  platform <span class="hljs-attr">num</span>: <span class="hljs-number">10</span>, 
+  <span class="hljs-comment">// Expressions cannot be keys.</span>
+  <span class="hljs-number">40</span> - <span class="hljs-number">10</span> + <span class="hljs-number">2</span>: <span class="hljs-number">30</span>,
+  <span class="hljs-comment">// A + sign is invalid unless it is enclosed in quotations.</span>
+  +<span class="hljs-attr">compartment</span>: <span class="hljs-string">&#x27;C&#x27;</span>
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="non-existent-properties"><a class="h-anchor" href="#non-existent-properties">#</a>Non-existent properties</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> classElection = &#123;
+  <span class="hljs-attr">date</span>: <span class="hljs-string">&#x27;January 12&#x27;</span>
+&#125;;
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(classElection.<span class="hljs-property">place</span>); <span class="hljs-comment">// undefined</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="mutable"><a class="h-anchor" href="#mutable">#</a>Mutable</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> student = &#123;
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Sheldon&#x27;</span>,
+  <span class="hljs-attr">score</span>: <span class="hljs-number">100</span>,
+  <span class="hljs-attr">grade</span>: <span class="hljs-string">&#x27;A&#x27;</span>,
+&#125;
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(student)
+<span class="hljs-comment">// &#123; name: &#x27;Sheldon&#x27;, score: 100, grade: &#x27;A&#x27; &#125;</span>
+
+<span class="hljs-keyword">delete</span> student.<span class="hljs-property">score</span>
+student.<span class="hljs-property">grade</span> = <span class="hljs-string">&#x27;F&#x27;</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(student)
+<span class="hljs-comment">// &#123; name: &#x27;Sheldon&#x27;, grade: &#x27;F&#x27; &#125;</span>
+
+student = &#123;&#125;
+<span class="hljs-comment">// TypeError: Assignment to constant variable.</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="assignment-shorthand-syntax"><a class="h-anchor" href="#assignment-shorthand-syntax">#</a>Assignment shorthand syntax</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> person = &#123;
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Tom&#x27;</span>,
+  <span class="hljs-attr">age</span>: <span class="hljs-string">&#x27;22&#x27;</span>,
+&#125;;
+<span class="hljs-keyword">const</span> &#123;name, age&#125; = person;
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(name); <span class="hljs-comment">// &#x27;Tom&#x27;</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(age);  <span class="hljs-comment">// &#x27;22&#x27;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="delete-operator"><a class="h-anchor" href="#delete-operator">#</a>Delete operator</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> person = &#123;
+  <span class="hljs-attr">firstName</span>: <span class="hljs-string">&quot;Matilda&quot;</span>,
+  <span class="hljs-attr">age</span>: <span class="hljs-number">27</span>,
+  <span class="hljs-attr">hobby</span>: <span class="hljs-string">&quot;knitting&quot;</span>,
+  <span class="hljs-attr">goal</span>: <span class="hljs-string">&quot;learning JavaScript&quot;</span>
+&#125;;
+
+<span class="hljs-keyword">delete</span> person.<span class="hljs-property">hobby</span>; <span class="hljs-comment">// or delete person[hobby];</span>
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(person);
+<span class="hljs-comment">/*
+&#123;
+  firstName: &quot;Matilda&quot;
+  age: 27
+  goal: &quot;learning JavaScript&quot;
+&#125;
+*/</span>
+	
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="objects-as-arguments"><a class="h-anchor" href="#objects-as-arguments">#</a>Objects as arguments</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> origNum = <span class="hljs-number">8</span>;
+<span class="hljs-keyword">const</span> origObj = &#123;<span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;blue&#x27;</span>&#125;;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">changeItUp</span> = (<span class="hljs-params">num, obj</span>) =&gt; &#123;
+  num = <span class="hljs-number">7</span>;
+  obj.<span class="hljs-property">color</span> = <span class="hljs-string">&#x27;red&#x27;</span>;
+&#125;;
+
+<span class="hljs-title function_">changeItUp</span>(origNum, origObj);
+
+<span class="hljs-comment">// Will output 8 since integers are passed by value.</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(origNum);
+
+<span class="hljs-comment">// Will output &#x27;red&#x27; since objects are passed </span>
+<span class="hljs-comment">// by reference and are therefore mutable.</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(origObj.<span class="hljs-property">color</span>);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="shorthand-object-creation"><a class="h-anchor" href="#shorthand-object-creation">#</a>Shorthand object creation</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> activity = <span class="hljs-string">&#x27;Surfing&#x27;</span>;
+<span class="hljs-keyword">const</span> beach = &#123; activity &#125;;
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(beach); <span class="hljs-comment">// &#123; activity: &#x27;Surfing&#x27; &#125;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="this-keyword"><a class="h-anchor" href="#this-keyword">#</a>this Keyword</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> cat = &#123;
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Pipey&#x27;</span>,
+  <span class="hljs-attr">age</span>: <span class="hljs-number">8</span>,
+  <span class="hljs-title function_">whatName</span>(<span class="hljs-params"></span>) &#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span>  
+  &#125;
+&#125;;
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(cat.<span class="hljs-title function_">whatName</span>()); <span class="hljs-comment">// =&gt; Pipey</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="factory-functions"><a class="h-anchor" href="#factory-functions">#</a>Factory functions</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// A factory function that accepts &#x27;name&#x27;, </span>
+<span class="hljs-comment">// &#x27;age&#x27;, and &#x27;breed&#x27; parameters to return </span>
+<span class="hljs-comment">// a customized dog object. </span>
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">dogFactory</span> = (<span class="hljs-params">name, age, breed</span>) =&gt; &#123;
+  <span class="hljs-keyword">return</span> &#123;
+    <span class="hljs-attr">name</span>: name,
+    <span class="hljs-attr">age</span>: age,
+    <span class="hljs-attr">breed</span>: breed,
+    <span class="hljs-title function_">bark</span>(<span class="hljs-params"></span>) &#123;
+      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Woof!&#x27;</span>);  
+    &#125;
+  &#125;;
+&#125;;
+
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="methods"><a class="h-anchor" href="#methods">#</a>Methods</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> engine = &#123;
+  <span class="hljs-comment">// method shorthand, with one argument</span>
+  <span class="hljs-title function_">start</span>(<span class="hljs-params">adverb</span>) &#123;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`The engine starts up <span class="hljs-subst">$&#123;adverb&#125;</span>...`</span>);
+  &#125;,  
+  <span class="hljs-comment">// anonymous arrow function expression with no arguments</span>
+  <span class="hljs-attr">sputter</span>: <span class="hljs-function">() =&gt;</span> &#123;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;The engine sputters...&#x27;</span>);
+  &#125;,
+&#125;;
+
+engine.<span class="hljs-title function_">start</span>(<span class="hljs-string">&#x27;noisily&#x27;</span>);
+engine.<span class="hljs-title function_">sputter</span>();
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="getters-and-setters"><a class="h-anchor" href="#getters-and-setters">#</a>Getters and setters</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> myCat = &#123;
+  <span class="hljs-attr">_name</span>: <span class="hljs-string">&#x27;Dottie&#x27;</span>,
+  <span class="hljs-keyword">get</span> <span class="hljs-title function_">name</span>() &#123;
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">_name</span>;  
+  &#125;,
+  <span class="hljs-keyword">set</span> <span class="hljs-title function_">name</span>(<span class="hljs-params">newName</span>) &#123;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_name</span> = newName;  
+  &#125;
+&#125;;
+
+<span class="hljs-comment">// Reference invokes the getter</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(myCat.<span class="hljs-property">name</span>);
+
+<span class="hljs-comment">// Assignment invokes the setter</span>
+myCat.<span class="hljs-property">name</span> = <span class="hljs-string">&#x27;Yankee&#x27;</span>;
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="javascript-classes"><a class="h-anchor" href="#javascript-classes">#</a>JavaScript Classes</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="static-methods"><a class="h-anchor" href="#static-methods">#</a>Static Methods</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Dog</span> &#123;
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">name</span>) &#123;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_name</span> = name;  
+  &#125;
+  
+  <span class="hljs-title function_">introduce</span>(<span class="hljs-params"></span>) &#123; 
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;This is &#x27;</span> + <span class="hljs-variable language_">this</span>.<span class="hljs-property">_name</span> + <span class="hljs-string">&#x27; !&#x27;</span>);  
+  &#125;
+  
+  <span class="hljs-comment">// A static method</span>
+  <span class="hljs-keyword">static</span> <span class="hljs-title function_">bark</span>(<span class="hljs-params"></span>) &#123;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Woof!&#x27;</span>);  
+  &#125;
+&#125;
+
+<span class="hljs-keyword">const</span> myDog = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Dog</span>(<span class="hljs-string">&#x27;Buster&#x27;</span>);
+myDog.<span class="hljs-title function_">introduce</span>();
+
+<span class="hljs-comment">// Calling the static method</span>
+<span class="hljs-title class_">Dog</span>.<span class="hljs-title function_">bark</span>();
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="class"><a class="h-anchor" href="#class">#</a>Class</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Song</span> &#123;
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) &#123;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">title</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">author</span>;
+  &#125;
+  
+  <span class="hljs-title function_">play</span>(<span class="hljs-params"></span>) &#123;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Song playing!&#x27;</span>);
+  &#125;
+&#125;
+
+<span class="hljs-keyword">const</span> mySong = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Song</span>();
+mySong.<span class="hljs-title function_">play</span>();
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="class-constructor"><a class="h-anchor" href="#class-constructor">#</a>Class Constructor</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Song</span> &#123;
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">title, artist</span>) &#123;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">title</span> = title;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">artist</span> = artist;
+  &#125;
+&#125;
+
+<span class="hljs-keyword">const</span> mySong = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Song</span>(<span class="hljs-string">&#x27;Bohemian Rhapsody&#x27;</span>, <span class="hljs-string">&#x27;Queen&#x27;</span>);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(mySong.<span class="hljs-property">title</span>);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="class-methods"><a class="h-anchor" href="#class-methods">#</a>Class Methods</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Song</span> &#123;
+  <span class="hljs-title function_">play</span>(<span class="hljs-params"></span>) &#123;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Playing!&#x27;</span>);
+  &#125;
+  
+  <span class="hljs-title function_">stop</span>(<span class="hljs-params"></span>) &#123;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Stopping!&#x27;</span>);
+  &#125;
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="extends"><a class="h-anchor" href="#extends">#</a>extends</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// Parent class</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Media</span> &#123;
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">info</span>) &#123;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">publishDate</span> = info.<span class="hljs-property">publishDate</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = info.<span class="hljs-property">name</span>;
+  &#125;
+&#125;
+
+<span class="hljs-comment">// Child class</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Song</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">Media</span> &#123;
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">songData</span>) &#123;
+    <span class="hljs-variable language_">super</span>(songData);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">artist</span> = songData.<span class="hljs-property">artist</span>;
+  &#125;
+&#125;
+
+<span class="hljs-keyword">const</span> mySong = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Song</span>(&#123; 
+  <span class="hljs-attr">artist</span>: <span class="hljs-string">&#x27;Queen&#x27;</span>, 
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Bohemian Rhapsody&#x27;</span>, 
+  <span class="hljs-attr">publishDate</span>: <span class="hljs-number">1975</span>
+&#125;);
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap cols-2">
+<h2 id="javascript-modules"><a class="h-anchor" href="#javascript-modules">#</a>JavaScript Modules</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="export"><a class="h-anchor" href="#export">#</a>Export</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// myMath.js</span>
+
+<span class="hljs-comment">// Default export</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">x,y</span>)&#123;
+    <span class="hljs-keyword">return</span> x + y
+&#125;
+
+<span class="hljs-comment">// Normal export</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">subtract</span>(<span class="hljs-params">x,y</span>)&#123;
+    <span class="hljs-keyword">return</span> x - y
+&#125;
+
+<span class="hljs-comment">// Multiple exports</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">multiply</span>(<span class="hljs-params">x,y</span>)&#123;
+    <span class="hljs-keyword">return</span> x * y
+&#125;
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">duplicate</span>(<span class="hljs-params">x</span>)&#123;
+    <span class="hljs-keyword">return</span> x * <span class="hljs-number">2</span>
+&#125;
+<span class="hljs-keyword">export</span> &#123;
+    multiply,
+    duplicate
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="import"><a class="h-anchor" href="#import">#</a>Import</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// main.js</span>
+<span class="hljs-keyword">import</span> add, &#123; subtract, multiply, duplicate &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./myMath.js&#x27;</span>;
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">add</span>(<span class="hljs-number">6</span>, <span class="hljs-number">2</span>)); <span class="hljs-comment">// 8 </span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">subtract</span>(<span class="hljs-number">6</span>, <span class="hljs-number">2</span>)) <span class="hljs-comment">// 4</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">multiply</span>(<span class="hljs-number">6</span>, <span class="hljs-number">2</span>)); <span class="hljs-comment">// 12</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">duplicate</span>(<span class="hljs-number">5</span>)) <span class="hljs-comment">// 10</span>
+
+<span class="hljs-comment">// index.html</span>
+&lt;script type=<span class="hljs-string">&quot;module&quot;</span> src=<span class="hljs-string">&quot;main.js&quot;</span>&gt;&lt;/script&gt;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="export-module"><a class="h-anchor" href="#export-module">#</a>Export Module</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// myMath.js</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">x,y</span>)&#123;
+    <span class="hljs-keyword">return</span> x + y
+&#125;
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">subtract</span>(<span class="hljs-params">x,y</span>)&#123;
+    <span class="hljs-keyword">return</span> x - y
+&#125;
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">multiply</span>(<span class="hljs-params">x,y</span>)&#123;
+    <span class="hljs-keyword">return</span> x * y
+&#125;
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">duplicate</span>(<span class="hljs-params">x</span>)&#123;
+    <span class="hljs-keyword">return</span> x * <span class="hljs-number">2</span>
+&#125;
+
+<span class="hljs-comment">// Multiple exports in node.js</span>
+<span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = &#123;
+    add,
+    subtract,
+    multiply,
+    duplicate
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="require-module"><a class="h-anchor" href="#require-module">#</a>Require Module</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// main.js</span>
+<span class="hljs-keyword">const</span> myMath = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./myMath.js&#x27;</span>)
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(myMath.<span class="hljs-title function_">add</span>(<span class="hljs-number">6</span>, <span class="hljs-number">2</span>)); <span class="hljs-comment">// 8 </span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(myMath.<span class="hljs-title function_">subtract</span>(<span class="hljs-number">6</span>, <span class="hljs-number">2</span>)) <span class="hljs-comment">// 4</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(myMath.<span class="hljs-title function_">multiply</span>(<span class="hljs-number">6</span>, <span class="hljs-number">2</span>)); <span class="hljs-comment">// 12</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(myMath.<span class="hljs-title function_">duplicate</span>(<span class="hljs-number">5</span>)) <span class="hljs-comment">// 10</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap cols-2">
+<h2 id="javascript-promises"><a class="h-anchor" href="#javascript-promises">#</a>JavaScript Promises</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap row-span-2">
+<h3 id="promise-states"><a class="h-anchor" href="#promise-states">#</a>Promise states </h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;
+  <span class="hljs-keyword">const</span> res = <span class="hljs-literal">true</span>;
+  <span class="hljs-comment">// An asynchronous operation.</span>
+  <span class="hljs-keyword">if</span> (res) &#123;
+    <span class="hljs-title function_">resolve</span>(<span class="hljs-string">&#x27;Resolved!&#x27;</span>);
+  &#125;
+  <span class="hljs-keyword">else</span> &#123;
+    <span class="hljs-title function_">reject</span>(<span class="hljs-title class_">Error</span>(<span class="hljs-string">&#x27;Error&#x27;</span>));
+  &#125;
+&#125;);
+
+promise.<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(res), <span class="hljs-function">(<span class="hljs-params">err</span>) =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(err));
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="executor-function"><a class="h-anchor" href="#executor-function">#</a>Executor function</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">executorFn</span> = (<span class="hljs-params">resolve, reject</span>) =&gt; &#123;
+  <span class="hljs-title function_">resolve</span>(<span class="hljs-string">&#x27;Resolved!&#x27;</span>);
+&#125;;
+
+<span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(executorFn);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="settimeout"><a class="h-anchor" href="#settimeout">#</a>setTimeout()</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">loginAlert</span> = (<span class="hljs-params"></span>) =&gt;&#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Login&#x27;</span>);
+&#125;;
+
+<span class="hljs-built_in">setTimeout</span>(loginAlert, <span class="hljs-number">6000</span>);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="then-method"><a class="h-anchor" href="#then-method">#</a>.then() method</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;    
+  <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;
+    <span class="hljs-title function_">resolve</span>(<span class="hljs-string">&#x27;Result&#x27;</span>);
+  &#125;, <span class="hljs-number">200</span>);
+&#125;);
+
+promise.<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(res);
+&#125;, <span class="hljs-function">(<span class="hljs-params">err</span>) =&gt;</span> &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(err);
+&#125;);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="catch-method"><a class="h-anchor" href="#catch-method">#</a>.catch() method</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;  
+  <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;
+    <span class="hljs-title function_">reject</span>(<span class="hljs-title class_">Error</span>(<span class="hljs-string">&#x27;Promise Rejected Unconditionally.&#x27;</span>));
+  &#125;, <span class="hljs-number">1000</span>);
+&#125;);
+
+promise.<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(value);
+&#125;);
+
+promise.<span class="hljs-title function_">catch</span>(<span class="hljs-function">(<span class="hljs-params">err</span>) =&gt;</span> &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(err);
+&#125;);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="promise-all"><a class="h-anchor" href="#promise-all">#</a>Promise.all()</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> promise1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;
+  <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;
+    <span class="hljs-title function_">resolve</span>(<span class="hljs-number">3</span>);
+  &#125;, <span class="hljs-number">300</span>);
+&#125;);
+<span class="hljs-keyword">const</span> promise2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;
+  <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;
+    <span class="hljs-title function_">resolve</span>(<span class="hljs-number">2</span>);
+  &#125;, <span class="hljs-number">200</span>);
+&#125;);
+
+<span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">all</span>([promise1, promise2]).<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(res[<span class="hljs-number">0</span>]);
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(res[<span class="hljs-number">1</span>]);
+&#125;);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="avoiding-nested-promise-and-then"><a class="h-anchor" href="#avoiding-nested-promise-and-then">#</a>Avoiding nested Promise and .then()</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;  
+  <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;
+    <span class="hljs-title function_">resolve</span>(<span class="hljs-string">&#x27;*&#x27;</span>);
+  &#125;, <span class="hljs-number">1000</span>);
+&#125;);
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">twoStars</span> = (<span class="hljs-params">star</span>) =&gt; &#123;  
+  <span class="hljs-keyword">return</span> (star + star);
+&#125;;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">oneDot</span> = (<span class="hljs-params">star</span>) =&gt; &#123;  
+  <span class="hljs-keyword">return</span> (star + <span class="hljs-string">&#x27;.&#x27;</span>);
+&#125;;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">print</span> = (<span class="hljs-params">val</span>) =&gt; &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(val);
+&#125;;
+
+<span class="hljs-comment">// Chaining them all together</span>
+promise.<span class="hljs-title function_">then</span>(twoStars).<span class="hljs-title function_">then</span>(oneDot).<span class="hljs-title function_">then</span>(print);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="creating"><a class="h-anchor" href="#creating">#</a>Creating</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">executorFn</span> = (<span class="hljs-params">resolve, reject</span>) =&gt; &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;The executor function of the promise!&#x27;</span>);
+&#125;;
+
+<span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(executorFn);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="chaining-multiple-then"><a class="h-anchor" href="#chaining-multiple-then">#</a>Chaining multiple .then()</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function"><span class="hljs-params">resolve</span> =&gt;</span> <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> <span class="hljs-title function_">resolve</span>(<span class="hljs-string">&#x27;dAlan&#x27;</span>), <span class="hljs-number">100</span>));
+
+promise.<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> &#123;
+  <span class="hljs-keyword">return</span> res === <span class="hljs-string">&#x27;Alan&#x27;</span> ? <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">resolve</span>(<span class="hljs-string">&#x27;Hey Alan!&#x27;</span>) : <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">reject</span>(<span class="hljs-string">&#x27;Who are you?&#x27;</span>)
+&#125;).<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(res)
+&#125;, <span class="hljs-function">(<span class="hljs-params">err</span>) =&gt;</span> &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(err)
+&#125;);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="fake-http-request-with-promise"><a class="h-anchor" href="#fake-http-request-with-promise">#</a>Fake http Request with Promise</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">mock</span> = (<span class="hljs-params">success, timeout = <span class="hljs-number">1000</span></span>) =&gt; &#123;
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;
+    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;
+      <span class="hljs-keyword">if</span>(success) &#123;
+        <span class="hljs-title function_">resolve</span>(&#123;<span class="hljs-attr">status</span>: <span class="hljs-number">200</span>, <span class="hljs-attr">data</span>:&#123;&#125;&#125;);
+      &#125; <span class="hljs-keyword">else</span> &#123;
+        <span class="hljs-title function_">reject</span>(&#123;<span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;Error&#x27;</span>&#125;);
+      &#125;
+    &#125;, timeout);
+  &#125;);
+&#125;
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">someEvent</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; &#123;
+  <span class="hljs-keyword">try</span> &#123;
+    <span class="hljs-keyword">await</span> <span class="hljs-title function_">mock</span>(<span class="hljs-literal">true</span>, <span class="hljs-number">1000</span>);
+  &#125; <span class="hljs-keyword">catch</span> (e) &#123;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(e.<span class="hljs-property">message</span>);
+  &#125;
+&#125;
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap cols-2">
+<h2 id="javascript-async-await"><a class="h-anchor" href="#javascript-async-await">#</a>JavaScript Async-Await</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="asynchronous"><a class="h-anchor" href="#asynchronous">#</a>Asynchronous</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">helloWorld</span>(<span class="hljs-params"></span>) &#123;
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function"><span class="hljs-params">resolve</span> =&gt;</span> &#123;
+    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;
+      <span class="hljs-title function_">resolve</span>(<span class="hljs-string">&#x27;Hello World!&#x27;</span>);
+    &#125;, <span class="hljs-number">2000</span>);
+  &#125;);
+&#125;
+
+<span class="hljs-keyword">const</span> msg = <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123; <span class="hljs-comment">//Async Function Expression</span>
+  <span class="hljs-keyword">const</span> msg = <span class="hljs-keyword">await</span> <span class="hljs-title function_">helloWorld</span>();
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Message:&#x27;</span>, msg);
+&#125;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">msg1</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; &#123; <span class="hljs-comment">//Async Arrow Function</span>
+  <span class="hljs-keyword">const</span> msg = <span class="hljs-keyword">await</span> <span class="hljs-title function_">helloWorld</span>();
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Message:&#x27;</span>, msg);
+&#125;
+
+<span class="hljs-title function_">msg</span>(); <span class="hljs-comment">// Message: Hello World! &lt;-- after 2 seconds</span>
+<span class="hljs-title function_">msg1</span>(); <span class="hljs-comment">// Message: Hello World! &lt;-- after 2 seconds</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="resolving-promises"><a class="h-anchor" href="#resolving-promises">#</a>Resolving Promises</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> pro1 = <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">resolve</span>(<span class="hljs-number">5</span>);
+<span class="hljs-keyword">let</span> pro2 = <span class="hljs-number">44</span>;
+<span class="hljs-keyword">let</span> pro3 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>) &#123;
+  <span class="hljs-built_in">setTimeout</span>(resolve, <span class="hljs-number">100</span>, <span class="hljs-string">&#x27;foo&#x27;</span>);
+&#125;);
+
+<span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">all</span>([pro1, pro2, pro3]).<span class="hljs-title function_">then</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">values</span>) &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(values);
+&#125;);
+<span class="hljs-comment">// expected =&gt; Array [5, 44, &quot;foo&quot;]</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="async-await-promises"><a class="h-anchor" href="#async-await-promises">#</a>Async Await Promises</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">helloWorld</span>(<span class="hljs-params"></span>) &#123;
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function"><span class="hljs-params">resolve</span> =&gt;</span> &#123;
+    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;
+      <span class="hljs-title function_">resolve</span>(<span class="hljs-string">&#x27;Hello World!&#x27;</span>);
+    &#125;, <span class="hljs-number">2000</span>);
+  &#125;);
+&#125;
+
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">msg</span>(<span class="hljs-params"></span>) &#123;
+  <span class="hljs-keyword">const</span> msg = <span class="hljs-keyword">await</span> <span class="hljs-title function_">helloWorld</span>();
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Message:&#x27;</span>, msg);
+&#125;
+
+<span class="hljs-title function_">msg</span>(); <span class="hljs-comment">// Message: Hello World! &lt;-- after 2 seconds</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="error-handling"><a class="h-anchor" href="#error-handling">#</a>Error Handling</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> json = <span class="hljs-string">&#x27;&#123; &quot;age&quot;: 30 &#125;&#x27;</span>; <span class="hljs-comment">// incomplete data</span>
+
+<span class="hljs-keyword">try</span> &#123;
+  <span class="hljs-keyword">let</span> user = <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">parse</span>(json); <span class="hljs-comment">// &lt;-- no errors</span>
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>( user.<span class="hljs-property">name</span> ); <span class="hljs-comment">// no name!</span>
+&#125; <span class="hljs-keyword">catch</span> (e) &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>( <span class="hljs-string">&quot;Invalid JSON data!&quot;</span> );
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="aysnc-await-operator"><a class="h-anchor" href="#aysnc-await-operator">#</a>Aysnc await operator</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">helloWorld</span>(<span class="hljs-params"></span>) &#123;
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function"><span class="hljs-params">resolve</span> =&gt;</span> &#123;
+    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;
+      <span class="hljs-title function_">resolve</span>(<span class="hljs-string">&#x27;Hello World!&#x27;</span>);
+    &#125;, <span class="hljs-number">2000</span>);
+  &#125;);
+&#125;
+
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">msg</span>(<span class="hljs-params"></span>) &#123;
+  <span class="hljs-keyword">const</span> msg = <span class="hljs-keyword">await</span> <span class="hljs-title function_">helloWorld</span>();
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Message:&#x27;</span>, msg);
+&#125;
+
+<span class="hljs-title function_">msg</span>(); <span class="hljs-comment">// Message: Hello World! &lt;-- after 2 seconds</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="javascript-requests"><a class="h-anchor" href="#javascript-requests">#</a>JavaScript Requests</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="json"><a class="h-anchor" href="#json">#</a>JSON</h3>
+<div class="section">
+<pre><code class="hljs language-json">const jsonObj = <span class="hljs-punctuation">&#123;</span>
+  <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Rick&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;11A&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;level&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">4</span>  
+<span class="hljs-punctuation">&#125;</span>;
+</code></pre>
+<p>Also see: <a href="/json">JSON cheatsheet</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="xmlhttprequest"><a class="h-anchor" href="#xmlhttprequest">#</a>XMLHttpRequest</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();
+xhr.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;GET&#x27;</span>, <span class="hljs-string">&#x27;mysite.com/getjson&#x27;</span>);
+</code></pre>
+<p><code>XMLHttpRequest</code> is a browser-level API that enables the client to script data transfers via JavaScript, NOT part of the JavaScript language.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="get"><a class="h-anchor" href="#get">#</a>GET</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> req = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();
+req.<span class="hljs-property">responseType</span> = <span class="hljs-string">&#x27;json&#x27;</span>;
+req.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;GET&#x27;</span>, <span class="hljs-string">&#x27;/getdata?id=65&#x27;</span>);
+req.<span class="hljs-property">onload</span> = <span class="hljs-function">() =&gt;</span> &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(xhr.<span class="hljs-property">response</span>);
+&#125;;
+
+req.<span class="hljs-title function_">send</span>();
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="post"><a class="h-anchor" href="#post">#</a>POST</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> data = &#123;
+  <span class="hljs-attr">fish</span>: <span class="hljs-string">&#x27;Salmon&#x27;</span>,
+  <span class="hljs-attr">weight</span>: <span class="hljs-string">&#x27;1.5 KG&#x27;</span>,
+  <span class="hljs-attr">units</span>: <span class="hljs-number">5</span>
+&#125;;
+<span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();
+xhr.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;POST&#x27;</span>, <span class="hljs-string">&#x27;/inventory/add&#x27;</span>);
+xhr.<span class="hljs-property">responseType</span> = <span class="hljs-string">&#x27;json&#x27;</span>;
+xhr.<span class="hljs-title function_">send</span>(<span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(data));
+
+xhr.<span class="hljs-property">onload</span> = <span class="hljs-function">() =&gt;</span> &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(xhr.<span class="hljs-property">response</span>);
+&#125;;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="fetch-api"><a class="h-anchor" href="#fetch-api">#</a>fetch api</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-title function_">fetch</span>(url, &#123;
+    <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;POST&#x27;</span>,
+    <span class="hljs-attr">headers</span>: &#123;
+      <span class="hljs-string">&#x27;Content-type&#x27;</span>: <span class="hljs-string">&#x27;application/json&#x27;</span>,
+      <span class="hljs-string">&#x27;apikey&#x27;</span>: apiKey
+    &#125;,
+    <span class="hljs-attr">body</span>: data
+  &#125;).<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> &#123;
+    <span class="hljs-keyword">if</span> (response.<span class="hljs-property">ok</span>) &#123;
+      <span class="hljs-keyword">return</span> response.<span class="hljs-title function_">json</span>();
+    &#125;
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">&#x27;Request failed!&#x27;</span>);
+  &#125;, <span class="hljs-function"><span class="hljs-params">networkError</span> =&gt;</span> &#123;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(networkError.<span class="hljs-property">message</span>)
+  &#125;)
+&#125;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="json-formatted"><a class="h-anchor" href="#json-formatted">#</a>JSON Formatted</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">&#x27;url-that-returns-JSON&#x27;</span>)
+.<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.<span class="hljs-title function_">json</span>())
+.<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">jsonResponse</span> =&gt;</span> &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(jsonResponse);
+&#125;);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="promise-url-parameter-fetch-api"><a class="h-anchor" href="#promise-url-parameter-fetch-api">#</a>promise url parameter fetch api</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">&#x27;url&#x27;</span>)
+.<span class="hljs-title function_">then</span>(
+  <span class="hljs-function"><span class="hljs-params">response</span>  =&gt;</span> &#123;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(response);
+  &#125;,
+ <span class="hljs-function"><span class="hljs-params">rejection</span> =&gt;</span> &#123;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(rejection.<span class="hljs-property">message</span>);
+);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="fetch-api-function"><a class="h-anchor" href="#fetch-api-function">#</a>Fetch API Function</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">&#x27;https://api-xxx.com/endpoint&#x27;</span>, &#123;
+  <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;POST&#x27;</span>,
+ <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(&#123;<span class="hljs-attr">id</span>: <span class="hljs-string">&quot;200&quot;</span>&#125;)
+&#125;).<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> &#123;
+  <span class="hljs-keyword">if</span>(response.<span class="hljs-property">ok</span>)&#123;
+	  <span class="hljs-keyword">return</span> response.<span class="hljs-title function_">json</span>();  
+  &#125;
+	<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">&#x27;Request failed!&#x27;</span>);
+&#125;, <span class="hljs-function"><span class="hljs-params">networkError</span> =&gt;</span> &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(networkError.<span class="hljs-property">message</span>);
+&#125;).<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">jsonResponse</span> =&gt;</span> &#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(jsonResponse);
+&#125;)
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap col-span-2">
+<h3 id="async-await-syntax"><a class="h-anchor" href="#async-await-syntax">#</a>async await syntax</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">getSuggestions</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; &#123;
+  <span class="hljs-keyword">const</span> wordQuery = inputField.<span class="hljs-property">value</span>;
+  <span class="hljs-keyword">const</span> endpoint = <span class="hljs-string">`<span class="hljs-subst">$&#123;url&#125;</span><span class="hljs-subst">$&#123;queryParams&#125;</span><span class="hljs-subst">$&#123;wordQuery&#125;</span>`</span>;
+  <span class="hljs-keyword">try</span>&#123;
+<span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(endpoint, &#123;<span class="hljs-attr">cache</span>: <span class="hljs-string">&#x27;no-cache&#x27;</span>&#125;);
+    <span class="hljs-keyword">if</span>(response.<span class="hljs-property">ok</span>)&#123;
+      <span class="hljs-keyword">const</span> jsonResponse = <span class="hljs-keyword">await</span> response.<span class="hljs-title function_">json</span>()
+    &#125;
+  &#125;
+  <span class="hljs-keyword">catch</span>(error)&#123;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(error)
+  &#125;
+&#125;
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+        </div></div><div id="mysearch" class="z-50 fixed inset-0 flex justify-center bg-slate-600/80 dark:bg-slate-900/90 items-start text-sm z-50 overflow-hidden lg:pt-16 lg:pb-20 hidden"><div id="mysearch-box" class="lg:max-w-screen-lg w-full flex flex-col justify-between bg-white dark:bg-slate-700 shadow-3xl dark:shadow-3xl lg:rounded-lg lg:max-h-832 min-h-320 h-full"><div class="flex items-center h-16 flex-none border-b border-slate-200 dark:border-slate-700"><div class="w-full h-full"><form class="flex items-center w-full h-full outline-none rounded-tl-lg"><label for="mysearch-input" id="mysearch-label" class="h-full w-14 mt-1 ml-1 px-4 flex items-center justify-center transition-colors duration-200 ease-in-out text-emerald-200"><div class="text-2xl text-emerald-500"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div></label><div class="relative flex-1"> <input class="flex-1 font-light h-full bg-transparent focus:text-slate-900 text-slate-500 dark:text-slate-300 placeholder-slate-400 placeholder-opacity-80 shadow-none outline-none truncate text-lg sm:text-2xl caret-color-emerald-400 leading-normalized w-full appearance-none rounded-none transition-colors duration-200 ease-in-out" id="mysearch-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search for cheatsheet" maxlength="128" type="text" enterkeyhint="go"></div> <button id="mysearch-clear" type="reset" class="items-center justify-center h-full w-14 px-4 text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 opacity-75 fill-current cursor-pointer transition-fast-out flex"><i class="icon icon-close text-xs font-bold"></i></button></form></div><div class="w-px h-8 bg-slate-100 dark:bg-slate-400/20 flex-none"></div> <button class="cancel mr-1 px-4 h-full text-slate-500 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-300"> Cancel</button></div><div class="flex flex-grow overflow-hidden lg:rounded-br-lg"><div class="relative w-full flex-none overflow-y-auto lg:w-1/2"><ul id="mysearch-list"></ul></div><div class="preview-panel shadow-inner bg-slate-100 dark:bg-slate-800 lg:block w-1/2 flex-none overflow-y-auto"></div></div></div></div><footer class="text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-slate-800 md:mt-14"></footer><div id="carbon_container"></div></body><script src="/js/main.js?_v=1705688051674"></script><script>
+        // Get all pre > code elements
+        const codeBlocks = document.querySelectorAll('pre > code');
+        const initInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path> </svg>';
+        const successInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>';
+        codeBlocks.forEach(function (codeBlock) {
+            // Create a copy button element
+            const copyButton = document.createElement('button');
+            copyButton.className = 'bg-emerald-500 p-2 text-white fadeIn shadow-xl rounded flex items-center absolute top-2 right-2';
+            copyButton.innerHTML = initInnerHTML;
+            copyButton.style.opacity = "0";
+            const parent = codeBlock.parentNode;
+
+            parent.style = "position: relative;"
+            parent.insertBefore(copyButton, codeBlock);
+
+            // Add click event listener to copy button
+            copyButton.addEventListener('click', () => {
+                navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+                    copyButton.innerHTML = successInnerHTML;
+                    setTimeout(() => {
+                        copyButton.innerHTML = initInnerHTML;
+                    }, 1000);
+                });
+            });
+
+            parent.addEventListener('mouseenter', () => {
+                copyButton.style.opacity = "1";
+            });
+            parent.addEventListener('mouseleave', () => {
+                copyButton.style.opacity = "0";
+            });
+        });
+    </script></html>

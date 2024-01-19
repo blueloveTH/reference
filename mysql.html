@@ -1,0 +1,1056 @@
+<!DOCTYPE HTML><html class="scrollbar" translate="no"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta http-equiv="content-language" content="en-gb"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="app:pageurl" content="/"><title>MySQL Cheat Sheet & Quick Reference</title><meta name="keywords" content="reference,cheatsheet,code table,snippets,linux,RDBMS,DB"><meta name="description" content="The SQL cheat sheet provides you with the most commonly used SQL statements for your reference. "><meta property="og:url" content="https://cheatsheets.zip/mysql.html"><meta property="og:title" content="MySQL Cheat Sheet & Quick Reference"><meta property="og:site_name" content="CheatSheets.zip"><meta property="og:description" content="The SQL cheat sheet provides you with the most commonly used SQL statements for your reference. "><meta property="og:image" content="https://cheatsheets.zip/assets/image/preview.png?v=h95k0j"><meta property="og:image:width" content="2276"><meta property="og:image:height" content="1240"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="MySQL Cheat Sheet & Quick Reference"><meta name="twitter:site" content="@CheatSheets.zip"><meta name="twitter:creator" content="@CheatSheets.zip"><meta name="twitter:description" content="The SQL cheat sheet provides you with the most commonly used SQL statements for your reference. "><meta name="twitter:image" content="https://cheatsheets.zip/assets/image/preview.png?v=2slmz"><link rel="icon" href="/images/favicon.png?v=1"><link rel="icon shortcut" type="image/png" href="/images/favicon.png?v=1"><link rel="canonical" href="https://cheatsheets.zip/mysql.html"><link rel="prefetch" href="https://cheatsheets.zip"><link rel="prerender" href="https://cheatsheets.zip"><link rel="alternate" href="/atom.xml" title="CheatSheets.zip" type="application/atom+xml"><link rel="stylesheet" href="/css/style.css?_v=1705688051674"><script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            let html = document.documentElement.classList;
+            html.toggle('dark')
+        }
+    </script></head><body class="bg-slate-100 dark:bg-slate-900"><header class=""><div class="max-container z-10" style="display:none"><div class="flex flex-row justify-between md:justify-start items-center py-3"><a href="/" class="flex font-medium items-center justify-center md:justify-start text-slate-800 dark:text-slate-300"><div class="hidden md:flex justify-center w-10 h-10 md:w-12 md:h-12 text-white p-2 bg-emerald-500 rounded-full mr-3 text-2xl"><div class="self-center"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M303.55291933 951.35043811c-1.84934059-3.43448917-12.68119097-22.19208477-24.04142536-41.74225521l-20.07855218-35.4016586 5.01963776-9.51089265c2.90610631-5.01963776 13.20957383-23.24885049 22.9846585-40.15710664l17.70082986-31.17459456h366.69778034l6.86897834-11.09604238c3.43448917-6.34059549 13.73795669-23.77723335 22.72046763-39.10033977 8.71831893-15.32310642 22.19208477-38.30776491 29.85363797-51.51733873 7.66155321-12.94538297 16.37987214-28.00429739 19.02178646-33.02393629 2.90610631-5.28382976 14.00214869-24.30561621 24.56980821-42.27063694 10.56765952-18.22921273 29.85363797-51.51733987 43.06321181-73.97361551 12.94538297-22.45627563 35.93004146-62.08499826 51.25314787-87.71157333 15.05891442-25.89076594 28.53268025-49.93219015 29.85363797-53.63087132 3.43448917-8.98251093 8.45412693-8.18993607 12.94538184 2.11353259 2.11353145 4.4912549 8.71831893 16.90825501 14.79472355 26.94753166 6.34059549 10.30346752 20.60693618 35.13746773 32.23136143 55.48021077s25.62657394 44.38416953 30.91040369 53.63087133l9.77508466 16.64406414-6.07640462 9.77508466c-3.43448917 5.28382976-7.13317035 11.62442525-8.71831893 14.00214869-2.90610631 4.7554469-13.73795669 23.77723335-24.83399908 43.3274038-3.96287203 7.39736121-13.47376583 23.77723335-21.13531904 36.45842432-7.39736121 12.94538297-13.47376583 24.04142535-13.47376583 24.56980821 0 .79257486-3.43448917 6.34059549-7.39736121 12.41699898-4.22706403 6.07640462-9.51089379 15.32310642-12.15280811 20.34274531-2.37772345 5.01963776-6.86897835 12.94538297-9.77508465 17.17244587-2.64191431 4.4912549-5.81221262 10.03927666-6.60478749 12.68119096-1.05676573 2.37772345-2.64191431 4.4912549-3.69868117 4.49125604s-2.64191431 2.11353145-3.43448918 4.75544576c-1.05676573 2.37772345-5.28382976 10.56765952-9.77508466 17.70082987-4.22706403 7.39736121-10.56765952 17.96502073-13.47376582 23.77723335-3.17029831 5.81221262-10.83185038 19.28597845-17.17244587 29.58944597-6.34059549 10.56765952-11.62442525 20.07855331-11.62442525 21.13531904 0 .79257486-1.58514859 3.69868117-3.69868117 5.81221263-2.11353145 2.37772345-8.71831893 13.73795669-14.79472355 25.36238307s-18.22921273 33.81651001-26.94753053 49.66799815l-16.11568128 28.26848939H307.25159936l-3.69868003-5.81221263z"></path><path d="M523.88861725 694.82050674c-31.70297856-20.60693618-68.95397774-44.11997753-70.01074347-44.11997753-.79257486 0-10.03927666-5.81221262-20.60693618-13.20957383-10.83185038-7.13317035-22.72046763-14.53053155-26.68333966-16.11568128-3.69868117-1.84934059-6.86897835-3.96287203-6.86897835-5.01963776 0-.79257486-4.7554469-4.22706403-10.56765952-7.66155321l-10.30346752-5.81221262-.79257486-98.27923172c-.52838286-54.15925419 0-99.33599744.79257486-100.3927643 1.05676573-1.32095773 27.74010539 12.94538297 59.44308395 31.96716942 31.96716942 18.75759559 69.21816861 40.42129749 82.95612529 48.61123356l25.09819108 14.26633956.264192 103.56306148c.264192 73.7094235-.52838286 103.56306147-2.64191545 103.56306261-1.58514859 0-10.56765952-5.01963776-20.07855217-11.36023438zm0-61.29242453c0-11.09604238-.79257486-12.15280811-11.09604239-18.2292116-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023325l60.23565881 34.60908486c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327574.264192 0 .52838286-5.28382976.528384-11.88861724zm0-42.27063695c0-11.09604238-.79257486-12.15280811-11.09604239-18.22921273-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023438l60.23565881 34.60908373c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327688.264192 0 .52838286-5.28382976.528384-11.88861725zm-1.84934059-54.42344619c-2.11353145-2.11353145-117.30101931-68.42559488-118.88616789-68.42559374-.52838286 0-.79257486 5.28382976-.79257487 11.62442525v11.36023324l60.23565881 34.60908487 59.97146681 34.60908488.79257373-10.83185152c.52838286-5.81221262 0-11.62442525-1.32095659-12.94538298z"></path><path d="M109.10798734 615.82725347c-3.69868117-7.39736121-10.56765952-20.34274418-15.58729841-28.26848938-7.92574407-13.47376583-49.66799929-84.80546589-61.2924234-105.41240206-7.13317035-12.15280811-6.34059549-15.85148928 6.34059548-37.77938205 24.56980821-42.00644608 41.21387122-70.27493433 45.96931812-78.99325326 7.13317035-12.41700011 49.66799929-86.12642361 81.37097671-141.34244466 14.53053155-24.56980821 40.68548835-70.27493433 58.12212622-101.18533803l32.23136143-56.27278563h229.05401685c159.30746539 0 230.37497458 1.05676573 232.75269689 2.90610631 1.84934059 1.58514859 10.56765952 15.58729728 19.55017045 31.17459456 8.71831893 15.58729728 18.75759559 33.02393515 22.45627563 38.83614777l6.34059548 10.83185152-8.9825098 14.26633955c-5.01963776 7.92574407-15.32310642 25.89076594-22.72046762 39.62872264s-13.73795669 25.62657394-14.2663407 25.89076594c-.264192.52838286-83.2203173.79257486-184.40565532.79257486l-183.6130816-.264192-9.5108938 14.53053155c-5.01963776 7.92574407-9.24670179 15.85148928-9.24670179 17.17244701 0 1.58514859-1.05676573 2.64191431-2.64191431 2.64191431-1.32095773 0-2.64191431 1.05676573-2.64191545 2.11353145 0 2.90610631-29.32525511 55.21601991-48.61123243 87.18319047-8.18993607 13.47376583-14.79472355 25.09819107-14.79472355 25.8907648 0 1.05676573-3.43448917 6.86897835-7.92574407 13.47376583-4.22706403 6.34059549-7.92574407 12.15280811-7.92574521 12.94538297 0 .52838286-2.90610631 5.54802062-6.07640349 11.09604238-3.43448917 5.28382976-9.24670179 15.05891442-12.94538296 21.6637019s-20.07855331 35.13746773-36.45842546 63.40595599-31.96716942 55.21601991-34.34489288 59.44308394c-2.64191431 4.4912549-8.18993607 14.26634069-12.94538182 21.92789276-4.4912549 7.66155321-8.18993607 14.53053155-8.18993608 15.32310642 0 2.37772345-19.28597845 30.11782883-20.87112704 30.11782884-.79257486 0-4.4912549-6.34059549-8.18993607-13.7379567z"></path><path d="M625.60233813 601.56091278c-15.85148928-10.56765952-31.17459456-21.13531904-33.81651-23.51304135-4.22706403-3.69868117-4.7554469-9.24670179-4.4912549-56.00859477.264192-39.89291463-.264192-52.3099136-3.17029832-54.95182905-1.84934059-1.84934059-21.13531904-13.73795669-43.0632118-26.4191488-21.6637019-12.68119097-41.74225408-25.09819107-44.11997753-27.21172252-4.22706403-3.43448917-4.7554469-9.51089379-4.75544689-50.72476502 0-25.62657394.52838286-47.29027584 1.58514858-48.08284956.79257486-.79257486 8.18993607 2.90610631 16.37987214 8.45412693s25.36238194 15.85148928 37.77938205 22.72046763c12.41700011 7.13317035 43.06321181 25.09819107 67.89721201 40.15710549l45.44093526 27.21172366-.52838286 103.29886948c-.52838286 66.31206229-1.84934059 103.56306147-3.43448918 103.82725347-1.32095773.264192-15.58729728-8.18993607-31.70297856-18.75759559z"></path></svg></div></div> <span class="domain text-slate-600 dark:text-slate-300 text-lg md:text-2xl">CheatSheets<span class="text-emerald-400">.zip</span></span></a><div class="md:ml-auto flex flex-wrap items-center text-base justify-center"> <button id="mysearch-trigger" type="button" class="fadeIn inline-flex h-8 items-center bg-slate-200 dark:bg-gray-900 md:dark:bg-transparent md:bg-transparent rounded-full px-2 md:px-3 lg:px-6 py-2 text-slate-700 md:hover:opacity-80"><div class="md:text-xl text-slate-700 dark:text-slate-300 md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div> <span class="hidden md:inline dark:text-slate-300">Search for cheatsheet</span> <span class="hidden md:inline dark:text-slate-300 md:ml-2 text-sm leading-5 py-0.5 px-1.5 border border-slate-400 rounded-md"><span class="font-sans">⌘</span> <span class="font-sans">K</span></span></button> <a href="https://github.com/Fechin/reference/blob/main/source/_posts/mysql.md" rel="external nofollow noreferrer" target="_blank"><img alt="GitHub Repo stars" style="height:26px;opacity:.8" src="https://img.shields.io/github/stars/Fechin/reference?style=social"></a> <a href="https://twitter.com/FechinLi" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"><div class="md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></div> <span class="hidden md:inline text-sm">Follow Me</span></button></a> <button id="darkMode" class="fadeIn inline-flex items-center justify-center flex-shrink-0 h-8 w-8 rounded-full text-gray-900 ml-1 lg:ml-4 dark:text-gray-300 bg-gray-200 dark:bg-gray-900"> <i class="icon-light text-gray-600 dark:text-gray-300 dark:hover:text-white"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M512 31.40266667c14.19946667 0 26.935296 8.14830933 31.93787733 20.447232l29.40381867 72.50466133c12.713984 31.30436267-4.456448 66.21320533-38.33856 77.96599467A70.34197333 70.34197333 0 0 1 512 206.16533333c-36.19771733 0-65.536-27.11005867-65.536-60.555264 0-7.25265067 1.41994667-14.46161067 4.17245867-21.25550933l29.425664-72.50466133C485.04285867 39.550976 497.75684267 31.40266667 512 31.40266667zm0 961.19466666c-14.221312 0-26.95714133-8.14830933-31.93787733-20.447232l-29.425664-72.50466133a56.492032 56.492032 0 0 1-4.17245867-21.25550933C446.464 844.96657067 475.80228267 817.83466667 512 817.83466667c7.86432 0 15.64125867 1.31072 23.003136 3.84477866 33.882112 11.75278933 51.052544 46.661632 38.33856 77.98784l-29.40381867 72.482816c-5.00258133 12.29892267-17.73841067 20.447232-31.93787733 20.447232zm480.59733333-480.59733333c0 14.19946667-8.14830933 26.935296-20.447232 31.93787733l-72.50466133 29.40381867c-31.30436267 12.713984-66.21320533-4.456448-77.96599467-38.33856A70.34197333 70.34197333 0 0 1 817.83466667 512c0-36.19771733 27.11005867-65.536 60.555264-65.536 7.25265067 0 14.46161067 1.41994667 21.25550933 4.17245867l72.50466133 29.425664c12.29892267 4.980736 20.447232 17.69472 20.447232 31.93787733zM31.40266667 512c0-14.221312 8.14830933-26.95714133 20.447232-31.93787733l72.50466133-29.425664c6.77205333-2.752512 13.98101333-4.17245867 21.25550933-4.17245867C179.03342933 446.464 206.16533333 475.80228267 206.16533333 512c0 7.86432-1.31072 15.64125867-3.84477866 23.003136-11.75278933 33.882112-46.661632 51.052544-77.98784 38.33856l-72.482816-29.40381867C39.550976 538.935296 31.40266667 526.19946667 31.40266667 512zM172.15214933 172.17399467c10.04885333-10.04885333 24.81629867-13.28196267 37.04968534-8.126464l72.06775466 30.45239466c31.1296 13.172736 43.66882133 49.98212267 28.00571734 82.24768a70.34197333 70.34197333 0 0 1-13.54410667 19.00544c-25.58088533 25.58088533-65.49230933 27.15374933-89.12896 3.49525334a56.492032 56.492032 0 0 1-12.10231467-17.97870934L164.04753067 209.22368c-5.177344-12.23338667-1.94423467-27.000832 8.10461866-37.04968533zm679.673856 679.673856c-10.04885333 10.04885333-24.81629867 13.28196267-37.04968533 8.10461866l-72.04590933-30.45239466a56.492032 56.492032 0 0 1-18.00055467-12.08046934c-23.63665067-23.658496-22.06378667-63.56992 3.51709867-89.15080533a70.34197333 70.34197333 0 0 1 19.00544-13.54410667c32.26555733-15.663104 69.074944-3.12388267 82.24768 28.00571734l30.45239466 72.06775466c5.15549867 12.23338667 1.92238933 26.97898667-8.126464 37.04968534zm0-679.69570134c10.04885333 10.04885333 13.28196267 24.81629867 8.126464 37.04968534l-30.45239466 72.06775466c-13.172736 31.1296-49.98212267 43.66882133-82.24768 28.00571734a70.34197333 70.34197333 0 0 1-19.00544-13.54410667c-25.58088533-25.58088533-27.15374933-65.49230933-3.49525334-89.12896 5.111808-5.15549867 11.206656-9.240576 17.97870934-12.10231467l72.04590933-30.45239466c12.23338667-5.177344 27.000832-1.94423467 37.04968533 8.10461866zM172.15214933 851.82600533c-10.04885333-10.04885333-13.28196267-24.81629867-8.10461866-37.04968533l30.45239466-72.04590933c2.83989333-6.77205333 6.946816-12.86690133 12.08046934-18.00055467 23.658496-23.63665067 63.56992-22.06378667 89.15080533 3.51709867 5.57056 5.57056 10.15808 12.01493333 13.54410667 19.00544 15.663104 32.26555733 3.12388267 69.074944-28.00571734 82.24768l-72.06775466 30.45239466c-12.23338667 5.15549867-26.97898667 1.92238933-37.04968534-8.126464zM512 752.29866667c-132.7104 0-240.29866667-107.58826667-240.29866667-240.29866667s107.58826667-240.29866667 240.29866667-240.29866667 240.29866667 107.58826667 240.29866667 240.29866667-107.58826667 240.29866667-240.29866667 240.29866667z"></path></svg></i></button> <a href="https://facebook.com/sharer/sharer.php?u=https://cheatsheets.zip/mysql.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4a66ad] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M594.74346667 51.53066667c-28.95893333 0-56.30826667 3.2192-88.48533334 16.0896-65.9616 27.34826667-98.13653333 88.48533333-98.13653333 186.6208v94.91946666h-91.70026667v157.66186667h91.70026667v455.28853333h186.6208v-455.28853333h127.09546667l17.696-157.66186667h-144.7936v-70.7872c0-22.52266667 1.60853333-38.61013333 8.04266666-46.65706666 8.04266667-14.47786667 24.13226667-20.91413333 49.872-20.91413334h85.26613334v-157.66186666h-143.184z"></path></svg></span> <span class="hidden">Facebook</span></button></a> <a href="https://twitter.com/intent/tweet/?text=The%20SQL%20cheat%20sheet%20provides%20you%20with%20the%20most%20commonly%20used%20SQL%20statements%20for%20your%20reference.%20&url=https://cheatsheets.zip/mysql.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></span> <span class="hidden">Twitter</span></button></a></div></div></div></header><div class="mx-auto flex flex-wrap md:py-5 flex-col md:flex-row items-center"><div class="flex flex-col w-full mx-auto text-center my-8"><div class="max-container w-full"><h1 class="text-5xl mb-4"> <span class="text-slate-700 dark:text-slate-300 font-light">MySQL</span> <span class="text-slate-400 dark:text-slate-500 font-extralight hidden md:inline">cheatsheet</span></h1><div class="lg:w-3/5 mx-auto intro leading-relaxed text-slate-600"><p>The SQL cheat sheet provides you with the most commonly used SQL statements for your reference.</p></div></div></div><div id="mdLayout" class="mdLayout w-full max-container"> 
+        <div class="h2-wrap cols-2">
+<h2 id="getting-started"><a class="h-anchor" href="#getting-started">#</a>Getting Started</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="connect-mysql"><a class="h-anchor" href="#connect-mysql">#</a>Connect MySQL</h3>
+<div class="section">
+<pre><code class="hljs">mysql -u &lt;user&gt; -<span class="hljs-selector-tag">p</span>
+
+mysql <span class="hljs-selector-attr">[db_name]</span>
+
+mysql -h &lt;host&gt; -<span class="hljs-selector-tag">P</span> &lt;port&gt; -u &lt;user&gt; -<span class="hljs-selector-tag">p</span> <span class="hljs-selector-attr">[db_name]</span>
+
+mysql -h &lt;host&gt; -u &lt;user&gt; -<span class="hljs-selector-tag">p</span> <span class="hljs-selector-attr">[db_name]</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="commons"><a class="h-anchor" href="#commons">#</a>Commons</h3>
+<div class="section">
+<h4 id="database"><a class="h-anchor" href="#database">#</a>Database</h4>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CREATE DATABASE</code> db <code>;</code></td>
+<td>Create database</td>
+</tr>
+<tr>
+<td><code>SHOW DATABASES;</code></td>
+<td>List databases</td>
+</tr>
+<tr>
+<td><code>USE</code> db<code>;</code></td>
+<td>Switch to db</td>
+</tr>
+<tr>
+<td><code>CONNECT</code> db <code>;</code></td>
+<td>Switch to db</td>
+</tr>
+<tr>
+<td><code>DROP DATABASE</code> db<code>;</code></td>
+<td>Delete db</td>
+</tr>
+</tbody>
+</table>
+<h4 id="table"><a class="h-anchor" href="#table">#</a>Table</h4>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SHOW TABLES;</code></td>
+<td>List tables for current db</td>
+</tr>
+<tr>
+<td><code>SHOW FIELDS FROM</code> t<code>;</code></td>
+<td>List fields for a table</td>
+</tr>
+<tr>
+<td><code>DESC</code> t<code>;</code></td>
+<td>Show table structure</td>
+</tr>
+<tr>
+<td><code>SHOW CREATE TABLE </code>t<code>;</code></td>
+<td>Show create table sql</td>
+</tr>
+<tr>
+<td><code>TRUNCATE TABLE </code>t<code>;</code></td>
+<td>Remove all data in a table</td>
+</tr>
+<tr>
+<td><code>DROP TABLE </code>t<code>;</code></td>
+<td>Delete table</td>
+</tr>
+</tbody>
+</table>
+<h4 id="process"><a class="h-anchor" href="#process">#</a>Process</h4>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>show processlist;</code></td>
+<td>List processes</td>
+</tr>
+<tr>
+<td><code>kill</code> pid<code>;</code></td>
+<td>kill process</td>
+</tr>
+</tbody>
+</table>
+<h4 id="other"><a class="h-anchor" href="#other">#</a>Other</h4>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>exit</code> or <code>\q</code></td>
+<td>Exit MySQL session</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="backups"><a class="h-anchor" href="#backups">#</a>Backups</h3>
+<div class="section">
+<p>Create a backup</p>
+<pre><code class="hljs language-sql">mysqldump <span class="hljs-operator">-</span>u <span class="hljs-keyword">user</span> <span class="hljs-operator">-</span>p db_name <span class="hljs-operator">&gt;</span> db.sql
+</code></pre>
+<p>Export db without schema</p>
+<pre><code class="hljs wrap">mysqldump -u <span class="hljs-keyword">user</span> <span class="hljs-title">-p</span> db_name --<span class="hljs-attr">no-data=</span><span class="hljs-literal">true</span> --<span class="hljs-attr">add-drop-table=</span><span class="hljs-literal">false</span> &gt; db.sql
+</code></pre>
+<p>Restore a backup</p>
+<pre><code class="hljs">mysql -u <span class="hljs-keyword">user</span> <span class="hljs-title">-p</span> db_name <span class="hljs-tag">&lt; db.sql
+</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="mysql-examples"><a class="h-anchor" href="#mysql-examples">#</a>MySQL Examples</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="managing-tables"><a class="h-anchor" href="#managing-tables">#</a>Managing tables</h3>
+<div class="section">
+<p>Create a new table with three columns</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> t (
+     id    <span class="hljs-type">INT</span>,
+     name  <span class="hljs-type">VARCHAR</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,
+     price <span class="hljs-type">INT</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-number">0</span>
+     <span class="hljs-keyword">PRIMARY</span> KEY(id)
+);
+</code></pre>
+<p>Delete the table from the database</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">TABLE</span> t ;
+</code></pre>
+<p>Add a new column to the table</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> t <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">column</span>;
+</code></pre>
+<p>Drop column c from the table</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> t <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">COLUMN</span> c ;
+</code></pre>
+<p>Add a constraint</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> t <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">constraint</span>;
+</code></pre>
+<p>Drop a constraint</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> t <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">constraint</span>;
+</code></pre>
+<p>Rename a table from t1 to t2</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> t1 RENAME <span class="hljs-keyword">TO</span> t2;
+</code></pre>
+<p>Rename column c1 to c2</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> t1 RENAME c1 <span class="hljs-keyword">TO</span> c2 ;
+</code></pre>
+<p>Remove all data in a table</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">TRUNCATE</span> <span class="hljs-keyword">TABLE</span> t;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="querying-data-from-a-table"><a class="h-anchor" href="#querying-data-from-a-table">#</a>Querying data from a table</h3>
+<div class="section">
+<p>Query data in columns c1, c2 from a table</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 <span class="hljs-keyword">FROM</span> t
+</code></pre>
+<p>Query all rows and columns from a table</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> t
+</code></pre>
+<p>Query data and filter rows with a condition</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 <span class="hljs-keyword">FROM</span> t
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">condition</span>
+</code></pre>
+<p>Query distinct rows from a table</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> c1 <span class="hljs-keyword">FROM</span> t
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">condition</span>
+</code></pre>
+<p>Sort the result set in ascending or descending order</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 <span class="hljs-keyword">FROM</span> t
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> c1 <span class="hljs-keyword">ASC</span> [<span class="hljs-keyword">DESC</span>]
+</code></pre>
+<p>Skip offset of rows and return the next n rows</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 <span class="hljs-keyword">FROM</span> t
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> c1 
+LIMIT n <span class="hljs-keyword">OFFSET</span> <span class="hljs-keyword">offset</span>
+</code></pre>
+<p>Group rows using an aggregate function</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, aggregate(c2)
+<span class="hljs-keyword">FROM</span> t
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> c1
+</code></pre>
+<p>Filter groups using HAVING clause</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, aggregate(c2)
+<span class="hljs-keyword">FROM</span> t
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> c1
+<span class="hljs-keyword">HAVING</span> <span class="hljs-keyword">condition</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="querying-from-multiple-tables"><a class="h-anchor" href="#querying-from-multiple-tables">#</a>Querying from multiple tables</h3>
+<div class="section">
+<p>Inner join t1 and t2</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 
+<span class="hljs-keyword">FROM</span> t1
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> t2 <span class="hljs-keyword">ON</span> <span class="hljs-keyword">condition</span>
+</code></pre>
+<p>Left join t1 and t1</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 
+<span class="hljs-keyword">FROM</span> t1
+<span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> t2 <span class="hljs-keyword">ON</span> <span class="hljs-keyword">condition</span>
+</code></pre>
+<p>Right join t1 and t2</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 
+<span class="hljs-keyword">FROM</span> t1
+<span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">JOIN</span> t2 <span class="hljs-keyword">ON</span> <span class="hljs-keyword">condition</span>
+</code></pre>
+<p>Perform full outer join</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 
+<span class="hljs-keyword">FROM</span> t1
+<span class="hljs-keyword">FULL</span> <span class="hljs-keyword">OUTER</span> <span class="hljs-keyword">JOIN</span> t2 <span class="hljs-keyword">ON</span> <span class="hljs-keyword">condition</span>
+</code></pre>
+<p>Produce a Cartesian product of rows in tables</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 
+<span class="hljs-keyword">FROM</span> t1
+<span class="hljs-keyword">CROSS</span> <span class="hljs-keyword">JOIN</span> t2
+</code></pre>
+<p>Another way to perform cross join</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 
+<span class="hljs-keyword">FROM</span> t1, t2
+</code></pre>
+<p>Join t1 to itself using INNER JOIN clause</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2
+<span class="hljs-keyword">FROM</span> t1 A
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> t1 B <span class="hljs-keyword">ON</span> <span class="hljs-keyword">condition</span>
+</code></pre>
+<p>Using SQL Operators
+Combine rows from two queries</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 <span class="hljs-keyword">FROM</span> t1
+<span class="hljs-keyword">UNION</span> [<span class="hljs-keyword">ALL</span>]
+<span class="hljs-keyword">SELECT</span> c1, c2 <span class="hljs-keyword">FROM</span> t2
+</code></pre>
+<p>Return the intersection of two queries</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 <span class="hljs-keyword">FROM</span> t1
+<span class="hljs-keyword">INTERSECT</span>
+<span class="hljs-keyword">SELECT</span> c1, c2 <span class="hljs-keyword">FROM</span> t2
+</code></pre>
+<p>Subtract a result set from another result set</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 <span class="hljs-keyword">FROM</span> t1
+MINUS
+<span class="hljs-keyword">SELECT</span> c1, c2 <span class="hljs-keyword">FROM</span> t2
+</code></pre>
+<p>Query rows using pattern matching %, _</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 <span class="hljs-keyword">FROM</span> t1
+<span class="hljs-keyword">WHERE</span> c1 [<span class="hljs-keyword">NOT</span>] <span class="hljs-keyword">LIKE</span> <span class="hljs-keyword">pattern</span>
+</code></pre>
+<p>Query rows in a list</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 <span class="hljs-keyword">FROM</span> t
+<span class="hljs-keyword">WHERE</span> c1 [<span class="hljs-keyword">NOT</span>] <span class="hljs-keyword">IN</span> value_list
+</code></pre>
+<p>Query rows between two values</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 <span class="hljs-keyword">FROM</span> t
+<span class="hljs-keyword">WHERE</span>  c1 <span class="hljs-keyword">BETWEEN</span> low <span class="hljs-keyword">AND</span> high
+</code></pre>
+<p>Check if values in a table is NULL or not</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">SELECT</span> c1, c2 <span class="hljs-keyword">FROM</span> t
+<span class="hljs-keyword">WHERE</span>  c1 <span class="hljs-keyword">IS</span> [<span class="hljs-keyword">NOT</span>] <span class="hljs-keyword">NULL</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="using-sql-constraints"><a class="h-anchor" href="#using-sql-constraints">#</a>Using SQL constraints</h3>
+<div class="section">
+<p>Set c1 and c2 as a primary key</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> t(
+    c1 <span class="hljs-type">INT</span>, c2 <span class="hljs-type">INT</span>, c3 <span class="hljs-type">VARCHAR</span>,
+    <span class="hljs-keyword">PRIMARY</span> KEY (c1,c2)
+);
+</code></pre>
+<p>Set c2 column as a foreign key</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> t1(
+    c1 <span class="hljs-type">INT</span> <span class="hljs-keyword">PRIMARY</span> KEY,  
+    c2 <span class="hljs-type">INT</span>,
+    <span class="hljs-keyword">FOREIGN</span> KEY (c2) <span class="hljs-keyword">REFERENCES</span> t2(c2)
+);
+</code></pre>
+<p>Make the values in c1 and c2 unique</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> t(
+    c1 <span class="hljs-type">INT</span>, c1 <span class="hljs-type">INT</span>,
+    <span class="hljs-keyword">UNIQUE</span>(c2,c3)
+);
+</code></pre>
+<p>Ensure c1 &gt; 0 and values in c1 &gt;= c2</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> t(
+  c1 <span class="hljs-type">INT</span>, c2 <span class="hljs-type">INT</span>,
+  <span class="hljs-keyword">CHECK</span>(c1<span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span> <span class="hljs-keyword">AND</span> c1 <span class="hljs-operator">&gt;=</span> c2)
+);
+</code></pre>
+<p>Set values in c2 column not NULL</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> t(
+     c1 <span class="hljs-type">INT</span> <span class="hljs-keyword">PRIMARY</span> KEY,
+     c2 <span class="hljs-type">VARCHAR</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>
+);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="modifying-data"><a class="h-anchor" href="#modifying-data">#</a>Modifying Data</h3>
+<div class="section">
+<p>Insert one row into a table</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> t(column_list)
+<span class="hljs-keyword">VALUES</span>(value_list);
+</code></pre>
+<p>Insert multiple rows into a table</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> t(column_list)
+<span class="hljs-keyword">VALUES</span> (value_list), 
+       (value_list), …;
+</code></pre>
+<p>Insert rows from t2 into t1</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> t1(column_list)
+<span class="hljs-keyword">SELECT</span> column_list
+<span class="hljs-keyword">FROM</span> t2;
+</code></pre>
+<p>Update new value in the column c1 for all rows</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">UPDATE</span> t
+<span class="hljs-keyword">SET</span> c1 <span class="hljs-operator">=</span> new_value;
+</code></pre>
+<p>Update values in the column c1, c2 that match the condition</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">UPDATE</span> t
+<span class="hljs-keyword">SET</span> c1 <span class="hljs-operator">=</span> new_value, 
+        c2 <span class="hljs-operator">=</span> new_value
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">condition</span>;
+</code></pre>
+<p>Delete all data in a table</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> t;
+</code></pre>
+<p>Delete subset of rows in a table</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> t
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">condition</span>;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="managing-views"><a class="h-anchor" href="#managing-views">#</a>Managing Views</h3>
+<div class="section">
+<p>Create a new view that consists  of c1 and c2</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">VIEW</span> v(c1,c2) 
+<span class="hljs-keyword">AS</span>
+<span class="hljs-keyword">SELECT</span> c1, c2
+<span class="hljs-keyword">FROM</span> t;
+</code></pre>
+<p>Create a new view with check option</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">VIEW</span> v(c1,c2) 
+<span class="hljs-keyword">AS</span>
+<span class="hljs-keyword">SELECT</span> c1, c2
+<span class="hljs-keyword">FROM</span> t;
+<span class="hljs-keyword">WITH</span> [<span class="hljs-keyword">CASCADED</span> <span class="hljs-operator">|</span> <span class="hljs-keyword">LOCAL</span>] <span class="hljs-keyword">CHECK</span> OPTION;
+</code></pre>
+<p>Create a recursive view</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">RECURSIVE</span> <span class="hljs-keyword">VIEW</span> v 
+<span class="hljs-keyword">AS</span>
+<span class="hljs-keyword">select</span><span class="hljs-operator">-</span>statement <span class="hljs-comment">-- anchor part</span>
+<span class="hljs-keyword">UNION</span> [<span class="hljs-keyword">ALL</span>]
+<span class="hljs-keyword">select</span><span class="hljs-operator">-</span>statement; <span class="hljs-comment">-- recursive part</span>
+</code></pre>
+<p>Create a temporary view</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE</span> TEMPORARY <span class="hljs-keyword">VIEW</span> v 
+<span class="hljs-keyword">AS</span>
+<span class="hljs-keyword">SELECT</span> c1, c2
+<span class="hljs-keyword">FROM</span> t;
+</code></pre>
+<p>Delete a view</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">VIEW</span> view_name;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="managing-triggers"><a class="h-anchor" href="#managing-triggers">#</a>Managing triggers</h3>
+<div class="section">
+<p>Create or modify a trigger</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">OR</span> MODIFY <span class="hljs-keyword">TRIGGER</span> trigger_name
+<span class="hljs-keyword">WHEN</span> EVENT
+<span class="hljs-keyword">ON</span> table_name TRIGGER_TYPE
+<span class="hljs-keyword">EXECUTE</span> stored_procedure;
+</code></pre>
+<h4 id="when"><a class="h-anchor" href="#when">#</a>WHEN</h4>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BEFORE</code></td>
+<td>invoke before the event occurs</td>
+</tr>
+<tr>
+<td><code>AFTER</code></td>
+<td>invoke after the event occurs</td>
+</tr>
+</tbody>
+</table>
+<h4 id="event"><a class="h-anchor" href="#event">#</a>EVENT</h4>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INSERT</code></td>
+<td>invoke for INSERT</td>
+</tr>
+<tr>
+<td><code>UPDATE</code></td>
+<td>invoke for UPDATE</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>invoke for DELETE</td>
+</tr>
+</tbody>
+</table>
+<h4 id="trigger-type"><a class="h-anchor" href="#trigger-type">#</a>TRIGGER_TYPE</h4>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FOR EACH ROW</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>FOR EACH STATEMENT</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="managing-indexes"><a class="h-anchor" href="#managing-indexes">#</a>Managing indexes</h3>
+<div class="section">
+<p>Create an index on c1 and c2 of the t table</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE</span> INDEX idx_name 
+<span class="hljs-keyword">ON</span> t(c1,c2);
+</code></pre>
+<p>Create a unique index on c3, c4 of the t table</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">UNIQUE</span> INDEX idx_name
+<span class="hljs-keyword">ON</span> t(c3,c4)
+</code></pre>
+<p>Drop an index</p>
+<pre><code class="hljs language-sql"><span class="hljs-keyword">DROP</span> INDEX idx_name;
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="mysql-data-types"><a class="h-anchor" href="#mysql-data-types">#</a>MySQL Data Types</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="strings"><a class="h-anchor" href="#strings">#</a>Strings</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CHAR</code></td>
+<td>String (0 - 255)</td>
+</tr>
+<tr>
+<td><code>VARCHAR</code></td>
+<td>String (0 - 255)</td>
+</tr>
+<tr>
+<td><code>TINYTEXT</code></td>
+<td>String (0 - 255)</td>
+</tr>
+<tr>
+<td><code>TEXT</code></td>
+<td>String (0 - 65535)</td>
+</tr>
+<tr>
+<td><code>BLOB</code></td>
+<td>String (0 - 65535)</td>
+</tr>
+<tr>
+<td><code>MEDIUMTEXT</code></td>
+<td>String (0 - 16777215)</td>
+</tr>
+<tr>
+<td><code>MEDIUMBLOB</code></td>
+<td>String (0 - 16777215)</td>
+</tr>
+<tr>
+<td><code>LONGTEXT</code></td>
+<td>String (0 - 429496­7295)</td>
+</tr>
+<tr>
+<td><code>LONGBLOB</code></td>
+<td>String (0 - 429496­7295)</td>
+</tr>
+<tr>
+<td><code>ENUM</code></td>
+<td>One of preset options</td>
+</tr>
+<tr>
+<td><code>SET</code></td>
+<td>Selection of preset options</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="date-time"><a class="h-anchor" href="#date-time">#</a>Date &amp; time</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DATE     </code></td>
+<td>yyyy-MM-dd</td>
+</tr>
+<tr>
+<td><code>TIME     </code></td>
+<td>hh:mm:ss</td>
+</tr>
+<tr>
+<td><code>DATETIME </code></td>
+<td>yyyy-MM-dd hh:mm:ss</td>
+</tr>
+<tr>
+<td><code>TIMESTAMP</code></td>
+<td>yyyy-MM-dd hh:mm:ss</td>
+</tr>
+<tr>
+<td><code>YEAR     </code></td>
+<td>yyyy</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="numeric"><a class="h-anchor" href="#numeric">#</a>Numeric</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TINYINT x</code></td>
+<td>Integer (-128 to 127)</td>
+</tr>
+<tr>
+<td><code>SMALLINT x</code></td>
+<td>Integer (-32768 to 32767)</td>
+</tr>
+<tr>
+<td><code>MEDIUMINT x</code></td>
+<td>Integer (-8388608 to 8388607)</td>
+</tr>
+<tr>
+<td><code>INT x</code></td>
+<td>Integer (-2147­483648 to 214748­3647)</td>
+</tr>
+<tr>
+<td><code>BIGINT x</code></td>
+<td>Integer (-9223­372­036­854­775808 to 922337­203­685­477­5807)</td>
+</tr>
+<tr>
+<td><code>FLOAT</code></td>
+<td>Decimal (precise to 23 digits)</td>
+</tr>
+<tr>
+<td><code>DOUBLE</code></td>
+<td>Decimal (24 to 53 digits)</td>
+</tr>
+<tr>
+<td><code>DECIMAL</code></td>
+<td>&quot;­DOU­BLE­&quot; stored as string</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="mysql-functions-operators"><a class="h-anchor" href="#mysql-functions-operators">#</a>MySQL Functions &amp; Operators</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap row-span-2">
+<h3 id="strings-2"><a class="h-anchor" href="#strings-2">#</a>Strings</h3>
+<div class="section">
+<ul class="cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_ascii" data-tooltip="Return numeric value of left-most character">ASCII()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_bin" data-tooltip="Return a string containing binary representation of a number">BIN()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_bit-length" data-tooltip="Return length of argument in bits">BIT_LENGTH()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_char" data-tooltip="Return the character for each integer passed">CHAR()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_character-length" data-tooltip="Synonym for CHAR_LENGTH()">CHARACTER_LENGTH()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_char-length" data-tooltip="Return number of characters in argument">CHAR_LENGTH()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_concat" data-tooltip="Return concatenated string">CONCAT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_concat-ws" data-tooltip="Return concatenate with separator">CONCAT_WS()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_elt" data-tooltip="Return string at index number">ELT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_export-set" data-tooltip="Return a string such that for every bit set in the value bits, you get an on string and for every unset bit, you get an off string">EXPORT_SET()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_field" data-tooltip="Index (position) of first argument in subsequent arguments">FIELD()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_find-in-set" data-tooltip="Index (position) of first argument within second argument">FIND_IN_SET()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_format" data-tooltip="Return a number formatted to specified number of decimal places">FORMAT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_from-base64" data-tooltip="Decode base64 encoded string and return result">FROM_BASE64()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_hex" data-tooltip="Hexadecimal representation of decimal or string value">HEX()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_insert" data-tooltip="Insert substring at specified position up to specified number of characters">INSERT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_instr" data-tooltip="Return the index of the first occurrence of substring">INSTR()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_lcase" data-tooltip="Synonym for LOWER()">LCASE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_left" data-tooltip="Return the leftmost number of characters as specified">LEFT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_length" data-tooltip="Return the length of a string in bytes">LENGTH()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-comparison-functions.html#operator_like" data-tooltip="Simple pattern matching">LIKE</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_load-file" data-tooltip="Load the named file">LOAD_FILE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_locate" data-tooltip="Return the position of the first occurrence of substring">LOCATE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_lower" data-tooltip="Return the argument in lowercase">LOWER()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_lpad" data-tooltip="Return the string argument, left-padded with the specified string">LPAD()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_ltrim" data-tooltip="Remove leading spaces">LTRIM()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_make-set" data-tooltip="Return a set of comma-separated strings that have the corresponding bit in bits set">MAKE_SET()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/fulltext-search.html#function_match" data-tooltip="Perform full-text search">MATCH</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_mid" data-tooltip="Return a substring starting from the specified position">MID()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-comparison-functions.html#operator_not-like" data-tooltip="Negation of simple pattern matching">NOT LIKE</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/regexp.html#operator_not-regexp" data-tooltip="Negation of REGEXP">NOT REGEXP</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_oct" data-tooltip="Return a string containing octal representation of a number">OCT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_octet-length" data-tooltip="Synonym for LENGTH()">OCTET_LENGTH()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_ord" data-tooltip="Return character code for leftmost character of the argument">ORD()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_position" data-tooltip="Synonym for LOCATE()">POSITION()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_quote" data-tooltip="Escape the argument for use in an SQL statement">QUOTE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/regexp.html#operator_regexp" data-tooltip="Whether string matches regular expression">REGEXP</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/regexp.html#function_regexp-instr" data-tooltip="Starting index of substring matching regular expression">REGEXP_INSTR()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/regexp.html#function_regexp-like" data-tooltip="Whether string matches regular expression">REGEXP_LIKE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/regexp.html#function_regexp-replace" data-tooltip="Replace substrings matching regular expression">REGEXP_REPLACE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/regexp.html#function_regexp-substr" data-tooltip="Return substring matching regular expression">REGEXP_SUBSTR()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_repeat" data-tooltip="Repeat a string the specified number of times">REPEAT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_replace" data-tooltip="Replace occurrences of a specified string">REPLACE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_reverse" data-tooltip="Reverse the characters in a string">REVERSE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_right" data-tooltip="Return the specified rightmost number of characters">RIGHT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/regexp.html#operator_regexp" data-tooltip="Whether string matches regular expression">RLIKE</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_rpad" data-tooltip="Append string the specified number of times">RPAD()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_rtrim" data-tooltip="Remove trailing spaces">RTRIM()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_soundex" data-tooltip="Return a soundex string">SOUNDEX()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#operator_sounds-like" data-tooltip="Compare sounds">SOUNDS LIKE</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_space" data-tooltip="Return a string of the specified number of spaces">SPACE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-comparison-functions.html#function_strcmp" data-tooltip="Compare two strings">STRCMP()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_substr" data-tooltip="Return the substring as specified">SUBSTR()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_substring" data-tooltip="Return the substring as specified">SUBSTRING()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_substring-index" data-tooltip="Return a substring from a string before the specified number of occurrences of the delimiter">SUBSTRING_INDEX()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_to-base64" data-tooltip="Return the argument converted to a base-64 string">TO_BASE64()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_trim" data-tooltip="Remove leading and trailing spaces">TRIM()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_ucase" data-tooltip="Synonym for UPPER()">UCASE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_unhex" data-tooltip="Return a string containing hex representation of a number">UNHEX()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_upper" data-tooltip="Convert to uppercase">UPPER()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_weight-string" data-tooltip="Return the weight string for a string">WEIGHT_STRING()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="date-and-time"><a class="h-anchor" href="#date-and-time">#</a>Date and Time </h3>
+<div class="section">
+<ul class="cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_adddate" data-tooltip="Add time values (intervals) to a date value">ADDDATE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_addtime" data-tooltip="Add time">ADDTIME()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_convert-tz" data-tooltip="Convert from one time zone to another">CONVERT_TZ()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_curdate" data-tooltip="Return the current date">CURDATE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_current-date" data-tooltip="Synonyms for CURDATE()">CURRENT_DATE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_current-time" data-tooltip="Synonyms for CURTIME()">CURRENT_TIME()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_current-timestamp" data-tooltip="Synonyms for NOW()">CURRENT_TIMESTAMP()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_curtime" data-tooltip="Return the current time">CURTIME()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_date" data-tooltip="Extract the date part of a date or datetime expression">DATE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_date-add" data-tooltip="Add time values (intervals) to a date value">DATE_ADD()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_date-format" data-tooltip="Format date as specified">DATE_FORMAT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_date-sub" data-tooltip="Subtract a time value (interval) from a date">DATE_SUB()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_datediff" data-tooltip="Subtract two dates">DATEDIFF()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_day" data-tooltip="Synonym for DAYOFMONTH()">DAY()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_dayname" data-tooltip="Return the name of the weekday">DAYNAME()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_dayofmonth" data-tooltip="Return the day of the month (0-31)">DAYOFMONTH()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_dayofweek" data-tooltip="Return the weekday index of the argument">DAYOFWEEK()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_dayofyear" data-tooltip="Return the day of the year (1-366)">DAYOFYEAR()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_extract" data-tooltip="Extract part of a date">EXTRACT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_from-days" data-tooltip="Convert a day number to a date">FROM_DAYS()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_from-unixtime" data-tooltip="Format Unix timestamp as a date">FROM_UNIXTIME()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_get-format" data-tooltip="Return a date format string">GET_FORMAT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_hour" data-tooltip="Extract the hour">HOUR()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_last-day" data-tooltip="Return the last day of the month for the argument">LAST_DAY</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_localtime" data-tooltip="Synonym for NOW()">LOCALTIME()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_localtimestamp" data-tooltip="Synonym for NOW()">LOCALTIMESTAMP()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_makedate" data-tooltip="Create a date from the year and day of year">MAKEDATE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_maketime" data-tooltip="Create time from hour, minute, second">MAKETIME()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_microsecond" data-tooltip="Return the microseconds from argument">MICROSECOND()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_minute" data-tooltip="Return the minute from the argument">MINUTE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_month" data-tooltip="Return the month from the date passed">MONTH()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_monthname" data-tooltip="Return the name of the month">MONTHNAME()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_now" data-tooltip="Return the current date and time">NOW()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_period-add" data-tooltip="Add a period to a year-month">PERIOD_ADD()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_period-diff" data-tooltip="Return the number of months between periods">PERIOD_DIFF()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_quarter" data-tooltip="Return the quarter from a date argument">QUARTER()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_sec-to-time" data-tooltip="Converts seconds to 'hh:mm:ss' format">SEC_TO_TIME()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_second" data-tooltip="Return the second (0-59)">SECOND()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_str-to-date" data-tooltip="Convert a string to a date">STR_TO_DATE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_subdate" data-tooltip="Synonym for DATE_SUB() when invoked with three arguments">SUBDATE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_subtime" data-tooltip="Subtract times">SUBTIME()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_sysdate" data-tooltip="Return the time at which the function executes">SYSDATE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_time" data-tooltip="Extract the time portion of the expression passed">TIME()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_time-format" data-tooltip="Format as time">TIME_FORMAT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_time-to-sec" data-tooltip="Return the argument converted to seconds">TIME_TO_SEC()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_timediff" data-tooltip="Subtract time">TIMEDIFF()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_timestamp" data-tooltip="With a single argument, this function returns the date or datetime expression; with two arguments, the sum of the arguments">TIMESTAMP()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_timestampadd" data-tooltip="Add an interval to a datetime expression">TIMESTAMPADD()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_timestampdiff" data-tooltip="Subtract an interval from a datetime expression">TIMESTAMPDIFF()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_to-days" data-tooltip="Return the date argument converted to days">TO_DAYS()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_to-seconds" data-tooltip="Return the date or datetime argument converted to seconds since Year 0">TO_SECONDS()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_unix-timestamp" data-tooltip="Return a Unix timestamp">UNIX_TIMESTAMP()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_utc-date" data-tooltip="Return the current UTC date">UTC_DATE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_utc-time" data-tooltip="Return the current UTC time">UTC_TIME()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_utc-timestamp" data-tooltip="Return the current UTC date and time">UTC_TIMESTAMP()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_week" data-tooltip="Return the week number">WEEK()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_weekday" data-tooltip="Return the weekday index">WEEKDAY()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_weekofyear" data-tooltip="Return the calendar week of the date (1-53)">WEEKOFYEAR()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_year" data-tooltip="Return the year">YEAR()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_yearweek" data-tooltip="Return the year and week">YEARWEEK()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_get-format" data-tooltip="'%m.%d.%Y'">GET_FORMAT()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="numeric-2"><a class="h-anchor" href="#numeric-2">#</a>Numeric</h3>
+<div class="section">
+<ul class="cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/arithmetic-functions.html#operator_mod" data-tooltip="Modulo operator">%, MOD</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/arithmetic-functions.html#operator_times" data-tooltip="Multiplication operator">*</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/arithmetic-functions.html#operator_plus" data-tooltip="Addition operator">+</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/arithmetic-functions.html#operator_minus" data-tooltip="Minus operator">-</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/arithmetic-functions.html#operator_unary-minus" data-tooltip="Change the sign of the argument">-</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/arithmetic-functions.html#operator_divide" data-tooltip="Division operator">/</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_abs" data-tooltip="Return the absolute value">ABS()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_acos" data-tooltip="Return the arc cosine">ACOS()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_asin" data-tooltip="Return the arc sine">ASIN()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_atan" data-tooltip="Return the arc tangent">ATAN()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_atan2" data-tooltip="Return the arc tangent of the two arguments">ATAN2(), ATAN()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_ceil" data-tooltip="Return the smallest integer value not less than the argument">CEIL()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_ceiling" data-tooltip="Return the smallest integer value not less than the argument">CEILING()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_conv" data-tooltip="Convert numbers between different number bases">CONV()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_cos" data-tooltip="Return the cosine">COS()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_cot" data-tooltip="Return the cotangent">COT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_crc32" data-tooltip="Compute a cyclic redundancy check value">CRC32()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_degrees" data-tooltip="Convert radians to degrees">DEGREES()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/arithmetic-functions.html#operator_div" data-tooltip="Integer division">DIV</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_exp" data-tooltip="Raise to the power of">EXP()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_floor" data-tooltip="Return the largest integer value not greater than the argument">FLOOR()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_ln" data-tooltip="Return the natural logarithm of the argument">LN()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_log" data-tooltip="Return the natural logarithm of the first argument">LOG()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_log10" data-tooltip="Return the base-10 logarithm of the argument">LOG10()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_log2" data-tooltip="Return the base-2 logarithm of the argument">LOG2()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_mod" data-tooltip="Return the remainder">MOD()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_pi" data-tooltip="Return the value of pi">PI()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_pow" data-tooltip="Return the argument raised to the specified power">POW()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_power" data-tooltip="Return the argument raised to the specified power">POWER()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_radians" data-tooltip="Return argument converted to radians">RADIANS()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_rand" data-tooltip="Return a random floating-point value">RAND()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_round" data-tooltip="Round the argument">ROUND()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_sign" data-tooltip="Return the sign of the argument">SIGN()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_sin" data-tooltip="Return the sine of the argument">SIN()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_sqrt" data-tooltip="Return the square root of the argument">SQRT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_tan" data-tooltip="Return the tangent of the argument">TAN()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_truncate" data-tooltip="Truncate to specified number of decimal places">TRUNCATE()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="aggregate"><a class="h-anchor" href="#aggregate">#</a>Aggregate</h3>
+<div class="section">
+<ul class="cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_avg" data-tooltip="Return the average value of the argument">AVG()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_bit-and" data-tooltip="Return bitwise AND">BIT_AND()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_bit-or" data-tooltip="Return bitwise OR">BIT_OR()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_bit-xor" data-tooltip="Return bitwise XOR">BIT_XOR()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_count" data-tooltip="Return a count of the number of rows returned">COUNT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_count-distinct" data-tooltip="Return the count of a number of different values">COUNT(DISTINCT)</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_group-concat" data-tooltip="Return a concatenated string">GROUP_CONCAT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_json-arrayagg" data-tooltip="Return result set as a single JSON array">JSON_ARRAYAGG()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_json-objectagg" data-tooltip="Return result set as a single JSON object">JSON_OBJECTAGG()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_max" data-tooltip="Return the maximum value">MAX()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_min" data-tooltip="Return the minimum value">MIN()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_std" data-tooltip="Return the population standard deviation">STD()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_stddev" data-tooltip="Return the population standard deviation">STDDEV()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_stddev-pop" data-tooltip="Return the population standard deviation">STDDEV_POP()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_stddev-samp" data-tooltip="Return the sample standard deviation">STDDEV_SAMP()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_sum" data-tooltip="Return the sum">SUM()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_var-pop" data-tooltip="Return the population standard variance">VAR_POP()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_var-samp" data-tooltip="Return the sample variance">VAR_SAMP()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_variance" data-tooltip="Return the population standard variance">VARIANCE()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap row-span-4">
+<h3 id="json"><a class="h-anchor" href="#json">#</a>JSON</h3>
+<div class="section">
+<ul class="cols-1">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#operator_json-column-path" data-tooltip="Return value from JSON column after evaluating path; equivalent to JSON_EXTRACT().">-&gt;</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#operator_json-inline-path" data-tooltip="Return value from JSON column after evaluating path and unquoting the result; equivalent to JSON_UNQUOTE(JSON_EXTRACT()).">-&gt;&gt;</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-creation-functions.html#function_json-array" data-tooltip="Create JSON array">JSON_ARRAY()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-modification-functions.html#function_json-array-append" data-tooltip="Append data to JSON document">JSON_ARRAY_APPEND()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-modification-functions.html#function_json-array-insert" data-tooltip="Insert into JSON array">JSON_ARRAY_INSERT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#function_json-contains" data-tooltip="Whether JSON document contains specific object at path">JSON_CONTAINS()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#function_json-contains-path" data-tooltip="Whether JSON document contains any data at path">JSON_CONTAINS_PATH()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-attribute-functions.html#function_json-depth" data-tooltip="Maximum depth of JSON document">JSON_DEPTH()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#function_json-extract" data-tooltip="Return data from JSON document">JSON_EXTRACT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-modification-functions.html#function_json-insert" data-tooltip="Insert data into JSON document">JSON_INSERT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#function_json-keys" data-tooltip="Array of keys from JSON document">JSON_KEYS()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-attribute-functions.html#function_json-length" data-tooltip="Number of elements in JSON document">JSON_LENGTH()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-modification-functions.html#function_json-merge" data-tooltip="Merge JSON documents, preserving duplicate keys. Deprecated synonym for JSON_MERGE_PRESERVE()">JSON_MERGE() (deprecated)</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-modification-functions.html#function_json-merge-patch" data-tooltip="Merge JSON documents, replacing values of duplicate keys">JSON_MERGE_PATCH()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-modification-functions.html#function_json-merge-preserve" data-tooltip="Merge JSON documents, preserving duplicate keys">JSON_MERGE_PRESERVE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-creation-functions.html#function_json-object" data-tooltip="Create JSON object">JSON_OBJECT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#function_json-overlaps" data-tooltip="Compares two JSON documents, returns TRUE (1) if these have any key-value pairs or array elements in common, otherwise FALSE (0)">JSON_OVERLAPS() (introduced 8.0.17)</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-utility-functions.html#function_json-pretty" data-tooltip="Print a JSON document in human-readable format">JSON_PRETTY()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-creation-functions.html#function_json-quote" data-tooltip="Quote JSON document">JSON_QUOTE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-modification-functions.html#function_json-remove" data-tooltip="Remove data from JSON document">JSON_REMOVE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-modification-functions.html#function_json-replace" data-tooltip="Replace values in JSON document">JSON_REPLACE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-validation-functions.html#function_json-schema-valid" data-tooltip="Validate JSON document against JSON schema; returns TRUE/1 if document validates against schema, or FALSE/0 if it does not">JSON_SCHEMA_VALID() (introduced 8.0.17)</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-validation-functions.html#function_json-schema-validation-report" data-tooltip="Validate JSON document against JSON schema; returns report in JSON format on outcome on validation including success or failure and reasons for failure">JSON_SCHEMA_VALIDATION_REPORT() (introduced 8.0.17)</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#function_json-search" data-tooltip="Path to value within JSON document">JSON_SEARCH()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-modification-functions.html#function_json-set" data-tooltip="Insert data into JSON document">JSON_SET()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-utility-functions.html#function_json-storage-free" data-tooltip="Freed space within binary representation of JSON column value following partial update">JSON_STORAGE_FREE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-utility-functions.html#function_json-storage-size" data-tooltip="Space used for storage of binary representation of a JSON document">JSON_STORAGE_SIZE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-table-functions.html#function_json-table" data-tooltip="Return data from a JSON expression as a relational table">JSON_TABLE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-attribute-functions.html#function_json-type" data-tooltip="Type of JSON value">JSON_TYPE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-modification-functions.html#function_json-unquote" data-tooltip="Unquote JSON value">JSON_UNQUOTE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-attribute-functions.html#function_json-valid" data-tooltip="Whether JSON value is valid">JSON_VALID()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#function_json-value" data-tooltip="Extract value from JSON document at location pointed to by path provided; return this value as VARCHAR(512) or specified type">JSON_VALUE() (introduced 8.0.21)</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#operator_member-of" data-tooltip="Returns true (1) if first operand matches any element of JSON array passed as second operand, otherwise returns false (0)">MEMBER OF() (introduced 8.0.17)</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="cast"><a class="h-anchor" href="#cast">#</a>Cast</h3>
+<div class="section">
+<ul class="cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/cast-functions.html#operator_binary" data-tooltip="Cast a string to a binary string">BINARY</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/cast-functions.html#function_cast" data-tooltip="Cast a value as a certain type">CAST()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/cast-functions.html#function_convert" data-tooltip="Cast a value as a certain type">CONVERT()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="flow-control"><a class="h-anchor" href="#flow-control">#</a>Flow Control</h3>
+<div class="section">
+<ul class="cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/flow-control-functions.html#operator_case" data-tooltip="Case operator">CASE</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/flow-control-functions.html#function_if" data-tooltip="If/else construct">IF()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/flow-control-functions.html#function_ifnull" data-tooltip="Null if/else construct">IFNULL()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/flow-control-functions.html#function_nullif" data-tooltip="Return NULL if expr1 = expr2">NULLIF()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="information"><a class="h-anchor" href="#information">#</a>Information</h3>
+<div class="section">
+<ul class="cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_benchmark" data-tooltip="Repeatedly execute an expression">BENCHMARK()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_charset" data-tooltip="Return the character set of the argument">CHARSET()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_coercibility" data-tooltip="Return the collation coercibility value of the string argument">COERCIBILITY()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_collation" data-tooltip="Return the collation of the string argument">COLLATION()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_connection-id" data-tooltip="Return the connection ID (thread ID) for the connection">CONNECTION_ID()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_current-role" data-tooltip="Return the current active roles">CURRENT_ROLE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_current-user" data-tooltip="The authenticated user name and host name">CURRENT_USER()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_database" data-tooltip="Return the default (current) database name">DATABASE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_found-rows" data-tooltip="For a SELECT with a LIMIT clause, the number of rows that would be returned were there no LIMIT clause">FOUND_ROWS()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_icu-version" data-tooltip="ICU library version">ICU_VERSION()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_last-insert-id" data-tooltip="Value of the AUTOINCREMENT column for the last INSERT">LAST_INSERT_ID()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_roles-graphml" data-tooltip="Return a GraphML document representing memory role subgraphs">ROLES_GRAPHML()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_row-count" data-tooltip="The number of rows updated">ROW_COUNT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_schema" data-tooltip="Synonym for DATABASE()">SCHEMA()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_session-user" data-tooltip="Synonym for USER()">SESSION_USER()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_system-user" data-tooltip="Synonym for USER()">SYSTEM_USER()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_user" data-tooltip="The user name and host name provided by the client">USER()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_version" data-tooltip="Return a string that indicates the MySQL server version">VERSION()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="encryption-and-compression"><a class="h-anchor" href="#encryption-and-compression">#</a>Encryption and Compression</h3>
+<div class="section">
+<ul class="cols-1">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_aes-decrypt" data-tooltip="Decrypt using AES">AES_DECRYPT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_aes-encrypt" data-tooltip="Encrypt using AES">AES_ENCRYPT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_compress" data-tooltip="Return result as a binary string">COMPRESS()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_md5" data-tooltip="Calculate MD5 checksum">MD5()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_random-bytes" data-tooltip="Return a random byte vector">RANDOM_BYTES()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_sha1" data-tooltip="Calculate an SHA-1 160-bit checksum">SHA1(), SHA()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_sha2" data-tooltip="Calculate an SHA-2 checksum">SHA2()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_statement-digest" data-tooltip="Compute statement digest hash value">STATEMENT_DIGEST()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_statement-digest-text" data-tooltip="Compute normalized statement digest">STATEMENT_DIGEST_TEXT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_uncompress" data-tooltip="Uncompress a string compressed">UNCOMPRESS()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_uncompressed-length" data-tooltip="Return the length of a string before compression">UNCOMPRESSED_LENGTH()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_validate-password-strength" data-tooltip="Determine strength of password">VALIDATE_PASSWORD_STRENGTH()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="locking"><a class="h-anchor" href="#locking">#</a>Locking</h3>
+<div class="section">
+<ul class="cols-1">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/locking-functions.html#function_get-lock" data-tooltip="Get a named lock">GET_LOCK()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/locking-functions.html#function_is-free-lock" data-tooltip="Whether the named lock is free">IS_FREE_LOCK()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/locking-functions.html#function_is-used-lock" data-tooltip="Whether the named lock is in use; return connection identifier if true">IS_USED_LOCK()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/locking-functions.html#function_release-all-locks" data-tooltip="Release all current named locks">RELEASE_ALL_LOCKS()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/locking-functions.html#function_release-lock" data-tooltip="Release the named lock">RELEASE_LOCK()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="bit"><a class="h-anchor" href="#bit">#</a>Bit</h3>
+<div class="section">
+<ul class="cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-and" data-tooltip="Bitwise AND">&amp;</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_right-shift" data-tooltip="Right shift">&gt;&gt;</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_left-shift" data-tooltip="Left shift">&lt;&lt;</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-xor" data-tooltip="Bitwise XOR">^</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#function_bit-count" data-tooltip="Return the number of bits that are set">BIT_COUNT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-or" data-tooltip="Bitwise OR">|</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-invert" data-tooltip="Bitwise inversion">~</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="miscellaneous"><a class="h-anchor" href="#miscellaneous">#</a>Miscellaneous</h3>
+<div class="section">
+<ul class="cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_any-value" data-tooltip="Suppress ONLY_FULL_GROUP_BY value rejection">ANY_VALUE()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_bin-to-uuid" data-tooltip="Convert binary UUID to string">BIN_TO_UUID()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_default" data-tooltip="Return the default value for a table column">DEFAULT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_grouping" data-tooltip="Distinguish super-aggregate ROLLUP rows from regular rows">GROUPING()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_inet-aton" data-tooltip="Return the numeric value of an IP address">INET_ATON()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_inet-ntoa" data-tooltip="Return the IP address from a numeric value">INET_NTOA()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_inet6-aton" data-tooltip="Return the numeric value of an IPv6 address">INET6_ATON()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_inet6-ntoa" data-tooltip="Return the IPv6 address from a numeric value">INET6_NTOA()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_is-ipv4" data-tooltip="Whether argument is an IPv4 address">IS_IPV4()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_is-ipv4-compat" data-tooltip="Whether argument is an IPv4-compatible address">IS_IPV4_COMPAT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_is-ipv4-mapped" data-tooltip="Whether argument is an IPv4-mapped address">IS_IPV4_MAPPED()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_is-ipv6" data-tooltip="Whether argument is an IPv6 address">IS_IPV6()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_is-uuid" data-tooltip="Whether argument is a valid UUID">IS_UUID()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_master-pos-wait" data-tooltip="Block until the replica has read and applied all updates up to the specified position">MASTER_POS_WAIT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_name-const" data-tooltip="Cause the column to have the given name">NAME_CONST()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_sleep" data-tooltip="Sleep for a number of seconds">SLEEP()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_uuid" data-tooltip="Return a Universal Unique Identifier (UUID)">UUID()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_uuid-short" data-tooltip="Return an integer-valued universal identifier">UUID_SHORT()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_uuid-to-bin" data-tooltip="Convert string UUID to binary">UUID_TO_BIN()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_values" data-tooltip="Define the values to be used during an INSERT">VALUES()</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap cols-1">
+<h2 id="also-see"><a class="h-anchor" href="#also-see">#</a>Also see</h2>
+<div class="h3-wrap-list">
+<ul>
+<li><a href="/regex#regex-in-mysql">Regex in MySQL</a> <em>(cheatsheets.zip)</em></li>
+</ul>
+</div>
+</div>
+
+        </div></div><div id="mysearch" class="z-50 fixed inset-0 flex justify-center bg-slate-600/80 dark:bg-slate-900/90 items-start text-sm z-50 overflow-hidden lg:pt-16 lg:pb-20 hidden"><div id="mysearch-box" class="lg:max-w-screen-lg w-full flex flex-col justify-between bg-white dark:bg-slate-700 shadow-3xl dark:shadow-3xl lg:rounded-lg lg:max-h-832 min-h-320 h-full"><div class="flex items-center h-16 flex-none border-b border-slate-200 dark:border-slate-700"><div class="w-full h-full"><form class="flex items-center w-full h-full outline-none rounded-tl-lg"><label for="mysearch-input" id="mysearch-label" class="h-full w-14 mt-1 ml-1 px-4 flex items-center justify-center transition-colors duration-200 ease-in-out text-emerald-200"><div class="text-2xl text-emerald-500"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div></label><div class="relative flex-1"> <input class="flex-1 font-light h-full bg-transparent focus:text-slate-900 text-slate-500 dark:text-slate-300 placeholder-slate-400 placeholder-opacity-80 shadow-none outline-none truncate text-lg sm:text-2xl caret-color-emerald-400 leading-normalized w-full appearance-none rounded-none transition-colors duration-200 ease-in-out" id="mysearch-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search for cheatsheet" maxlength="128" type="text" enterkeyhint="go"></div> <button id="mysearch-clear" type="reset" class="items-center justify-center h-full w-14 px-4 text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 opacity-75 fill-current cursor-pointer transition-fast-out flex"><i class="icon icon-close text-xs font-bold"></i></button></form></div><div class="w-px h-8 bg-slate-100 dark:bg-slate-400/20 flex-none"></div> <button class="cancel mr-1 px-4 h-full text-slate-500 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-300"> Cancel</button></div><div class="flex flex-grow overflow-hidden lg:rounded-br-lg"><div class="relative w-full flex-none overflow-y-auto lg:w-1/2"><ul id="mysearch-list"></ul></div><div class="preview-panel shadow-inner bg-slate-100 dark:bg-slate-800 lg:block w-1/2 flex-none overflow-y-auto"></div></div></div></div><footer class="text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-slate-800 md:mt-14"></footer><div id="carbon_container"></div></body><script src="/js/main.js?_v=1705688051674"></script><script src="https://unpkg.com/@popperjs/core@2?_v=1705688051674"></script><script src="https://unpkg.com/tippy.js@6?_v=1705688051674"></script><script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof (tippy) !== 'undefined') {
+                document.querySelectorAll("a[data-tooltip]").forEach(function (x) {
+                    let content = x.getAttribute('data-tooltip');
+                    tippy(x, {content: content});
+                });
+            }
+        });
+    </script><script>
+        // Get all pre > code elements
+        const codeBlocks = document.querySelectorAll('pre > code');
+        const initInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path> </svg>';
+        const successInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>';
+        codeBlocks.forEach(function (codeBlock) {
+            // Create a copy button element
+            const copyButton = document.createElement('button');
+            copyButton.className = 'bg-emerald-500 p-2 text-white fadeIn shadow-xl rounded flex items-center absolute top-2 right-2';
+            copyButton.innerHTML = initInnerHTML;
+            copyButton.style.opacity = "0";
+            const parent = codeBlock.parentNode;
+
+            parent.style = "position: relative;"
+            parent.insertBefore(copyButton, codeBlock);
+
+            // Add click event listener to copy button
+            copyButton.addEventListener('click', () => {
+                navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+                    copyButton.innerHTML = successInnerHTML;
+                    setTimeout(() => {
+                        copyButton.innerHTML = initInnerHTML;
+                    }, 1000);
+                });
+            });
+
+            parent.addEventListener('mouseenter', () => {
+                copyButton.style.opacity = "1";
+            });
+            parent.addEventListener('mouseleave', () => {
+                copyButton.style.opacity = "0";
+            });
+        });
+    </script></html>

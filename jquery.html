@@ -1,0 +1,844 @@
+<!DOCTYPE HTML><html class="scrollbar" translate="no"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta http-equiv="content-language" content="en-gb"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="app:pageurl" content="/"><title>jQuery Cheat Sheet & Quick Reference</title><meta name="keywords" content="reference,cheatsheet,code table,snippets,linux,web,js,javascript,library"><meta name="description" content="This jQuery cheat sheet is a great reference for both beginners and experienced developers. "><meta property="og:url" content="https://cheatsheets.zip/jquery.html"><meta property="og:title" content="jQuery Cheat Sheet & Quick Reference"><meta property="og:site_name" content="CheatSheets.zip"><meta property="og:description" content="This jQuery cheat sheet is a great reference for both beginners and experienced developers. "><meta property="og:image" content="https://cheatsheets.zip/assets/image/preview.png?v=rtvft"><meta property="og:image:width" content="2276"><meta property="og:image:height" content="1240"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="jQuery Cheat Sheet & Quick Reference"><meta name="twitter:site" content="@CheatSheets.zip"><meta name="twitter:creator" content="@CheatSheets.zip"><meta name="twitter:description" content="This jQuery cheat sheet is a great reference for both beginners and experienced developers. "><meta name="twitter:image" content="https://cheatsheets.zip/assets/image/preview.png?v=zk2fk"><link rel="icon" href="/images/favicon.png?v=1"><link rel="icon shortcut" type="image/png" href="/images/favicon.png?v=1"><link rel="canonical" href="https://cheatsheets.zip/jquery.html"><link rel="prefetch" href="https://cheatsheets.zip"><link rel="prerender" href="https://cheatsheets.zip"><link rel="alternate" href="/atom.xml" title="CheatSheets.zip" type="application/atom+xml"><link rel="stylesheet" href="/css/style.css?_v=1705688051674"><script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            let html = document.documentElement.classList;
+            html.toggle('dark')
+        }
+    </script></head><body class="bg-slate-100 dark:bg-slate-900"><header class=""><div class="max-container z-10" style="display:none"><div class="flex flex-row justify-between md:justify-start items-center py-3"><a href="/" class="flex font-medium items-center justify-center md:justify-start text-slate-800 dark:text-slate-300"><div class="hidden md:flex justify-center w-10 h-10 md:w-12 md:h-12 text-white p-2 bg-emerald-500 rounded-full mr-3 text-2xl"><div class="self-center"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M303.55291933 951.35043811c-1.84934059-3.43448917-12.68119097-22.19208477-24.04142536-41.74225521l-20.07855218-35.4016586 5.01963776-9.51089265c2.90610631-5.01963776 13.20957383-23.24885049 22.9846585-40.15710664l17.70082986-31.17459456h366.69778034l6.86897834-11.09604238c3.43448917-6.34059549 13.73795669-23.77723335 22.72046763-39.10033977 8.71831893-15.32310642 22.19208477-38.30776491 29.85363797-51.51733873 7.66155321-12.94538297 16.37987214-28.00429739 19.02178646-33.02393629 2.90610631-5.28382976 14.00214869-24.30561621 24.56980821-42.27063694 10.56765952-18.22921273 29.85363797-51.51733987 43.06321181-73.97361551 12.94538297-22.45627563 35.93004146-62.08499826 51.25314787-87.71157333 15.05891442-25.89076594 28.53268025-49.93219015 29.85363797-53.63087132 3.43448917-8.98251093 8.45412693-8.18993607 12.94538184 2.11353259 2.11353145 4.4912549 8.71831893 16.90825501 14.79472355 26.94753166 6.34059549 10.30346752 20.60693618 35.13746773 32.23136143 55.48021077s25.62657394 44.38416953 30.91040369 53.63087133l9.77508466 16.64406414-6.07640462 9.77508466c-3.43448917 5.28382976-7.13317035 11.62442525-8.71831893 14.00214869-2.90610631 4.7554469-13.73795669 23.77723335-24.83399908 43.3274038-3.96287203 7.39736121-13.47376583 23.77723335-21.13531904 36.45842432-7.39736121 12.94538297-13.47376583 24.04142535-13.47376583 24.56980821 0 .79257486-3.43448917 6.34059549-7.39736121 12.41699898-4.22706403 6.07640462-9.51089379 15.32310642-12.15280811 20.34274531-2.37772345 5.01963776-6.86897835 12.94538297-9.77508465 17.17244587-2.64191431 4.4912549-5.81221262 10.03927666-6.60478749 12.68119096-1.05676573 2.37772345-2.64191431 4.4912549-3.69868117 4.49125604s-2.64191431 2.11353145-3.43448918 4.75544576c-1.05676573 2.37772345-5.28382976 10.56765952-9.77508466 17.70082987-4.22706403 7.39736121-10.56765952 17.96502073-13.47376582 23.77723335-3.17029831 5.81221262-10.83185038 19.28597845-17.17244587 29.58944597-6.34059549 10.56765952-11.62442525 20.07855331-11.62442525 21.13531904 0 .79257486-1.58514859 3.69868117-3.69868117 5.81221263-2.11353145 2.37772345-8.71831893 13.73795669-14.79472355 25.36238307s-18.22921273 33.81651001-26.94753053 49.66799815l-16.11568128 28.26848939H307.25159936l-3.69868003-5.81221263z"></path><path d="M523.88861725 694.82050674c-31.70297856-20.60693618-68.95397774-44.11997753-70.01074347-44.11997753-.79257486 0-10.03927666-5.81221262-20.60693618-13.20957383-10.83185038-7.13317035-22.72046763-14.53053155-26.68333966-16.11568128-3.69868117-1.84934059-6.86897835-3.96287203-6.86897835-5.01963776 0-.79257486-4.7554469-4.22706403-10.56765952-7.66155321l-10.30346752-5.81221262-.79257486-98.27923172c-.52838286-54.15925419 0-99.33599744.79257486-100.3927643 1.05676573-1.32095773 27.74010539 12.94538297 59.44308395 31.96716942 31.96716942 18.75759559 69.21816861 40.42129749 82.95612529 48.61123356l25.09819108 14.26633956.264192 103.56306148c.264192 73.7094235-.52838286 103.56306147-2.64191545 103.56306261-1.58514859 0-10.56765952-5.01963776-20.07855217-11.36023438zm0-61.29242453c0-11.09604238-.79257486-12.15280811-11.09604239-18.2292116-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023325l60.23565881 34.60908486c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327574.264192 0 .52838286-5.28382976.528384-11.88861724zm0-42.27063695c0-11.09604238-.79257486-12.15280811-11.09604239-18.22921273-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023438l60.23565881 34.60908373c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327688.264192 0 .52838286-5.28382976.528384-11.88861725zm-1.84934059-54.42344619c-2.11353145-2.11353145-117.30101931-68.42559488-118.88616789-68.42559374-.52838286 0-.79257486 5.28382976-.79257487 11.62442525v11.36023324l60.23565881 34.60908487 59.97146681 34.60908488.79257373-10.83185152c.52838286-5.81221262 0-11.62442525-1.32095659-12.94538298z"></path><path d="M109.10798734 615.82725347c-3.69868117-7.39736121-10.56765952-20.34274418-15.58729841-28.26848938-7.92574407-13.47376583-49.66799929-84.80546589-61.2924234-105.41240206-7.13317035-12.15280811-6.34059549-15.85148928 6.34059548-37.77938205 24.56980821-42.00644608 41.21387122-70.27493433 45.96931812-78.99325326 7.13317035-12.41700011 49.66799929-86.12642361 81.37097671-141.34244466 14.53053155-24.56980821 40.68548835-70.27493433 58.12212622-101.18533803l32.23136143-56.27278563h229.05401685c159.30746539 0 230.37497458 1.05676573 232.75269689 2.90610631 1.84934059 1.58514859 10.56765952 15.58729728 19.55017045 31.17459456 8.71831893 15.58729728 18.75759559 33.02393515 22.45627563 38.83614777l6.34059548 10.83185152-8.9825098 14.26633955c-5.01963776 7.92574407-15.32310642 25.89076594-22.72046762 39.62872264s-13.73795669 25.62657394-14.2663407 25.89076594c-.264192.52838286-83.2203173.79257486-184.40565532.79257486l-183.6130816-.264192-9.5108938 14.53053155c-5.01963776 7.92574407-9.24670179 15.85148928-9.24670179 17.17244701 0 1.58514859-1.05676573 2.64191431-2.64191431 2.64191431-1.32095773 0-2.64191431 1.05676573-2.64191545 2.11353145 0 2.90610631-29.32525511 55.21601991-48.61123243 87.18319047-8.18993607 13.47376583-14.79472355 25.09819107-14.79472355 25.8907648 0 1.05676573-3.43448917 6.86897835-7.92574407 13.47376583-4.22706403 6.34059549-7.92574407 12.15280811-7.92574521 12.94538297 0 .52838286-2.90610631 5.54802062-6.07640349 11.09604238-3.43448917 5.28382976-9.24670179 15.05891442-12.94538296 21.6637019s-20.07855331 35.13746773-36.45842546 63.40595599-31.96716942 55.21601991-34.34489288 59.44308394c-2.64191431 4.4912549-8.18993607 14.26634069-12.94538182 21.92789276-4.4912549 7.66155321-8.18993607 14.53053155-8.18993608 15.32310642 0 2.37772345-19.28597845 30.11782883-20.87112704 30.11782884-.79257486 0-4.4912549-6.34059549-8.18993607-13.7379567z"></path><path d="M625.60233813 601.56091278c-15.85148928-10.56765952-31.17459456-21.13531904-33.81651-23.51304135-4.22706403-3.69868117-4.7554469-9.24670179-4.4912549-56.00859477.264192-39.89291463-.264192-52.3099136-3.17029832-54.95182905-1.84934059-1.84934059-21.13531904-13.73795669-43.0632118-26.4191488-21.6637019-12.68119097-41.74225408-25.09819107-44.11997753-27.21172252-4.22706403-3.43448917-4.7554469-9.51089379-4.75544689-50.72476502 0-25.62657394.52838286-47.29027584 1.58514858-48.08284956.79257486-.79257486 8.18993607 2.90610631 16.37987214 8.45412693s25.36238194 15.85148928 37.77938205 22.72046763c12.41700011 7.13317035 43.06321181 25.09819107 67.89721201 40.15710549l45.44093526 27.21172366-.52838286 103.29886948c-.52838286 66.31206229-1.84934059 103.56306147-3.43448918 103.82725347-1.32095773.264192-15.58729728-8.18993607-31.70297856-18.75759559z"></path></svg></div></div> <span class="domain text-slate-600 dark:text-slate-300 text-lg md:text-2xl">CheatSheets<span class="text-emerald-400">.zip</span></span></a><div class="md:ml-auto flex flex-wrap items-center text-base justify-center"> <button id="mysearch-trigger" type="button" class="fadeIn inline-flex h-8 items-center bg-slate-200 dark:bg-gray-900 md:dark:bg-transparent md:bg-transparent rounded-full px-2 md:px-3 lg:px-6 py-2 text-slate-700 md:hover:opacity-80"><div class="md:text-xl text-slate-700 dark:text-slate-300 md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div> <span class="hidden md:inline dark:text-slate-300">Search for cheatsheet</span> <span class="hidden md:inline dark:text-slate-300 md:ml-2 text-sm leading-5 py-0.5 px-1.5 border border-slate-400 rounded-md"><span class="font-sans">⌘</span> <span class="font-sans">K</span></span></button> <a href="https://github.com/Fechin/reference/blob/main/source/_posts/jquery.md" rel="external nofollow noreferrer" target="_blank"><img alt="GitHub Repo stars" style="height:26px;opacity:.8" src="https://img.shields.io/github/stars/Fechin/reference?style=social"></a> <a href="https://twitter.com/FechinLi" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"><div class="md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></div> <span class="hidden md:inline text-sm">Follow Me</span></button></a> <button id="darkMode" class="fadeIn inline-flex items-center justify-center flex-shrink-0 h-8 w-8 rounded-full text-gray-900 ml-1 lg:ml-4 dark:text-gray-300 bg-gray-200 dark:bg-gray-900"> <i class="icon-light text-gray-600 dark:text-gray-300 dark:hover:text-white"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M512 31.40266667c14.19946667 0 26.935296 8.14830933 31.93787733 20.447232l29.40381867 72.50466133c12.713984 31.30436267-4.456448 66.21320533-38.33856 77.96599467A70.34197333 70.34197333 0 0 1 512 206.16533333c-36.19771733 0-65.536-27.11005867-65.536-60.555264 0-7.25265067 1.41994667-14.46161067 4.17245867-21.25550933l29.425664-72.50466133C485.04285867 39.550976 497.75684267 31.40266667 512 31.40266667zm0 961.19466666c-14.221312 0-26.95714133-8.14830933-31.93787733-20.447232l-29.425664-72.50466133a56.492032 56.492032 0 0 1-4.17245867-21.25550933C446.464 844.96657067 475.80228267 817.83466667 512 817.83466667c7.86432 0 15.64125867 1.31072 23.003136 3.84477866 33.882112 11.75278933 51.052544 46.661632 38.33856 77.98784l-29.40381867 72.482816c-5.00258133 12.29892267-17.73841067 20.447232-31.93787733 20.447232zm480.59733333-480.59733333c0 14.19946667-8.14830933 26.935296-20.447232 31.93787733l-72.50466133 29.40381867c-31.30436267 12.713984-66.21320533-4.456448-77.96599467-38.33856A70.34197333 70.34197333 0 0 1 817.83466667 512c0-36.19771733 27.11005867-65.536 60.555264-65.536 7.25265067 0 14.46161067 1.41994667 21.25550933 4.17245867l72.50466133 29.425664c12.29892267 4.980736 20.447232 17.69472 20.447232 31.93787733zM31.40266667 512c0-14.221312 8.14830933-26.95714133 20.447232-31.93787733l72.50466133-29.425664c6.77205333-2.752512 13.98101333-4.17245867 21.25550933-4.17245867C179.03342933 446.464 206.16533333 475.80228267 206.16533333 512c0 7.86432-1.31072 15.64125867-3.84477866 23.003136-11.75278933 33.882112-46.661632 51.052544-77.98784 38.33856l-72.482816-29.40381867C39.550976 538.935296 31.40266667 526.19946667 31.40266667 512zM172.15214933 172.17399467c10.04885333-10.04885333 24.81629867-13.28196267 37.04968534-8.126464l72.06775466 30.45239466c31.1296 13.172736 43.66882133 49.98212267 28.00571734 82.24768a70.34197333 70.34197333 0 0 1-13.54410667 19.00544c-25.58088533 25.58088533-65.49230933 27.15374933-89.12896 3.49525334a56.492032 56.492032 0 0 1-12.10231467-17.97870934L164.04753067 209.22368c-5.177344-12.23338667-1.94423467-27.000832 8.10461866-37.04968533zm679.673856 679.673856c-10.04885333 10.04885333-24.81629867 13.28196267-37.04968533 8.10461866l-72.04590933-30.45239466a56.492032 56.492032 0 0 1-18.00055467-12.08046934c-23.63665067-23.658496-22.06378667-63.56992 3.51709867-89.15080533a70.34197333 70.34197333 0 0 1 19.00544-13.54410667c32.26555733-15.663104 69.074944-3.12388267 82.24768 28.00571734l30.45239466 72.06775466c5.15549867 12.23338667 1.92238933 26.97898667-8.126464 37.04968534zm0-679.69570134c10.04885333 10.04885333 13.28196267 24.81629867 8.126464 37.04968534l-30.45239466 72.06775466c-13.172736 31.1296-49.98212267 43.66882133-82.24768 28.00571734a70.34197333 70.34197333 0 0 1-19.00544-13.54410667c-25.58088533-25.58088533-27.15374933-65.49230933-3.49525334-89.12896 5.111808-5.15549867 11.206656-9.240576 17.97870934-12.10231467l72.04590933-30.45239466c12.23338667-5.177344 27.000832-1.94423467 37.04968533 8.10461866zM172.15214933 851.82600533c-10.04885333-10.04885333-13.28196267-24.81629867-8.10461866-37.04968533l30.45239466-72.04590933c2.83989333-6.77205333 6.946816-12.86690133 12.08046934-18.00055467 23.658496-23.63665067 63.56992-22.06378667 89.15080533 3.51709867 5.57056 5.57056 10.15808 12.01493333 13.54410667 19.00544 15.663104 32.26555733 3.12388267 69.074944-28.00571734 82.24768l-72.06775466 30.45239466c-12.23338667 5.15549867-26.97898667 1.92238933-37.04968534-8.126464zM512 752.29866667c-132.7104 0-240.29866667-107.58826667-240.29866667-240.29866667s107.58826667-240.29866667 240.29866667-240.29866667 240.29866667 107.58826667 240.29866667 240.29866667-107.58826667 240.29866667-240.29866667 240.29866667z"></path></svg></i></button> <a href="https://facebook.com/sharer/sharer.php?u=https://cheatsheets.zip/jquery.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4a66ad] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M594.74346667 51.53066667c-28.95893333 0-56.30826667 3.2192-88.48533334 16.0896-65.9616 27.34826667-98.13653333 88.48533333-98.13653333 186.6208v94.91946666h-91.70026667v157.66186667h91.70026667v455.28853333h186.6208v-455.28853333h127.09546667l17.696-157.66186667h-144.7936v-70.7872c0-22.52266667 1.60853333-38.61013333 8.04266666-46.65706666 8.04266667-14.47786667 24.13226667-20.91413333 49.872-20.91413334h85.26613334v-157.66186666h-143.184z"></path></svg></span> <span class="hidden">Facebook</span></button></a> <a href="https://twitter.com/intent/tweet/?text=This%20jQuery%20cheat%20sheet%20is%20a%20great%20reference%20for%20both%20beginners%20and%20experienced%20developers.%20&url=https://cheatsheets.zip/jquery.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></span> <span class="hidden">Twitter</span></button></a></div></div></div></header><div class="mx-auto flex flex-wrap md:py-5 flex-col md:flex-row items-center"><div class="flex flex-col w-full mx-auto text-center my-8"><div class="max-container w-full"><h1 class="text-5xl mb-4"> <span class="text-slate-700 dark:text-slate-300 font-light">jQuery</span> <span class="text-slate-400 dark:text-slate-500 font-extralight hidden md:inline">cheatsheet</span></h1><div class="lg:w-3/5 mx-auto intro leading-relaxed text-slate-600"><p>This <a target="_blank" rel="noopener external nofollow noreferrer" href="https://jquery.com/">jQuery</a> cheat sheet is a great reference for both beginners and experienced developers.</p></div></div></div><div id="mdLayout" class="mdLayout w-full max-container"> 
+        <div class="h2-wrap">
+<h2 id="getting-started"><a class="h-anchor" href="#getting-started">#</a>Getting Started</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="including-jquery"><a class="h-anchor" href="#including-jquery">#</a>Including jQuery</h3>
+<div class="section">
+<pre><code class="hljs wrap language-javascript">&lt;script src=<span class="hljs-string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;&lt;/script&gt;
+</code></pre>
+<h4 id="official-cdn"><a class="h-anchor" href="#official-cdn">#</a>Official CDN</h4>
+<pre><code class="hljs wrap language-javascript">&lt;script src=<span class="hljs-string">&quot;https://code.jquery.com/jquery-3.5.1.min.js&quot;</span> crossorigin=<span class="hljs-string">&quot;anonymous&quot;</span>&gt;&lt;/script&gt;
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="jquery-syntax"><a class="h-anchor" href="#jquery-syntax">#</a>jQuery syntax</h3>
+<div class="section">
+<pre><code class="hljs language-javascript">
+$(selector).<span class="hljs-title function_">methodOrFunction</span>();
+
+</code></pre>
+<h4 id="example"><a class="h-anchor" href="#example">#</a>Example:</h4>
+<pre><code class="hljs language-javascript">$(<span class="hljs-string">&#x27;#menu&#x27;</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span>&#123;
+  $(<span class="hljs-variable language_">this</span>).<span class="hljs-title function_">hide</span>();  
+&#125;);
+
+$(<span class="hljs-string">&quot;body&quot;</span>).<span class="hljs-title function_">css</span>(<span class="hljs-string">&quot;background&quot;</span>, <span class="hljs-string">&quot;red&quot;</span>);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="jquery-document-ready"><a class="h-anchor" href="#jquery-document-ready">#</a>jQuery document ready</h3>
+<div class="section">
+<pre><code class="hljs language-javascript">
+$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;
+  <span class="hljs-comment">// Runs after the DOM is loaded.</span>
+  <span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;DOM fully loaded!&#x27;</span>);
+&#125;);
+</code></pre>
+<pre><code class="hljs language-javascript">$(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;
+  <span class="hljs-comment">// Runs after the DOM is loaded.</span>
+  <span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;DOM fully loaded!&#x27;</span>);
+&#125;);
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="jquery-selectors"><a class="h-anchor" href="#jquery-selectors">#</a>jQuery Selectors</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap secondary">
+<h3 id="examples"><a class="h-anchor" href="#examples">#</a>Examples</h3>
+<div class="section">
+<pre><code class="hljs language-javascript">$(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-function">() =&gt;</span> &#123;
+    $(<span class="hljs-string">&quot;:button&quot;</span>).<span class="hljs-title function_">css</span>(<span class="hljs-string">&quot;color&quot;</span>, <span class="hljs-string">&quot;red&quot;</span>);
+&#125;);
+</code></pre>
+<h4 id="combining-selectors"><a class="h-anchor" href="#combining-selectors">#</a>Combining selectors</h4>
+<pre><code class="hljs language-javascript">$(<span class="hljs-string">&quot;selector1, selector2 ...selectorn&quot;</span>)
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="basics"><a class="h-anchor" href="#basics">#</a>Basics</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/all-selector/" data-tooltip="Selects all elements.">*</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/class-selector/" data-tooltip="Selects all elements with the given class. ">.class</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/element-selector/" data-tooltip="Selects all elements with the given tag name.">element</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/id-selector/" data-tooltip="Selects a single element with the given id attribute. ">#id</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/hidden-selector/" data-tooltip="Selects all elements that are hidden.">:hidden</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/visible-selector/" data-tooltip="Selects all elements that are visible.">:visible</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/contains-selector/" data-tooltip="Select all elements that contain the specified text.">:contains()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/empty-selector/" data-tooltip="Select all elements that have no children (including text nodes).">:empty</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/has-selector/" data-tooltip="Selects elements which contain at least one element that matches the specified selector.">:has()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/parent-selector/" data-tooltip="Select all elements that have at least one child node (either an element or text).">:parent</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/child-selector/" data-tooltip="Selects all direct child elements specified by child of elements specified by parent.">parent &gt; child</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/descendant-selector/" data-tooltip="Selects all elements that are descendants of a given ancestor.">ancestor descendant</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/next-adjacent-Selector/" data-tooltip="Selects all next elements matching next that are immediately preceded by a sibling prev.">prev + next</a></li>
+<li class="col-span-2"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/next-siblings-selector/" data-tooltip="Selects all sibling elements that follow after the prev element, have the same parent, and match the filtering siblings selector.">prev ~ siblings</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="basic-filters"><a class="h-anchor" href="#basic-filters">#</a>Basic Filters</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/animated-selector/" data-tooltip="Select all elements that are in the progress of an animation at the time the selector is run.">:animated</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/eq-selector/" data-tooltip="Select the element at index n within the matched set.">:eq()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/even-selector/" data-tooltip="Selects even elements, zero-indexed.  See also :odd.">:even</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/first-selector/" data-tooltip="Selects the first matched DOM element.">:first</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/gt-selector/" data-tooltip="Select all elements at an index greater than index within the matched set.">:gt()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/header-selector/" data-tooltip="Selects all elements that are headers, like h1, h2, h3 and so on.">:header</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/lang-selector/" data-tooltip="Selects all elements of the specified language.">:lang()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/last-selector/" data-tooltip="Selects the last matched element.">:last</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/lt-selector/" data-tooltip="Select all elements at an index less than index within the matched set.">:lt()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/not-selector/" data-tooltip="Selects all elements that do not match the given selector.">:not()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/odd-selector/" data-tooltip="Selects odd elements, zero-indexed.  See also :even.">:odd</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/root-selector/" data-tooltip="Selects the element that is the root of the document.">:root</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/target-selector/" data-tooltip="Selects the target element indicated by the fragment identifier of the document's URI.">:target</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="attribute"><a class="h-anchor" href="#attribute">#</a>Attribute</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/attribute-contains-prefix-selector/" data-tooltip="Selects elements that have the specified attribute with a value either equal to a given string or starting with that string followed by a hyphen (-).">[name|=&quot;value&quot;]</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/attribute-contains-selector/" data-tooltip="Selects elements that have the specified attribute with a value containing a given substring.">[name*=&quot;value&quot;]</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/attribute-contains-word-selector/" data-tooltip="Selects elements that have the specified attribute with a value containing a given word, delimited by spaces.">[name~=&quot;value&quot;]</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/attribute-ends-with-selector/" data-tooltip="Selects elements that have the specified attribute with a value ending exactly with a given string. The comparison is case sensitive.">[name$=&quot;value&quot;]</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/attribute-equals-selector/" data-tooltip="Selects elements that have the specified attribute with a value exactly equal to a certain value.">[name=&quot;value&quot;]</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/attribute-not-equal-selector/" data-tooltip="Select elements that either don't have the specified attribute, or do have the specified attribute but not with a certain value.">[name!=&quot;value&quot;]</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/attribute-starts-with-selector/" data-tooltip="Selects elements that have the specified attribute with a value beginning exactly with a given string.">[name^=&quot;value&quot;]</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/has-attribute-selector/" data-tooltip="Selects elements that have the specified attribute, with any value. ">[name]</a></li>
+<li class="col-span-2"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/multiple-attribute-selector/" data-tooltip="Matches elements that match all of the specified attribute filters.">[name=&quot;value&quot;][name2=&quot;value2&quot;]</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="child-filters"><a class="h-anchor" href="#child-filters">#</a>Child Filters</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/first-child-selector/" data-tooltip="Selects all elements that are the first child of their parent.">:first-child</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/first-of-type-selector/" data-tooltip="Selects all elements that are the first among siblings of the same element name.">:first-of-type</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/last-child-selector/" data-tooltip="Selects all elements that are the last child of their parent.">:last-child</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/last-of-type-selector/" data-tooltip="Selects all elements that are the last among siblings of the same element name.">:last-of-type</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/nth-child-selector/" data-tooltip="Selects all elements that are the nth-child of their parent.">:nth-child()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/nth-last-child-selector/" data-tooltip="Selects all elements that are the nth-child of their parent, counting from the last element to the first.">:nth-last-child()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/nth-last-of-type-selector/" data-tooltip="Selects all the elements that are the nth-child of their parent in relation to siblings with the same element name, counting from the last element to the first.">:nth-last-of-type()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/nth-of-type-selector/" data-tooltip="Selects all elements that are the nth child of their parent in relation to siblings with the same element name.">:nth-of-type()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/only-child-selector/" data-tooltip="Selects all elements that are the only child of their parent.">:only-child</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/only-of-type-selector/" data-tooltip="Selects all elements that have no siblings with the same element name.">:only-of-type()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="forms"><a class="h-anchor" href="#forms">#</a>Forms</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/button-selector/" data-tooltip="Selects all button elements and elements of type button.">:button</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/checkbox-selector/" data-tooltip="Selects all elements of type checkbox.">:checkbox</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/checked-selector/" data-tooltip="Matches all elements that are checked or selected.">:checked</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/disabled-selector/" data-tooltip="Selects all elements that are disabled.">:disabled</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/enabled-selector/" data-tooltip="Selects all elements that are enabled.">:enabled</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/focus-selector/" data-tooltip="Selects element if it is currently focused.">:focus</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/file-selector/" data-tooltip="Selects all elements of type file.">:file</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/image-selector/" data-tooltip="Selects all elements of type image.">:image</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/input-selector/" data-tooltip="Selects all input, textarea, select and button elements.">:input</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/password-selector/" data-tooltip="Selects all elements of type password.">:password</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/radio-selector/" data-tooltip="Selects all  elements of type radio.">:radio</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/reset-selector/" data-tooltip="Selects all elements of type reset.">:reset</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/selected-selector/" data-tooltip="Selects all elements that are selected.">:selected</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/submit-selector/" data-tooltip="Selects all elements of type submit.">:submit</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/text-selector/" data-tooltip="Selects all input elements of type text.">:text</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="jquery-attributes"><a class="h-anchor" href="#jquery-attributes">#</a>jQuery Attributes</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap secondary row-span-2">
+<h3 id="examples-2"><a class="h-anchor" href="#examples-2">#</a>Examples</h3>
+<div class="section">
+<pre><code class="hljs language-javascript">$(<span class="hljs-string">&#x27;h2&#x27;</span>).<span class="hljs-title function_">css</span>(&#123;
+  <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;blue&#x27;</span>,
+  <span class="hljs-attr">backgroundColor</span>: <span class="hljs-string">&#x27;gray&#x27;</span>,
+  <span class="hljs-attr">fontSize</span>: <span class="hljs-string">&#x27;24px&#x27;</span>
+&#125;);
+</code></pre>
+<h4 id="jquery-addclass"><a class="h-anchor" href="#jquery-addclass">#</a>jQuery addClass</h4>
+<pre><code class="hljs language-javascript">$(<span class="hljs-string">&#x27;.button&#x27;</span>).<span class="hljs-title function_">addClass</span>(<span class="hljs-string">&#x27;active&#x27;</span>); 
+</code></pre>
+<h4 id="jquery-removeclass"><a class="h-anchor" href="#jquery-removeclass">#</a>jQuery removeClass</h4>
+<pre><code class="hljs language-javascript">$(<span class="hljs-string">&#x27;.button&#x27;</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;mouseleave&#x27;</span>, <span class="hljs-function"><span class="hljs-params">evt</span> =&gt;</span> &#123;
+   <span class="hljs-keyword">let</span> e = evt.<span class="hljs-property">currentTarget</span>;
+   $(e).<span class="hljs-title function_">removeClass</span>(<span class="hljs-string">&#x27;active&#x27;</span>);
+&#125;);
+</code></pre>
+<h4 id="jquery-toggleclass"><a class="h-anchor" href="#jquery-toggleclass">#</a>jQuery .toggleClass</h4>
+<pre><code class="hljs language-javascript">$(<span class="hljs-string">&#x27;.choice&#x27;</span>).<span class="hljs-title function_">toggleClass</span>(<span class="hljs-string">&#x27;highlighted&#x27;</span>);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="attributes"><a class="h-anchor" href="#attributes">#</a>Attributes</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/attr/" data-tooltip="Get the value of an attribute for the first element in the set of matched elements.">.attr()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/prop/" data-tooltip="Get the value of a property for the first element in the set of matched elements.">.prop()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/removeAttr/" data-tooltip="Remove an attribute from each element in the set of matched elements.">.removeAttr()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/removeProp/" data-tooltip="Remove a property for the set of matched elements.">.removeProp()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/val/" data-tooltip="Get the current value of the first element in the set of matched elements.">.val()</a></li>
+</ul>
+<h4 id="data"><a class="h-anchor" href="#data">#</a>Data</h4>
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.data/" data-tooltip="Store arbitrary data associated with the specified element. Returns the value that was set.">jQuery.data()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/data/" data-tooltip="Store arbitrary data associated with the matched elements.">.data()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.hasData/" data-tooltip="Determine whether an element has any jQuery data associated with it.">jQuery.hasData()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.removeData/" data-tooltip="Remove a previously-stored piece of data.">jQuery.removeData()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/removeData/" data-tooltip="Remove a previously-stored piece of data.">.removeData()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="css"><a class="h-anchor" href="#css">#</a>CSS</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/addClass/" data-tooltip="Adds the specified class(es) to each element in the set of matched elements.">.addClass()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/hasClass/" data-tooltip="Determine whether any of the matched elements are assigned the given class.">.hasClass()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/removeClass/" data-tooltip="Remove a single class, multiple classes, or all classes from each element in the set of matched elements.">.removeClass()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/toggleClass/" data-tooltip="Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the state argument.">.toggleClass()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/css/" data-tooltip="Get the computed style properties for the first element in the set of matched elements.">.css()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.cssHooks/" data-tooltip="Hook directly into jQuery to override how particular CSS properties are retrieved or set, normalize CSS property naming, or create custom properties.">jQuery.cssHooks</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.cssNumber/" data-tooltip="An object containing all CSS properties that may be used without a unit. The .css() method uses this object to see if it may append px to unitless values.">jQuery.cssNumber</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.escapeSelector/" data-tooltip="Escapes any character that has a special meaning in a CSS selector.">jQuery.escapeSelector()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="dimensions"><a class="h-anchor" href="#dimensions">#</a>Dimensions</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/height/" data-tooltip="Get the current computed height for the first element in the set of matched elements.">.height()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/innerHeight/" data-tooltip="Get the current computed height for the first element in the set of matched elements, including padding but not border.">.innerHeight()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/innerWidth/" data-tooltip="Get the current computed inner width for the first element in the set of matched elements, including padding but not border.">.innerWidth()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/outerHeight/" data-tooltip="Get the current computed outer height (including padding, border, and optionally margin) for the first element in the set of matched elements.">.outerHeight()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/outerWidth/" data-tooltip="Get the current computed outer width (including padding, border, and optionally margin) for the first element in the set of matched elements.">.outerWidth()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/width/" data-tooltip="Get the current computed width for the first element in the set of matched elements.">.width()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="offset"><a class="h-anchor" href="#offset">#</a>Offset</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/offset/" data-tooltip="Get the current coordinates of the first element in the set of matched elements, relative to the document.">.offset()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/offsetParent/" data-tooltip="Get the closest ancestor element that is positioned.">.offsetParent()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/position/" data-tooltip="Get the current coordinates of the first element in the set of matched elements, relative to the offset parent.">.position()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/scrollLeft/" data-tooltip="Get the current horizontal position of the scroll bar for the first element in the set of matched elements.">.scrollLeft()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/scrollTop/" data-tooltip="Get the current vertical position of the scroll bar for the first element in the set of matched elements or set the vertical position of the scroll bar for every matched element.">.scrollTop()</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="jquery-manipulation"><a class="h-anchor" href="#jquery-manipulation">#</a>jQuery Manipulation</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap secondary row-span-3">
+<h3 id="examples-3"><a class="h-anchor" href="#examples-3">#</a>Examples</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">/*&lt;span&gt;Span.&lt;/span&gt;*/</span>
+$(<span class="hljs-string">&#x27;span&#x27;</span>).<span class="hljs-title function_">after</span>(<span class="hljs-string">&#x27;&lt;p&gt;Paragraph.&lt;/p&gt;&#x27;</span>);
+<span class="hljs-comment">/*&lt;span&gt;Span.&lt;/span&gt;&lt;p&gt;Paragraph.&lt;/p&gt;*/</span>
+
+<span class="hljs-comment">/*&lt;span&gt;Span.&lt;/span&gt;*/</span>
+$(<span class="hljs-string">&#x27;&lt;span&gt;Span.&lt;/span&gt;&#x27;</span>).<span class="hljs-title function_">replaceAll</span>(<span class="hljs-string">&#x27;p&#x27;</span>);
+<span class="hljs-comment">/*&lt;p&gt;Span.&lt;/p&gt;*/</span>
+
+<span class="hljs-comment">/*&lt;span&gt;This is span.&lt;/span&gt;*/</span>
+$(<span class="hljs-string">&#x27;span&#x27;</span>).<span class="hljs-title function_">wrap</span>(<span class="hljs-string">&#x27;&lt;p&gt;&lt;/p&gt;&#x27;</span>);
+<span class="hljs-comment">/*&lt;p&gt;&lt;span&gt;This is span.&lt;/span&gt;&lt;/p&gt;*/</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="copying"><a class="h-anchor" href="#copying">#</a>Copying</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/clone/" data-tooltip="Create a deep copy of the set of matched elements.">.clone()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="dom-insertion-around"><a class="h-anchor" href="#dom-insertion-around">#</a>DOM Insertion, Around</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/wrap/" data-tooltip="Wrap an HTML structure around each element in the set of matched elements.">.wrap()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/wrapAll/" data-tooltip="Wrap an HTML structure around all elements in the set of matched elements.">.wrapAll()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/wrapInner/" data-tooltip="Wrap an HTML structure around the content of each element in the set of matched elements.">.wrapInner()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="dom-insertion-inside"><a class="h-anchor" href="#dom-insertion-inside">#</a>DOM Insertion, Inside</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/append/" data-tooltip="Insert content, specified by the parameter, to the end of each element in the set of matched elements.">.append()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/appendTo/" data-tooltip="Insert every element in the set of matched elements to the end of the target.">.appendTo()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/html/" data-tooltip="Get the HTML contents of the first element in the set of matched elements.">.html()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/prepend/" data-tooltip="Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.">.prepend()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/prependTo/" data-tooltip="Insert every element in the set of matched elements to the beginning of the target.">.prependTo()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/text/" data-tooltip="Get the combined text contents of each element in the set of matched elements, including their descendants.">.text()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="dom-insertion-outside"><a class="h-anchor" href="#dom-insertion-outside">#</a>DOM Insertion, Outside</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/after/" data-tooltip="Insert content, specified by the parameter, after each element in the set of matched elements.">.after()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/before/" data-tooltip="Insert content, specified by the parameter, before each element in the set of matched elements.">.before()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/insertAfter/" data-tooltip="Insert every element in the set of matched elements after the target.">.insertAfter()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/insertBefore/" data-tooltip="Insert every element in the set of matched elements before the target.">.insertBefore()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="dom-removal"><a class="h-anchor" href="#dom-removal">#</a>DOM Removal</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/detach/" data-tooltip="Remove the set of matched elements from the DOM.">.detach()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/empty/" data-tooltip="Remove all child nodes of the set of matched elements from the DOM.">.empty()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/remove/" data-tooltip="Remove the set of matched elements from the DOM.">.remove()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/unwrap/" data-tooltip="Remove the parents of the set of matched elements from the DOM, leaving the matched elements in their place.">.unwrap()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="dom-replacement"><a class="h-anchor" href="#dom-replacement">#</a>DOM Replacement</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/replaceAll/" data-tooltip="Replace each target element with the set of matched elements.">.replaceAll()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/replaceWith/" data-tooltip="Replace each element in the set of matched elements with the provided new content and return the set of elements that was removed.">.replaceWith()</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="jquery-traversing"><a class="h-anchor" href="#jquery-traversing">#</a>jQuery Traversing</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="filtering"><a class="h-anchor" href="#filtering">#</a>Filtering</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/eq/" data-tooltip="Reduce the set of matched elements to the one at the specified index.">.eq()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/filter/" data-tooltip="Reduce the set of matched elements to those that match the selector or pass the function's test. ">.filter()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/first/" data-tooltip="Reduce the set of matched elements to the first in the set.">.first()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/has/" data-tooltip="Reduce the set of matched elements to those that have a descendant that matches the selector or DOM element.">.has()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/is/" data-tooltip="Check the current matched set of elements against a selector, element, or jQuery object and return true if at least one of these elements matches the given arguments.">.is()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/last/" data-tooltip="Reduce the set of matched elements to the final one in the set.">.last()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/map/" data-tooltip="Pass each element in the current matched set through a function, producing a new jQuery object containing the return values.">.map()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/not/" data-tooltip="Remove elements from the set of matched elements.">.not()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/slice/" data-tooltip="Reduce the set of matched elements to a subset specified by a range of indices.">.slice()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="miscellaneous-traversing"><a class="h-anchor" href="#miscellaneous-traversing">#</a>Miscellaneous Traversing</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/add/" data-tooltip="Create a new jQuery object with elements added to the set of matched elements.">.add()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/addBack/" data-tooltip="Add the previous set of elements on the stack to the current set, optionally filtered by a selector.">.addBack()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/andSelf/" data-tooltip="Add the previous set of elements on the stack to the current set.">.andSelf()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/contents/" data-tooltip="Get the children of each element in the set of matched elements, including text and comment nodes.">.contents()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/each/" data-tooltip="Iterate over a jQuery object, executing a function for each matched element. ">.each()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/end/" data-tooltip="End the most recent filtering operation in the current chain and return the set of matched elements to its previous state.">.end()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="tree-traversal"><a class="h-anchor" href="#tree-traversal">#</a>Tree Traversal</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/children/" data-tooltip="Get the children of each element in the set of matched elements, optionally filtered by a selector.">.children()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/closest/" data-tooltip="For each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree.">.closest()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/find/" data-tooltip="Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element.">.find()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/next/" data-tooltip="Get the immediately following sibling of each element in the set of matched elements. If a selector is provided, it retrieves the next sibling only if it matches that selector.">.next()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/nextAll/" data-tooltip="Get all following siblings of each element in the set of matched elements, optionally filtered by a selector.">.nextAll()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/nextUntil/" data-tooltip="Get all following siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object passed.">.nextUntil()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/parent/" data-tooltip="Get the parent of each element in the current set of matched elements, optionally filtered by a selector.">.parent()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/parents/" data-tooltip="Get the ancestors of each element in the current set of matched elements, optionally filtered by a selector.">.parents()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/parentsUntil/" data-tooltip="Get the ancestors of each element in the current set of matched elements, up to but not including the element matched by the selector, DOM node, or jQuery object.">.parentsUntil()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/prev/" data-tooltip="Get the immediately preceding sibling of each element in the set of matched elements. If a selector is provided, it retrieves the previous sibling only if it matches that selector.">.prev()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/prevAll/" data-tooltip="Get all preceding siblings of each element in the set of matched elements, optionally filtered by a selector.">.prevAll()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/prevUntil/" data-tooltip="Get all preceding siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object.">.prevUntil()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/siblings/" data-tooltip="Get the siblings of each element in the set of matched elements, optionally filtered by a selector.">.siblings()</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="jquery-events"><a class="h-anchor" href="#jquery-events">#</a>jQuery Events</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap secondary row-span-6">
+<h3 id="examples-4"><a class="h-anchor" href="#examples-4">#</a>Examples</h3>
+<div class="section">
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// A mouse event &#x27;click&#x27;</span>
+$(<span class="hljs-string">&#x27;#menu-button&#x27;</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> &#123;
+  $(<span class="hljs-string">&#x27;#menu&#x27;</span>).<span class="hljs-title function_">show</span>();
+&#125;);
+
+<span class="hljs-comment">// A keyboard event &#x27;keyup&#x27;</span>
+$(<span class="hljs-string">&#x27;#textbox&#x27;</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;keyup&#x27;</span>, <span class="hljs-function">() =&gt;</span> &#123;
+  $(<span class="hljs-string">&#x27;#menu&#x27;</span>).<span class="hljs-title function_">show</span>();
+&#125;);
+
+<span class="hljs-comment">// A scroll event &#x27;scroll&#x27;</span>
+$(<span class="hljs-string">&#x27;#menu-button&#x27;</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;scroll&#x27;</span>, <span class="hljs-function">() =&gt;</span> &#123;
+  $(<span class="hljs-string">&#x27;#menu&#x27;</span>).<span class="hljs-title function_">show</span>();
+&#125;);
+</code></pre>
+<h4 id="event-object"><a class="h-anchor" href="#event-object">#</a>Event object</h4>
+<pre><code class="hljs language-javascript">$(<span class="hljs-string">&#x27;#menu&#x27;</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> &#123;
+  $(event.<span class="hljs-property">currentTarget</span>).<span class="hljs-title function_">hide</span>();
+&#125;);
+</code></pre>
+<h4 id="method-chaining"><a class="h-anchor" href="#method-chaining">#</a>Method chaining</h4>
+<pre><code class="hljs language-javascript">$(<span class="hljs-string">&#x27;#menu-btn&#x27;</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;mouseenter&#x27;</span>, <span class="hljs-function">() =&gt;</span> &#123;
+  $(<span class="hljs-string">&#x27;#menu&#x27;</span>).<span class="hljs-title function_">show</span>();
+&#125;).<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;mouseleave&#x27;</span>, <span class="hljs-function">() =&gt;</span> &#123;
+  $(<span class="hljs-string">&#x27;#menu&#x27;</span>).<span class="hljs-title function_">hide</span>();
+&#125;);
+</code></pre>
+<h4 id="prevents-the-event"><a class="h-anchor" href="#prevents-the-event">#</a>Prevents the event</h4>
+<pre><code class="hljs language-javascript">$( <span class="hljs-string">&quot;p&quot;</span> ).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"> event </span>) &#123;
+  event.<span class="hljs-title function_">stopPropagation</span>();
+  <span class="hljs-comment">// Do something</span>
+&#125;);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="browser-events"><a class="h-anchor" href="#browser-events">#</a>Browser Events</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/error/" data-tooltip="Bind an event handler to the error JavaScript event.">.error()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/resize/" data-tooltip="Bind an event handler to the resize JavaScript event, or trigger that event on an element.">.resize()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/scroll/" data-tooltip="Bind an event handler to the scroll JavaScript event, or trigger that event on an element.">.scroll()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap row-span-6">
+<h3 id="event-object-2"><a class="h-anchor" href="#event-object-2">#</a>Event Object</h3>
+<div class="section">
+<ul class="marker-none cols-1">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.currentTarget/" data-tooltip=" The current DOM element within the event bubbling phase.  ">event.currentTarget</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.delegateTarget/" data-tooltip="The element where the currently-called jQuery event handler was attached.">event.delegateTarget</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.data/" data-tooltip="An optional object of data passed to an event method when the current executing handler is bound.  ">event.data</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.isDefaultPrevented/" data-tooltip="Returns whether event.preventDefault() was ever called on this event object. ">event.isDefaultPrevented()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.isImmediatePropagationStopped/" data-tooltip="  Returns whether event.stopImmediatePropagation() was ever called on this event object. ">event.isImmediatePropagationStopped()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.isPropagationStopped/" data-tooltip="  Returns whether event.stopPropagation() was ever called on this event object. ">event.isPropagationStopped()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.metaKey/" data-tooltip="Indicates whether the META key was pressed when the event fired.">event.metaKey</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.namespace/" data-tooltip="The namespace specified when the event was triggered.">event.namespace</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.pageX/" data-tooltip="The mouse position relative to the left edge of the document.">event.pageX</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.pageY/" data-tooltip="The mouse position relative to the top edge of the document.">event.pageY</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.preventDefault/" data-tooltip="If this method is called, the default action of the event will not be triggered.">event.preventDefault()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.relatedTarget/" data-tooltip="The other DOM element involved in the event, if any.">event.relatedTarget</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.result/" data-tooltip="The last value returned by an event handler that was triggered by this event, unless the value was undefined.">event.result</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.stopImmediatePropagation/" data-tooltip="Keeps the rest of the handlers from being executed and prevents the event from bubbling up the DOM tree.">event.stopImmediatePropagation()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.stopPropagation/" data-tooltip="Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.">event.stopPropagation()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.target/" data-tooltip=" The DOM element that initiated the event.  ">event.target</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.timeStamp/" data-tooltip="The difference in milliseconds between the time the browser created the event and January 1, 1970.">event.timeStamp</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.type/" data-tooltip="Describes the nature of the event.">event.type</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/event.which/" data-tooltip="For key or mouse events, this property indicates the specific key or button that was pressed.">event.which</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="document-loading"><a class="h-anchor" href="#document-loading">#</a>Document Loading</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/load-event/" data-tooltip="Bind an event handler to the load JavaScript event.">.load()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/ready/" data-tooltip="Specify a function to execute when the DOM is fully loaded.">.ready()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/unload/" data-tooltip="Bind an event handler to the unload JavaScript event.">.unload()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="event-handler-attachment"><a class="h-anchor" href="#event-handler-attachment">#</a>Event Handler Attachment</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/bind/" data-tooltip="Attach a handler to an event for the elements.">.bind()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/delegate/" data-tooltip="Attach a handler to one or more events for all elements that match the selector, now or in the future, based on a specific set of root elements.">.delegate()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/die/" data-tooltip="Remove event handlers previously attached using .live() from the elements.">.die()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/live/" data-tooltip="Attach an event handler for all elements which match the current selector, now and in the future.">.live()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/off/" data-tooltip="Remove an event handler.">.off()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/on/" data-tooltip="Attach an event handler function for one or more events to the selected elements.">.on()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/one/" data-tooltip="Attach a handler to an event for the elements. The handler is executed at most once per element per event type.">.one()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/trigger/" data-tooltip="Execute all handlers and behaviors attached to the matched elements for the given event type.">.trigger()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/triggerHandler/" data-tooltip="Execute all handlers attached to an element for an event.">.triggerHandler()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/unbind/" data-tooltip="Remove a previously-attached event handler from the elements.">.unbind()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/undelegate/" data-tooltip="Remove a handler from the event for all elements which match the current selector, based upon a specific set of root elements.">.undelegate()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="form-events"><a class="h-anchor" href="#form-events">#</a>Form Events</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/blur/" data-tooltip="Bind an event handler to the blur JavaScript event, or trigger that event on an element.">.blur()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/change/" data-tooltip="Bind an event handler to the change JavaScript event, or trigger that event on an element.">.change()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/focus/" data-tooltip="Bind an event handler to the focus JavaScript event, or trigger that event on an element.">.focus()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/focusin/" data-tooltip="Bind an event handler to the focusin event.">.focusin()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/focusout/" data-tooltip="Bind an event handler to the focusout JavaScript event.">.focusout()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/select/" data-tooltip="Bind an event handler to the select JavaScript event, or trigger that event on an element.">.select()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/submit/" data-tooltip="Bind an event handler to the submit JavaScript event, or trigger that event on an element.">.submit()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="keyboard-events"><a class="h-anchor" href="#keyboard-events">#</a>Keyboard Events</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/keydown/" data-tooltip="Bind an event handler to the keydown JavaScript event, or trigger that event on an element.">.keydown()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/keypress/" data-tooltip="Bind an event handler to the keypress JavaScript event, or trigger that event on an element.">.keypress()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/keyup/" data-tooltip="Bind an event handler to the keyup JavaScript event, or trigger that event on an element.">.keyup()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="mouse-events"><a class="h-anchor" href="#mouse-events">#</a>Mouse Events</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/click/" data-tooltip="Bind an event handler to the click JavaScript event, or trigger that event on an element.">.click()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/contextmenu/" data-tooltip="Bind an event handler to the contextmenu JavaScript event, or trigger that event on an element.">.contextMenu()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/dblclick/" data-tooltip="Bind an event handler to the dblclick JavaScript event, or trigger that event on an element.">.dblclick()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/hover/" data-tooltip="Bind two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements.">.hover()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/mousedown/" data-tooltip="Bind an event handler to the mousedown JavaScript event, or trigger that event on an element.">.mousedown()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/mouseenter/" data-tooltip="Bind an event handler to be fired when the mouse enters an element, or trigger that handler on an element.">.mouseenter()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/mouseleave/" data-tooltip="Bind an event handler to be fired when the mouse leaves an element, or trigger that handler on an element.">.mouseleave()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/mousemove/" data-tooltip="Bind an event handler to the mousemove JavaScript event, or trigger that event on an element.">.mousemove()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/mouseout/" data-tooltip="Bind an event handler to the mouseout JavaScript event, or trigger that event on an element.">.mouseout()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/mouseover/" data-tooltip="Bind an event handler to the mouseover JavaScript event, or trigger that event on an element.">.mouseover()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/mouseup/" data-tooltip="Bind an event handler to the mouseup JavaScript event, or trigger that event on an element.">.mouseup()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/toggle-event/" data-tooltip="Bind two or more handlers to the matched elements, to be executed on alternate clicks.">.toggle()</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="jquery-effects"><a class="h-anchor" href="#jquery-effects">#</a>jQuery Effects</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap secondary row-span-2">
+<h3 id="examples-5"><a class="h-anchor" href="#examples-5">#</a>Examples</h3>
+<div class="section">
+<pre><code class="hljs language-javascript">$(<span class="hljs-string">&#x27;#menu-button&#x27;</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> &#123;
+  <span class="hljs-comment">// $(&#x27;#menu&#x27;).fadeIn(400, &#x27;swing&#x27;)</span>
+  $(<span class="hljs-string">&#x27;#menu&#x27;</span>).<span class="hljs-title function_">fadeIn</span>();
+&#125;);
+</code></pre>
+<h4 id="fadeout-effect"><a class="h-anchor" href="#fadeout-effect">#</a>fadeOut effect</h4>
+<pre><code class="hljs language-javascript">$(<span class="hljs-string">&#x27;#menu-button&#x27;</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> &#123;
+  <span class="hljs-comment">// $(&#x27;#menu&#x27;).fadeOut(400, &#x27;swing&#x27;)</span>
+  $(<span class="hljs-string">&#x27;#menu&#x27;</span>).<span class="hljs-title function_">fadeOut</span>();
+&#125;);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="basics-2"><a class="h-anchor" href="#basics-2">#</a>Basics</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/hide/" data-tooltip="Hide the matched elements.">.hide()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/show/" data-tooltip="Display the matched elements.">.show()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/toggle/" data-tooltip="Display or hide the matched elements.">.toggle()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="sliding"><a class="h-anchor" href="#sliding">#</a>Sliding</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/slideDown/" data-tooltip="Display the matched elements with a sliding motion.">.slideDown()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/slideToggle/" data-tooltip="Display or hide the matched elements with a sliding motion.">.slideToggle()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/slideUp/" data-tooltip="Hide the matched elements with a sliding motion.">.slideUp()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="custom"><a class="h-anchor" href="#custom">#</a>Custom</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/animate/" data-tooltip="Perform a custom animation of a set of CSS properties.">.animate()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/clearQueue/" data-tooltip="Remove from the queue all items that have not yet been run.">.clearQueue()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/delay/" data-tooltip="Set a timer to delay execution of subsequent items in the queue.">.delay()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/dequeue/" data-tooltip="Execute the next function on the queue for the matched elements.">.dequeue()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.dequeue/" data-tooltip="Execute the next function on the queue for the matched element.">jQuery.dequeue()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/finish/" data-tooltip="Stop the currently-running animation, remove all queued animations, and complete all animations for the matched elements.">.finish()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.fx.interval/" data-tooltip="The rate (in milliseconds) at which animations fire.">jQuery.fx.interval</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.fx.off/" data-tooltip="Globally disable all animations.">jQuery.fx.off</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.speed/" data-tooltip="Creates an object containing a set of properties ready to be used in the definition of custom animations.">jQuery.speed</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/queue/" data-tooltip="Show the queue of functions to be executed on the matched elements.">.queue()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.queue/" data-tooltip="Show the queue of functions to be executed on the matched element.">jQuery.queue()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/stop/" data-tooltip="Stop the currently-running animation on the matched elements.">.stop()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="fading"><a class="h-anchor" href="#fading">#</a>Fading</h3>
+<div class="section">
+<ul class="marker-none cols-3">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/fadeIn/" data-tooltip="Display the matched elements by fading them to opaque.">.fadeIn()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/fadeOut/" data-tooltip="Hide the matched elements by fading them to transparent.">.fadeOut()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/fadeTo/" data-tooltip="Adjust the opacity of the matched elements.">.fadeTo()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/fadeToggle/" data-tooltip="Display or hide the matched elements by animating their opacity.">.fadeToggle()</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="jquery-ajax"><a class="h-anchor" href="#jquery-ajax">#</a>jQuery Ajax</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap secondary row-span-2">
+<h3 id="examples-6"><a class="h-anchor" href="#examples-6">#</a>Examples</h3>
+<div class="section">
+<pre><code class="hljs language-javascript">$.<span class="hljs-title function_">ajax</span>(&#123;
+  <span class="hljs-attr">url</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">action</span>,
+  <span class="hljs-attr">type</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">method</span>,
+  <span class="hljs-attr">data</span>: $(<span class="hljs-variable language_">this</span>).<span class="hljs-title function_">serialize</span>()
+&#125;).<span class="hljs-title function_">done</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">server_data</span>)&#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;success&quot;</span> + server_data);
+&#125;).<span class="hljs-title function_">fail</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">jqXHR, status, err</span>)&#123;
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;fail&quot;</span> + err);
+&#125;);
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="global-ajax-event-handlers"><a class="h-anchor" href="#global-ajax-event-handlers">#</a>Global Ajax Event Handlers</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/ajaxComplete/" data-tooltip="Register a handler to be called when Ajax requests complete. This is an AjaxEvent.">.ajaxComplete()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/ajaxError/" data-tooltip="Register a handler to be called when Ajax requests complete with an error. This is an Ajax Event.">.ajaxError()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/ajaxSend/" data-tooltip="Attach a function to be executed before an Ajax request is sent. This is an Ajax Event.">.ajaxSend()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/ajaxStart/" data-tooltip="Register a handler to be called when the first Ajax request begins. This is an Ajax Event.">.ajaxStart()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/ajaxStop/" data-tooltip="Register a handler to be called when all Ajax requests have completed. This is an Ajax Event.">.ajaxStop()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/ajaxSuccess/" data-tooltip="Attach a function to be executed whenever an Ajax request completes successfully. This is an Ajax Event.">.ajaxSuccess()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="helper-functions"><a class="h-anchor" href="#helper-functions">#</a>Helper Functions</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.param/" data-tooltip="Create a serialized representation of an array, a plain object, or a jQuery object suitable for use in a URL query string or Ajax request. In case a jQuery object is passed, it should contain input elements with name/value properties.">jQuery.param()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/serialize/" data-tooltip="Encode a set of form elements as a string for submission.">.serialize()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/serializeArray/" data-tooltip="Encode a set of form elements as an array of names and values.">.serializeArray()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="low-level-interface"><a class="h-anchor" href="#low-level-interface">#</a>Low-Level Interface</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.ajax/" data-tooltip="Perform an asynchronous HTTP (Ajax) request.">jQuery.ajax()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.ajaxPrefilter/" data-tooltip="Handle custom Ajax options or modify existing options before each request is sent and before they are processed by $.ajax().">jQuery.prefilter()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.ajaxSetup/" data-tooltip="Set default values for future Ajax requests. Its use is not recommended.">jQuery.ajaxSetup()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.ajaxTransport/" data-tooltip="Creates an object that handles the actual transmission of Ajax data.">jQuery.ajaxTransport()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="shorthand-methods"><a class="h-anchor" href="#shorthand-methods">#</a>Shorthand Methods</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.get/" data-tooltip="Load data from the server using a HTTP GET request.">jQuery.get()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.getJSON/" data-tooltip="Load JSON-encoded data from the server using a GET HTTP request.">jQuery.getJSON()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.getScript/" data-tooltip="Load a JavaScript file from the server using a GET HTTP request, then execute it.">jQuery.getScript()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.post/" data-tooltip="Send data to the server using a HTTP POST request.">jQuery.post()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/load/" data-tooltip="Load data from the server and place the returned HTML into the matched elements.">.load()</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="miscellaneous"><a class="h-anchor" href="#miscellaneous">#</a>Miscellaneous</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="jquery-object"><a class="h-anchor" href="#jquery-object">#</a>jQuery Object</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery/" data-tooltip="Accepts a string containing a CSS selector which is then used to match a set of elements.">jQuery()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.noConflict/" data-tooltip="Relinquish jQuery's control of the $ variable.">jQuery.noConflict()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.sub/" data-tooltip="Creates a new copy of jQuery whose properties and methods can be modified without affecting the original jQuery object.">jQuery.sub()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.holdReady/" data-tooltip="Holds or releases the execution of jQuery's ready event.">jQuery.holdReady()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.when/" data-tooltip="Provides a way to execute callback functions based on zero or more Thenable objects, usually Deferred objects that represent asynchronous events.">jQuery.when()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="deferred-object"><a class="h-anchor" href="#deferred-object">#</a>Deferred Object</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.Deferred/" data-tooltip=" A factory function that returns a chainable utility object with methods to register multiple callbacks into callback queues, invoke callback queues, and relay the success or failure state of any synchronous or asynchronous function.">jQuery.Deferred()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.always/" data-tooltip=" Add handlers to be called when the Deferred object is either resolved or rejected. ">deferred.always()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.done/" data-tooltip=" Add handlers to be called when the Deferred object is resolved. ">deferred.done()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.fail/" data-tooltip=" Add handlers to be called when the Deferred object is rejected. ">deferred.fail()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.isRejected/" data-tooltip=" Determine whether a Deferred object has been rejected. ">deferred.isRejected()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.isResolved/" data-tooltip=" Determine whether a Deferred object has been resolved. ">deferred.isResolved()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.notify/" data-tooltip=" Call the progressCallbacks on a Deferred object with the given args. ">deferred.notify()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.notifyWith/" data-tooltip=" Call the progressCallbacks on a Deferred object with the given context and args. ">deferred.notifyWith()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.pipe/" data-tooltip=" Utility method to filter and/or chain Deferreds.  ">deferred.pipe()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.progress/" data-tooltip=" Add handlers to be called when the Deferred object generates progress notifications.">deferred.progress()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.promise/" data-tooltip=" Return a Deferred's Promise object. ">deferred.promise()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.reject/" data-tooltip=" Reject a Deferred object and call any failCallbacks with the given args. ">deferred.reject()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.rejectWith/" data-tooltip=" Reject a Deferred object and call any failCallbacks with the given context and args. ">deferred.rejectWith()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.resolve/" data-tooltip=" Resolve a Deferred object and call any doneCallbacks with the given args. ">deferred.resolve()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.resolveWith/" data-tooltip=" Resolve a Deferred object and call any doneCallbacks with the given context and args. ">deferred.resolveWith()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.state/" data-tooltip="Determine the current state of a Deferred object. ">deferred.state()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/deferred.then/" data-tooltip="Add handlers to be called when the Deferred object is resolved, rejected, or still in progress. ">deferred.then()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/promise/" data-tooltip=" Return a Promise object to observe when all actions of a certain type bound to the collection, queued or not, have finished. ">.promise()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap row-span-3">
+<h3 id="utilities"><a class="h-anchor" href="#utilities">#</a>Utilities</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.boxModel/" data-tooltip="States if the current page, in the user's browser, is being rendered using the W3C CSS Box Model.">jQuery.boxModel</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.browser/" data-tooltip="Contains flags for the useragent, read from navigator.userAgent. This property was removed in jQuery 1.9 and is available only through the jQuery.migrate plugin. Please try to use feature detection instead.">jQuery.browser</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.contains/" data-tooltip="Check to see if a DOM element is a descendant of another DOM element.">jQuery.contains()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.each/" data-tooltip="A generic iterator function, which can be used to seamlessly iterate over both objects and arrays. Arrays and array-like objects with a length property (such as a function's arguments object) are iterated by numeric index, from 0 to length-1. Other objects are iterated via their named properties.">jQuery.each()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.extend/" data-tooltip="Merge the contents of two or more objects together into the first object.">jQuery.extend()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.globalEval/" data-tooltip="Execute some JavaScript code globally.">jQuery.globalEval()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.grep/" data-tooltip="Finds the elements of an array which satisfy a filter function. The original array is not affected.">jQuery.grep()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.inArray/" data-tooltip="Search for a specified value within an array and return its index (or -1 if not found).">jQuery.inArray()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.isArray/" data-tooltip="Determine whether the argument is an array.">jQuery.isArray()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.isEmptyObject/" data-tooltip="Check to see if an object is empty (contains no enumerable properties).">jQuery.isEmptyObject()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.isFunction/" data-tooltip="Determines if its argument is callable as a function.">jQuery.isFunction()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.isNumeric/" data-tooltip="Determines whether its argument represents a JavaScript number.">jQuery.isNumeric()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.isPlainObject/" data-tooltip="Check to see if an object is a plain object.">jQuery.isPlainObject()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.isWindow/" data-tooltip="Determine whether the argument is a window.">jQuery.isWindow()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.isXMLDoc/" data-tooltip="Check to see if a DOM node is within an XML document (or is an XML document).">jQuery.isXMLDoc()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.makeArray/" data-tooltip="Convert an array-like object into a true JavaScript array.">jQuery.makeArray()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.map/" data-tooltip="Translate all items in an array or object to new array of items.">jQuery.map()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.merge/" data-tooltip="Merge the contents of two arrays together into the first array. ">jQuery.merge()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.noop/" data-tooltip="An empty function.">jQuery.noop()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.now/" data-tooltip="Return a number representing the current time.">jQuery.now()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.parseHTML/" data-tooltip="Parses a string into an array of DOM nodes.">jQuery.parseHTML()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.parseJSON/" data-tooltip="Takes a well-formed JSON string and returns the resulting JavaScript value.">jQuery.parseJSON()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.parseXML/" data-tooltip="Parses a string into an XML document.">jQuery.parseXML()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.proxy/" data-tooltip="Takes a function and returns a new one that will always have a particular context.">jQuery.proxy()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.support/" data-tooltip="A collection of properties that represent the presence of different browser features or bugs. Intended for jQuery's internal use; specific properties may be removed when they are no longer needed internally to improve page startup performance. For your own project's feature-detection needs, we strongly recommend the use of an external library such as Modernizr instead of dependency on properties in jQuery.support.">jQuery.support</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.trim/" data-tooltip="Remove the whitespace from the beginning and end of a string.">jQuery.trim()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.type/" data-tooltip="Determine the internal JavaScript [[Class]] of an object.">jQuery.type()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.unique/" data-tooltip="Sorts an array of DOM elements, in place, with the duplicates removed. Note that this only works on arrays of DOM elements, not strings or numbers.">jQuery.unique()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.uniqueSort/" data-tooltip="Sorts an array of DOM elements, in place, with the duplicates removed. Note that this only works on arrays of DOM elements, not strings or numbers.">jQuery.uniqueSort()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="dom-element-methods"><a class="h-anchor" href="#dom-element-methods">#</a>DOM Element Methods</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/get/" data-tooltip="Retrieve one of the elements matched by the jQuery object.">.get()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/index/" data-tooltip="Search for a given element from among the matched elements.">.index()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/size/" data-tooltip="Return the number of elements in the jQuery object.">.size()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/toArray/" data-tooltip="Retrieve all the elements contained in the jQuery set, as an array.">.toArray()</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="internals"><a class="h-anchor" href="#internals">#</a>Internals</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jquery-2/" data-tooltip="A string containing the jQuery version number.">.jquery</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/context/" data-tooltip="The DOM node context originally passed to jQuery(); if none was passed then context will likely be the document.">.context</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.error/" data-tooltip="Takes a string and throws an exception containing it.">jQuery.error()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/length/" data-tooltip="The number of elements in the jQuery object.">.length</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/pushStack/" data-tooltip="Add a collection of DOM elements onto the jQuery stack.">.pushStack()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/selector/" data-tooltip="A selector representing selector passed to jQuery(), if any, when creating the original set.">.selector</a></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="callbacks-object"><a class="h-anchor" href="#callbacks-object">#</a>Callbacks Object</h3>
+<div class="section">
+<ul class="marker-none cols-2">
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/jQuery.Callbacks/" data-tooltip="A multi-purpose callbacks list object that provides a powerful way to manage callback lists.">jQuery.Callbacks()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/callbacks.add/" data-tooltip="Add a callback or a collection of callbacks to a callback list.">callbacks.add()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/callbacks.disable/" data-tooltip="Disable a callback list from doing anything more.">callbacks.disable()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/callbacks.disabled/" data-tooltip="Determine if the callbacks list has been disabled.">callbacks.disabled()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/callbacks.empty/" data-tooltip="Remove all of the callbacks from a list.">callbacks.empty()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/callbacks.fire/" data-tooltip="Call all of the callbacks with the given arguments.">callbacks.fire()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/callbacks.fired/" data-tooltip="Determine if the callbacks have already been called at least once.">callbacks.fired()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/callbacks.fireWith/" data-tooltip="Call all callbacks in a list with the given context and arguments.">callbacks.fireWith()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/callbacks.has/" data-tooltip="Determine whether or not the list has any callbacks attached. If a callback is provided as an argument, determine whether it is in a list.">callbacks.has()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/callbacks.lock/" data-tooltip="Lock a callback list in its current state.">callbacks.lock()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/callbacks.locked/" data-tooltip="Determine if the callbacks list has been locked.">callbacks.locked()</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://api.jquery.com/callbacks.remove/" data-tooltip="Remove a callback or a collection of callbacks from a callback list.">callbacks.remove()</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+        </div></div><div id="mysearch" class="z-50 fixed inset-0 flex justify-center bg-slate-600/80 dark:bg-slate-900/90 items-start text-sm z-50 overflow-hidden lg:pt-16 lg:pb-20 hidden"><div id="mysearch-box" class="lg:max-w-screen-lg w-full flex flex-col justify-between bg-white dark:bg-slate-700 shadow-3xl dark:shadow-3xl lg:rounded-lg lg:max-h-832 min-h-320 h-full"><div class="flex items-center h-16 flex-none border-b border-slate-200 dark:border-slate-700"><div class="w-full h-full"><form class="flex items-center w-full h-full outline-none rounded-tl-lg"><label for="mysearch-input" id="mysearch-label" class="h-full w-14 mt-1 ml-1 px-4 flex items-center justify-center transition-colors duration-200 ease-in-out text-emerald-200"><div class="text-2xl text-emerald-500"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div></label><div class="relative flex-1"> <input class="flex-1 font-light h-full bg-transparent focus:text-slate-900 text-slate-500 dark:text-slate-300 placeholder-slate-400 placeholder-opacity-80 shadow-none outline-none truncate text-lg sm:text-2xl caret-color-emerald-400 leading-normalized w-full appearance-none rounded-none transition-colors duration-200 ease-in-out" id="mysearch-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search for cheatsheet" maxlength="128" type="text" enterkeyhint="go"></div> <button id="mysearch-clear" type="reset" class="items-center justify-center h-full w-14 px-4 text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 opacity-75 fill-current cursor-pointer transition-fast-out flex"><i class="icon icon-close text-xs font-bold"></i></button></form></div><div class="w-px h-8 bg-slate-100 dark:bg-slate-400/20 flex-none"></div> <button class="cancel mr-1 px-4 h-full text-slate-500 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-300"> Cancel</button></div><div class="flex flex-grow overflow-hidden lg:rounded-br-lg"><div class="relative w-full flex-none overflow-y-auto lg:w-1/2"><ul id="mysearch-list"></ul></div><div class="preview-panel shadow-inner bg-slate-100 dark:bg-slate-800 lg:block w-1/2 flex-none overflow-y-auto"></div></div></div></div><footer class="text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-slate-800 md:mt-14"></footer><div id="carbon_container"></div></body><script src="/js/main.js?_v=1705688051674"></script><script src="https://unpkg.com/@popperjs/core@2?_v=1705688051674"></script><script src="https://unpkg.com/tippy.js@6?_v=1705688051674"></script><script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof (tippy) !== 'undefined') {
+                document.querySelectorAll("a[data-tooltip]").forEach(function (x) {
+                    let content = x.getAttribute('data-tooltip');
+                    tippy(x, {content: content});
+                });
+            }
+        });
+    </script><script>
+        // Get all pre > code elements
+        const codeBlocks = document.querySelectorAll('pre > code');
+        const initInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path> </svg>';
+        const successInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>';
+        codeBlocks.forEach(function (codeBlock) {
+            // Create a copy button element
+            const copyButton = document.createElement('button');
+            copyButton.className = 'bg-emerald-500 p-2 text-white fadeIn shadow-xl rounded flex items-center absolute top-2 right-2';
+            copyButton.innerHTML = initInnerHTML;
+            copyButton.style.opacity = "0";
+            const parent = codeBlock.parentNode;
+
+            parent.style = "position: relative;"
+            parent.insertBefore(copyButton, codeBlock);
+
+            // Add click event listener to copy button
+            copyButton.addEventListener('click', () => {
+                navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+                    copyButton.innerHTML = successInnerHTML;
+                    setTimeout(() => {
+                        copyButton.innerHTML = initInnerHTML;
+                    }, 1000);
+                });
+            });
+
+            parent.addEventListener('mouseenter', () => {
+                copyButton.style.opacity = "1";
+            });
+            parent.addEventListener('mouseleave', () => {
+                copyButton.style.opacity = "0";
+            });
+        });
+    </script></html>

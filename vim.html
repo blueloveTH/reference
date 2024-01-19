@@ -1,0 +1,2112 @@
+<!DOCTYPE HTML><html class="scrollbar" translate="no"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta http-equiv="content-language" content="en-gb"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="app:pageurl" content="/"><title>Vim Cheat Sheet & Quick Reference</title><meta name="keywords" content="reference,cheatsheet,code table,snippets,linux,text,editor,shortcut,terminal,vi"><meta name="description" content="A useful collection of Vim 8.2 quick reference cheat sheets to help you learn vim editor faster. "><meta property="og:url" content="https://cheatsheets.zip/vim.html"><meta property="og:title" content="Vim Cheat Sheet & Quick Reference"><meta property="og:site_name" content="CheatSheets.zip"><meta property="og:description" content="A useful collection of Vim 8.2 quick reference cheat sheets to help you learn vim editor faster. "><meta property="og:image" content="https://cheatsheets.zip/assets/image/preview.png?v=yd98d"><meta property="og:image:width" content="2276"><meta property="og:image:height" content="1240"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Vim Cheat Sheet & Quick Reference"><meta name="twitter:site" content="@CheatSheets.zip"><meta name="twitter:creator" content="@CheatSheets.zip"><meta name="twitter:description" content="A useful collection of Vim 8.2 quick reference cheat sheets to help you learn vim editor faster. "><meta name="twitter:image" content="https://cheatsheets.zip/assets/image/preview.png?v=r86yc"><link rel="icon" href="/images/favicon.png?v=1"><link rel="icon shortcut" type="image/png" href="/images/favicon.png?v=1"><link rel="canonical" href="https://cheatsheets.zip/vim.html"><link rel="prefetch" href="https://cheatsheets.zip"><link rel="prerender" href="https://cheatsheets.zip"><link rel="alternate" href="/atom.xml" title="CheatSheets.zip" type="application/atom+xml"><link rel="stylesheet" href="/css/style.css?_v=1705688051674"><script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            let html = document.documentElement.classList;
+            html.toggle('dark')
+        }
+    </script></head><body class="bg-slate-100 dark:bg-slate-900"><header class=""><div class="max-container z-10" style="display:none"><div class="flex flex-row justify-between md:justify-start items-center py-3"><a href="/" class="flex font-medium items-center justify-center md:justify-start text-slate-800 dark:text-slate-300"><div class="hidden md:flex justify-center w-10 h-10 md:w-12 md:h-12 text-white p-2 bg-emerald-500 rounded-full mr-3 text-2xl"><div class="self-center"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M303.55291933 951.35043811c-1.84934059-3.43448917-12.68119097-22.19208477-24.04142536-41.74225521l-20.07855218-35.4016586 5.01963776-9.51089265c2.90610631-5.01963776 13.20957383-23.24885049 22.9846585-40.15710664l17.70082986-31.17459456h366.69778034l6.86897834-11.09604238c3.43448917-6.34059549 13.73795669-23.77723335 22.72046763-39.10033977 8.71831893-15.32310642 22.19208477-38.30776491 29.85363797-51.51733873 7.66155321-12.94538297 16.37987214-28.00429739 19.02178646-33.02393629 2.90610631-5.28382976 14.00214869-24.30561621 24.56980821-42.27063694 10.56765952-18.22921273 29.85363797-51.51733987 43.06321181-73.97361551 12.94538297-22.45627563 35.93004146-62.08499826 51.25314787-87.71157333 15.05891442-25.89076594 28.53268025-49.93219015 29.85363797-53.63087132 3.43448917-8.98251093 8.45412693-8.18993607 12.94538184 2.11353259 2.11353145 4.4912549 8.71831893 16.90825501 14.79472355 26.94753166 6.34059549 10.30346752 20.60693618 35.13746773 32.23136143 55.48021077s25.62657394 44.38416953 30.91040369 53.63087133l9.77508466 16.64406414-6.07640462 9.77508466c-3.43448917 5.28382976-7.13317035 11.62442525-8.71831893 14.00214869-2.90610631 4.7554469-13.73795669 23.77723335-24.83399908 43.3274038-3.96287203 7.39736121-13.47376583 23.77723335-21.13531904 36.45842432-7.39736121 12.94538297-13.47376583 24.04142535-13.47376583 24.56980821 0 .79257486-3.43448917 6.34059549-7.39736121 12.41699898-4.22706403 6.07640462-9.51089379 15.32310642-12.15280811 20.34274531-2.37772345 5.01963776-6.86897835 12.94538297-9.77508465 17.17244587-2.64191431 4.4912549-5.81221262 10.03927666-6.60478749 12.68119096-1.05676573 2.37772345-2.64191431 4.4912549-3.69868117 4.49125604s-2.64191431 2.11353145-3.43448918 4.75544576c-1.05676573 2.37772345-5.28382976 10.56765952-9.77508466 17.70082987-4.22706403 7.39736121-10.56765952 17.96502073-13.47376582 23.77723335-3.17029831 5.81221262-10.83185038 19.28597845-17.17244587 29.58944597-6.34059549 10.56765952-11.62442525 20.07855331-11.62442525 21.13531904 0 .79257486-1.58514859 3.69868117-3.69868117 5.81221263-2.11353145 2.37772345-8.71831893 13.73795669-14.79472355 25.36238307s-18.22921273 33.81651001-26.94753053 49.66799815l-16.11568128 28.26848939H307.25159936l-3.69868003-5.81221263z"></path><path d="M523.88861725 694.82050674c-31.70297856-20.60693618-68.95397774-44.11997753-70.01074347-44.11997753-.79257486 0-10.03927666-5.81221262-20.60693618-13.20957383-10.83185038-7.13317035-22.72046763-14.53053155-26.68333966-16.11568128-3.69868117-1.84934059-6.86897835-3.96287203-6.86897835-5.01963776 0-.79257486-4.7554469-4.22706403-10.56765952-7.66155321l-10.30346752-5.81221262-.79257486-98.27923172c-.52838286-54.15925419 0-99.33599744.79257486-100.3927643 1.05676573-1.32095773 27.74010539 12.94538297 59.44308395 31.96716942 31.96716942 18.75759559 69.21816861 40.42129749 82.95612529 48.61123356l25.09819108 14.26633956.264192 103.56306148c.264192 73.7094235-.52838286 103.56306147-2.64191545 103.56306261-1.58514859 0-10.56765952-5.01963776-20.07855217-11.36023438zm0-61.29242453c0-11.09604238-.79257486-12.15280811-11.09604239-18.2292116-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023325l60.23565881 34.60908486c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327574.264192 0 .52838286-5.28382976.528384-11.88861724zm0-42.27063695c0-11.09604238-.79257486-12.15280811-11.09604239-18.22921273-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023438l60.23565881 34.60908373c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327688.264192 0 .52838286-5.28382976.528384-11.88861725zm-1.84934059-54.42344619c-2.11353145-2.11353145-117.30101931-68.42559488-118.88616789-68.42559374-.52838286 0-.79257486 5.28382976-.79257487 11.62442525v11.36023324l60.23565881 34.60908487 59.97146681 34.60908488.79257373-10.83185152c.52838286-5.81221262 0-11.62442525-1.32095659-12.94538298z"></path><path d="M109.10798734 615.82725347c-3.69868117-7.39736121-10.56765952-20.34274418-15.58729841-28.26848938-7.92574407-13.47376583-49.66799929-84.80546589-61.2924234-105.41240206-7.13317035-12.15280811-6.34059549-15.85148928 6.34059548-37.77938205 24.56980821-42.00644608 41.21387122-70.27493433 45.96931812-78.99325326 7.13317035-12.41700011 49.66799929-86.12642361 81.37097671-141.34244466 14.53053155-24.56980821 40.68548835-70.27493433 58.12212622-101.18533803l32.23136143-56.27278563h229.05401685c159.30746539 0 230.37497458 1.05676573 232.75269689 2.90610631 1.84934059 1.58514859 10.56765952 15.58729728 19.55017045 31.17459456 8.71831893 15.58729728 18.75759559 33.02393515 22.45627563 38.83614777l6.34059548 10.83185152-8.9825098 14.26633955c-5.01963776 7.92574407-15.32310642 25.89076594-22.72046762 39.62872264s-13.73795669 25.62657394-14.2663407 25.89076594c-.264192.52838286-83.2203173.79257486-184.40565532.79257486l-183.6130816-.264192-9.5108938 14.53053155c-5.01963776 7.92574407-9.24670179 15.85148928-9.24670179 17.17244701 0 1.58514859-1.05676573 2.64191431-2.64191431 2.64191431-1.32095773 0-2.64191431 1.05676573-2.64191545 2.11353145 0 2.90610631-29.32525511 55.21601991-48.61123243 87.18319047-8.18993607 13.47376583-14.79472355 25.09819107-14.79472355 25.8907648 0 1.05676573-3.43448917 6.86897835-7.92574407 13.47376583-4.22706403 6.34059549-7.92574407 12.15280811-7.92574521 12.94538297 0 .52838286-2.90610631 5.54802062-6.07640349 11.09604238-3.43448917 5.28382976-9.24670179 15.05891442-12.94538296 21.6637019s-20.07855331 35.13746773-36.45842546 63.40595599-31.96716942 55.21601991-34.34489288 59.44308394c-2.64191431 4.4912549-8.18993607 14.26634069-12.94538182 21.92789276-4.4912549 7.66155321-8.18993607 14.53053155-8.18993608 15.32310642 0 2.37772345-19.28597845 30.11782883-20.87112704 30.11782884-.79257486 0-4.4912549-6.34059549-8.18993607-13.7379567z"></path><path d="M625.60233813 601.56091278c-15.85148928-10.56765952-31.17459456-21.13531904-33.81651-23.51304135-4.22706403-3.69868117-4.7554469-9.24670179-4.4912549-56.00859477.264192-39.89291463-.264192-52.3099136-3.17029832-54.95182905-1.84934059-1.84934059-21.13531904-13.73795669-43.0632118-26.4191488-21.6637019-12.68119097-41.74225408-25.09819107-44.11997753-27.21172252-4.22706403-3.43448917-4.7554469-9.51089379-4.75544689-50.72476502 0-25.62657394.52838286-47.29027584 1.58514858-48.08284956.79257486-.79257486 8.18993607 2.90610631 16.37987214 8.45412693s25.36238194 15.85148928 37.77938205 22.72046763c12.41700011 7.13317035 43.06321181 25.09819107 67.89721201 40.15710549l45.44093526 27.21172366-.52838286 103.29886948c-.52838286 66.31206229-1.84934059 103.56306147-3.43448918 103.82725347-1.32095773.264192-15.58729728-8.18993607-31.70297856-18.75759559z"></path></svg></div></div> <span class="domain text-slate-600 dark:text-slate-300 text-lg md:text-2xl">CheatSheets<span class="text-emerald-400">.zip</span></span></a><div class="md:ml-auto flex flex-wrap items-center text-base justify-center"> <button id="mysearch-trigger" type="button" class="fadeIn inline-flex h-8 items-center bg-slate-200 dark:bg-gray-900 md:dark:bg-transparent md:bg-transparent rounded-full px-2 md:px-3 lg:px-6 py-2 text-slate-700 md:hover:opacity-80"><div class="md:text-xl text-slate-700 dark:text-slate-300 md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div> <span class="hidden md:inline dark:text-slate-300">Search for cheatsheet</span> <span class="hidden md:inline dark:text-slate-300 md:ml-2 text-sm leading-5 py-0.5 px-1.5 border border-slate-400 rounded-md"><span class="font-sans">⌘</span> <span class="font-sans">K</span></span></button> <a href="https://github.com/Fechin/reference/blob/main/source/_posts/vim.md" rel="external nofollow noreferrer" target="_blank"><img alt="GitHub Repo stars" style="height:26px;opacity:.8" src="https://img.shields.io/github/stars/Fechin/reference?style=social"></a> <a href="https://twitter.com/FechinLi" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"><div class="md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></div> <span class="hidden md:inline text-sm">Follow Me</span></button></a> <button id="darkMode" class="fadeIn inline-flex items-center justify-center flex-shrink-0 h-8 w-8 rounded-full text-gray-900 ml-1 lg:ml-4 dark:text-gray-300 bg-gray-200 dark:bg-gray-900"> <i class="icon-light text-gray-600 dark:text-gray-300 dark:hover:text-white"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M512 31.40266667c14.19946667 0 26.935296 8.14830933 31.93787733 20.447232l29.40381867 72.50466133c12.713984 31.30436267-4.456448 66.21320533-38.33856 77.96599467A70.34197333 70.34197333 0 0 1 512 206.16533333c-36.19771733 0-65.536-27.11005867-65.536-60.555264 0-7.25265067 1.41994667-14.46161067 4.17245867-21.25550933l29.425664-72.50466133C485.04285867 39.550976 497.75684267 31.40266667 512 31.40266667zm0 961.19466666c-14.221312 0-26.95714133-8.14830933-31.93787733-20.447232l-29.425664-72.50466133a56.492032 56.492032 0 0 1-4.17245867-21.25550933C446.464 844.96657067 475.80228267 817.83466667 512 817.83466667c7.86432 0 15.64125867 1.31072 23.003136 3.84477866 33.882112 11.75278933 51.052544 46.661632 38.33856 77.98784l-29.40381867 72.482816c-5.00258133 12.29892267-17.73841067 20.447232-31.93787733 20.447232zm480.59733333-480.59733333c0 14.19946667-8.14830933 26.935296-20.447232 31.93787733l-72.50466133 29.40381867c-31.30436267 12.713984-66.21320533-4.456448-77.96599467-38.33856A70.34197333 70.34197333 0 0 1 817.83466667 512c0-36.19771733 27.11005867-65.536 60.555264-65.536 7.25265067 0 14.46161067 1.41994667 21.25550933 4.17245867l72.50466133 29.425664c12.29892267 4.980736 20.447232 17.69472 20.447232 31.93787733zM31.40266667 512c0-14.221312 8.14830933-26.95714133 20.447232-31.93787733l72.50466133-29.425664c6.77205333-2.752512 13.98101333-4.17245867 21.25550933-4.17245867C179.03342933 446.464 206.16533333 475.80228267 206.16533333 512c0 7.86432-1.31072 15.64125867-3.84477866 23.003136-11.75278933 33.882112-46.661632 51.052544-77.98784 38.33856l-72.482816-29.40381867C39.550976 538.935296 31.40266667 526.19946667 31.40266667 512zM172.15214933 172.17399467c10.04885333-10.04885333 24.81629867-13.28196267 37.04968534-8.126464l72.06775466 30.45239466c31.1296 13.172736 43.66882133 49.98212267 28.00571734 82.24768a70.34197333 70.34197333 0 0 1-13.54410667 19.00544c-25.58088533 25.58088533-65.49230933 27.15374933-89.12896 3.49525334a56.492032 56.492032 0 0 1-12.10231467-17.97870934L164.04753067 209.22368c-5.177344-12.23338667-1.94423467-27.000832 8.10461866-37.04968533zm679.673856 679.673856c-10.04885333 10.04885333-24.81629867 13.28196267-37.04968533 8.10461866l-72.04590933-30.45239466a56.492032 56.492032 0 0 1-18.00055467-12.08046934c-23.63665067-23.658496-22.06378667-63.56992 3.51709867-89.15080533a70.34197333 70.34197333 0 0 1 19.00544-13.54410667c32.26555733-15.663104 69.074944-3.12388267 82.24768 28.00571734l30.45239466 72.06775466c5.15549867 12.23338667 1.92238933 26.97898667-8.126464 37.04968534zm0-679.69570134c10.04885333 10.04885333 13.28196267 24.81629867 8.126464 37.04968534l-30.45239466 72.06775466c-13.172736 31.1296-49.98212267 43.66882133-82.24768 28.00571734a70.34197333 70.34197333 0 0 1-19.00544-13.54410667c-25.58088533-25.58088533-27.15374933-65.49230933-3.49525334-89.12896 5.111808-5.15549867 11.206656-9.240576 17.97870934-12.10231467l72.04590933-30.45239466c12.23338667-5.177344 27.000832-1.94423467 37.04968533 8.10461866zM172.15214933 851.82600533c-10.04885333-10.04885333-13.28196267-24.81629867-8.10461866-37.04968533l30.45239466-72.04590933c2.83989333-6.77205333 6.946816-12.86690133 12.08046934-18.00055467 23.658496-23.63665067 63.56992-22.06378667 89.15080533 3.51709867 5.57056 5.57056 10.15808 12.01493333 13.54410667 19.00544 15.663104 32.26555733 3.12388267 69.074944-28.00571734 82.24768l-72.06775466 30.45239466c-12.23338667 5.15549867-26.97898667 1.92238933-37.04968534-8.126464zM512 752.29866667c-132.7104 0-240.29866667-107.58826667-240.29866667-240.29866667s107.58826667-240.29866667 240.29866667-240.29866667 240.29866667 107.58826667 240.29866667 240.29866667-107.58826667 240.29866667-240.29866667 240.29866667z"></path></svg></i></button> <a href="https://facebook.com/sharer/sharer.php?u=https://cheatsheets.zip/vim.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4a66ad] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M594.74346667 51.53066667c-28.95893333 0-56.30826667 3.2192-88.48533334 16.0896-65.9616 27.34826667-98.13653333 88.48533333-98.13653333 186.6208v94.91946666h-91.70026667v157.66186667h91.70026667v455.28853333h186.6208v-455.28853333h127.09546667l17.696-157.66186667h-144.7936v-70.7872c0-22.52266667 1.60853333-38.61013333 8.04266666-46.65706666 8.04266667-14.47786667 24.13226667-20.91413333 49.872-20.91413334h85.26613334v-157.66186666h-143.184z"></path></svg></span> <span class="hidden">Facebook</span></button></a> <a href="https://twitter.com/intent/tweet/?text=A%20useful%20collection%20of%20Vim%208.2%20quick%20reference%20cheat%20sheets%20to%20help%20you%20learn%20vim%20editor%20faster.%20&url=https://cheatsheets.zip/vim.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></span> <span class="hidden">Twitter</span></button></a></div></div></div></header><div class="mx-auto flex flex-wrap md:py-5 flex-col md:flex-row items-center"><div class="flex flex-col w-full mx-auto text-center my-8"><div class="max-container w-full"><h1 class="text-5xl mb-4"> <span class="text-slate-700 dark:text-slate-300 font-light">Vim</span> <span class="text-slate-400 dark:text-slate-500 font-extralight hidden md:inline">cheatsheet</span></h1><div class="lg:w-3/5 mx-auto intro leading-relaxed text-slate-600"><p>A useful collection of <a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.vim.org/">Vim</a> 8.2 quick reference cheat sheets to help you learn vim editor faster.</p></div></div></div><div id="mdLayout" class="mdLayout w-full max-container"> 
+        <div class="h2-wrap">
+<h2 id="getting-started"><a class="h-anchor" href="#getting-started">#</a>Getting Started</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap row-span-2">
+<h3 id="motion-diagrams"><a class="h-anchor" href="#motion-diagrams">#</a>Motion Diagrams</h3>
+<div class="section">
+<pre><code class="hljs language-bash">▼/▶ Cursor   ▽/▷ Target
+</code></pre>
+<h4 id="left-right-motions"><a class="h-anchor" href="#left-right-motions">#</a>Left-right motions</h4>
+<pre><code class="hljs language-bash">┌───────────── |      
+├───────────── 0      $ ──────────────┐ 
+│  ┌────────── ^      fe ────────┐    │
+│  │  ┌─────── Fo     te ───────┐│    │
+│  │  │┌────── To     30| ───┐  ││    │
+│  │  ││ ┌──── ge     w ───┐ │  ││    │
+│  │  ││ │ ┌── b      e ─┐ │ │  ││    │
+│  │  ││ │ │  ┌h      l┐ │ │ │  ││    │
+▽  ▽  ▽▽ ▽ ▽  ▽▼      ▼▽ ▽ ▽ ▽  ▽▽    ▽
+   <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;A cheatsheet from quickref.me&quot;</span>
+</code></pre>
+<h4 id="up-down-motions"><a class="h-anchor" href="#up-down-motions">#</a>Up-down motions</h4>
+<pre><code class="hljs language-bash">                 - SCREEN 1 START
+   ┌─┬─────────▷ <span class="hljs-comment">#!/usr/bin/python</span>
+   │ │     ┌───▷     
+   │ │     │     <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello&quot;</span>)
+   │ │     &#123; &#125; ▶ <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Vim&quot;</span>)
+   │ │       │   <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;!&quot;</span>)
+   │ │       └─▷    
+   │ │ ┌───┬───▷ <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Welcome&quot;</span>)
+G gg H M L k j ▶ <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;to&quot;</span>)
+│        │   └─▷ <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;cheatsheets.zip&quot;</span>)
+│        │       <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;/vim&quot;</span>)
+│        │     
+│        └─────▷ 
+│                - SCREEN 1 END
+└──────────────▷ <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;SCREEN 2&quot;</span>)
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="motions"><a class="h-anchor" href="#motions">#</a>Motions</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>h</code> <em>|</em> <code>j</code> <em>|</em> <code>k</code> <em>|</em> <code>l</code></td>
+<td>Arrow keys</td>
+</tr>
+<tr>
+<td><code>&lt;C-u&gt;</code> <em>/</em> <code>&lt;C-d&gt;</code></td>
+<td>Half-page up/down</td>
+</tr>
+<tr>
+<td><code>&lt;C-b&gt;</code> <em>/</em> <code>&lt;C-f&gt;</code></td>
+<td>Page up/down</td>
+</tr>
+</tbody>
+</table>
+<h4 class="left-text" id="words"><a class="h-anchor" href="#words">#</a>Words</h4>
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>b</code> <em>/</em> <code>w</code></td>
+<td>Previous/Next word</td>
+</tr>
+<tr>
+<td><code>ge</code> <em>/</em> <code>e</code></td>
+<td>Previous/Next end of word</td>
+</tr>
+</tbody>
+</table>
+<h4 id="line"><a class="h-anchor" href="#line">#</a>Line</h4>
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code> <em>(zero)</em> <em>/</em> <code>$</code></td>
+<td>Start/End of line</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>Start of line <em>(non-blank)</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="character"><a class="h-anchor" href="#character">#</a>Character</h4>
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Fe</code> <em>/</em> <code>fe</code></td>
+<td>Move to previous/next <code>e</code></td>
+</tr>
+<tr>
+<td><code>To</code> <em>/</em> <code>to</code></td>
+<td>Move before/after previous/next <code>o</code></td>
+</tr>
+<tr>
+<td><code>|</code> <em>/</em> <code>n|</code></td>
+<td>Go to first/<code>n</code>th column</td>
+</tr>
+</tbody>
+</table>
+<h4 id="document"><a class="h-anchor" href="#document">#</a>Document</h4>
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gg</code> <em>/</em> <code>G</code></td>
+<td>First/Last line</td>
+</tr>
+<tr>
+<td><code>:n</code> <em>|</em> <code>nG</code></td>
+<td>Go to line <code>n</code></td>
+</tr>
+<tr>
+<td><code>&#125;</code> <em>/</em> <code>&#123;</code></td>
+<td>Next/Previous empty line</td>
+</tr>
+</tbody>
+</table>
+<h4 id="window"><a class="h-anchor" href="#window">#</a>Window</h4>
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>H</code> <em>/</em> <code>M</code> <em>/</em> <code>L</code></td>
+<td>Top/Middle/Bottom screen</td>
+</tr>
+<tr>
+<td><code>zt</code> <em>/</em> <code>zz</code> <em>/</em>  <code>zb</code></td>
+<td>Top/Center/Bottom this line</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="insert-mode"><a class="h-anchor" href="#insert-mode">#</a>Insert Mode</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>i</code> <em>/</em> <code>a</code></td>
+<td>Insert before/after cursor</td>
+</tr>
+<tr>
+<td><code>I</code> <em>/</em> <code>A</code></td>
+<td>Insert start/end of line</td>
+</tr>
+<tr>
+<td><code>o</code> <em>/</em> <code>O</code> <em>(letter)</em></td>
+<td>Insert new line below/above</td>
+</tr>
+<tr>
+<td><code>s</code> <em>/</em> <code>S</code></td>
+<td>Delete char/line and insert</td>
+</tr>
+<tr>
+<td><code>C</code> <em>/</em> <code>cc</code></td>
+<td>Change to end of/current line</td>
+</tr>
+<tr>
+<td><code>gi</code></td>
+<td>Insert at last insert point</td>
+</tr>
+<tr>
+<td><code>Esc</code> <em>|</em> <code>&lt;C-[&gt;</code></td>
+<td>Exit insert mode</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="saving-and-exiting"><a class="h-anchor" href="#saving-and-exiting">#</a>Saving and Exiting</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:w</code></td>
+<td>Save</td>
+</tr>
+<tr>
+<td><code>:q</code></td>
+<td>Close file</td>
+</tr>
+<tr>
+<td><code>:wq</code> <em>|</em> <code>:x</code> <em>|</em> <code>ZZ</code></td>
+<td>Save and quit</td>
+</tr>
+<tr>
+<td><code>:wqa</code></td>
+<td>Save and quit all files</td>
+</tr>
+<tr>
+<td><code>:q!</code> <em>|</em> <code>ZQ</code></td>
+<td>Force quit</td>
+</tr>
+<tr>
+<td><code>:qa</code></td>
+<td>Close all files</td>
+</tr>
+<tr>
+<td><code>:qa!</code></td>
+<td>Force quit all files</td>
+</tr>
+<tr>
+<td><code>:w</code> now.txt</td>
+<td>Write to <code>now.txt</code></td>
+</tr>
+<tr>
+<td><code>:sav</code> new.txt</td>
+<td>Save and edit <code>new.txt</code></td>
+</tr>
+<tr>
+<td><code>:w</code> !sudo tee %</td>
+<td>Write to readonly file</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="normal-mode"><a class="h-anchor" href="#normal-mode">#</a>Normal Mode</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r</code></td>
+<td>Replace one character</td>
+</tr>
+<tr>
+<td><code>R</code></td>
+<td>Enter Replace mode</td>
+</tr>
+<tr>
+<td><code>u</code> <em>/</em> <code>3u</code></td>
+<td>Undo changes <code>1</code> / <code>3</code> times</td>
+</tr>
+<tr>
+<td><code>U</code></td>
+<td>Undo changes on one line</td>
+</tr>
+<tr>
+<td><code>J</code></td>
+<td>Join with next line</td>
+</tr>
+<tr>
+<td><code>&lt;C-r&gt;</code> <em>/</em> 5 <code>&lt;C-r&gt;</code></td>
+<td>Redo changes <code>1</code> / <code>5</code> times</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="cut-and-paste"><a class="h-anchor" href="#cut-and-paste">#</a>Cut and paste</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x</code></td>
+<td>Delete character <em>(Cut)</em></td>
+</tr>
+<tr>
+<td><code>p</code> <em>/</em> <code>P</code></td>
+<td>Paste after/before</td>
+</tr>
+<tr>
+<td><code>xp</code></td>
+<td>Swap two characters</td>
+</tr>
+<tr>
+<td><code>D</code></td>
+<td>Delete to end of line <em>(Cut)</em></td>
+</tr>
+<tr>
+<td><code>dw</code></td>
+<td>Delete word <em>(Cut)</em></td>
+</tr>
+<tr>
+<td><code>dd</code></td>
+<td>Delete line <em>(Cut)</em></td>
+</tr>
+<tr>
+<td><code>ddp</code></td>
+<td>Swap two lines</td>
+</tr>
+<tr>
+<td><code>yy</code></td>
+<td>Yank line <em>(Copy)</em></td>
+</tr>
+<tr>
+<td><code>&quot;*p</code> <em>|</em> <code>&quot;+p</code></td>
+<td>Paste from system clipboard</td>
+</tr>
+<tr>
+<td><code>&quot;*y</code> <em>|</em> <code>&quot;+y</code></td>
+<td>Paste to system clipboard</td>
+</tr>
+</tbody>
+</table>
+<h4 id="in-visual-mode"><a class="h-anchor" href="#in-visual-mode">#</a>In visual mode</h4>
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d</code> <em>|</em> <code>x</code></td>
+<td>Delete selection  <em>(Cut)</em></td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td>Replace selection</td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Yank selection <em>(Copy)</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="repeating"><a class="h-anchor" href="#repeating">#</a>Repeating</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.</code></td>
+<td>Repeat last command</td>
+</tr>
+<tr>
+<td><code>;</code></td>
+<td>Repeat latest <code>f</code>, <code>t</code>, <code>F</code> or <code>T</code></td>
+</tr>
+<tr>
+<td><code>,</code></td>
+<td>Repeat latest <code>f</code>, <code>t</code>, <code>F</code> or <code>T</code> reversed</td>
+</tr>
+<tr>
+<td><code>&amp;</code></td>
+<td>Repeat last <code>:s</code></td>
+</tr>
+<tr>
+<td><code>@:</code></td>
+<td>Repeat a command-line command</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="visual-mode"><a class="h-anchor" href="#visual-mode">#</a>Visual mode</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>v</code></td>
+<td>Enter visual mode</td>
+</tr>
+<tr>
+<td><code>V</code></td>
+<td>Enter visual line mode</td>
+</tr>
+<tr>
+<td><code>&lt;C-v&gt;</code></td>
+<td>Enter visual block mode</td>
+</tr>
+<tr>
+<td><code>ggVG</code></td>
+<td>Select all text</td>
+</tr>
+<tr>
+<td><code>&gt;</code> <em>/</em> <code>&lt;</code></td>
+<td>Shift text right/left</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="macros"><a class="h-anchor" href="#macros">#</a>Macros</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>qi</code></td>
+<td>Record macro <code>i</code></td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td>Stop recording macro</td>
+</tr>
+<tr>
+<td><code>@i</code></td>
+<td>Run macro <code>i</code></td>
+</tr>
+<tr>
+<td><code>7@i</code></td>
+<td>Run macro <code>i</code> 7 times</td>
+</tr>
+<tr>
+<td><code>@@</code></td>
+<td>Repeat last macro</td>
+</tr>
+</tbody>
+</table>
+<p>You can save macro for any letters not just <code>i</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="vim-operators"><a class="h-anchor" href="#vim-operators">#</a>Vim Operators</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap secondary">
+<h3 id="usage"><a class="h-anchor" href="#usage">#</a>Usage</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d</code></td>
+<td><yel>w</yel></td>
+</tr>
+<tr>
+<td>Operator</td>
+<td>Motion</td>
+</tr>
+</tbody>
+</table>
+<p>Combine <a href="#available-operators">operators</a> with <a href="#motions">motions</a> to use them</p>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="available-operators"><a class="h-anchor" href="#available-operators">#</a>Available Operators</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d</code></td>
+<td>Delete</td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Yank <em>(copy)</em></td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td>Change <em>(delete then insert)</em></td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td>Paste</td>
+</tr>
+<tr>
+<td><code>=</code></td>
+<td>Formats code</td>
+</tr>
+<tr>
+<td><code>g~</code></td>
+<td>Toggle case</td>
+</tr>
+<tr>
+<td><code>gU</code></td>
+<td>Uppercase</td>
+</tr>
+<tr>
+<td><code>gu</code></td>
+<td>Lowercase</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>Indent right</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Indent left</td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td>Filter through external program</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="examples"><a class="h-anchor" href="#examples">#</a>Examples</h3>
+<div class="section">
+<table class="show-header">
+<thead>
+<tr>
+<th>Combination</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d</code><yel>d</yel></td>
+<td>Delete current line</td>
+</tr>
+<tr>
+<td><code>d</code><yel>j</yel></td>
+<td>Delete two lines</td>
+</tr>
+<tr>
+<td><code>d</code><yel>w</yel></td>
+<td>Delete to next word</td>
+</tr>
+<tr>
+<td><code>d</code><yel>b</yel></td>
+<td>Delete to beginning of word</td>
+</tr>
+<tr>
+<td><code>d</code><yel>fa</yel></td>
+<td>Delete until <code>a</code> char</td>
+</tr>
+<tr>
+<td><code>d</code><yel>/hello</yel></td>
+<td>Delete until <code>hello</code></td>
+</tr>
+<tr>
+<td><code>c</code><yel>c</yel></td>
+<td>Change current line, synonym with <code>S</code></td>
+</tr>
+<tr>
+<td><code>y</code><yel>y</yel></td>
+<td>Copy current line</td>
+</tr>
+<tr>
+<td><code>&gt;</code><yel>j</yel></td>
+<td>Indent 2 lines</td>
+</tr>
+<tr>
+<td>gg<code>d</code><yel>G</yel></td>
+<td>Delete a complete document</td>
+</tr>
+<tr>
+<td>gg<code>=</code><yel>G</yel></td>
+<td>Indent a complete document</td>
+</tr>
+<tr>
+<td>gg<code>y</code><yel>G</yel></td>
+<td>Copy a whole document</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="counts"><a class="h-anchor" href="#counts">#</a>Counts</h3>
+<div class="section">
+<pre><code class="hljs">[<span class="hljs-built_in">count</span>] <span class="hljs-symbol">&lt;operator&gt;</span> <span class="hljs-symbol">&lt;motion&gt;</span>
+<span class="hljs-symbol">&lt;operator&gt;</span> [<span class="hljs-built_in">count</span>] <span class="hljs-symbol">&lt;motion&gt;</span>
+</code></pre>
+<hr>
+<table>
+<thead>
+<tr>
+<th>Combination</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2<code>d</code><yel>d</yel></td>
+<td>Delete <code>2</code> lines</td>
+</tr>
+<tr>
+<td>6<code>y</code><yel>y</yel></td>
+<td>Copy <code>6</code> lines</td>
+</tr>
+<tr>
+<td><code>d</code>3<yel>w</yel></td>
+<td>Delete <code>3</code> words</td>
+</tr>
+<tr>
+<td><code>d</code>5<yel>j</yel></td>
+<td>Delete <code>5</code> lines downwards</td>
+</tr>
+<tr>
+<td><code>&gt;</code>4<yel>k</yel></td>
+<td>Indent <code>4</code> lines upwards</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="vim-text-objects"><a class="h-anchor" href="#vim-text-objects">#</a>Vim Text objects</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap secondary">
+<h3 id="usage-2"><a class="h-anchor" href="#usage-2">#</a>Usage</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>v</code></td>
+<td>        <pur>i</pur> <em>/</em> <pur>a</pur></td>
+<td><yel>p</yel></td>
+</tr>
+<tr>
+<td>Operator</td>
+<td><pur>i</pur>nner <em>/</em> <pur>a</pur>round</td>
+<td>Text object</td>
+</tr>
+</tbody>
+</table>
+<p>Operate with an <a href="#available-operators">operator</a> inner or around text blocks</p>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="text-objects"><a class="h-anchor" href="#text-objects">#</a>Text objects</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><yel>p</yel></td>
+<td>Paragraph</td>
+</tr>
+<tr>
+<td><yel>w</yel></td>
+<td>Word</td>
+</tr>
+<tr>
+<td><yel>W</yel></td>
+<td>WORD <br><em>(surrounded by whitespace)</em></td>
+</tr>
+<tr>
+<td><yel>s</yel></td>
+<td>Sentence</td>
+</tr>
+<tr>
+<td><yel>[</yel> <yel>(</yel> <yel>{</yel> <yel>&lt;</yel></td>
+<td>A [], (), or {} block</td>
+</tr>
+<tr>
+<td><yel>]</yel> <yel>)</yel> <yel>}</yel> <yel>&gt;</yel></td>
+<td>A [], (), or {} block</td>
+</tr>
+<tr>
+<td><yel>'</yel> <yel>&quot;</yel> <yel>`</yel></td>
+<td>A quoted string</td>
+</tr>
+<tr>
+<td><yel>b</yel></td>
+<td>A block [(</td>
+</tr>
+<tr>
+<td><yel>B</yel></td>
+<td>A block in [{</td>
+</tr>
+<tr>
+<td><yel>t</yel></td>
+<td>A HTML tag block</td>
+</tr>
+</tbody>
+</table>
+<p>See <code>:help text-objects</code></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="delete"><a class="h-anchor" href="#delete">#</a>Delete</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d</code><pur>i</pur><yel>w</yel></td>
+<td>Delete inner word</td>
+</tr>
+<tr>
+<td><code>d</code><pur>i</pur><yel>s</yel></td>
+<td>Delete inner sentence</td>
+</tr>
+<tr>
+<td><code>d</code><pur>i</pur><yel>&quot;</yel></td>
+<td>Delete in quotes</td>
+</tr>
+<tr>
+<td><code>d</code><pur>a</pur><yel>&quot;</yel></td>
+<td>Delete in quotes <em>(including quotes)</em></td>
+</tr>
+<tr>
+<td><code>d</code><pur>i</pur><yel>p</yel></td>
+<td>Delete a paragraph</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="selections"><a class="h-anchor" href="#selections">#</a>Selections</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>v</code><pur>i</pur><yel>&quot;</yel></td>
+<td>Select inner quotes &quot;<code class="underline">...</code>&quot;</td>
+</tr>
+<tr>
+<td><code>v</code><pur>a</pur><yel>&quot;</yel></td>
+<td>Select quotes <code class="underline">&quot;...&quot;</code></td>
+</tr>
+<tr>
+<td><code>v</code><pur>i</pur><yel>[</yel></td>
+<td>Select inner brackets [<code class="underline">...</code>]</td>
+</tr>
+<tr>
+<td><code>v</code><pur>a</pur><yel>[</yel></td>
+<td>Select brackets <code class="underline">[...]</code></td>
+</tr>
+<tr>
+<td><code>v</code><pur>i</pur><yel>w</yel></td>
+<td>Select inner word</td>
+</tr>
+<tr>
+<td><code>v</code><pur>i</pur><yel>p</yel></td>
+<td>Select inner paragraph</td>
+</tr>
+<tr>
+<td><code>v</code><pur>i</pur><yel>p</yel><pur>i</pur><yel>p</yel></td>
+<td>Select more paragraph</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="misc"><a class="h-anchor" href="#misc">#</a>Misc</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>c</code><pur>i</pur><yel>w</yel></td>
+<td>Change inner word</td>
+</tr>
+<tr>
+<td><code>c</code><pur>i</pur><yel>&quot;</yel></td>
+<td>Change inner quotes</td>
+</tr>
+<tr>
+<td><code>c</code><pur>i</pur><yel>t</yel></td>
+<td>Change inner tags (HTML)</td>
+</tr>
+<tr>
+<td><code>c</code><pur>i</pur><yel>p</yel></td>
+<td>Change inner paragraph</td>
+</tr>
+<tr>
+<td><code>y</code><pur>i</pur><yel>p</yel></td>
+<td>Yank inner paragraph</td>
+</tr>
+<tr>
+<td><code>y</code><pur>a</pur><yel>p</yel></td>
+<td>Yank paragraph <em>(including newline)</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="vim-multiple-files"><a class="h-anchor" href="#vim-multiple-files">#</a>Vim Multiple files</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="buffers"><a class="h-anchor" href="#buffers">#</a>Buffers</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:e file</code></td>
+<td>Edit a file in a new buffer</td>
+</tr>
+<tr>
+<td><code>:bn</code></td>
+<td>Go to the next buffer</td>
+</tr>
+<tr>
+<td><code>:bp</code></td>
+<td>Go to the previous buffer</td>
+</tr>
+<tr>
+<td><code>:bd</code></td>
+<td>Remove file from buffer list</td>
+</tr>
+<tr>
+<td><code>:b 5</code></td>
+<td>Open buffer #5</td>
+</tr>
+<tr>
+<td><code>:b file</code></td>
+<td>Go to a buffer by file</td>
+</tr>
+<tr>
+<td><code>:ls</code></td>
+<td>List all open buffers</td>
+</tr>
+<tr>
+<td><code>:sp file</code></td>
+<td>Open and split window</td>
+</tr>
+<tr>
+<td><code>:vs file</code></td>
+<td>Open and vertically split window</td>
+</tr>
+<tr>
+<td><code>:hid</code></td>
+<td>Hide this buffer</td>
+</tr>
+<tr>
+<td><code>:wn</code></td>
+<td>Write file and move to next</td>
+</tr>
+<tr>
+<td><code>:tab ba</code></td>
+<td>Edit all buffers as tabs</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="windows"><a class="h-anchor" href="#windows">#</a>Windows</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;C-w&gt;</code> <code>s</code></td>
+<td>Split window</td>
+</tr>
+<tr>
+<td><code>&lt;C-w&gt;</code> <code>v</code></td>
+<td>Split window vertically</td>
+</tr>
+<tr>
+<td><code>&lt;C-w&gt;</code> <code>w</code></td>
+<td>Switch windows</td>
+</tr>
+<tr>
+<td><code>&lt;C-w&gt;</code> <code>q</code></td>
+<td>Quit a window</td>
+</tr>
+<tr>
+<td><code>&lt;C-w&gt;</code> <code>T</code></td>
+<td>Break out into a new tab</td>
+</tr>
+<tr>
+<td><code>&lt;C-w&gt;</code> <code>x</code></td>
+<td>Swap current with next</td>
+</tr>
+<tr>
+<td><code>&lt;C-w&gt;</code> <code>-</code>  <em>/</em> <code>+</code></td>
+<td>Decrease/Increase height</td>
+</tr>
+<tr>
+<td><code>&lt;C-w&gt;</code> <code>&lt;</code>  <em>/</em> <code>&gt;</code></td>
+<td>Decrease/Increase width</td>
+</tr>
+<tr>
+<td><code>&lt;C-w&gt;</code> <code>|</code></td>
+<td>Max out the width</td>
+</tr>
+<tr>
+<td><code>&lt;C-w&gt;</code> <code>=</code></td>
+<td>Equally high and wide</td>
+</tr>
+<tr>
+<td><code>&lt;C-w&gt;</code> <code>h</code> <em>/</em> <code>l</code></td>
+<td>Go to the left/right window</td>
+</tr>
+<tr>
+<td><code>&lt;C-w&gt;</code> <code>j</code> <em>/</em> <code>k</code></td>
+<td>Go to the up/down window</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="tabs"><a class="h-anchor" href="#tabs">#</a>Tabs</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:tabe [file]</code></td>
+<td><yel>E</yel>dit file in a new tab</td>
+</tr>
+<tr>
+<td><code>:tabf [file]</code></td>
+<td>Open if exists in new tab</td>
+</tr>
+<tr>
+<td><code>:tabc</code></td>
+<td><yel>C</yel>lose current tab</td>
+</tr>
+<tr>
+<td><code>:tabo</code></td>
+<td>Close <yel>o</yel>ther tabs</td>
+</tr>
+<tr>
+<td><code>:tabs</code></td>
+<td>List all <yel>tabs</yel></td>
+</tr>
+<tr>
+<td><code>:tabr</code></td>
+<td>Go to fi<yel>r</yel>st tab</td>
+</tr>
+<tr>
+<td><code>:tabl</code></td>
+<td>Go to <yel>l</yel>ast tab</td>
+</tr>
+<tr>
+<td><code>:tabm 0</code></td>
+<td><yel>M</yel>ove to position <code>0</code></td>
+</tr>
+<tr>
+<td><code>:tabn</code></td>
+<td>Go to <yel>n</yel>ext tab</td>
+</tr>
+<tr>
+<td><code>:tabp</code></td>
+<td>Go to <yel>p</yel>revious tab</td>
+</tr>
+</tbody>
+</table>
+<h4 id="normal-mode-2"><a class="h-anchor" href="#normal-mode-2">#</a>Normal mode</h4>
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gt</code></td>
+<td>Go to <yel>n</yel>ext tab</td>
+</tr>
+<tr>
+<td><code>gT</code></td>
+<td>Go to <yel>p</yel>revious tab</td>
+</tr>
+<tr>
+<td><code>2gt</code></td>
+<td>Go to tab number <code>2</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="vim-search-and-replace"><a class="h-anchor" href="#vim-search-and-replace">#</a>Vim Search and Replace</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="search"><a class="h-anchor" href="#search">#</a>Search</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/foo</code></td>
+<td>Search forward</td>
+</tr>
+<tr>
+<td><code>/foo\c</code></td>
+<td>Search forward <em>(case insensitive)</em></td>
+</tr>
+<tr>
+<td><code>?foo</code></td>
+<td>Search backward</td>
+</tr>
+<tr>
+<td><code>/\v\d+</code></td>
+<td>Search with <a href="/regex">regex</a></td>
+</tr>
+<tr>
+<td><code>n</code></td>
+<td>Next matching search pattern</td>
+</tr>
+<tr>
+<td><code>N</code></td>
+<td>Previous match</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Search for current word forward</td>
+</tr>
+<tr>
+<td><code>#</code></td>
+<td>Search for current word backward</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="replace-line"><a class="h-anchor" href="#replace-line">#</a>Replace LINE</h3>
+<div class="section">
+<pre><code class="hljs language-vim">:[<span class="hljs-built_in">range</span>]s/&#123;pattern&#125;/&#123;str&#125;/[flags]
+</code></pre>
+<hr>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:s/old/new</code></td>
+<td>Replace first</td>
+</tr>
+<tr>
+<td><code>:s/old/new/g</code></td>
+<td>Replace all</td>
+</tr>
+<tr>
+<td><code>:s/\vold/new/g</code></td>
+<td>Replace all with <a href="/regex">regex</a></td>
+</tr>
+<tr>
+<td><code>:s/old/new/gc</code></td>
+<td>replace all <em>(Confirm)</em></td>
+</tr>
+<tr>
+<td><code>:s/old/new/i</code></td>
+<td>Ignore case replace first</td>
+</tr>
+<tr>
+<td><code>:2,6s/old/new/g</code></td>
+<td>Replace between lines <code>2</code>-<code>6</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="replace-file"><a class="h-anchor" href="#replace-file">#</a>Replace FILE</h3>
+<div class="section">
+<pre><code class="hljs language-vim">:%s/&#123;pattern&#125;/&#123;str&#125;/[flags]
+</code></pre>
+<hr>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:%s/old/new</code></td>
+<td>Replace first</td>
+</tr>
+<tr>
+<td><code>:%s/old/new/g</code></td>
+<td>Replace all</td>
+</tr>
+<tr>
+<td><code>:%s/old/new/gc</code></td>
+<td>Replace all <em>(Confirm)</em></td>
+</tr>
+<tr>
+<td><code>:%s/old/new/gi</code></td>
+<td>Replace all <em>(ignore case)</em></td>
+</tr>
+<tr>
+<td><code>:%s/\vold/new/g</code></td>
+<td>Replace all with <a href="/regex">regex</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="ranges"><a class="h-anchor" href="#ranges">#</a>Ranges</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%</code></td>
+<td>Entire file</td>
+</tr>
+<tr>
+<td><code>’&lt;,’&gt;</code></td>
+<td>Current selection</td>
+</tr>
+<tr>
+<td><code>5</code></td>
+<td>Line <code>5</code></td>
+</tr>
+<tr>
+<td><code>5,10</code></td>
+<td>Lines <code>5</code> to <code>10</code></td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>Last line</td>
+</tr>
+<tr>
+<td><code>2,$</code></td>
+<td>Lines <code>2</code> to Last</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>Current line</td>
+</tr>
+<tr>
+<td><code>,3</code></td>
+<td>Next <code>3</code> lines</td>
+</tr>
+<tr>
+<td><code>-3,</code></td>
+<td>Forward <code>3</code> lines</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="global-command"><a class="h-anchor" href="#global-command">#</a>Global command</h3>
+<div class="section">
+<pre><code class="hljs language-vim">:[<span class="hljs-built_in">range</span>]g/&#123;pattern&#125;/[<span class="hljs-keyword">command</span>]
+</code></pre>
+<hr>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:g/foo/d</code></td>
+<td>Delete lines containing <code>foo</code></td>
+</tr>
+<tr>
+<td><code>:g!/foo/d</code></td>
+<td>Delete lines not containing <code>foo</code></td>
+</tr>
+<tr>
+<td><code>:g/^\s*$/d</code></td>
+<td>Delete all blank lines</td>
+</tr>
+<tr>
+<td><code>:g/foo/t$</code></td>
+<td>Copy lines containing <code>foo</code> to EOF</td>
+</tr>
+<tr>
+<td><code>:g/foo/m$</code></td>
+<td>Move lines containing <code>foo</code> to EOF</td>
+</tr>
+<tr>
+<td><code>:g/^/m0</code></td>
+<td>Reverse a file</td>
+</tr>
+<tr>
+<td><code>:g/^/t.</code></td>
+<td>Duplicate every line</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="inverse-g"><a class="h-anchor" href="#inverse-g">#</a>Inverse :g</h3>
+<div class="section">
+<pre><code class="hljs language-vim">:[<span class="hljs-built_in">range</span>]v/&#123;pattern&#125;/[<span class="hljs-keyword">command</span>]
+</code></pre>
+<hr>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:v/foo/d</code></td>
+<td>Delete lines not containing <code>foo</code><br><em>(also <code>:g!/foo/d</code>)</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="flags"><a class="h-anchor" href="#flags">#</a>Flags</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>g</code></td>
+<td>Replace all occurrences</td>
+</tr>
+<tr>
+<td><code>i</code></td>
+<td>Ignore case</td>
+</tr>
+<tr>
+<td><code>I</code></td>
+<td>Don't ignore case</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td>Confirm each substitution</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="substitute-expression-magic"><a class="h-anchor" href="#substitute-expression-magic">#</a>Substitute expression (magic)</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;</code> <em>|</em> <code>\0</code></td>
+<td>Replace with the whole matched</td>
+</tr>
+<tr>
+<td><code>\1</code>...<code>\9</code></td>
+<td>Replace with the group 0-9</td>
+</tr>
+<tr>
+<td><code>\u</code></td>
+<td>Uppercase next letter</td>
+</tr>
+<tr>
+<td><code>\U</code></td>
+<td>Uppercase following characters</td>
+</tr>
+<tr>
+<td><code>\l</code></td>
+<td>Lowercase next letter</td>
+</tr>
+<tr>
+<td><code>\L</code></td>
+<td>Lowercase following characters</td>
+</tr>
+<tr>
+<td><code>\e</code></td>
+<td>End of <code>\u</code>, <code>\U</code>, <code>\l</code> and <code>\L</code></td>
+</tr>
+<tr>
+<td><code>\E</code></td>
+<td>End of <code>\u</code>, <code>\U</code>, <code>\l</code> and <code>\L</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap col-span-2">
+<h3 id="examples-2"><a class="h-anchor" href="#examples-2">#</a>Examples</h3>
+<div class="section">
+<pre><code class="hljs wrap language-c">:s/a\|b/xxx\<span class="hljs-number">0</span>xxx/g		         # Modifies <span class="hljs-string">&quot;a b&quot;</span>      to <span class="hljs-string">&quot;xxxaxxx xxxbxxx&quot;</span>
+:s/test/\U&amp; file/                # Modifies <span class="hljs-string">&quot;test&quot;</span>     to <span class="hljs-string">&quot;TEST FILE&quot;</span>
+:s/\(test\)/\U\<span class="hljs-number">1</span>\e file/         # Modifies <span class="hljs-string">&quot;test&quot;</span>     to <span class="hljs-string">&quot;TEST file&quot;</span>
+:s/\v([abc])([efg])/\<span class="hljs-number">2</span>\<span class="hljs-number">1</span>/g	     # Modifies <span class="hljs-string">&quot;af fa bg&quot;</span> to <span class="hljs-string">&quot;fa fa gb&quot;</span>
+:s/\v\w+/\u\<span class="hljs-number">0</span>/g		             # Modifies <span class="hljs-string">&quot;bla bla&quot;</span>  to <span class="hljs-string">&quot;Bla Bla&quot;</span>
+:s/\v([ab])|([cd])/\<span class="hljs-number">1</span>x/g         # Modifies <span class="hljs-string">&quot;a b c d&quot;</span>  to <span class="hljs-string">&quot;ax bx x x&quot;</span>
+:%s/.*/\L&amp;/                      # Modifies <span class="hljs-string">&quot;HTML&quot;</span>     to <span class="hljs-string">&quot;html&quot;</span>
+:s/\v&lt;(.)(\w*)/\u\<span class="hljs-number">1</span>\L\<span class="hljs-number">2</span>/g        # Make every first letter of a word uppercase
+:%s/^\(.*\)\n\<span class="hljs-number">1</span>/\<span class="hljs-number">1</span>/              # Remove duplicate lines
+:%s/&lt;\/\=\(\w\+\)\&gt;/\U&amp;/g        # Convert HTML-Tags to uppercase
+:g/^pattern/s/$/mytext           # Find and append text to the end
+:g/pattern/norm! @i              # Run a macro on matching lines
+/^\(.*\)\(\r\?\n\<span class="hljs-number">1</span>\)\+$          # View the duplicates lines
+/\v^(.*)(\r?\n\<span class="hljs-number">1</span>)+$              # View the duplicates lines (very magic)
+:v/./,/./-j                      # Compress blank lines into a blank line
+:g/&lt;p1&gt;/,/&lt;p2&gt;/d                 # Delete inclusively from &lt;p1&gt; to &lt;p2&gt;
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="vimdiff"><a class="h-anchor" href="#vimdiff">#</a>Vimdiff</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap secondary">
+<h3 id="usage-3"><a class="h-anchor" href="#usage-3">#</a>Usage</h3>
+<div class="section">
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">
+$ </span><span class="language-bash">vimdiff file1 file2 [file3]</span>
+<span class="hljs-meta prompt_">$ </span><span class="language-bash">vim -d file1 file2 [file3]</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="editing"><a class="h-anchor" href="#editing">#</a>Editing</h3>
+<div class="section">
+<pre><code class="hljs">:<span class="hljs-comment">[range]</span>diffget <span class="hljs-comment">[bufspec]</span>
+:<span class="hljs-comment">[range]</span>diffput <span class="hljs-comment">[bufspec]</span>
+</code></pre>
+<hr>
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>do</code> <em>/</em> <code>:diffget</code></td>
+<td>Obtain (get) difference</td>
+</tr>
+<tr>
+<td><code>dp</code> <em>/</em> <code>:diffput</code></td>
+<td>Put difference</td>
+</tr>
+<tr>
+<td><code>:dif</code></td>
+<td>Re-scan differences</td>
+</tr>
+<tr>
+<td><code>:diffo</code></td>
+<td>Switch off diff mode</td>
+</tr>
+<tr>
+<td><code>:1,$+1diffget</code></td>
+<td>Get all differences</td>
+</tr>
+<tr>
+<td><code>ZQ</code></td>
+<td>Quit without changes</td>
+</tr>
+</tbody>
+</table>
+<p>See: <a href="#ranges">Ranges</a></p>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="folds"><a class="h-anchor" href="#folds">#</a>Folds</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>zo</code> <em>/</em> <code>zO</code></td>
+<td>Open</td>
+</tr>
+<tr>
+<td><code>zc</code> <em>/</em> <code>zC</code></td>
+<td>Close</td>
+</tr>
+<tr>
+<td><code>za</code> <em>/</em> <code>zA</code></td>
+<td>Toggle</td>
+</tr>
+<tr>
+<td><code>zv</code></td>
+<td>Open folds for this line</td>
+</tr>
+<tr>
+<td><code>zM</code></td>
+<td>Close all</td>
+</tr>
+<tr>
+<td><code>zR</code></td>
+<td>Open all</td>
+</tr>
+<tr>
+<td><code>zm</code></td>
+<td>Fold more <em>(foldlevel += 1)</em></td>
+</tr>
+<tr>
+<td><code>zr</code></td>
+<td>Fold less <em>(foldlevel -= 1)</em></td>
+</tr>
+<tr>
+<td><code>zx</code></td>
+<td>Update folds</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="jumping"><a class="h-anchor" href="#jumping">#</a>Jumping</h3>
+<div class="section">
+<br>
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>]c</code></td>
+<td>Next difference</td>
+</tr>
+<tr>
+<td><code>[c</code></td>
+<td>Previous difference</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="miscellaneous"><a class="h-anchor" href="#miscellaneous">#</a>Miscellaneous</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap row-span-2">
+<h3 id="case"><a class="h-anchor" href="#case">#</a>Case</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vU</code></td>
+<td><em>Uppercase</em> character</td>
+</tr>
+<tr>
+<td><code>vu</code></td>
+<td><em>Lowercase</em> character</td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td><em>Toggle case</em> character</td>
+</tr>
+<tr>
+<td><code>viw</code> <code>U</code></td>
+<td><em>Uppercase</em> word</td>
+</tr>
+<tr>
+<td><code>viw</code> <code>u</code></td>
+<td><em>Lowercase</em> word</td>
+</tr>
+<tr>
+<td><code>viw</code> <code>~</code></td>
+<td><em>Toggle case</em> word</td>
+</tr>
+<tr>
+<td><code>VU</code> <em>/</em> <code>gUU</code></td>
+<td><em>Uppercase</em> line</td>
+</tr>
+<tr>
+<td><code>Vu</code> <em>/</em> <code>guu</code></td>
+<td><em>Lowercase</em> line</td>
+</tr>
+<tr>
+<td><code>V~</code> <em>/</em> <code>g~~</code></td>
+<td><em>Toggle case</em> line</td>
+</tr>
+<tr>
+<td><code>gggUG</code></td>
+<td><em>Uppercase</em> all text</td>
+</tr>
+<tr>
+<td><code>ggguG</code></td>
+<td><em>Lowercase</em> all text</td>
+</tr>
+<tr>
+<td><code>ggg~G</code></td>
+<td><em>Toggle case</em>  all text</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="jumping-2"><a class="h-anchor" href="#jumping-2">#</a>Jumping</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;C-o&gt;</code></td>
+<td>Go back to previous</td>
+</tr>
+<tr>
+<td><code>&lt;C-i&gt;</code></td>
+<td>Go forward</td>
+</tr>
+<tr>
+<td><code>gf</code></td>
+<td>Go to file in cursor</td>
+</tr>
+<tr>
+<td><code>ga</code></td>
+<td>Display hex, ascii value</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap row-span-2">
+<h3 id="misc-command-lines"><a class="h-anchor" href="#misc-command-lines">#</a>Misc command-lines</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:h</code></td>
+<td>Help open help view</td>
+</tr>
+<tr>
+<td><code>:edit!</code></td>
+<td>Reload current file</td>
+</tr>
+<tr>
+<td><code>:2,8m0</code></td>
+<td>Move lines <code>2</code>-<code>8</code> to <code>0</code></td>
+</tr>
+<tr>
+<td><code>:noh</code></td>
+<td>Clear search highlights</td>
+</tr>
+<tr>
+<td><code>:sort</code></td>
+<td>Sort lines</td>
+</tr>
+<tr>
+<td><code>:ter</code></td>
+<td>Open a terminal window</td>
+</tr>
+<tr>
+<td><code>:set paste</code></td>
+<td>Enable Insert Paste sub-mode</td>
+</tr>
+<tr>
+<td><code>:set nopaste</code></td>
+<td>disable Insert Paste sub-mode</td>
+</tr>
+<tr>
+<td><code>:cq</code></td>
+<td>Exiting with an error<br><em>(aborting Git)</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="navigating"><a class="h-anchor" href="#navigating">#</a>Navigating</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%</code></td>
+<td>Nearest/matching <code>&#123;[()]&#125;</code></td>
+</tr>
+<tr>
+<td><code>[(</code> <em>|</em> <code>[&#123;</code></td>
+<td>Previous <code>(</code> or <code>&#123;</code></td>
+</tr>
+<tr>
+<td><code>])</code> <em>|</em> <code>]&#123;</code></td>
+<td>Next <code>)</code> or <code>&#125;</code></td>
+</tr>
+<tr>
+<td><code>[m</code></td>
+<td>Previous method start</td>
+</tr>
+<tr>
+<td><code>[M</code></td>
+<td>Previous method end</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="counters"><a class="h-anchor" href="#counters">#</a>Counters</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;C-a&gt;</code></td>
+<td>Increase number</td>
+</tr>
+<tr>
+<td><code>&lt;C-x&gt;</code></td>
+<td>Decrease number</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap row-span-2 col-span-2">
+<h3 id="tags"><a class="h-anchor" href="#tags">#</a>Tags</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:tag Classname</code></td>
+<td>Jump to first definition of Classname</td>
+</tr>
+<tr>
+<td><code>&lt;C-]&gt;</code></td>
+<td>Jump to definition</td>
+</tr>
+<tr>
+<td><code>g]</code></td>
+<td>See all definitions</td>
+</tr>
+<tr>
+<td><code>&lt;C-t&gt;</code></td>
+<td>Go back to last tag</td>
+</tr>
+<tr>
+<td><code>&lt;C-o&gt; &lt;C-i&gt;</code></td>
+<td>Back/forward</td>
+</tr>
+<tr>
+<td><code>:tselect Classname</code></td>
+<td>Find definitions of Classname</td>
+</tr>
+<tr>
+<td><code>:tjump Classname</code></td>
+<td>Find definitions of Classname (auto-select 1st)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="formatting"><a class="h-anchor" href="#formatting">#</a>Formatting</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:ce 8</code></td>
+<td>Center lines between <code>8</code> columns</td>
+</tr>
+<tr>
+<td><code>:ri 4</code></td>
+<td>Right-align lines at <code>4</code> columns</td>
+</tr>
+<tr>
+<td><code>:le</code></td>
+<td>Left-align lines</td>
+</tr>
+</tbody>
+</table>
+<p>See <code>:help formatting</code></p>
+</div>
+</div>
+<div class="h3-wrap col-span-2 row-span-4">
+<h3 id="marks"><a class="h-anchor" href="#marks">#</a>Marks</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>`^</code></td>
+<td>Last position of cursor in insert mode</td>
+</tr>
+<tr>
+<td><code>`.</code></td>
+<td>Last change in current buffer</td>
+</tr>
+<tr>
+<td><code>`&quot;</code></td>
+<td>Last exited current buffer</td>
+</tr>
+<tr>
+<td><code>`0</code></td>
+<td>In last file edited</td>
+</tr>
+<tr>
+<td><code>''</code></td>
+<td>Back to line in current buffer where jumped from</td>
+</tr>
+<tr>
+<td><code>``</code></td>
+<td>Back to position in current buffer where jumped from</td>
+</tr>
+<tr>
+<td><code>`[</code></td>
+<td>To beginning of previously changed or yanked text</td>
+</tr>
+<tr>
+<td><code>`]</code></td>
+<td>To end of previously changed or yanked text</td>
+</tr>
+<tr>
+<td><code>`&lt;</code></td>
+<td>To beginning of last visual selection</td>
+</tr>
+<tr>
+<td><code>`&gt;</code></td>
+<td>To end of last visual selection</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td><code>ma</code></td>
+<td>Mark this cursor position as <code>a</code></td>
+</tr>
+<tr>
+<td><code>`a</code></td>
+<td>Jump to the cursor position <code>a</code></td>
+</tr>
+<tr>
+<td><code>'a</code></td>
+<td>Jump to the beginning of the line with position <code>a</code></td>
+</tr>
+<tr>
+<td><code>d'a</code></td>
+<td>Delete from current line to line of mark <code>a</code></td>
+</tr>
+<tr>
+<td><code>d`a</code></td>
+<td>Delete from current position to position of mark <code>a</code></td>
+</tr>
+<tr>
+<td><code>c'a</code></td>
+<td>Change text from current line to line of <code>a</code></td>
+</tr>
+<tr>
+<td><code>y`a</code></td>
+<td>Yank text from current position to position of <code>a</code></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td><code>:marks</code></td>
+<td>List all current marks</td>
+</tr>
+<tr>
+<td><code>:delm a</code></td>
+<td>Delete mark <code>a</code></td>
+</tr>
+<tr>
+<td><code>:delm a-d</code></td>
+<td>Delete marks <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code></td>
+</tr>
+<tr>
+<td><code>:delm abc</code></td>
+<td>Delete marks <code>a</code>, <code>b</code>, <code>c</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="calculator"><a class="h-anchor" href="#calculator">#</a>Calculator</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;C-r&gt;</code> <code>=</code> 7*7</td>
+<td>Shows the result</td>
+</tr>
+<tr>
+<td><code>&lt;C-r&gt;</code> <code>=</code> 10/2</td>
+<td>Shows the result</td>
+</tr>
+</tbody>
+</table>
+<p>Do this in INSERT mode</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="shell"><a class="h-anchor" href="#shell">#</a>Shell</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:!&lt;shell&gt;</code></td>
+<td>Interpret Shell Command</td>
+</tr>
+<tr>
+<td><code>:r!&lt;shell&gt;</code></td>
+<td>Read in output of shell</td>
+</tr>
+<tr>
+<td><code>:r!date</code></td>
+<td>Insert date</td>
+</tr>
+<tr>
+<td><code>:!!date</code></td>
+<td>Replace current line with date</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="command-line"><a class="h-anchor" href="#command-line">#</a>Command line</h3>
+<div class="section">
+<table class="shortcuts">
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;C-r&gt;&lt;C-w&gt;</code></td>
+<td>Insert current word into the command line</td>
+</tr>
+<tr>
+<td><code>&lt;C-r&gt;&quot;</code></td>
+<td>Paste from &quot; register</td>
+</tr>
+<tr>
+<td><code>&lt;C-x&gt;&lt;C-f&gt;</code></td>
+<td>Auto-completion of path in insert mode</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="tricks"><a class="h-anchor" href="#tricks">#</a>Tricks</h3>
+<div class="section">
+<p>Remove duplicate lines</p>
+<pre><code class="hljs language-shell">:sort | %!uniq -u
+</code></pre>
+<p>To number the lines in the file</p>
+<pre><code class="hljs language-shell">:%!cat -n
+</code></pre>
+<p>Copy whole doc to clipboard</p>
+<pre><code class="hljs language-shell">:%w !pbcopy            # Mac OS X
+:%w !xclip -i -sel c   # GNU/Linux
+:%w !xsel -i -b        # GNU/Linux
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="also-see"><a class="h-anchor" href="#also-see">#</a>Also see</h2>
+<div class="h3-wrap-list">
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://devhints.io/vim">Devhints</a> <em>(devhints.io)</em></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://vim.rtorr.com/">Vim cheatsheet</a> <em>(vim.rotrr.com)</em></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="http://vimdoc.sourceforge.net/htmldoc/">Vim documentation</a> <em>(vimdoc.sourceforge.net)</em></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="http://openvim.com/">Interactive Vim tutorial</a> <em>(openvim.com)</em></li>
+</ul>
+</div>
+</div>
+
+        </div></div><div id="mysearch" class="z-50 fixed inset-0 flex justify-center bg-slate-600/80 dark:bg-slate-900/90 items-start text-sm z-50 overflow-hidden lg:pt-16 lg:pb-20 hidden"><div id="mysearch-box" class="lg:max-w-screen-lg w-full flex flex-col justify-between bg-white dark:bg-slate-700 shadow-3xl dark:shadow-3xl lg:rounded-lg lg:max-h-832 min-h-320 h-full"><div class="flex items-center h-16 flex-none border-b border-slate-200 dark:border-slate-700"><div class="w-full h-full"><form class="flex items-center w-full h-full outline-none rounded-tl-lg"><label for="mysearch-input" id="mysearch-label" class="h-full w-14 mt-1 ml-1 px-4 flex items-center justify-center transition-colors duration-200 ease-in-out text-emerald-200"><div class="text-2xl text-emerald-500"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div></label><div class="relative flex-1"> <input class="flex-1 font-light h-full bg-transparent focus:text-slate-900 text-slate-500 dark:text-slate-300 placeholder-slate-400 placeholder-opacity-80 shadow-none outline-none truncate text-lg sm:text-2xl caret-color-emerald-400 leading-normalized w-full appearance-none rounded-none transition-colors duration-200 ease-in-out" id="mysearch-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search for cheatsheet" maxlength="128" type="text" enterkeyhint="go"></div> <button id="mysearch-clear" type="reset" class="items-center justify-center h-full w-14 px-4 text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 opacity-75 fill-current cursor-pointer transition-fast-out flex"><i class="icon icon-close text-xs font-bold"></i></button></form></div><div class="w-px h-8 bg-slate-100 dark:bg-slate-400/20 flex-none"></div> <button class="cancel mr-1 px-4 h-full text-slate-500 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-300"> Cancel</button></div><div class="flex flex-grow overflow-hidden lg:rounded-br-lg"><div class="relative w-full flex-none overflow-y-auto lg:w-1/2"><ul id="mysearch-list"></ul></div><div class="preview-panel shadow-inner bg-slate-100 dark:bg-slate-800 lg:block w-1/2 flex-none overflow-y-auto"></div></div></div></div><footer class="text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-slate-800 md:mt-14"></footer><div id="carbon_container"></div></body><script src="/js/main.js?_v=1705688051674"></script><script>
+        // Get all pre > code elements
+        const codeBlocks = document.querySelectorAll('pre > code');
+        const initInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path> </svg>';
+        const successInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>';
+        codeBlocks.forEach(function (codeBlock) {
+            // Create a copy button element
+            const copyButton = document.createElement('button');
+            copyButton.className = 'bg-emerald-500 p-2 text-white fadeIn shadow-xl rounded flex items-center absolute top-2 right-2';
+            copyButton.innerHTML = initInnerHTML;
+            copyButton.style.opacity = "0";
+            const parent = codeBlock.parentNode;
+
+            parent.style = "position: relative;"
+            parent.insertBefore(copyButton, codeBlock);
+
+            // Add click event listener to copy button
+            copyButton.addEventListener('click', () => {
+                navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+                    copyButton.innerHTML = successInnerHTML;
+                    setTimeout(() => {
+                        copyButton.innerHTML = initInnerHTML;
+                    }, 1000);
+                });
+            });
+
+            parent.addEventListener('mouseenter', () => {
+                copyButton.style.opacity = "1";
+            });
+            parent.addEventListener('mouseleave', () => {
+                copyButton.style.opacity = "0";
+            });
+        });
+    </script></html>

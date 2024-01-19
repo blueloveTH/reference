@@ -1,0 +1,531 @@
+<!DOCTYPE HTML><html class="scrollbar" translate="no"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta http-equiv="content-language" content="en-gb"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="app:pageurl" content="/"><title>Find Command Cheat Sheet & Quick Reference</title><meta name="keywords" content="reference,cheatsheet,code table,snippets,linux,search,file,directory"><meta name="description" content="This is a quick reference list of cheatsheet for linux find command, contains common options and examples. "><meta property="og:url" content="https://cheatsheets.zip/find.html"><meta property="og:title" content="Find Command Cheat Sheet & Quick Reference"><meta property="og:site_name" content="CheatSheets.zip"><meta property="og:description" content="This is a quick reference list of cheatsheet for linux find command, contains common options and examples. "><meta property="og:image" content="https://cheatsheets.zip/assets/image/preview.png?v=lu8pa"><meta property="og:image:width" content="2276"><meta property="og:image:height" content="1240"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Find Command Cheat Sheet & Quick Reference"><meta name="twitter:site" content="@CheatSheets.zip"><meta name="twitter:creator" content="@CheatSheets.zip"><meta name="twitter:description" content="This is a quick reference list of cheatsheet for linux find command, contains common options and examples. "><meta name="twitter:image" content="https://cheatsheets.zip/assets/image/preview.png?v=63fif"><link rel="icon" href="/images/favicon.png?v=1"><link rel="icon shortcut" type="image/png" href="/images/favicon.png?v=1"><link rel="canonical" href="https://cheatsheets.zip/find.html"><link rel="prefetch" href="https://cheatsheets.zip"><link rel="prerender" href="https://cheatsheets.zip"><link rel="alternate" href="/atom.xml" title="CheatSheets.zip" type="application/atom+xml"><link rel="stylesheet" href="/css/style.css?_v=1705688051674"><script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            let html = document.documentElement.classList;
+            html.toggle('dark')
+        }
+    </script></head><body class="bg-slate-100 dark:bg-slate-900"><header class=""><div class="max-container z-10" style="display:none"><div class="flex flex-row justify-between md:justify-start items-center py-3"><a href="/" class="flex font-medium items-center justify-center md:justify-start text-slate-800 dark:text-slate-300"><div class="hidden md:flex justify-center w-10 h-10 md:w-12 md:h-12 text-white p-2 bg-emerald-500 rounded-full mr-3 text-2xl"><div class="self-center"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M303.55291933 951.35043811c-1.84934059-3.43448917-12.68119097-22.19208477-24.04142536-41.74225521l-20.07855218-35.4016586 5.01963776-9.51089265c2.90610631-5.01963776 13.20957383-23.24885049 22.9846585-40.15710664l17.70082986-31.17459456h366.69778034l6.86897834-11.09604238c3.43448917-6.34059549 13.73795669-23.77723335 22.72046763-39.10033977 8.71831893-15.32310642 22.19208477-38.30776491 29.85363797-51.51733873 7.66155321-12.94538297 16.37987214-28.00429739 19.02178646-33.02393629 2.90610631-5.28382976 14.00214869-24.30561621 24.56980821-42.27063694 10.56765952-18.22921273 29.85363797-51.51733987 43.06321181-73.97361551 12.94538297-22.45627563 35.93004146-62.08499826 51.25314787-87.71157333 15.05891442-25.89076594 28.53268025-49.93219015 29.85363797-53.63087132 3.43448917-8.98251093 8.45412693-8.18993607 12.94538184 2.11353259 2.11353145 4.4912549 8.71831893 16.90825501 14.79472355 26.94753166 6.34059549 10.30346752 20.60693618 35.13746773 32.23136143 55.48021077s25.62657394 44.38416953 30.91040369 53.63087133l9.77508466 16.64406414-6.07640462 9.77508466c-3.43448917 5.28382976-7.13317035 11.62442525-8.71831893 14.00214869-2.90610631 4.7554469-13.73795669 23.77723335-24.83399908 43.3274038-3.96287203 7.39736121-13.47376583 23.77723335-21.13531904 36.45842432-7.39736121 12.94538297-13.47376583 24.04142535-13.47376583 24.56980821 0 .79257486-3.43448917 6.34059549-7.39736121 12.41699898-4.22706403 6.07640462-9.51089379 15.32310642-12.15280811 20.34274531-2.37772345 5.01963776-6.86897835 12.94538297-9.77508465 17.17244587-2.64191431 4.4912549-5.81221262 10.03927666-6.60478749 12.68119096-1.05676573 2.37772345-2.64191431 4.4912549-3.69868117 4.49125604s-2.64191431 2.11353145-3.43448918 4.75544576c-1.05676573 2.37772345-5.28382976 10.56765952-9.77508466 17.70082987-4.22706403 7.39736121-10.56765952 17.96502073-13.47376582 23.77723335-3.17029831 5.81221262-10.83185038 19.28597845-17.17244587 29.58944597-6.34059549 10.56765952-11.62442525 20.07855331-11.62442525 21.13531904 0 .79257486-1.58514859 3.69868117-3.69868117 5.81221263-2.11353145 2.37772345-8.71831893 13.73795669-14.79472355 25.36238307s-18.22921273 33.81651001-26.94753053 49.66799815l-16.11568128 28.26848939H307.25159936l-3.69868003-5.81221263z"></path><path d="M523.88861725 694.82050674c-31.70297856-20.60693618-68.95397774-44.11997753-70.01074347-44.11997753-.79257486 0-10.03927666-5.81221262-20.60693618-13.20957383-10.83185038-7.13317035-22.72046763-14.53053155-26.68333966-16.11568128-3.69868117-1.84934059-6.86897835-3.96287203-6.86897835-5.01963776 0-.79257486-4.7554469-4.22706403-10.56765952-7.66155321l-10.30346752-5.81221262-.79257486-98.27923172c-.52838286-54.15925419 0-99.33599744.79257486-100.3927643 1.05676573-1.32095773 27.74010539 12.94538297 59.44308395 31.96716942 31.96716942 18.75759559 69.21816861 40.42129749 82.95612529 48.61123356l25.09819108 14.26633956.264192 103.56306148c.264192 73.7094235-.52838286 103.56306147-2.64191545 103.56306261-1.58514859 0-10.56765952-5.01963776-20.07855217-11.36023438zm0-61.29242453c0-11.09604238-.79257486-12.15280811-11.09604239-18.2292116-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023325l60.23565881 34.60908486c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327574.264192 0 .52838286-5.28382976.528384-11.88861724zm0-42.27063695c0-11.09604238-.79257486-12.15280811-11.09604239-18.22921273-6.34059549-3.43448917-33.28812715-19.02178645-59.97146681-34.34489287s-48.87542443-28.00429739-49.40380842-28.00429739-1.05676573 5.28382976-1.05676573 11.62442525v11.36023438l60.23565881 34.60908373c33.02393515 19.28597845 60.23565881 34.87327573 60.76404054 34.87327688.264192 0 .52838286-5.28382976.528384-11.88861725zm-1.84934059-54.42344619c-2.11353145-2.11353145-117.30101931-68.42559488-118.88616789-68.42559374-.52838286 0-.79257486 5.28382976-.79257487 11.62442525v11.36023324l60.23565881 34.60908487 59.97146681 34.60908488.79257373-10.83185152c.52838286-5.81221262 0-11.62442525-1.32095659-12.94538298z"></path><path d="M109.10798734 615.82725347c-3.69868117-7.39736121-10.56765952-20.34274418-15.58729841-28.26848938-7.92574407-13.47376583-49.66799929-84.80546589-61.2924234-105.41240206-7.13317035-12.15280811-6.34059549-15.85148928 6.34059548-37.77938205 24.56980821-42.00644608 41.21387122-70.27493433 45.96931812-78.99325326 7.13317035-12.41700011 49.66799929-86.12642361 81.37097671-141.34244466 14.53053155-24.56980821 40.68548835-70.27493433 58.12212622-101.18533803l32.23136143-56.27278563h229.05401685c159.30746539 0 230.37497458 1.05676573 232.75269689 2.90610631 1.84934059 1.58514859 10.56765952 15.58729728 19.55017045 31.17459456 8.71831893 15.58729728 18.75759559 33.02393515 22.45627563 38.83614777l6.34059548 10.83185152-8.9825098 14.26633955c-5.01963776 7.92574407-15.32310642 25.89076594-22.72046762 39.62872264s-13.73795669 25.62657394-14.2663407 25.89076594c-.264192.52838286-83.2203173.79257486-184.40565532.79257486l-183.6130816-.264192-9.5108938 14.53053155c-5.01963776 7.92574407-9.24670179 15.85148928-9.24670179 17.17244701 0 1.58514859-1.05676573 2.64191431-2.64191431 2.64191431-1.32095773 0-2.64191431 1.05676573-2.64191545 2.11353145 0 2.90610631-29.32525511 55.21601991-48.61123243 87.18319047-8.18993607 13.47376583-14.79472355 25.09819107-14.79472355 25.8907648 0 1.05676573-3.43448917 6.86897835-7.92574407 13.47376583-4.22706403 6.34059549-7.92574407 12.15280811-7.92574521 12.94538297 0 .52838286-2.90610631 5.54802062-6.07640349 11.09604238-3.43448917 5.28382976-9.24670179 15.05891442-12.94538296 21.6637019s-20.07855331 35.13746773-36.45842546 63.40595599-31.96716942 55.21601991-34.34489288 59.44308394c-2.64191431 4.4912549-8.18993607 14.26634069-12.94538182 21.92789276-4.4912549 7.66155321-8.18993607 14.53053155-8.18993608 15.32310642 0 2.37772345-19.28597845 30.11782883-20.87112704 30.11782884-.79257486 0-4.4912549-6.34059549-8.18993607-13.7379567z"></path><path d="M625.60233813 601.56091278c-15.85148928-10.56765952-31.17459456-21.13531904-33.81651-23.51304135-4.22706403-3.69868117-4.7554469-9.24670179-4.4912549-56.00859477.264192-39.89291463-.264192-52.3099136-3.17029832-54.95182905-1.84934059-1.84934059-21.13531904-13.73795669-43.0632118-26.4191488-21.6637019-12.68119097-41.74225408-25.09819107-44.11997753-27.21172252-4.22706403-3.43448917-4.7554469-9.51089379-4.75544689-50.72476502 0-25.62657394.52838286-47.29027584 1.58514858-48.08284956.79257486-.79257486 8.18993607 2.90610631 16.37987214 8.45412693s25.36238194 15.85148928 37.77938205 22.72046763c12.41700011 7.13317035 43.06321181 25.09819107 67.89721201 40.15710549l45.44093526 27.21172366-.52838286 103.29886948c-.52838286 66.31206229-1.84934059 103.56306147-3.43448918 103.82725347-1.32095773.264192-15.58729728-8.18993607-31.70297856-18.75759559z"></path></svg></div></div> <span class="domain text-slate-600 dark:text-slate-300 text-lg md:text-2xl">CheatSheets<span class="text-emerald-400">.zip</span></span></a><div class="md:ml-auto flex flex-wrap items-center text-base justify-center"> <button id="mysearch-trigger" type="button" class="fadeIn inline-flex h-8 items-center bg-slate-200 dark:bg-gray-900 md:dark:bg-transparent md:bg-transparent rounded-full px-2 md:px-3 lg:px-6 py-2 text-slate-700 md:hover:opacity-80"><div class="md:text-xl text-slate-700 dark:text-slate-300 md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div> <span class="hidden md:inline dark:text-slate-300">Search for cheatsheet</span> <span class="hidden md:inline dark:text-slate-300 md:ml-2 text-sm leading-5 py-0.5 px-1.5 border border-slate-400 rounded-md"><span class="font-sans">⌘</span> <span class="font-sans">K</span></span></button> <a href="https://github.com/Fechin/reference/blob/main/source/_posts/find.md" rel="external nofollow noreferrer" target="_blank"><img alt="GitHub Repo stars" style="height:26px;opacity:.8" src="https://img.shields.io/github/stars/Fechin/reference?style=social"></a> <a href="https://twitter.com/FechinLi" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"><div class="md:mr-2"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></div> <span class="hidden md:inline text-sm">Follow Me</span></button></a> <button id="darkMode" class="fadeIn inline-flex items-center justify-center flex-shrink-0 h-8 w-8 rounded-full text-gray-900 ml-1 lg:ml-4 dark:text-gray-300 bg-gray-200 dark:bg-gray-900"> <i class="icon-light text-gray-600 dark:text-gray-300 dark:hover:text-white"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M512 31.40266667c14.19946667 0 26.935296 8.14830933 31.93787733 20.447232l29.40381867 72.50466133c12.713984 31.30436267-4.456448 66.21320533-38.33856 77.96599467A70.34197333 70.34197333 0 0 1 512 206.16533333c-36.19771733 0-65.536-27.11005867-65.536-60.555264 0-7.25265067 1.41994667-14.46161067 4.17245867-21.25550933l29.425664-72.50466133C485.04285867 39.550976 497.75684267 31.40266667 512 31.40266667zm0 961.19466666c-14.221312 0-26.95714133-8.14830933-31.93787733-20.447232l-29.425664-72.50466133a56.492032 56.492032 0 0 1-4.17245867-21.25550933C446.464 844.96657067 475.80228267 817.83466667 512 817.83466667c7.86432 0 15.64125867 1.31072 23.003136 3.84477866 33.882112 11.75278933 51.052544 46.661632 38.33856 77.98784l-29.40381867 72.482816c-5.00258133 12.29892267-17.73841067 20.447232-31.93787733 20.447232zm480.59733333-480.59733333c0 14.19946667-8.14830933 26.935296-20.447232 31.93787733l-72.50466133 29.40381867c-31.30436267 12.713984-66.21320533-4.456448-77.96599467-38.33856A70.34197333 70.34197333 0 0 1 817.83466667 512c0-36.19771733 27.11005867-65.536 60.555264-65.536 7.25265067 0 14.46161067 1.41994667 21.25550933 4.17245867l72.50466133 29.425664c12.29892267 4.980736 20.447232 17.69472 20.447232 31.93787733zM31.40266667 512c0-14.221312 8.14830933-26.95714133 20.447232-31.93787733l72.50466133-29.425664c6.77205333-2.752512 13.98101333-4.17245867 21.25550933-4.17245867C179.03342933 446.464 206.16533333 475.80228267 206.16533333 512c0 7.86432-1.31072 15.64125867-3.84477866 23.003136-11.75278933 33.882112-46.661632 51.052544-77.98784 38.33856l-72.482816-29.40381867C39.550976 538.935296 31.40266667 526.19946667 31.40266667 512zM172.15214933 172.17399467c10.04885333-10.04885333 24.81629867-13.28196267 37.04968534-8.126464l72.06775466 30.45239466c31.1296 13.172736 43.66882133 49.98212267 28.00571734 82.24768a70.34197333 70.34197333 0 0 1-13.54410667 19.00544c-25.58088533 25.58088533-65.49230933 27.15374933-89.12896 3.49525334a56.492032 56.492032 0 0 1-12.10231467-17.97870934L164.04753067 209.22368c-5.177344-12.23338667-1.94423467-27.000832 8.10461866-37.04968533zm679.673856 679.673856c-10.04885333 10.04885333-24.81629867 13.28196267-37.04968533 8.10461866l-72.04590933-30.45239466a56.492032 56.492032 0 0 1-18.00055467-12.08046934c-23.63665067-23.658496-22.06378667-63.56992 3.51709867-89.15080533a70.34197333 70.34197333 0 0 1 19.00544-13.54410667c32.26555733-15.663104 69.074944-3.12388267 82.24768 28.00571734l30.45239466 72.06775466c5.15549867 12.23338667 1.92238933 26.97898667-8.126464 37.04968534zm0-679.69570134c10.04885333 10.04885333 13.28196267 24.81629867 8.126464 37.04968534l-30.45239466 72.06775466c-13.172736 31.1296-49.98212267 43.66882133-82.24768 28.00571734a70.34197333 70.34197333 0 0 1-19.00544-13.54410667c-25.58088533-25.58088533-27.15374933-65.49230933-3.49525334-89.12896 5.111808-5.15549867 11.206656-9.240576 17.97870934-12.10231467l72.04590933-30.45239466c12.23338667-5.177344 27.000832-1.94423467 37.04968533 8.10461866zM172.15214933 851.82600533c-10.04885333-10.04885333-13.28196267-24.81629867-8.10461866-37.04968533l30.45239466-72.04590933c2.83989333-6.77205333 6.946816-12.86690133 12.08046934-18.00055467 23.658496-23.63665067 63.56992-22.06378667 89.15080533 3.51709867 5.57056 5.57056 10.15808 12.01493333 13.54410667 19.00544 15.663104 32.26555733 3.12388267 69.074944-28.00571734 82.24768l-72.06775466 30.45239466c-12.23338667 5.15549867-26.97898667 1.92238933-37.04968534-8.126464zM512 752.29866667c-132.7104 0-240.29866667-107.58826667-240.29866667-240.29866667s107.58826667-240.29866667 240.29866667-240.29866667 240.29866667 107.58826667 240.29866667 240.29866667-107.58826667 240.29866667-240.29866667 240.29866667z"></path></svg></i></button> <a href="https://facebook.com/sharer/sharer.php?u=https://cheatsheets.zip/find.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4a66ad] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M594.74346667 51.53066667c-28.95893333 0-56.30826667 3.2192-88.48533334 16.0896-65.9616 27.34826667-98.13653333 88.48533333-98.13653333 186.6208v94.91946666h-91.70026667v157.66186667h91.70026667v455.28853333h186.6208v-455.28853333h127.09546667l17.696-157.66186667h-144.7936v-70.7872c0-22.52266667 1.60853333-38.61013333 8.04266666-46.65706666 8.04266667-14.47786667 24.13226667-20.91413333 49.872-20.91413334h85.26613334v-157.66186666h-143.184z"></path></svg></span> <span class="hidden">Facebook</span></button></a> <a href="https://twitter.com/intent/tweet/?text=This%20is%20a%20quick%20reference%20list%20of%20cheatsheet%20for%20linux%20find%20command,%20contains%20common%20options%20and%20examples.%20&url=https://cheatsheets.zip/find.html" rel="external nofollow noreferrer" target="_blank"><button type="button" class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80"> <span class="text-md"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M283.02655555 307.55600001c140.717 72.074 260.839 66.925 260.839 66.92499999s-44.617-157.87599999 94.384-228.234c138.998-70.359 236.816 48.048 236.816 48.048s24.025-6.863 42.901-13.728 44.617-18.87599999 44.61700001-18.876l-42.90100001 77.222 66.92500001-6.863s-8.579 12.014-34.31900001 36.038c-25.741 24.025-37.754 37.754-37.754 37.754s10.297 190.483-90.95 338.062c-99.53 147.58000001-229.952 235.099-417.002 253.973-187.05 18.87599999-310.606-58.347-310.606-58.347s82.37-5.149 133.852-24.025c51.483-20.592 126.99-73.79 126.99-73.79s-106.397-32.605-145.866-70.35899999-48.048-60.062-48.048-60.06200001l106.397-1.716s-111.542-60.062-142.433-106.397c-30.89-46.333-36.038-92.666-36.038-92.666l80.656 32.605s-66.925-92.666-77.222-163.025c-10.297-72.074 12.014-109.826 12.014-109.826s36.038 65.21 176.752 137.283z"></path></svg></span> <span class="hidden">Twitter</span></button></a></div></div></div></header><div class="mx-auto flex flex-wrap md:py-5 flex-col md:flex-row items-center"><div class="flex flex-col w-full mx-auto text-center my-8"><div class="max-container w-full"><h1 class="text-5xl mb-4"> <span class="text-slate-700 dark:text-slate-300 font-light">Find</span> <span class="text-slate-400 dark:text-slate-500 font-extralight hidden md:inline">cheatsheet</span></h1><div class="lg:w-3/5 mx-auto intro leading-relaxed text-slate-600"><p>This is a quick reference list of cheatsheet for linux find command, contains common options and examples.</p></div></div></div><div id="mdLayout" class="mdLayout w-full max-container"> 
+        <div class="h2-wrap">
+<h2 id="getting-started"><a class="h-anchor" href="#getting-started">#</a>Getting Started</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap">
+<h3 id="usage"><a class="h-anchor" href="#usage">#</a>Usage</h3>
+<div class="section">
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find [path...] [options] [expression]</span>
+</code></pre>
+<p>Wildcard</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -name <span class="hljs-string">&quot;*.txt&quot;</span></span>
+<span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -name <span class="hljs-string">&quot;2020*.csv&quot;</span></span>
+<span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -name <span class="hljs-string">&quot;json_*&quot;</span></span>
+</code></pre>
+<hr>
+<ul>
+<li><a href="/regex">Regex reference</a> <em>(cheatsheets.zip)</em></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://gist.github.com/gr1ev0us/3a9b9d9dbdd38f6379288eb2686fc538">Find cheatsheet</a> <em>(gist.github.com)</em></li>
+</ul>
+</div>
+</div>
+<div class="h3-wrap col-span-2">
+<h3 id="option-examples"><a class="h-anchor" href="#option-examples">#</a>Option Examples</h3>
+<div class="section">
+<table class="show-header">
+<thead>
+<tr>
+<th>Option</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-type</code></td>
+<td>find . -type d</td>
+<td>Find only directories</td>
+</tr>
+<tr>
+<td><code>-name</code></td>
+<td>find . -type f -name &quot;*.txt&quot;</td>
+<td>Find file by name</td>
+</tr>
+<tr>
+<td><code>-iname</code></td>
+<td>find . -type f -iname &quot;hello&quot;</td>
+<td>Find file by name (case-insensitive)</td>
+</tr>
+<tr>
+<td><code>-size</code></td>
+<td>find . -size +1G</td>
+<td>Find files larger than 1G</td>
+</tr>
+<tr>
+<td><code>-user</code></td>
+<td>find . -type d -user jack</td>
+<td>Find jack's file</td>
+</tr>
+<tr>
+<td><code>-regex</code></td>
+<td>find /var -regex '.*/tmp/.*[0-9]*.file'</td>
+<td>Using Regex with find. See <a href="/regex">regex</a></td>
+</tr>
+<tr>
+<td><code>-maxdepth</code></td>
+<td>find . -maxdepth 1 -name &quot;a.txt&quot;</td>
+<td>In the current directory and subdirectories</td>
+</tr>
+<tr>
+<td><code>-mindepth</code></td>
+<td>find / -mindepth 3 -maxdepth 5 -name pass</td>
+<td>Between sub-directory level 2 and 4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="type"><a class="h-anchor" href="#type">#</a>Type</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-type d</code></td>
+<td>Directory</td>
+</tr>
+<tr>
+<td><code>-type f</code></td>
+<td>File</td>
+</tr>
+<tr>
+<td><code>-type l</code></td>
+<td>Symbolic link</td>
+</tr>
+<tr>
+<td><code>-type b</code></td>
+<td>Buffered block</td>
+</tr>
+<tr>
+<td><code>-type c</code></td>
+<td>Unbuffered character</td>
+</tr>
+<tr>
+<td><code>-type p</code></td>
+<td>Named pipe</td>
+</tr>
+<tr>
+<td><code>-type s</code></td>
+<td>Socket</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="size"><a class="h-anchor" href="#size">#</a>Size</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-size b</code></td>
+<td>512-byte blocks (default)</td>
+</tr>
+<tr>
+<td><code>-size c</code></td>
+<td>Bytes</td>
+</tr>
+<tr>
+<td><code>-size k</code></td>
+<td>Kilobytes</td>
+</tr>
+<tr>
+<td><code>-size M</code></td>
+<td>Megabytes</td>
+</tr>
+<tr>
+<td><code>-size G</code></td>
+<td>Gigabytes</td>
+</tr>
+<tr>
+<td><code>-size T</code></td>
+<td>Terabytes <em>(only BSD)</em></td>
+</tr>
+<tr>
+<td><code>-size P</code></td>
+<td>Petabytes <em>(only BSD)</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="size-2"><a class="h-anchor" href="#size-2">#</a>Size +/-</h3>
+<div class="section">
+<p>Find all bigger than 10MB files</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -size +10M</span>
+</code></pre>
+<p>Find all smaller than 10MB files</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -size -10M</span>
+</code></pre>
+<p>Find all files that are exactly 10M</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -size 10M</span>
+</code></pre>
+<p>Find Size between 100MB and 1GB</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -size +100M -size -1G</span>
+</code></pre>
+<p>The <code>+</code> and <code>-</code> prefixes signify greater than and less than, as usual.</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="names"><a class="h-anchor" href="#names">#</a>Names</h3>
+<div class="section">
+<p>Find files using name in current directory</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -name tecmint.txt</span>
+</code></pre>
+<p>Find files under home directory</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find /home -name tecmint.txt</span>
+</code></pre>
+<p>Find files using name and ignoring case</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find /home -iname tecmint.txt</span>
+</code></pre>
+<p>Find directories using name</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -<span class="hljs-built_in">type</span> d -name tecmint</span>
+</code></pre>
+<p>Find php files using name</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -<span class="hljs-built_in">type</span> f -name tecmint.php</span>
+</code></pre>
+<p>Find all php files in directory</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -<span class="hljs-built_in">type</span> f -name <span class="hljs-string">&quot;*.php&quot;</span></span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="permissions"><a class="h-anchor" href="#permissions">#</a>Permissions</h3>
+<div class="section">
+<p>Find the files whose permissions are 777.</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -<span class="hljs-built_in">type</span> f -perm 0777 -<span class="hljs-built_in">print</span></span>
+</code></pre>
+<p>Find the files without permission 777.</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -<span class="hljs-built_in">type</span> f ! -perm 777</span>
+</code></pre>
+<p>Find SUID set files.</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -perm /u=s</span>
+</code></pre>
+<p>Find SGID set files.</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -perm /g=s</span>
+</code></pre>
+<p>Find Read Only files.</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -perm /u=r</span>
+</code></pre>
+<p>Find Executable files.</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -perm /a=x</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="owners-and-groups"><a class="h-anchor" href="#owners-and-groups">#</a>Owners and Groups</h3>
+<div class="section">
+<p>Find single file based on user</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -user root -name tecmint.txt</span>
+</code></pre>
+<p>Find all files based on user</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find /home -user tecmint</span>
+</code></pre>
+<p>Find all files based on group</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find /home -group developer</span>
+</code></pre>
+<p>Find particular files of user</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find /home -user tecmint -iname <span class="hljs-string">&quot;*.txt&quot;</span></span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="multiple-filenames"><a class="h-anchor" href="#multiple-filenames">#</a>Multiple filenames</h3>
+<div class="section">
+<pre><code class="hljs wrap language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -<span class="hljs-built_in">type</span> f \( -name <span class="hljs-string">&quot;*.sh&quot;</span> -o -name <span class="hljs-string">&quot;*.txt&quot;</span> \)</span>
+</code></pre>
+<p>Find files with <code>.sh</code> and <code>.txt</code> extensions</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="multiple-dirs"><a class="h-anchor" href="#multiple-dirs">#</a>Multiple dirs</h3>
+<div class="section">
+<pre><code class="hljs wrap language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find /opt /usr /var -name foo.scala -<span class="hljs-built_in">type</span> f</span>
+</code></pre>
+<p>Find files with multiple dirs</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="empty"><a class="h-anchor" href="#empty">#</a>Empty</h3>
+<div class="section">
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -<span class="hljs-built_in">type</span> d -empty</span>
+</code></pre>
+<p>Delete all empty files in a directory</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -<span class="hljs-built_in">type</span> f -empty -delete</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap">
+<h2 id="find-date-and-time"><a class="h-anchor" href="#find-date-and-time">#</a>Find Date and Time</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap col-span-2">
+<h3 id="means"><a class="h-anchor" href="#means">#</a>Means</h3>
+<div class="section">
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>atime</code></td>
+<td>access time (last time file <yel>opened</yel>)</td>
+</tr>
+<tr>
+<td><code>mtime</code></td>
+<td>modified time (last time file <yel>contents was modified</yel>)</td>
+</tr>
+<tr>
+<td><code>ctime</code></td>
+<td>changed time (last time file <yel>inode was changed</yel>)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example"><a class="h-anchor" href="#example">#</a>Example</h4>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-mtime +0</code></td>
+<td>Modified greater than 24 hours ago</td>
+</tr>
+<tr>
+<td><code>-mtime 0</code></td>
+<td>Modified between now and 1 day ago</td>
+</tr>
+<tr>
+<td><code>-mtime -1</code></td>
+<td>Modified less than 1 day ago (same as <code>-mtime 0</code>)</td>
+</tr>
+<tr>
+<td><code>-mtime 1</code></td>
+<td>Modified between 24 and 48 hours ago</td>
+</tr>
+<tr>
+<td><code>-mtime +1</code></td>
+<td>Modified more than 48 hours ago</td>
+</tr>
+<tr>
+<td><code>-mtime +1w</code></td>
+<td>Last modified more than 1 week ago</td>
+</tr>
+<tr>
+<td><code>-atime 0</code></td>
+<td>Last accessed between now and 24 hours ago</td>
+</tr>
+<tr>
+<td><code>-atime +0</code></td>
+<td>Accessed more than 24 hours ago</td>
+</tr>
+<tr>
+<td><code>-atime 1</code></td>
+<td>Accessed between 24 and 48 hours ago</td>
+</tr>
+<tr>
+<td><code>-atime +1</code></td>
+<td>Accessed more than 48 hours ago</td>
+</tr>
+<tr>
+<td><code>-atime -1</code></td>
+<td>Accessed less than 24 hours ago (same as <code>-atime 0</code>)</td>
+</tr>
+<tr>
+<td><code>-ctime -6h30m</code></td>
+<td>File status changed within the last 6 hours and 30 minutes</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="examples"><a class="h-anchor" href="#examples">#</a>Examples</h3>
+<div class="section">
+<p>Find last 50 days modified files</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -mtime 50</span>
+</code></pre>
+<p>find last 50 days accessed files</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -atime 50</span>
+</code></pre>
+<p>find last 50-100 days modified files</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -mtime +50 –mtime -100</span>
+</code></pre>
+<p>find changed files in last 1 hour</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -cmin -60</span>
+</code></pre>
+<p>find modified files in last 1 hour</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -mmin -60</span>
+</code></pre>
+<p>find accessed files in last 1 hour</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -amin -60</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="h2-wrap cols-2">
+<h2 id="find-and"><a class="h-anchor" href="#find-and">#</a>Find and</h2>
+<div class="h3-wrap-list">
+<div class="h3-wrap row-span-2">
+<h3 id="find-and-delete"><a class="h-anchor" href="#find-and-delete">#</a>Find and delete</h3>
+<div class="section">
+<p>Find and remove multiple files</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -<span class="hljs-built_in">type</span> f -name <span class="hljs-string">&quot;*.mp3&quot;</span> -<span class="hljs-built_in">exec</span> <span class="hljs-built_in">rm</span> -f &#123;&#125; \;</span>
+</code></pre>
+<p>Find and remove single file</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -<span class="hljs-built_in">type</span> f -name <span class="hljs-string">&quot;tecmint.txt&quot;</span> -<span class="hljs-built_in">exec</span> <span class="hljs-built_in">rm</span> -f &#123;&#125; \;</span>
+</code></pre>
+<p>Find and delete 100mb files</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -<span class="hljs-built_in">type</span> f -size +100m -<span class="hljs-built_in">exec</span> <span class="hljs-built_in">rm</span> -f &#123;&#125; \;</span>
+</code></pre>
+<p>Find specific files and delete</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -<span class="hljs-built_in">type</span> f -name *.mp3 -size +10m -<span class="hljs-built_in">exec</span> <span class="hljs-built_in">rm</span> &#123;&#125; \;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="find-and-replace"><a class="h-anchor" href="#find-and-replace">#</a>Find and replace</h3>
+<div class="section">
+<p>Find all files and modify the content <code>const</code> to <code>let</code></p>
+<pre><code class="hljs wrap language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find ./ -<span class="hljs-built_in">type</span> f -<span class="hljs-built_in">exec</span> sed -i <span class="hljs-string">&#x27;s/const/let/g&#x27;</span> &#123;&#125; \;</span>
+</code></pre>
+<p>Find readable and writable files and modify the content <code>old</code> to <code>new</code></p>
+<pre><code class="hljs wrap language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find ./ -<span class="hljs-built_in">type</span> f -readable -writable -<span class="hljs-built_in">exec</span> sed -i <span class="hljs-string">&quot;s/old/new/g&quot;</span> &#123;&#125; \;</span>
+</code></pre>
+<p>See also: <a href="/sed">sed cheatsheet</a></p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="find-and-rename"><a class="h-anchor" href="#find-and-rename">#</a>Find and rename</h3>
+<div class="section">
+<p>Find and suffix (added <code>.bak</code>)</p>
+<pre><code class="hljs wrap language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -<span class="hljs-built_in">type</span> f -name <span class="hljs-string">&#x27;file*&#x27;</span> -<span class="hljs-built_in">exec</span> <span class="hljs-built_in">mv</span> &#123;&#125; &#123;&#125;.bak\;</span>
+</code></pre>
+<p>Find and rename extension (<code>.html</code> =&gt; <code>.gohtml</code>)</p>
+<pre><code class="hljs wrap language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find ./ -depth -name <span class="hljs-string">&quot;*.html&quot;</span> -<span class="hljs-built_in">exec</span> sh -c <span class="hljs-string">&#x27;mv &quot;$1&quot; &quot;$&#123;1%.html&#125;.gohtml&quot;&#x27;</span> _ &#123;&#125; \;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="find-and-move"><a class="h-anchor" href="#find-and-move">#</a>Find and move</h3>
+<div class="section">
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -name <span class="hljs-string">&#x27;*.mp3&#x27;</span> -<span class="hljs-built_in">exec</span> <span class="hljs-built_in">mv</span> &#123;&#125; /tmp/music \;</span>
+</code></pre>
+<p>Find and move it to a specific directory (<code>/tmp/music</code>)</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="find-and-copy"><a class="h-anchor" href="#find-and-copy">#</a>Find and copy</h3>
+<div class="section">
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -name <span class="hljs-string">&#x27;*2020*.xml&#x27;</span> -<span class="hljs-built_in">exec</span> <span class="hljs-built_in">cp</span> -r <span class="hljs-string">&quot;&#123;&#125;&quot;</span> /tmp/backup \;</span>
+</code></pre>
+<p>Find matching files and copy to a specific directory (<code>/tmp/backup</code>)</p>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="find-and-concatenate"><a class="h-anchor" href="#find-and-concatenate">#</a>Find and concatenate</h3>
+<div class="section">
+<p>Merge all csv files in the download directory into <code>merged.csv</code></p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find download -<span class="hljs-built_in">type</span> f -iname <span class="hljs-string">&#x27;*.csv&#x27;</span> | xargs <span class="hljs-built_in">cat</span> &gt; merged.csv</span>
+</code></pre>
+<p>Merge all sorted csv files in the download directory into <code>merged.csv</code></p>
+<pre><code class="hljs wrap language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find download -<span class="hljs-built_in">type</span> f -iname <span class="hljs-string">&#x27;*.csv&#x27;</span> | <span class="hljs-built_in">sort</span> | xargs <span class="hljs-built_in">cat</span> &gt; merged.csv</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="find-and-sort"><a class="h-anchor" href="#find-and-sort">#</a>Find and sort</h3>
+<div class="section">
+<p>Find and sort in ascending</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -<span class="hljs-built_in">type</span> f | <span class="hljs-built_in">sort</span></span>
+</code></pre>
+<p>find and sort descending</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -<span class="hljs-built_in">type</span> f | <span class="hljs-built_in">sort</span> -r</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap row-span-1">
+<h3 id="find-and-chmod"><a class="h-anchor" href="#find-and-chmod">#</a>Find and chmod </h3>
+<div class="section">
+<p>Find files and set permissions to 644.</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -<span class="hljs-built_in">type</span> f -perm 0777 -<span class="hljs-built_in">print</span> -<span class="hljs-built_in">exec</span> <span class="hljs-built_in">chmod</span> 644 &#123;&#125; \;</span>
+</code></pre>
+<p>Find directories and set permissions to 755.</p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find / -<span class="hljs-built_in">type</span> d -perm 777 -<span class="hljs-built_in">print</span> -<span class="hljs-built_in">exec</span> <span class="hljs-built_in">chmod</span> 755 &#123;&#125; \;</span>
+</code></pre>
+</div>
+</div>
+<div class="h3-wrap">
+<h3 id="find-and-compress"><a class="h-anchor" href="#find-and-compress">#</a>Find and compress</h3>
+<div class="section">
+<p>Find all <code>.java</code> files and compress it into <code>java.tar</code></p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -<span class="hljs-built_in">type</span> f -name <span class="hljs-string">&quot;*.java&quot;</span> | xargs tar cvf java.tar</span>
+</code></pre>
+<p>Find all <code>.csv</code> files and compress it into <code>cheatsheets.zip</code></p>
+<pre><code class="hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">find . -<span class="hljs-built_in">type</span> f -name <span class="hljs-string">&quot;*.csv&quot;</span> | xargs zip cheatsheets.zip</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+        </div></div><div id="mysearch" class="z-50 fixed inset-0 flex justify-center bg-slate-600/80 dark:bg-slate-900/90 items-start text-sm z-50 overflow-hidden lg:pt-16 lg:pb-20 hidden"><div id="mysearch-box" class="lg:max-w-screen-lg w-full flex flex-col justify-between bg-white dark:bg-slate-700 shadow-3xl dark:shadow-3xl lg:rounded-lg lg:max-h-832 min-h-320 h-full"><div class="flex items-center h-16 flex-none border-b border-slate-200 dark:border-slate-700"><div class="w-full h-full"><form class="flex items-center w-full h-full outline-none rounded-tl-lg"><label for="mysearch-input" id="mysearch-label" class="h-full w-14 mt-1 ml-1 px-4 flex items-center justify-center transition-colors duration-200 ease-in-out text-emerald-200"><div class="text-2xl text-emerald-500"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1em" width="1em"><path d="M942.14826666 878.7968l-200.56746667-229.92213333C795.37493333 583.8848 827.73333333 500.5312 827.73333333 409.6 827.73333333 202.27413333 659.59253333 34.13333333 452.26666666 34.13333333 244.87253333 34.13333333 76.79999999 202.27413333 76.79999999 409.6S244.87253333 785.06666667 452.26666666 785.06666667c77.14133333 0 148.82133333-23.3472 208.41813333-63.21493334l199.33866667 228.5568c19.72906667 22.7328 54.272 24.91733333 76.8 5.25653334C959.62453333 935.86773333 961.87733333 901.46133333 942.14826666 878.7968zM179.19999999 409.6c0-150.59626667 122.4704-273.06666667 273.06666667-273.06666667 150.59626667 0 273.06666667 122.4704 273.06666667 273.06666667s-122.4704 273.06666667-273.06666667 273.06666667C301.67039999 682.66666667 179.19999999 560.19626667 179.19999999 409.6z"></path></svg></div></label><div class="relative flex-1"> <input class="flex-1 font-light h-full bg-transparent focus:text-slate-900 text-slate-500 dark:text-slate-300 placeholder-slate-400 placeholder-opacity-80 shadow-none outline-none truncate text-lg sm:text-2xl caret-color-emerald-400 leading-normalized w-full appearance-none rounded-none transition-colors duration-200 ease-in-out" id="mysearch-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search for cheatsheet" maxlength="128" type="text" enterkeyhint="go"></div> <button id="mysearch-clear" type="reset" class="items-center justify-center h-full w-14 px-4 text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 opacity-75 fill-current cursor-pointer transition-fast-out flex"><i class="icon icon-close text-xs font-bold"></i></button></form></div><div class="w-px h-8 bg-slate-100 dark:bg-slate-400/20 flex-none"></div> <button class="cancel mr-1 px-4 h-full text-slate-500 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-300"> Cancel</button></div><div class="flex flex-grow overflow-hidden lg:rounded-br-lg"><div class="relative w-full flex-none overflow-y-auto lg:w-1/2"><ul id="mysearch-list"></ul></div><div class="preview-panel shadow-inner bg-slate-100 dark:bg-slate-800 lg:block w-1/2 flex-none overflow-y-auto"></div></div></div></div><footer class="text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-slate-800 md:mt-14"></footer><div id="carbon_container"></div></body><script src="/js/main.js?_v=1705688051674"></script><script>
+        // Get all pre > code elements
+        const codeBlocks = document.querySelectorAll('pre > code');
+        const initInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path> </svg>';
+        const successInnerHTML = '<svg height="1em" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>';
+        codeBlocks.forEach(function (codeBlock) {
+            // Create a copy button element
+            const copyButton = document.createElement('button');
+            copyButton.className = 'bg-emerald-500 p-2 text-white fadeIn shadow-xl rounded flex items-center absolute top-2 right-2';
+            copyButton.innerHTML = initInnerHTML;
+            copyButton.style.opacity = "0";
+            const parent = codeBlock.parentNode;
+
+            parent.style = "position: relative;"
+            parent.insertBefore(copyButton, codeBlock);
+
+            // Add click event listener to copy button
+            copyButton.addEventListener('click', () => {
+                navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+                    copyButton.innerHTML = successInnerHTML;
+                    setTimeout(() => {
+                        copyButton.innerHTML = initInnerHTML;
+                    }, 1000);
+                });
+            });
+
+            parent.addEventListener('mouseenter', () => {
+                copyButton.style.opacity = "1";
+            });
+            parent.addEventListener('mouseleave', () => {
+                copyButton.style.opacity = "0";
+            });
+        });
+    </script></html>
