@@ -1647,7 +1647,7 @@ sum(
 ```
 
 
-### Handle exceptions {.col-span-3 .warning}
+### Handle exceptions {.col-span-3}
 ```python
 try:
     # Use "raise" to raise an error
@@ -1656,6 +1656,6 @@ except TypeError:
     pass    # won't catch the IndexError
 except IndexError as e:
     print("An index error occurred")
-# (unsupport) finally:
-#     print("This will always be called")
+finally:
+    print("This will always be called")
 ```
